@@ -13,7 +13,7 @@ using System ;
 using System.Windows ;
 using Autofac.Core ;
 using NLog ;
-using WpfControlLibrary1 ;
+using WpfApp ;
 
 namespace AppShared
 {
@@ -22,7 +22,7 @@ namespace AppShared
 		private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
 		public static readonly DependencyProperty
-			LifetimeScopeProperty = App.LifetimeScopeProperty ;
+			LifetimeScopeProperty = Props.LifetimeScopeProperty ;
 
 		public static readonly RoutedEvent ServiceInstanceChangedEvent =
 			EventManager.RegisterRoutedEvent (

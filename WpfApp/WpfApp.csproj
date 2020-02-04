@@ -55,11 +55,74 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Controls\AssemblyBrowser.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\DefaultPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Registrations.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\ResourcesView.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TypeControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TypeControl2.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TypeNavigator.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\TypePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\UserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="App.cs" />
+    <Compile Include="Controls\AssemblyBrowser.xaml.cs">
+      <DependentUpon>AssemblyBrowser.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\DefaultPage.xaml.cs">
+      <DependentUpon>DefaultPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\Registrations.xaml.cs">
+      <DependentUpon>Registrations.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\ResourcesView.xaml.cs">
+      <DependentUpon>ResourcesView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TypeControl.xaml.cs">
+      <DependentUpon>TypeControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TypeControl2.xaml.cs">
+      <DependentUpon>TypeControl2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TypeNavigator.xaml.cs">
+      <DependentUpon>TypeNavigator.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\TypePage.xaml.cs">
+      <DependentUpon>TypePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Controls\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Props.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -100,7 +163,59 @@
     <Compile Include="AppShared\Utils\SerializableDictionary.cs" />
     <Compile Include="AppShared\Xaml\LifetimeScopeExtension.cs" />
     <Compile Include="AppShared\Xaml\ObjectIdExtension.cs" />
+    <Compile Include="Common\AppContainerFixture.cs" />
+    <Compile Include="Common\Context\ContextStackInstanceAttribute.cs" />
+    <Compile Include="Common\Context\PushContextAttribute.cs" />
+    <Compile Include="Common\Converters\AssemblyConverter.cs" />
+    <Compile Include="Common\Converters\ComponentLifetimeConverter.cs" />
+    <Compile Include="Common\Converters\GetTypeConverter.cs" />
+    <Compile Include="Common\Converters\InstanceRegistrationConverter.cs" />
+    <Compile Include="Common\Converters\LoggerInstanceConverter.cs" />
+    <Compile Include="Common\Converters\RegistrationConverter.cs" />
+    <Compile Include="Common\Converters\RegistrationConverter2.cs" />
+    <Compile Include="Common\Converters\RegistrationSourceConverter.cs" />
+    <Compile Include="Common\Converters\ResolveServiceConverter.cs" />
+    <Compile Include="Common\Converters\TargetConverter.cs" />
+    <Compile Include="Common\Exceptions\AttributeNotFoundException.cs" />
+    <Compile Include="Common\Exceptions\InfoContextFactoryAttribute.cs" />
+    <Compile Include="Common\Logging\AppLogger.cs" />
+    <Compile Include="Common\Logging\AppLoggingConfigHelper.cs" />
+    <Compile Include="Common\Logging\LoggerTracker.cs" />
+    <Compile Include="Common\Logging\LoggingEntityMetadataAttribute.cs" />
+    <Compile Include="Common\Logging\LoggingInterceptor.cs" />
+    <Compile Include="Common\Logging\MyCacheTarget.cs" />
+    <Compile Include="Common\MainVie.cs" />
+    <Compile Include="Common\Menus\MenuItemContainerStyleSelector.cs" />
+    <Compile Include="Common\Menus\MenuMenuItemTemplateSelector.cs" />
+    <Compile Include="Common\Menus\MenuModule.cs" />
+    <Compile Include="Common\Menus\MenuTemplateSelector.cs" />
+    <Compile Include="Common\Menus\WindowsTopLevelMenu.cs" />
+    <Compile Include="Common\Menus\XMenuItem.cs" />
+    <Compile Include="Common\Model\ComponentRegistration.cs" />
+    <Compile Include="Common\Model\InstanceRegistration.cs" />
+    <Compile Include="Common\Model\MenuItemList.cs" />
+    <Compile Include="Common\Model\MethodInvocation.cs" />
+    <Compile Include="Common\Model\ResourceInfo.cs" />
+    <Compile Include="Common\Model\ResourcesModel.cs" />
+    <Compile Include="Common\Model\ResourcesUtil.cs" />
+    <Compile Include="Common\MyAppCommands.cs" />
+    <Compile Include="Common\NLogTextWriter.cs" />
+    <Compile Include="Common\ResourceMetadata.cs" />
+    <Compile Include="Common\TestO.cs" />
+    <Compile Include="Common\Tracing\AppTraceListener.cs" />
+    <Compile Include="Common\Tracing\AppTraceListener2.cs" />
+    <Compile Include="Common\Tracing\Info.cs" />
+    <Compile Include="Common\Utils\BuilderInterceptor.cs" />
+    <Compile Include="Common\Utils\ContainerHelper.cs" />
     <Compile Include="ComponentManager.cs" />
+    <Compile Include="Logging\AppLoggingConfigHelper.cs" />
+    <Compile Include="Logging\CodeConfiguration.cs" />
+    <Compile Include="Logging\LogDelegates.cs" />
+    <Compile Include="Logging\LogFactoryInterceptor.cs" />
+    <Compile Include="Logging\LoggerFactoryHook.cs" />
+    <Compile Include="Logging\LoggerInterceptor.cs" />
+    <Compile Include="Logging\LoggerProxyHelper.cs" />
+    <Compile Include="Logging\MyLogFactory.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -137,7 +252,16 @@
       <Version>4.9.4</Version>
     </PackageReference>
     <PackageReference Include="Autofac.Extras.AttributeMetadata">
-      <Version>5.0.0</Version>
+      <Version>4.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Autofac.Extras.DynamicProxy">
+      <Version>4.5.0</Version>
+    </PackageReference>
+    <PackageReference Include="Castle.Core">
+      <Version>4.4.0</Version>
+    </PackageReference>
+    <PackageReference Include="DynamicData">
+      <Version>6.14.3</Version>
     </PackageReference>
     <PackageReference Include="JetBrains.Annotations">
       <Version>2019.1.3</Version>
@@ -148,6 +272,9 @@
     <PackageReference Include="MvvmLightLibs">
       <Version>5.4.1.1</Version>
     </PackageReference>
+    <PackageReference Include="System.Reactive">
+      <Version>4.3.2</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\NLog\src\NLog\NLog.csproj">
@@ -155,5 +282,6 @@
       <Name>NLog</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
