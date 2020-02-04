@@ -1,0 +1,16 @@
+bin
+~$*
+obj
+.vs
+packages
+FileSigs_*
+*~
+.idea
+*.user
+*.DotSettings
+TestResults
+nlog.txt
+TestResult.xml
+/Backup
+*.sln.bak
+/UpgradeLog.htm
