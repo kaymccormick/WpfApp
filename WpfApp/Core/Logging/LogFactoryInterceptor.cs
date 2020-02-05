@@ -10,8 +10,9 @@
 // ---
 #endregion
 using Castle.DynamicProxy ;
+using WpfApp1.Util ;
 
-namespace Logging
+namespace WpfApp.Core.Logging
 {
     public class LogFactoryInterceptor : IInterceptor
     {

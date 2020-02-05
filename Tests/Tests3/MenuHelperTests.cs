@@ -21,19 +21,9 @@ namespace WpfApp1Tests3
 
         private readonly Func < IMenuItem > _xMenuItemCreator ;
 
-        /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
-        ///     class.
-        /// </summary>
-        public MenuHelperTests (
-            WpfApplicationFixture fixture
-          , AppContainerFixture containerFixture
-          , UtilsContainerFixture utilsContainerFixture
-          , ITestOutputHelper outputHelper
-        ) : base (fixture, containerFixture, utilsContainerFixture, outputHelper )
+
+        protected MenuHelperTests ( WpfApplicationFixture wpfAppFixture , AppContainerFixture containerFixture , UtilsContainerFixture utilsContainerFixture , ITestOutputHelper outputHelper ) : base ( wpfAppFixture , containerFixture , utilsContainerFixture , outputHelper )
         {
-            _containerFixture = containerFixture ;
-            _xMenuItemCreator = containerScope.Resolve < Func < IMenuItem > > ( ) ;
         }
 
         /// <summary>Makes the menu item test.</summary>

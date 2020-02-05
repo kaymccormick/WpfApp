@@ -22,7 +22,7 @@ namespace WpfApp1Tests3
         protected AppContainerFixture _containerFixture ;
 
         protected WpfTestsBase (
-            WpfApplicationFixture fixture
+            WpfApplicationFixture wpfAppFixture
           , AppContainerFixture   containerFixture
           , UtilsContainerFixture utilsContainerFixture
           , ITestOutputHelper     outputHelper

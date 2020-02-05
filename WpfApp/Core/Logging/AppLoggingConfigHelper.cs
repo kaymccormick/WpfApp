@@ -9,13 +9,14 @@ using System.Text ;
 using System.Text.RegularExpressions ;
 using Castle.DynamicProxy ;
 using DynamicData ;
+using Logging ;
 using NLog ;
 using NLog.Common ;
 using NLog.Config ;
 using NLog.Layouts ;
 using NLog.Targets ;
 
-namespace Logging
+namespace WpfApp.Core.Logging
 {
     /// <summary></summary>
     /// <seealso cref="NLog.Config.LoggingConfiguration" />
@@ -37,7 +38,7 @@ namespace Logging
         /// </summary>gi
         public override IEnumerable < string > FileNamesToWatch { get ; }
 
-        public MyLogFactory logFactory { get ; set ; }
+        public LogFactory logFactory { get ; set ; }
 
         public static bool DebuggerTargetEnabled { get ; set ; } = false ;
 

@@ -1,6 +1,7 @@
 ﻿using System ;
 using System.Reflection ;
 using Castle.DynamicProxy ;
+using WpfApp.Core.Logging ;
 
 namespace Logging
 {

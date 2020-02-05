@@ -11,7 +11,6 @@ using Common.Logging ;
 using Common.Utils ;
 using JetBrains.Annotations ;
 using KayMcCormick.Dev.Test.Metadata ;
-using Logging ;
 using NLog ;
 using NLog.Config ;
 using NLog.Layouts ;
@@ -19,6 +18,7 @@ using NLog.Targets ;
 using TestLib ;
 using TestLib.Attributes ;
 using TestLib.Fixtures ;
+using WpfApp.Core.Logging ;
 using Xunit ;
 using Xunit.Abstractions ;
 using LogLevel = NLog.LogLevel ;
@@ -61,7 +61,7 @@ namespace CommonTests
         ///     class.
         /// </summary>
         // public ContainerHelperTests ( WpfApplicationFixture WpfApplicationFixture ) { WpfApplicationFixture = WpfApplicationFixture ; }
-        private static readonly Logger Logger = LoggerProxyHelper.GetCurrentClassLogger ( ) ;
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
         public LogDelegates.LogMethod UseLogMethod { get ; set ; }
 

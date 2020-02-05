@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics ;
 using NLog ;
 
-namespace Logging
+namespace WpfApp.Core.Logging
 {
     public class MyLogFactory : LogFactory
     {

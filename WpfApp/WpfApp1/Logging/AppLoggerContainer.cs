@@ -1,7 +1,7 @@
 ﻿using System.Linq ;
 using Common.Logging ;
-using Logging ;
 using NLog.Config ;
+using WpfApp.Core.Logging ;
 using LogManager = NLog.LogManager ;
 
 namespace WpfApp1.Logging

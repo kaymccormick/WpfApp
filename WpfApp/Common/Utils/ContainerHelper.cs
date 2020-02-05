@@ -13,8 +13,8 @@ using Autofac.Extras.AttributeMetadata ;
 using Castle.DynamicProxy ;
 using Common.Logging ;
 using Common.Menus ;
-using Logging ;
 using NLog ;
+using WpfApp.Core.Logging ;
 
 namespace Common.Utils
 {

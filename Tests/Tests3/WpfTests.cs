@@ -25,12 +25,12 @@ namespace WpfApp1Tests3
     public class WpfTests : WpfTestsBase
     {
         public WpfTests (
-            WpfApplicationFixture fixture
+            WpfApplicationFixture wpfAppFixture
           , AppContainerFixture containerFixture
           , UtilsContainerFixture utilsContainerFixture
           , ITestOutputHelper outputHelper
         ) : base (
-                  fixture
+                  wpfAppFixture
                 , containerFixture
                 , utilsContainerFixture
                 , outputHelper

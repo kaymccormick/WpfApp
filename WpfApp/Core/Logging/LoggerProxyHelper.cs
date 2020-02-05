@@ -4,6 +4,7 @@ using System.IO ;
 using System.Runtime.CompilerServices ;
 using Castle.DynamicProxy ;
 using NLog ;
+using WpfApp.Core.Logging ;
 
 namespace Logging
 {
@@ -65,8 +66,9 @@ namespace Logging
                 name = Path.GetFileNameWithoutExtension ( path ) ;
             }
 
-            var myLogFactory =
-                LogManager.Configuration?.LogFactory as MyLogFactory ;
+            // fixme
+            MyLogFactory  myLogFactory = null ;
+                // LogManager.Configuration?.LogFactory as MyLogFactory ;
             if ( myLogFactory == null )
 
             {

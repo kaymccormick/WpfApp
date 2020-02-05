@@ -1,7 +1,7 @@
 ﻿using NLog ;
 using NLog.Config ;
 
-namespace Logging
+namespace WpfApp.Core.Logging
 {
 	public class CodeConfiguration : LoggingConfiguration
 	{

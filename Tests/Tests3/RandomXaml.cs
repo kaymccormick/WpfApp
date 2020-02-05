@@ -4,6 +4,7 @@ using KayMcCormick.Dev.Test.Metadata ;
 using Logging ;
 using NLog ;
 using TestLib.Attributes ;
+using WpfApp.Core.Logging ;
 using Xunit ;
 
 namespace WpfApp1Tests3

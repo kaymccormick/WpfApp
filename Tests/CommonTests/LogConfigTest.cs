@@ -2,11 +2,11 @@
 using System.Linq ;
 using Common ;
 using Common.Logging ;
-using Logging ;
 using NLog ;
 using NLog.Config ;
 using NLog.Targets ;
 using TestLib.Attributes ;
+using WpfApp.Core.Logging ;
 using Xunit ;
 using Xunit.Abstractions ;
 

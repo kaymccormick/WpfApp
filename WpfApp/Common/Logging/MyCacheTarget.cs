@@ -2,10 +2,10 @@
 using System.Linq ;
 using System.Reactive.Linq ;
 using System.Reactive.Subjects ;
-using Logging ;
 using NLog ;
 using NLog.Config ;
 using NLog.Targets ;
+using WpfApp.Core.Logging ;
 
 namespace Common.Logging
 {

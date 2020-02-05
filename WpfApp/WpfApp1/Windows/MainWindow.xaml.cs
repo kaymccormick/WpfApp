@@ -23,7 +23,6 @@ using NLog ;
 using NLog.Config ;
 using Vanara.Extensions.Reflection ;
 using WpfApp ;
-using WpfApp1.Application ;
 using WpfApp1.Attributes ;
 using WpfApp1.Menus ;
 
@@ -37,7 +36,7 @@ namespace WpfApp1.Windows
     /// </summary>
     /// public c
     [ WindowMetadata ( "Main Window" ) ]
-    public partial class OldMainWindow : Window , IHaveLogger , IHaveAppLogger
+    public partial class OldMainWindow : Window , IHaveLogger
 
     {
         public LoggingConfiguration Configuration { get ; set ; }

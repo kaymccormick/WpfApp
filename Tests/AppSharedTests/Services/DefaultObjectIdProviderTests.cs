@@ -16,7 +16,7 @@ namespace AppShared.Services.ests
         {
             DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
             var rootNodes = x.GetRootNodes ( ) ;
-            Assert.NotEmpty(rootNodes);
+            Assert.Empty(rootNodes);
         }
 
 
@@ -53,7 +53,8 @@ namespace AppShared.Services.ests
         {
             DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
             var reg = new Moq.Mock < IComponentRegistration > ( ) ;
-            var id = x.ProvideObjectInstanceIdentifier ( null , reg.Object , null ) ;
+            var instance = new object ( ) ;
+            var id = x.ProvideObjectInstanceIdentifier ( instance, reg.Object , null ) ;
             
         }
     }

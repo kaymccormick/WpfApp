@@ -1,11 +1,11 @@
 ﻿using System.Reflection ;
 using Common.Logging ;
 using JetBrains.Annotations ;
-using Logging ;
 using NLog ;
 using NLog.Config ;
 using NLog.Layouts ;
 using NLog.Targets ;
+using WpfApp.Core.Logging ;
 using Xunit.Sdk ;
 
 namespace TestLib.Attributes

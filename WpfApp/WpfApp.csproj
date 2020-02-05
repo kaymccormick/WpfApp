@@ -55,7 +55,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="WpfApp1\Application\IHaveAppLogger.cs" />
     <Compile Include="WpfApp1\Attributes\LoggingEntityMetadata.cs" />
     <Compile Include="WpfApp1\Attributes\WindowMetadataAttribute.cs" />
     <Compile Include="WpfApp1\Controls\Container.xaml.cs" />
@@ -120,10 +119,6 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Controls\UserControl1.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -152,15 +147,11 @@
     <Compile Include="Controls\TypePage.xaml.cs">
       <DependentUpon>TypePage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Controls\UserControl1.xaml.cs">
-      <DependentUpon>UserControl1.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Props.cs" />
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="AppShared\AppSharedLogger.cs" />
     <Compile Include="AppShared\AssemblyList.cs" />
     <Compile Include="AppShared\Attributes\AssemblyContainerScanAttribute.cs" />
     <Compile Include="AppShared\Attributes\InterfaceMetadataAttribute.cs" />
@@ -239,15 +230,14 @@
     <Compile Include="Common\Tracing\Info.cs" />
     <Compile Include="Common\Utils\BuilderInterceptor.cs" />
     <Compile Include="Common\Utils\ContainerHelper.cs" />
-    <Compile Include="ComponentManager.cs" />
-    <Compile Include="Logging\AppLoggingConfigHelper.cs" />
-    <Compile Include="Logging\CodeConfiguration.cs" />
-    <Compile Include="Logging\LogDelegates.cs" />
-    <Compile Include="Logging\LogFactoryInterceptor.cs" />
-    <Compile Include="Logging\LoggerFactoryHook.cs" />
-    <Compile Include="Logging\LoggerInterceptor.cs" />
-    <Compile Include="Logging\LoggerProxyHelper.cs" />
-    <Compile Include="Logging\MyLogFactory.cs" />
+    <Compile Include="Core\Logging\AppLoggingConfigHelper.cs" />
+    <Compile Include="Core\Logging\CodeConfiguration.cs" />
+    <Compile Include="Core\Logging\LogDelegates.cs" />
+    <Compile Include="Core\Logging\LogFactoryInterceptor.cs" />
+    <Compile Include="Core\Logging\LoggerFactoryHook.cs" />
+    <Compile Include="Core\Logging\LoggerInterceptor.cs" />
+    <Compile Include="Core\Logging\LoggerProxyHelper.cs" />
+    <Compile Include="Core\Logging\MyLogFactory.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
