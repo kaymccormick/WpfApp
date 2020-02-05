@@ -12,10 +12,13 @@ namespace AppShared.Utils
     [ UsedImplicitly ]
     public class AttachedContext : IDisposable
     {
-        private readonly InfoContext                  _infoContext ;
         private readonly ContextStack < InfoContext > _contextStack ;
+        private readonly InfoContext                  _infoContext ;
 
-        /// <summary>Initializes a new instance of the <see cref="AttachedContext"/> class.</summary>
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="AttachedContext" />
+        ///     class.
+        /// </summary>
         /// <param name="contextStack">The context stack.</param>
         /// <param name="context">The context.</param>
         /// <exception cref="System.ArgumentNullException">contextStack</exception>
@@ -23,7 +26,7 @@ namespace AppShared.Utils
         /// TODO Edit XML Comment Template for #ctor
         public AttachedContext ( ContextStack < InfoContext > contextStack , InfoContext context )
         {
-            this._contextStack =
+            _contextStack =
                 contextStack ?? throw new ArgumentNullException ( nameof ( contextStack ) ) ;
             _infoContext = context ;
             contextStack.Push ( _infoContext ) ;

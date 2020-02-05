@@ -1,6 +1,6 @@
 ﻿namespace AppShared.Interfaces
 {
-	public interface IAppLogger
-	{
-	}
+    public interface IAppLogger
+    {
+    }
 }

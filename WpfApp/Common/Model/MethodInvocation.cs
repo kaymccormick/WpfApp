@@ -18,13 +18,21 @@ namespace Common.Model
     /// TODO Edit XML Comment Template for MethodInvocation
     public class MethodInvocation
     {
-        /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
-        public MethodInvocation ( MethodInfo method , object[] arguments , object originalReturnValue = null, object returnValue = null )
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     class.
+        /// </summary>
+        public MethodInvocation (
+            MethodInfo method
+          , object[]   arguments
+          , object     originalReturnValue = null
+          , object     returnValue         = null
+        )
         {
-            Method = method ;
-            Arguments = arguments ;
+            Method              = method ;
+            Arguments           = arguments ;
             OriginalReturnValue = originalReturnValue ;
-            ReturnValue = returnValue ;
+            ReturnValue         = returnValue ;
         }
 
         /// <summary>Gets or sets the method.</summary>

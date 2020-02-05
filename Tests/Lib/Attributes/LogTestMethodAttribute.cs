@@ -13,7 +13,7 @@ namespace TestLib.Attributes
     public class LogTestMethodAttribute : BeforeAfterTestAttribute
     {
         /// <summary>
-        /// This method is called after the test method is executed.
+        ///     This method is called after the test method is executed.
         /// </summary>
         /// <param name="methodUnderTest">The method under test</param>
         public override void After ( MethodInfo methodUnderTest )
@@ -26,7 +26,7 @@ namespace TestLib.Attributes
         }
 
         /// <summary>
-        /// This method is called before the test method is executed.
+        ///     This method is called before the test method is executed.
         /// </summary>
         /// <param name="methodUnderTest">The method under test</param>
         public override void Before ( MethodInfo methodUnderTest )
@@ -37,10 +37,10 @@ namespace TestLib.Attributes
                 {
                     LogManager.GetLogger ( methodUnderTest.DeclaringType.ToString ( ) )
                               .Info ( $"{nameof ( Before )} test method {methodUnderTest.Name}" ) ;
-                } catch(Exception ex)
+                }
+                catch ( Exception ex )
                 {
                     Debug.WriteLine ( ex.ToString ( ) ) ;
-                    
                 }
             }
         }

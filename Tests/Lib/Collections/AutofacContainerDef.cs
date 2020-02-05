@@ -3,9 +3,9 @@ using Xunit ;
 
 namespace Tests.Lib.Collections
 {
-	[ CollectionDefinition ( "AutofacContainer" ) ]
-	internal class AutofacContainerDef : ICollectionFixture < AppContainerFixture >
-	  , ICollectionFixture < LoggingFixture >
-	{
-	}
+    [ CollectionDefinition ( "AutofacContainer" ) ]
+    internal class AutofacContainerDef : ICollectionFixture < AppContainerFixture >
+      , ICollectionFixture < LoggingFixture >
+    {
+    }
 }

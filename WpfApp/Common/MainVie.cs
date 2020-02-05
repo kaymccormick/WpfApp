@@ -1,16 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic ;
 
 namespace Common
 {
     public class MainVie
     {
-        public IEnumerable < ITabGuest > Guests { get ; }
+        public MainVie ( IEnumerable < ITabGuest > guests ) { Guests = guests ; }
 
-        public MainVie (IEnumerable <ITabGuest> guests) { Guests = guests ; }
+        public IEnumerable < ITabGuest > Guests { get ; }
     }
 
     public interface ITabGuest

@@ -17,7 +17,7 @@
         mc:Ignorable="d" FontSize="20"
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
-        <CollectionViewSource x:Key="ResourcesList" Source="{Binding ElementName=mainWindow,Path=ResourcesCollection}"></CollectionViewSource>
+        <CollectionViewSource x:Key="ResourcesList" Source="{Binding ElementName=mainWindow,Path=ResourcesCollection}" />
         <DataTemplate DataType="{x:Type system:Type}" x:Key="CellTemplateType">
             <wpfControlLibrary1:TypeControl MinWidth="200" Target="{Binding ElementName=frame}">
                 <wpfApp:Props.RenderedType>
@@ -25,7 +25,7 @@
                 </wpfApp:Props.RenderedType>
             </wpfControlLibrary1:TypeControl>
         </DataTemplate>
-        
+
         <types1:ResolveServiceList x:Key="ResolveServices">
             <appShared1:ResolveService ServiceType="{x:Type interfaces:IObjectIdProvider}">
                 <wpfApp:Props.LifetimeScope>
@@ -52,13 +52,9 @@
             <TextBlock Text="{Binding Path=Tag}" />
             <TextBlock Text="{Binding Source={xaml1:LifetimeScope}, Path=Tag}" />
         </StackPanel>
-        <TabControl Name="mainTabControl" Grid.Column="0" Grid.Row="1">
-
-        </TabControl>
+        <TabControl Name="mainTabControl" Grid.Column="0" Grid.Row="1" />
         <TabControl Visibility="Hidden" Grid.Column="0" Grid.Row="1" Style="{StaticResource TabControlStyle1}">
-            <TabItem Header="0">
-                
-            </TabItem>
+            <TabItem Header="0" />
             <TabItem Header="Tab 1" HorizontalAlignment="Right" Margin="-2.4,-2,-2.2,0.4" Width="63">
                 <Grid>
                     <Grid.ColumnDefinitions>

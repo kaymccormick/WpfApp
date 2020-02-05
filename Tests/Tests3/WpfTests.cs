@@ -18,23 +18,17 @@ using Xunit.Abstractions ;
 namespace Tests.Tests3
 {
     /// <summary>
-    /// 
     /// </summary>
     [ Collection ( "WpfApp" ) ]
-    [LogTestMethod, BeforeAfterLogger]
+    [ LogTestMethod ] [ BeforeAfterLogger ]
     public class WpfTests : WpfTestsBase
     {
         public WpfTests (
             WpfApplicationFixture wpfAppFixture
-          , AppContainerFixture containerFixture
+          , AppContainerFixture   containerFixture
           , UtilsContainerFixture utilsContainerFixture
-          , ITestOutputHelper outputHelper
-        ) : base (
-                  wpfAppFixture
-                , containerFixture
-                , utilsContainerFixture
-                , outputHelper
-                 )
+          , ITestOutputHelper     outputHelper
+        ) : base ( wpfAppFixture , containerFixture , utilsContainerFixture , outputHelper )
         {
             Logger.Debug ( $"{nameof ( WpfTests )} constructor" ) ;
         }

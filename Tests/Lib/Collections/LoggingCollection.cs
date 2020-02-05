@@ -3,8 +3,8 @@ using Xunit ;
 
 namespace TestLib.Collections
 {
-	[ CollectionDefinition ( "Logging" ) ]
-	internal class LoggingCollection : ICollectionFixture < LoggingFixture >
-	{
-	}
+    [ CollectionDefinition ( "Logging" ) ]
+    internal class LoggingCollection : ICollectionFixture < LoggingFixture >
+    {
+    }
 }

@@ -41,7 +41,8 @@ namespace Common.Converters
                 return null ;
             }
 
-            if ( s != null ) {
+            if ( s != null )
+            {
                 var service = lifetimeScope.Resolve ( s.ServiceType ) ;
                 return service ;
             }

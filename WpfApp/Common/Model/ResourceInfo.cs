@@ -4,12 +4,15 @@ namespace Common.Model
 {
     public class ResourceInfo
     {
-        /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     class.
+        /// </summary>
         public ResourceInfo ( Uri source , object key , object value )
         {
-            this.Source = source ;
-            this.Key1   = key ;
-            this.Value  = value ;
+            Source = source ;
+            Key1   = key ;
+            Value  = value ;
         }
 
         public Uri Source { get ; }

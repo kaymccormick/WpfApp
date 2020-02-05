@@ -18,30 +18,30 @@ using NLog ;
 
 namespace WpfApp1.Util
 {
-	public class ProxyGenerationHook : IProxyGenerationHook
-	{
-		[ SuppressMessage (
-			                  "Code Quality"
-			                , "IDE0052:Remove unread private members"
-			                , Justification = "<Pending>"
-		                  ) ]
-		private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
+    public class ProxyGenerationHook : IProxyGenerationHook
+    {
+        [ SuppressMessage (
+                              "Code Quality"
+                            , "IDE0052:Remove unread private members"
+                            , Justification = "<Pending>"
+                          ) ]
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
-		public void NonProxyableMemberNotification ( Type type , MemberInfo memberInfo )
-		{
-			Logger.Debug (
-			              $"{nameof ( NonProxyableMemberNotification )}: type={type}, memberInfo={memberInfo}"
-			             ) ;
-		}
+        public void NonProxyableMemberNotification ( Type type , MemberInfo memberInfo )
+        {
+            Logger.Debug (
+                          $"{nameof ( NonProxyableMemberNotification )}: type={type}, memberInfo={memberInfo}"
+                         ) ;
+        }
 
-		public bool ShouldInterceptMethod ( Type type , MethodInfo memberInfo )
-		{
-			Logger.Debug (
-			              $"{nameof ( ShouldInterceptMethod )}: type={type}, memberInfo={memberInfo}"
-			             ) ;
-			return memberInfo.Name.StartsWith ( "get_" , StringComparison.Ordinal ) ;
-		}
+        public bool ShouldInterceptMethod ( Type type , MethodInfo memberInfo )
+        {
+            Logger.Debug (
+                          $"{nameof ( ShouldInterceptMethod )}: type={type}, memberInfo={memberInfo}"
+                         ) ;
+            return memberInfo.Name.StartsWith ( "get_" , StringComparison.Ordinal ) ;
+        }
 
-		public void MethodsInspected ( ) { Logger.Debug ( $"{nameof ( MethodsInspected )}" ) ; }
-	}
+        public void MethodsInspected ( ) { Logger.Debug ( $"{nameof ( MethodsInspected )}" ) ; }
+    }
 }

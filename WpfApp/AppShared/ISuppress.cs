@@ -31,42 +31,56 @@
 // THE POSSIBILITY OF SUCH DAMAGE.
 // 
 
+using System ;
+
 namespace AppShared
 {
-    using System;
 #if NET4_5
     using System.Threading.Tasks;
 #endif
 
     /// <summary>
-    /// Provides an interface to execute System.Actions without surfacing any exceptions raised for that action.
+    ///     Provides an interface to execute System.Actions without surfacing any
+    ///     exceptions raised for that action.
     /// </summary>
     public interface ISuppress
     {
         /// <summary>
-        /// Runs the provided action. If the action throws, the exception is logged at <c>Error</c> level. The exception is not propagated outside of this method.
+        ///     Runs the provided action. If the action throws, the exception is logged
+        ///     at <c>Error</c> level. The exception is not propagated outside of this
+        ///     method.
         /// </summary>
         /// <param name="action">Action to execute.</param>
-        void Swallow(Action action);
+        void Swallow ( Action action ) ;
 
         /// <summary>
-        /// Runs the provided function and returns its result. If an exception is thrown, it is logged at <c>Error</c> level.
-        /// The exception is not propagated outside of this method; a default value is returned instead.
+        ///     Runs the provided function and returns its result. If an exception is
+        ///     thrown, it is logged at <c>Error</c> level.
+        ///     The exception is not propagated outside of this method; a default value
+        ///     is returned instead.
         /// </summary>
         /// <typeparam name="T">Return type of the provided function.</typeparam>
         /// <param name="func">Function to run.</param>
-        /// <returns>Result returned by the provided function or the default value of type <typeparamref name="T"/> in case of exception.</returns>
-        T Swallow<T>(Func<T> func);
+        /// <returns>
+        ///     Result returned by the provided function or the default value of
+        ///     type <typeparamref name="T" /> in case of exception.
+        /// </returns>
+        T Swallow < T > ( Func < T > func ) ;
 
         /// <summary>
-        /// Runs the provided function and returns its result. If an exception is thrown, it is logged at <c>Error</c> level.
-        /// The exception is not propagated outside of this method; a fallback value is returned instead.
+        ///     Runs the provided function and returns its result. If an exception is
+        ///     thrown, it is logged at <c>Error</c> level.
+        ///     The exception is not propagated outside of this method; a fallback value
+        ///     is returned instead.
         /// </summary>
         /// <typeparam name="T">Return type of the provided function.</typeparam>
         /// <param name="func">Function to run.</param>
         /// <param name="fallback">Fallback value to return in case of exception.</param>
-        /// <returns>Result returned by the provided function or fallback value in case of exception.</returns>
-        T Swallow<T>(Func<T> func, T fallback);
+        /// <returns>
+        ///     Result returned by the provided function or fallback value in case
+        ///     of exception.
+        /// </returns>
+        T Swallow < T > ( Func < T > func , T fallback ) ;
 
 #if NET4_5
         /// <summary>

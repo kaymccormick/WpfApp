@@ -19,7 +19,10 @@ namespace Common.Model
     /// TODO Edit XML Comment Template for InstanceRegistration
     public class InstanceRegistration
     {
-        /// <summary>Initializes a new instance of the <see cref="InstanceRegistration"/> class.</summary>
+        /// <summary>
+        ///     Initializes a new instance of the
+        ///     <see cref="InstanceRegistration" /> class.
+        /// </summary>
         /// <param name="instance">The instance.</param>
         /// <param name="objectId">The object identifier.</param>
         /// <param name="instanceInfo">The instance information.</param>
@@ -70,7 +73,8 @@ namespace Common.Model
         /// <returns>A string that represents the current object.</returns>
         public override string ToString ( )
         {
-            return $"{nameof ( Instance )}: {Instance}, {nameof ( ObjectId )}: {ObjectId}, {nameof ( InstanceInfo )}: {InstanceInfo}, {nameof ( Type )}: {Type}" ;
+            return
+                $"{nameof ( Instance )}: {Instance}, {nameof ( ObjectId )}: {ObjectId}, {nameof ( InstanceInfo )}: {InstanceInfo}, {nameof ( Type )}: {Type}" ;
         }
     }
 }

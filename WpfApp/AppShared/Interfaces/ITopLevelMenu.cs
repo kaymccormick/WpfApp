@@ -1,7 +1,7 @@
 namespace AppShared.Interfaces
 {
-	public interface ITopLevelMenu
-	{
-		IMenuItem GetXMenuItem ( ) ;
-	}
+    public interface ITopLevelMenu
+    {
+        IMenuItem GetXMenuItem ( ) ;
+    }
 }

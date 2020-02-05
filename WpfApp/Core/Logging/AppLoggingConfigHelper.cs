@@ -29,8 +29,7 @@ namespace WpfApp.Core.Logging
         private static JsonLayout   _fLayout ;
 
         [ ThreadStatic ]
-        private static Nullable<int> NumTimesConfigured ;
-
+        private static int ? NumTimesConfigured ;
 
 
         public LogFactory logFactory { get ; set ; }
@@ -62,8 +61,8 @@ namespace WpfApp.Core.Logging
 
         // ReSharper disable once MemberCanBePrivate.Global
         internal static LoggingConfiguration ConfigureLogging (
-            LogDelegates.LogMethod logMethod,
-            bool proxyLogging = false
+            LogDelegates.LogMethod logMethod
+          , bool                   proxyLogging = false
         )
         {
             logMethod ( "*** Starting logger configuration." ) ;
@@ -106,7 +105,7 @@ namespace WpfApp.Core.Logging
             var cacheTarget = new  MyCacheTarget ( ) ;
             t.Add ( cacheTarget );
 
-#endif			
+#endif
             #endregion
             #region NLogViewer Target
             var viewer = Viewer ( ) ;
@@ -141,11 +140,13 @@ namespace WpfApp.Core.Logging
                 {
                     target.Name = $"{Regex.Replace ( type.Name , "Target" , "" )}{count:D2}" ;
                 }
+
                 lconf.AddTarget ( target ) ;
             }
 
             var loggingRules = t.AsQueryable ( ).AsEnumerable ( ).Select ( DefaultLoggingRule ) ;
             foreach ( var loggingRule in loggingRules ) { lconf.LoggingRules.Add ( loggingRule ) ; }
+
             LogManager.Configuration = lconf ;
             return lconf ;
         }
@@ -162,7 +163,7 @@ namespace WpfApp.Core.Logging
             var id = Process.GetCurrentProcess ( ).Id ;
             var logFile = $@"c:\temp\nlog-internal-{id}.txt" ;
             InternalLogger.LogFile = logFile ;
-            
+
             //InternalLogger.LogToConsole      = true ;
             //InternalLogger.LogToConsoleError = true ;
             //InternalLogger.LogToTrace        = true ;
@@ -203,7 +204,7 @@ namespace WpfApp.Core.Logging
             var j = _fLayout ;
             var layout = Layout.FromString ( "${appdomain} ${message}" ) ;
             var messageAttr = new JsonAttribute ( "message" , layout ) ;
-            
+
             j.Attributes.AddRange ( new[] { messageAttr } ) ;
 
             return f ;
@@ -221,14 +222,11 @@ namespace WpfApp.Core.Logging
             return f ;
         }
 
-        public static void EnsureLoggingConfigured ( )
-        {
-            EnsureLoggingConfigured ( null ) ;
-        }
+        public static void EnsureLoggingConfigured ( ) { EnsureLoggingConfigured ( null ) ; }
 
         public static void EnsureLoggingConfigured (
-            LogDelegates.LogMethod logMethod
-          , [ CallerFilePath ] string   callerFilePath = null
+            LogDelegates.LogMethod    logMethod
+          , [ CallerFilePath ] string callerFilePath = null
         )
         {
             if ( ! NumTimesConfigured.HasValue )
@@ -245,7 +243,9 @@ namespace WpfApp.Core.Logging
                 logMethod = DoLogMessage ;
             }
 
-            logMethod ( $"[time {NumTimesConfigured.Value}]\t{nameof ( EnsureLoggingConfigured )} called from {callerFilePath}" ) ;
+            logMethod (
+                       $"[time {NumTimesConfigured.Value}]\t{nameof ( EnsureLoggingConfigured )} called from {callerFilePath}"
+                      ) ;
 
 
             var fieldInfo2 = LogManager.LogFactory.GetType ( )
@@ -289,7 +289,7 @@ namespace WpfApp.Core.Logging
                 configLoaded = ( bool ) fieldInfo.GetValue ( LogManager.LogFactory ) ;
             }
 
-            var isMyConfig = ! configLoaded     || LogManager.Configuration is CodeConfiguration ;
+            var isMyConfig = ! configLoaded      || LogManager.Configuration is CodeConfiguration ;
             var doConfig = ! LoggingIsConfigured || ForceCodeConfig && ! isMyConfig ;
             logMethod (
                        $"{nameof ( LoggingIsConfigured )} = {LoggingIsConfigured}; {nameof ( ForceCodeConfig )} = {ForceCodeConfig}; {nameof ( isMyConfig )} = {isMyConfig});"
@@ -361,9 +361,6 @@ namespace WpfApp.Core.Logging
                     {
                         collect ( gt.FileName.ToString ( ) ) ;
                     }
-
-
-
                 }
             }
         }

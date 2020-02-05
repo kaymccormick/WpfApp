@@ -14,9 +14,9 @@ using NLog ;
 
 namespace AppShared.Interfaces
 {
-	public interface IHaveLogger
+    public interface IHaveLogger
 
-	{
-		ILogger Logger { get ; set ; }
-	}
+    {
+        ILogger Logger { get ; set ; }
+    }
 }

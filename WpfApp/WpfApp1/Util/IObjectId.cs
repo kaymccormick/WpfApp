@@ -11,8 +11,8 @@
 #endregion
 namespace WpfApp1.Util
 {
-	public interface IObjectId
-	{
-		object InstanceObjectId { get ; }
-	}
+    public interface IObjectId
+    {
+        object InstanceObjectId { get ; }
+    }
 }

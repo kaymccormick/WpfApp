@@ -18,23 +18,23 @@ using Xunit ;
 
 namespace WpfApp1Tests3.Fixtures
 {
-	[ UsedImplicitly ]
-	public class CombinedFixture : IAsyncLifetime
-	{
-		// ReSharper disable once UnusedMember.Local
-		private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
+    [ UsedImplicitly ]
+    public class CombinedFixture : IAsyncLifetime
+    {
+        // ReSharper disable once UnusedMember.Local
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
 
-		/// <summary>
-		///     Called immediately after the class has been created, before it is used.
-		/// </summary>
-		public Task InitializeAsync ( ) { return Task.CompletedTask ; }
+        /// <summary>
+        ///     Called immediately after the class has been created, before it is used.
+        /// </summary>
+        public Task InitializeAsync ( ) { return Task.CompletedTask ; }
 
-		/// <summary>
-		///     Called when an object is no longer needed. Called just before
-		///     <see cref="M:System.IDisposable.Dispose" />
-		///     if the class also implements that.
-		/// </summary>
-		public Task DisposeAsync ( ) { throw new NotImplementedException ( ) ; }
-	}
+        /// <summary>
+        ///     Called when an object is no longer needed. Called just before
+        ///     <see cref="M:System.IDisposable.Dispose" />
+        ///     if the class also implements that.
+        /// </summary>
+        public Task DisposeAsync ( ) { throw new NotImplementedException ( ) ; }
+    }
 }

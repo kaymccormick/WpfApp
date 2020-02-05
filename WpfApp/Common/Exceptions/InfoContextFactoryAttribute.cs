@@ -2,8 +2,8 @@
 
 namespace Common.Exceptions
 {
-	[ AttributeUsage ( AttributeTargets.Property ) ]
-	public class InfoContextFactoryAttribute : Attribute
-	{
-	}
+    [ AttributeUsage ( AttributeTargets.Property ) ]
+    public class InfoContextFactoryAttribute : Attribute
+    {
+    }
 }

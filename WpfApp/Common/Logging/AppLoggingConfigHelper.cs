@@ -60,8 +60,8 @@ namespace Common.Logging
 
 		private static void DoLogMessage (
 			string message
-		  , string callerFilePath
-		  , string callerMemberName
+      , string callerFilePath
+      , string callerMemberName
 		)
 		{
 			System.Diagnostics.Debug.WriteLine (
@@ -95,7 +95,7 @@ namespace Common.Logging
 
 			var fieldInfo = typeof ( LogManager ).GetField (
 			                                                "factory"
-			                                              , BindingFlags.Static
+                                                      , BindingFlags.Static
 			                                                | BindingFlags.NonPublic
 			                                               ) ;
 			logMethod ( $"field info is {fieldInfo.DeclaringType} . {fieldInfo.Name}" ) ;
@@ -144,8 +144,8 @@ namespace Common.Logging
 				var count = 0 ;
 				var type = target.GetType ( ) ;
 				byType.TryGetValue ( type , out count ) ;
-				count          += 1 ;
-				byType[ type ] =  count ;
+				count += 1 ;
+				byType[ type ] = count ;
 
 				if ( target.Name == null )
 				{
@@ -177,7 +177,7 @@ namespace Common.Logging
 			//InternalLogger.LogToConsoleError = true ;
 			//InternalLogger.LogToTrace        = true ;
 
-			_stringWriter            = new StringWriter ( ) ;
+			_stringWriter = new StringWriter ( ) ;
 			InternalLogger.LogWriter = _stringWriter ;
 		}
 
@@ -190,17 +190,17 @@ namespace Common.Logging
 		{
 			return new NLogViewerTarget ( name )
 			       {
-				       Address              = new SimpleLayout ( "udp://10.25.0.102:9999" )
-				     , IncludeAllProperties = true
-				     , IncludeCallSite      = true
-				     , IncludeSourceInfo    = true
+				       Address = new SimpleLayout ( "udp://10.25.0.102:9999" )
+                 , IncludeAllProperties = true
+                 , IncludeCallSite = true
+                 , IncludeSourceInfo = true
 			       } ;
 		}
 
 		public static FileTarget JsonFileTarget ( )
 		{
 			var f = new FileTarget ( "OUT.JSON" ) ;
-			f.Name     = "json_out" ;
+			f.Name = "json_out" ;
 			f.FileName = Layout.FromString ( @"c:\data\logs\${appdomain}-${processid}-out.json" ) ;
 
 			_fLayout = new JsonLayout { IncludeAllProperties = true } ;
@@ -218,7 +218,7 @@ namespace Common.Logging
 		public static FileTarget MyFileTarget ( )
 		{
 			var f = new FileTarget ( ) ;
-			f.Name     = "text_log" ;
+			f.Name = "text_log" ;
 			f.FileName = Layout.FromString ( @"c:\data\logs\log.txt" ) ;
 
 			f.Layout = Layout.FromString ( "${message}" ) ;
@@ -232,8 +232,8 @@ namespace Common.Logging
 
 		public static void EnsureLoggingConfigured (
 			bool                        b
-		  , LogDelegates.LogMethod logMethod
-		  , [ CallerFilePath ] string   callerFilePath = null
+      , LogDelegates.LogMethod logMethod
+      , [ CallerFilePath ] string   callerFilePath = null
 		)
 		{
 			if ( ! NumTimesConfigured.HasValue )
@@ -256,7 +256,7 @@ namespace Common.Logging
 			var fieldInfo2 = LogManager.LogFactory.GetType ( )
 			                           .GetField (
 			                                      "_config"
-			                                    , BindingFlags.Instance | BindingFlags.NonPublic
+                                            , BindingFlags.Instance | BindingFlags.NonPublic
 			                                     ) ;
 
 			object config ;
@@ -276,7 +276,7 @@ namespace Common.Logging
 			var fieldInfo = LogManager.LogFactory.GetType ( )
 			                          .GetField (
 			                                     "_configLoaded"
-			                                   , BindingFlags.Instance | BindingFlags.NonPublic
+                                           , BindingFlags.Instance | BindingFlags.NonPublic
 			                                    ) ;
 
 			bool _configLoaded ;
@@ -397,7 +397,7 @@ namespace Common.Logging
 			var fieldInfo = configuration.GetType ( )
 			                             .GetField (
 			                                        "_originalFileName"
-			                                      , BindingFlags.NonPublic | BindingFlags.Instance
+                                              , BindingFlags.NonPublic | BindingFlags.Instance
 			                                       ) ;
 			if ( fieldInfo != null )
 			{

@@ -57,7 +57,8 @@ namespace Common.Converters
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides
+        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     provides
         ///     a format context.
         /// </param>
         /// <param name="destinationType">
@@ -84,7 +85,8 @@ namespace Common.Converters
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that provides
+        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     provides
         ///     a format context.
         /// </param>
         /// <param name="culture">
@@ -96,10 +98,14 @@ namespace Common.Converters
         ///     The <see cref="T:System.Type" /> to convert the
         ///     <paramref name="value" /> parameter to.
         /// </param>
-        /// <returns>An <see cref="T:System.Object" /> that represents the converted value.</returns>
+        /// <returns>
+        ///     An <see cref="T:System.Object" /> that represents the converted
+        ///     value.
+        /// </returns>
         /// <exception cref="T:System.ArgumentNullException">
         ///     The
-        ///     <paramref name="destinationType" /> parameter is <see langword="null" />.
+        ///     <paramref name="destinationType" /> parameter is <see langword="null" />
+        ///     .
         /// </exception>
         /// <exception cref="T:System.NotSupportedException">
         ///     The conversion cannot be
@@ -138,9 +144,9 @@ namespace Common.Converters
         ///     valid null value is used.
         /// </returns>
         public object Convert (
-            object      value
-          , Type        targetType
-          , object      parameter
+            object value
+          , Type   targetType
+          , object parameter
             // ReSharper disable once UnusedParameter.Global
           , CultureInfo culture
         )
@@ -166,11 +172,14 @@ namespace Common.Converters
         /// </returns>
         public object ConvertBack (
             // ReSharper disable twice UnusedParameter.Global
-            object      value
-          , Type        targetType
+            object value
+          , Type   targetType
             // ReSharper disable twice UnusedParameter.Global
           , object      parameter
           , CultureInfo culture
-        ) => throw new NotImplementedException ( ) ;
+        )
+        {
+            throw new NotImplementedException ( ) ;
+        }
     }
 }

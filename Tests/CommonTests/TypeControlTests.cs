@@ -20,13 +20,13 @@ namespace Tests.CommonTests
     /// <summary>
     ///     Test class for tests of <see cref="TypeControl" />
     /// </summary>
-    [ LogTestMethod, BeforeAfterLogger]
+    [ LogTestMethod ] [ BeforeAfterLogger ]
     public class TypeControlTests : IClassFixture < LoggingFixture >
     {
         // ReSharper disable once NotAccessedField.Local
         private readonly ITestOutputHelper _originalOutput ;
         private readonly ITestOutputHelper _output ;
-        
+
 
         /// <summary>
         ///     Constructor for test class
@@ -150,7 +150,7 @@ namespace Tests.CommonTests
         [ Trait ( "UITest" , "true" ) ]
         private void TestTypeNavigator ( )
         {
-            CacheUtils.SetupCacheSubscriber();
+            CacheUtils.SetupCacheSubscriber ( ) ;
 
             var controlName = SetupTypeNavControl ( out var control ) ;
             var window = MakeWindow ( control , out var r ) ;

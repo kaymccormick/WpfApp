@@ -11,21 +11,27 @@ namespace Common.Model
     public static class ResourcesUtil
     {
         // ReSharper disable once UnusedMember.Local
-        private static void CollectResources ( FrameworkElement haveResources, ObservableCollection <ResourceInfo> ResourcesCollection  )
+        private static void CollectResources (
+            FrameworkElement                      haveResources
+          , ObservableCollection < ResourceInfo > ResourcesCollection
+        )
         {
             var res = haveResources.Resources ;
-            AddResourceInfos ( res ,ResourcesCollection ) ;
+            AddResourceInfos ( res , ResourcesCollection ) ;
 
-            foreach ( var child in LogicalTreeHelper.GetChildren ( haveResources))
+            foreach ( var child in LogicalTreeHelper.GetChildren ( haveResources ) )
             {
                 if ( child is FrameworkElement e )
                 {
-                    CollectResources ( e,ResourcesCollection) ;
-
+                    CollectResources ( e , ResourcesCollection ) ;
                 }
             }
         }
-        private static void AddResourceInfos ( ResourceDictionary res , ObservableCollection <ResourceInfo> ResourcesCollection )
+
+        private static void AddResourceInfos (
+            ResourceDictionary                    res
+          , ObservableCollection < ResourceInfo > ResourcesCollection
+        )
         {
             var resourcesSource = res.Source ;
             foreach ( DictionaryEntry haveResourcesResource in res )
@@ -41,7 +47,7 @@ namespace Common.Model
 
             foreach ( var r in res.MergedDictionaries )
             {
-                AddResourceInfos ( r, ResourcesCollection ) ;
+                AddResourceInfos ( r , ResourcesCollection ) ;
             }
         }
     }

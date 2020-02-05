@@ -6,13 +6,9 @@ namespace WpfApp1.Windows
     /// <summary>
     ///     Interaction logic for AppSettingsWindow.xaml
     /// </summary>
-    ///
-    [WindowMetadata("Application Settings")]
+    [ WindowMetadata ( "Application Settings" ) ]
     public partial class AppSettingsWindow : Window
     {
-	    public AppSettingsWindow()
-        {
-            InitializeComponent();
-        }
+        public AppSettingsWindow ( ) { InitializeComponent ( ) ; }
     }
 }

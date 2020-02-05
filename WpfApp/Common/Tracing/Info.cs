@@ -11,14 +11,14 @@
 #endregion
 namespace Common.Tracing
 {
-	public class Info
-	{
-		public int count ;
+    public class Info
+    {
+        public int count ;
 
-		/// <summary>
-		///     Initializes a new instance of the <see cref="T:System.Object" />
-		///     class.
-		/// </summary>
-		public Info ( int count ) { this.count = count ; }
-	}
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     class.
+        /// </summary>
+        public Info ( int count ) { this.count = count ; }
+    }
 }

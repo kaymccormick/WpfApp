@@ -3,13 +3,10 @@
 namespace WpfControlLibrary1
 {
     /// <summary>
-    /// Interaction logic for TypeNavigator.xaml
+    ///     Interaction logic for TypeNavigator.xaml
     /// </summary>
     public partial class TypeNavigator : UserControl
     {
-        public TypeNavigator ( )
-        {
-            InitializeComponent ( );
-        }
+        public TypeNavigator ( ) { InitializeComponent ( ) ; }
     }
 }

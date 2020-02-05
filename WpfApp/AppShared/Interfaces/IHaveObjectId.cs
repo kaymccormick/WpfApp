@@ -11,8 +11,8 @@
 #endregion
 namespace AppShared.Interfaces
 {
-	public interface IHaveObjectId
-	{
-		object InstanceObjectId { set ; }
-	}
+    public interface IHaveObjectId
+    {
+        object InstanceObjectId { set ; }
+    }
 }

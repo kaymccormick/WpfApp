@@ -2,9 +2,9 @@
 
 namespace AppShared.Interfaces
 {
-	public interface IHaveLifetimeScope
+    public interface IHaveLifetimeScope
 
-	{
-		ILifetimeScope LifetimeScope { get ; set ; }
-	}
+    {
+        ILifetimeScope LifetimeScope { get ; set ; }
+    }
 }

@@ -13,7 +13,7 @@ using System ;
 
 namespace AppShared.Services
 {
-	public class UnableToRegisterObjectIdException : Exception
-	{
-	}
+    public class UnableToRegisterObjectIdException : Exception
+    {
+    }
 }

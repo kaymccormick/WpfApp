@@ -12,8 +12,8 @@
 
 namespace AppShared.Interfaces
 {
-	public interface IHasId
-	{
-		long ObjectId { get ; }
-	}
+    public interface IHasId
+    {
+        long ObjectId { get ; }
+    }
 }

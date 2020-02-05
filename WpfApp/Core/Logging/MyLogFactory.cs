@@ -8,7 +8,8 @@ namespace WpfApp.Core.Logging
         private readonly LogDelegates.LogMethod _doLogMessage ;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:NLog.LogFactory" /> class.
+        ///     Initializes a new instance of the <see cref="T:NLog.LogFactory" />
+        ///     class.
         /// </summary>
         public MyLogFactory ( ) { }
 

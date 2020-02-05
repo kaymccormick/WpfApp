@@ -15,20 +15,20 @@ using NLog.Fluent ;
 
 namespace AppShared.Interfaces
 {
-	public class MyLogBuilder : LogBuilder
-	{
-		/// <summary>
-		///     Initializes a new instance of the <see cref="MyLogBuilder" /> class.
-		/// </summary>
-		/// <param name="logger">The <see cref="NLog.Logger" /> to send the log event.</param>
-		public MyLogBuilder ( ILogger logger ) : base ( logger ) { }
+    public class MyLogBuilder : LogBuilder
+    {
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="MyLogBuilder" /> class.
+        /// </summary>
+        /// <param name="logger">The <see cref="NLog.Logger" /> to send the log event.</param>
+        public MyLogBuilder ( ILogger logger ) : base ( logger ) { }
 
 
-		/// <summary>
-		///     Initializes a new instance of the <see cref="MyLogBuilder" /> class.
-		/// </summary>
-		/// <param name="logger">The <see cref="NLog.Logger" /> to send the log event.</param>
-		/// <param name="logLevel">The <see cref="NLog.LogLevel" /> for the log event.</param>
-		public MyLogBuilder ( ILogger logger , LogLevel logLevel ) : base ( logger , logLevel ) { }
-	}
+        /// <summary>
+        ///     Initializes a new instance of the <see cref="MyLogBuilder" /> class.
+        /// </summary>
+        /// <param name="logger">The <see cref="NLog.Logger" /> to send the log event.</param>
+        /// <param name="logLevel">The <see cref="NLog.LogLevel" /> for the log event.</param>
+        public MyLogBuilder ( ILogger logger , LogLevel logLevel ) : base ( logger , logLevel ) { }
+    }
 }

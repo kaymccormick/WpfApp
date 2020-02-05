@@ -1,6 +1,6 @@
 ﻿namespace AppShared.Interfaces
 {
-	public interface ISettingsPanel
-	{
-	}
+    public interface ISettingsPanel
+    {
+    }
 }

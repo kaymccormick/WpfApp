@@ -19,12 +19,6 @@ namespace WpfApp1Tests3
 {
     public class WpfTestsBase
     {
-        public WpfApplicationFixture WpfAppFixture { get ; }
-
-        public UtilsContainerFixture UtilsContainerFixture { get ; }
-
-        public ITestOutputHelper OutputHelper { get ; }
-
         protected readonly AppContainerFixture ContainerFixture ;
 
         protected WpfTestsBase (
@@ -34,13 +28,19 @@ namespace WpfApp1Tests3
           , ITestOutputHelper     outputHelper
         )
         {
-            WpfAppFixture = wpfAppFixture ;
+            WpfAppFixture         = wpfAppFixture ;
             UtilsContainerFixture = utilsContainerFixture ;
-            OutputHelper = outputHelper ;
-            ContainerFixture = containerFixture ;
+            OutputHelper          = outputHelper ;
+            ContainerFixture      = containerFixture ;
         }
 
-        public ILifetimeScope containerScope { get => ContainerFixture.LifetimeScope ; }
+        public WpfApplicationFixture WpfAppFixture { get ; }
+
+        public UtilsContainerFixture UtilsContainerFixture { get ; }
+
+        public ITestOutputHelper OutputHelper { get ; }
+
+        public ILifetimeScope containerScope => ContainerFixture.LifetimeScope ;
 
         public IMyServices myServices { get ; set ; }
 

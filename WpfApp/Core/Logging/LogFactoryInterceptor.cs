@@ -16,7 +16,7 @@ namespace WpfApp.Core.Logging
     public class LogFactoryInterceptor : IInterceptor
     {
         public LogFactoryInterceptor (
-            ProxyGenerator              generator
+            ProxyGenerator         generator
           , LogDelegates.LogMethod useLogMethod
         )
         {
@@ -38,9 +38,7 @@ namespace WpfApp.Core.Logging
             if ( invocation.Method.Name == "GetLogger" )
             {
                 invocation.Proceed ( ) ;
-                var inter = new LoggerInterceptor (
-                                                   UseLogMethod
-                                                              ) ;
+                var inter = new LoggerInterceptor ( UseLogMethod ) ;
                 var proxy = Generator.CreateClassProxyWithTarget (
                                                                   invocation.ReturnValue
                                                                 , inter

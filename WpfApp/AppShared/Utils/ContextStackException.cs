@@ -38,7 +38,8 @@ namespace AppShared.Utils
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="T:System.Exception" />
-        ///     class with a specified error message and a reference to the inner exception
+        ///     class with a specified error message and a reference to the inner
+        ///     exception
         ///     that is the cause of this exception.
         /// </summary>
         /// <param name="message">
@@ -47,7 +48,8 @@ namespace AppShared.Utils
         /// </param>
         /// <param name="innerException">
         ///     The exception that is the cause of the current
-        ///     exception, or a null reference (<see langword="Nothing" /> in Visual Basic)
+        ///     exception, or a null reference (<see langword="Nothing" /> in Visual
+        ///     Basic)
         ///     if no inner exception is specified.
         /// </param>
         // ReSharper disable once UnusedMember.Global
@@ -64,7 +66,8 @@ namespace AppShared.Utils
         /// </summary>
         /// <param name="info">
         ///     The
-        ///     <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that holds
+        ///     <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that
+        ///     holds
         ///     the serialized object data about the exception being thrown.
         /// </param>
         /// <param name="context">

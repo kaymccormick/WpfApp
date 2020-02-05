@@ -19,8 +19,7 @@ using Common.Logging ;
 namespace Tests.CommonTests
 {
     public static class CacheUtils
-    { 
-
+    {
         public static void SetupCacheSubscriber ( )
         {
             var myCacheTarget = MyCacheTarget.GetInstance ( 1000 ) ;
@@ -33,7 +32,7 @@ namespace Tests.CommonTests
                                          // ReSharper disable once UnusedVariable
                                          foreach ( var logEventInfo in infos )
                                          {
-                                                                                      }
+                                         }
                                      }
                                     ) ;
         }

@@ -14,7 +14,7 @@ using System.ComponentModel ;
 
 namespace Common.Converters
 {
-	public class LoggerInstanceConverter : TypeConverter
-	{
-	}
+    public class LoggerInstanceConverter : TypeConverter
+    {
+    }
 }

@@ -56,18 +56,20 @@ namespace AppShared.Modules
             //        .InstancePerLifetimeScope ( ) ;
         }
 
-        
+
         /// <summary>
-        /// Override to attach module-specific functionality to a
-        /// component registration.
+        ///     Override to attach module-specific functionality to a
+        ///     component registration.
         /// </summary>
-        /// <remarks>This method will be called for all existing <i>and future</i> component
-        /// registrations - ordering is not important.</remarks>
+        /// <remarks>
+        ///     This method will be called for all existing <i>and future</i> component
+        ///     registrations - ordering is not important.
+        /// </remarks>
         /// <param name="componentRegistry">The component registry.</param>
         /// <param name="registration">The registration to attach functionality to.</param>
         protected override void AttachToComponentRegistration (
-            IComponentRegistry componentRegistry
-          , IComponentRegistration    registration
+            IComponentRegistry     componentRegistry
+          , IComponentRegistration registration
         )
         {
             registration.Preparing  += RegistrationOnPreparing ;
@@ -78,7 +80,9 @@ namespace AppShared.Modules
         {
             var inst = e.Instance ;
 
-            Logger.Trace ( $"{nameof ( RegistrationOnActivating )} {e.Component.DebugFormat()}" ) ;
+            Logger.Trace (
+                          $"{nameof ( RegistrationOnActivating )} {e.Component.DebugFormat ( )}"
+                         ) ;
             if ( e.Component.Services.Any (
                                            service => {
                                                var typedService = service as TypedService ;
@@ -92,11 +96,10 @@ namespace AppShared.Modules
                                                    typedService.ServiceType ;
                                                return typedServiceServiceType
                                                       == typeof ( ObjectIDGenerator ) ;
-
                                            }
                                           ) )
             {
-                Logger.Debug ( $"Departing {nameof(RegistrationOnActivating)} early.");
+                Logger.Debug ( $"Departing {nameof ( RegistrationOnActivating )} early." ) ;
                 return ;
             }
 

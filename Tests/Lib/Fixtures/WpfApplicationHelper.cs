@@ -43,11 +43,11 @@ namespace TestLib.Fixtures
         {
             Logger?.Debug ( $"{nameof ( InitializeAsync )}" ) ;
             // return Task.Run (
-                             // ( ) => {
-                                 // CreateApplication ( TheAssembly ) ;
-                             // }
-                            // ) ;
-                            return Task.CompletedTask ;
+            // ( ) => {
+            // CreateApplication ( TheAssembly ) ;
+            // }
+            // ) ;
+            return Task.CompletedTask ;
         }
 
         /// <summary>
@@ -60,7 +60,9 @@ namespace TestLib.Fixtures
             var tcs = new TaskCompletionSource < bool > ( ) ;
             var s = new CancellationTokenSource ( ) ;
             var token = s.Token ;
-            if ( MyApp != null && MyApp.Dispatcher != null ) {
+            if ( MyApp               != null
+                 && MyApp.Dispatcher != null )
+            {
                 var dispatcherOperation = MyApp.Dispatcher.InvokeAsync (
                                                                         ( ) => {
                                                                             Logger.Error (
@@ -76,7 +78,9 @@ namespace TestLib.Fixtures
                                                                                 Logger.Error (
                                                                                               "setting result to true"
                                                                                              ) ;
-                                                                                tcs.SetResult ( true ) ;
+                                                                                tcs.SetResult (
+                                                                                               true
+                                                                                              ) ;
                                                                             } ;
                                                                             Logger.Error (
                                                                                           "calling shutdown"
@@ -94,10 +98,8 @@ namespace TestLib.Fixtures
                                    , Task.Delay ( 3000 )
                                     ) ;
             }
-            else
-            {
-                Logger.Error ( "MyApp is null" ) ;
-            }
+
+            Logger.Error ( "MyApp is null" ) ;
 
             return Task.CompletedTask ;
         }
