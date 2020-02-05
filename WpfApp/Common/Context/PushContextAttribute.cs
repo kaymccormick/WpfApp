@@ -7,6 +7,7 @@ using AppShared.Infos ;
 using Common.Exceptions ;
 using JetBrains.Annotations ;
 using NLog ;
+using WpfApp.AppShared.Infos ;
 using WpfApp.Core.Interfaces ;
 
 namespace Common.Context

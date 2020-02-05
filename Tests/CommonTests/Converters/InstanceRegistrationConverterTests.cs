@@ -8,6 +8,7 @@ using Autofac.Core ;
 using Common.Converters ;
 using Common.Model ;
 using CommonTests.Fixtures ;
+using NLog ;
 using TestLib.Attributes ;
 using WpfApp.Core.Interfaces ;
 using Xunit ;
@@ -55,7 +56,7 @@ namespace CommonTests.Converters
         {
             // takes IComponentLifetime
 
-            _fixture.Container.Resolve < Lazy < IRandom > > ( ) ;
+            var lazy = _fixture.Container.Resolve < Lazy < IRandom > > ( ) ;
             var objIdProv = _fixture.Container.Resolve < IObjectIdProvider > ( ) ;
 
             var instConv =
@@ -72,8 +73,14 @@ namespace CommonTests.Converters
             var regsAry = regs as IComponentRegistration[] ?? regs.ToArray ( ) ;
             DumpRegistrations ( regsAry ) ;
 
-            var value = FindTypedService ( regsAry , typeof ( IRandom ) )
-                        ?? throw new ArgumentNullException ( ) ;
+            var serviceType = lazy.GetType ( ) ;
+            _output.WriteLine ( $"serviceType is {serviceType}" ) ;
+            var value = FindTypedService ( regsAry , serviceType ) ;
+            if ( value == null )
+            {
+                throw new ArgumentNullException ( ) ;
+            }
+
             _output.WriteLine ( $"typed service is ${value}" ) ;
             var myVal = instConv.Convert (
                                           value

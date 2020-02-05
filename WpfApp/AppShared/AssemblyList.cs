@@ -2,7 +2,7 @@
 using System.Collections.ObjectModel ;
 using System.Reflection ;
 
-namespace AppShared
+namespace WpfApp.AppShared
 {
     /// <summary></summary>
     /// <seealso cref="System.Collections.ObjectModel.ObservableCollection{T}" />
@@ -15,6 +15,7 @@ namespace AppShared
         ///     <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" />
         ///     class.
         /// </summary>
+        // ReSharper disable once UnusedMember.Global
         public AssemblyList ( ) { }
 
         /// <summary>
@@ -27,6 +28,7 @@ namespace AppShared
         ///     The <paramref name="list" />
         ///     parameter cannot be <see langword="null" />.
         /// </exception>
+        // ReSharper disable once UnusedMember.Global
         public AssemblyList ( List < Assembly > list ) : base ( list ) { }
 
         /// <summary>

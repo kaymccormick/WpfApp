@@ -4,10 +4,10 @@ using System ;
 using System.Windows ;
 using System.Windows.Controls ;
 using System.Windows.Data ;
-using AppShared ;
 using AppShared.Types ;
 using Autofac ;
 using NLog ;
+using WpfApp.AppShared ;
 
 // ReSharper disable UnusedMember.Global
 

@@ -3,6 +3,7 @@ using System.Reflection ;
 using System.Windows ;
 using AppShared.Infos ;
 using NLog ;
+using WpfApp.AppShared.Infos ;
 using WpfApp1Tests3 ;
 
 namespace Tests.Lib.Utils

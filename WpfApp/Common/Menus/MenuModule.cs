@@ -14,14 +14,16 @@ using System.Linq ;
 using System.Reflection ;
 using Autofac ;
 using Autofac.Extras.DynamicProxy ;
+using Common ;
 using Common.Logging ;
+using Common.Menus ;
 using Common.Model ;
 using Common.Utils ;
 using NLog ;
 using WpfApp.Core.Interfaces ;
 using Module = Autofac.Module ;
 
-namespace Common.Menus
+namespace WpfApp.Common.Menus
 {
     /// <summary>Autofac module supporting menu system.</summary>
     /// <seealso cref="Autofac.Module" />
@@ -43,22 +45,25 @@ namespace Common.Menus
         {
             var intercept = ( bool ) builder.Properties[ ContainerHelper.InterceptProperty ] ;
             var ass =
-                builder.Properties[ ContainerHelper.AssembliesForScanningProperty ] as
-                    ICollection < Assembly > ;
-            builder.RegisterAssemblyTypes ( ass.ToArray ( ) )
-                   .Where (
-                           t => {
-                               var isAssignableFrom =
-                                   typeof ( ITopLevelMenu ).IsAssignableFrom ( t ) ;
-                               if ( isAssignableFrom )
-                               {
-                                   Logger.Debug ( "* Scanned and registering " + t ) ;
-                               }
+                ( ICollection < Assembly > ) builder.Properties[ ContainerHelper.AssembliesForScanningProperty ] ;
+            if ( ass != null )
+            {
+                builder.RegisterAssemblyTypes ( ass.ToArray ( ) )
+                       .Where (
+                               t => {
+                                   var isAssignableFrom =
+                                       typeof ( ITopLevelMenu ).IsAssignableFrom ( t ) ;
+                                   if ( isAssignableFrom )
+                                   {
+                                       Logger.Debug ( "* Scanned and registering " + t ) ;
+                                   }
 
-                               return isAssignableFrom ;
-                           }
-                          )
-                   .As < ITopLevelMenu > ( ) ;
+                                   return isAssignableFrom ;
+                               }
+                              )
+                       .As < ITopLevelMenu > ( ) ;
+            }
+
             #region Menu Item Lists
             Logger.Debug ( "Registering MenuItemList" ) ;
             var q = builder.RegisterType < MenuItemList > ( )

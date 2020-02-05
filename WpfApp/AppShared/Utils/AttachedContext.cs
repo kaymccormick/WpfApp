@@ -2,6 +2,7 @@
 using System.Linq ;
 using AppShared.Infos ;
 using JetBrains.Annotations ;
+using WpfApp.AppShared.Infos ;
 
 namespace AppShared.Utils
 {

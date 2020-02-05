@@ -2,6 +2,7 @@
 using AppShared.Infos ;
 using Autofac ;
 using Common.Menus ;
+using WpfApp.Common.Menus ;
 
 namespace WpfApp1
 {

@@ -25,6 +25,7 @@ namespace WpfApp1.Util
             var s = invocation.InvocationTarget.GetType ( ).ToString ( ) ;
             if ( q != s )
             {
+                // ReSharper disable once RedundantAssignment
                 q += $" [{s}]" ;
             }
 

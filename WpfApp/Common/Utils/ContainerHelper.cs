@@ -14,6 +14,7 @@ using Castle.DynamicProxy ;
 using Common.Logging ;
 using Common.Menus ;
 using NLog ;
+using WpfApp.Common.Utils ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Core.Logging ;
 

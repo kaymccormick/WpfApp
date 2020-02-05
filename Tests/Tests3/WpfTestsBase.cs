@@ -14,9 +14,10 @@ using Autofac ;
 using TestLib ;
 using TestLib.Fixtures ;
 using Tests.Lib.Fixtures ;
+using WpfApp.AppShared.Infos ;
 using Xunit.Abstractions ;
 
-namespace WpfApp1Tests3
+namespace Tests.Tests3
 {
     public class WpfTestsBase
     {
@@ -41,12 +42,12 @@ namespace WpfApp1Tests3
 
         public ITestOutputHelper OutputHelper { get ; }
 
-        public ILifetimeScope containerScope => ContainerFixture.LifetimeScope ;
+        protected ILifetimeScope ContainerScope => ContainerFixture.LifetimeScope ;
 
-        public IMyServices myServices { get ; set ; }
+        protected IMyServices MyServices { get ; set ; }
 
-        public ContextStack < InfoContext > MyStack { get ; set ; }
+        protected ContextStack < InfoContext > MyStack { get ; set ; }
 
-        public WpfApplicationFixture Fixture { get ; set ; }
+        protected WpfApplicationFixture Fixture { get ; set ; }
     }
 }

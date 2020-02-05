@@ -40,7 +40,7 @@ namespace Tests.Tests3
         [ Trait ( "Experimental" , "true" ) ]
         public void Test1 ( )
         {
-            var menuItemList = containerScope.Resolve < IMenuItemList > ( ) ;
+            var menuItemList = ContainerScope.Resolve < IMenuItemList > ( ) ;
             Assert.NotNull ( menuItemList ) ;
             Assert.NotEmpty ( menuItemList ) ;
 
@@ -73,15 +73,15 @@ namespace Tests.Tests3
                 //var stack = InstanceFactory.CreateContextStack < InfoContext >();
                 var stack = MyStack ;
                 var entry =
-                    myServices.InfoContextFactory ( nameof ( menuResources ) , menuResources ) ;
+                    MyServices.InfoContextFactory ( nameof ( menuResources ) , menuResources ) ;
                 stack.Push ( entry ) ;
 
                 foreach ( var q in menuResources.Keys )
                 {
                     var resource = menuResources[ q ] ;
-                    stack.Push ( myServices.InfoContextFactory ( "key" , q ) ) ;
+                    stack.Push ( MyServices.InfoContextFactory ( "key" , q ) ) ;
                     Logger.Debug ( $"{q}: {resource}" ) ;
-                    DumpHelper.DumpResource ( stack , resource , myServices.InfoContextFactory ) ;
+                    DumpHelper.DumpResource ( stack , resource , MyServices.InfoContextFactory ) ;
                     stack.Pop ( ) ;
                 }
             }
