@@ -1,5 +1,4 @@
 ﻿using System.Reflection ;
-using Common.Logging ;
 using JetBrains.Annotations ;
 using NLog ;
 using NLog.Config ;
@@ -36,7 +35,7 @@ namespace TestLib.Attributes
 		/// <param name="methodUnderTest">The method under test</param>
 		public override void Before ( [ NotNull ] MethodInfo methodUnderTest )
 		{
-			AppLoggingConfigHelper.EnsureLoggingConfigured(true, null);
+			AppLoggingConfigHelper.EnsureLoggingConfigured( null);
 			TestFileTarget = new FileTarget ( Name ) ;
 			var fileTarget = TestFileTarget ;
 			fileTarget.FileName = Layout.FromString (

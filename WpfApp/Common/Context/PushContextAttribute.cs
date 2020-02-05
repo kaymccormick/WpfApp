@@ -142,6 +142,9 @@ namespace Common.Context
             //var contextAtt = Attribute.GetCustomAttributes(instance.GetType(),)
             // TODO what next??
             var customAttributes = GetCustomAttributes ( methodUnderTest , GetType ( ) ) ;
+
+            // todo IMPLEMENT
+            // ReSharper disable once UnusedVariable
             foreach ( var q in customAttributes )
             {
             }

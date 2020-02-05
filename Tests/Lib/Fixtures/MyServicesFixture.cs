@@ -9,6 +9,7 @@
         /// </summary>
         public MyServicesFixture ( IMyServices myServices ) { MyServices = myServices ; }
 
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public IMyServices MyServices { get ; set ; }
     }
 }

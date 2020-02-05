@@ -1,17 +1,16 @@
 ﻿using AppShared.Modules ;
 using Autofac ;
-using Common.Logging ;
 using WpfApp.Core.Logging ;
 
 namespace CommonTests.Fixtures
 {
-	public class testContainerFixture
+	public class TestContainerFixture
 	{
 		/// <summary>
 		///     Initializes a new instance of the <see cref="T:System.Object" />
 		///     class.
 		/// </summary>
-		public testContainerFixture ( ) { _init ( ) ; }
+		public TestContainerFixture ( ) { _init ( ) ; }
 
 		public IContainer Container { get ; private set ; }
 

@@ -83,20 +83,10 @@ namespace WpfApp1Tests3
 
         private void DumpContainer ( IContainer container )
         {
-            var seen = new HashSet < object > ( ) ;
-#if DUMP1
-            foreach ( var componentRegistryRegistration in container.ComponentRegistry.Registrations )
-            {
-                ContainerHelper.Dump ( componentRegistryRegistration , seen, s => Output.WriteLine(s)) ;
-            }
-#endif
 
             foreach ( var comp in container.ComponentRegistry.Registrations )
             {
-                if ( comp.Activator is ReflectionActivator a )
-                {
-                }
-
+                
                 var s = $"{comp.Activator.LimitType}: " ;
                 foreach ( var service in comp.Services )
                 {
@@ -115,7 +105,7 @@ namespace WpfApp1Tests3
         // ReSharper disable once UnusedMember.Local
         private void AddTestLoggingTarget ( string setupContainerTest2Name )
         {
-            AppLoggingConfigHelper.EnsureLoggingConfigured ( true , LogMethod ) ;
+            AppLoggingConfigHelper.EnsureLoggingConfigured ( LogMethod ) ;
             var fileTarget = new FileTarget ( "test target" ) ;
             fileTarget.FileName = Layout.FromString ( "test-" + setupContainerTest2Name + ".txt" ) ;
             LogManager.LogFactory.Configuration.AddTarget ( fileTarget ) ;
@@ -177,7 +167,9 @@ namespace WpfApp1Tests3
         public void TestPushContext ( )
         {
             var c = ContainerHelper.SetupContainer ( out _ ) ;
+            Assert.NotNull ( c) ;
         }
+        
 
 
         /// <summary>Containers the test resolve i menu item list.</summary>

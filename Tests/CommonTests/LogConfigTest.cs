@@ -1,6 +1,5 @@
 ﻿using System.Diagnostics ;
 using System.Linq ;
-using Common ;
 using Common.Logging ;
 using NLog ;
 using NLog.Config ;
@@ -84,7 +83,7 @@ namespace CommonTests
 		[Fact ]
 		public void TestEnsureConfigTwoArgs ( )
 		{
-			AppLoggingConfigHelper.EnsureLoggingConfigured ( true , _logMethod ) ;
+			AppLoggingConfigHelper.EnsureLoggingConfigured ( _logMethod ) ;
 			CheckLogConfig ( LogManager.Configuration ) ;
 		}
 	}

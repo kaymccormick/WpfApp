@@ -75,18 +75,17 @@
     <Compile Include="Lib\UtilsContainerFixture.cs" />
     <Compile Include="Lib\Utils\WindowWrap.cs" />
     <Compile Include="Misc\Resources.cs" />
+    <Compile Include="Misc\ResourcesPaths.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DefaultObjectIdProviderTests.cs" />
-    <Compile Include="Tests3\Attributes\PushContextAttributeTests.cs" />
+    <Compile Include="Lib\Attributes\PushContextAttributeTests.cs" />
     <Compile Include="Tests3\ContainerHelperTests2.cs" />
-    <Compile Include="Tests3\DumpHelper.cs" />
+    <Compile Include="Lib\Utils\DumpHelper.cs" />
     <Compile Include="Tests3\Fixtures\CombinedFixture.cs" />
-    <Compile Include="Tests3\InfoContextTests.cs" />
+    <Compile Include="Misc\InfoContextTests.cs" />
     <Compile Include="Tests3\MenuHelperTests.cs" />
     <Compile Include="Tests3\MyService.cs" />
     <Compile Include="Tests3\ProvideValueTarget.cs" />
-    <Compile Include="Tests3\RandomXaml.cs" />
-    <Compile Include="Tests3\ResourcesPaths.cs" />
     <Compile Include="Tests3\ServiceProviderProxy.cs" />
     <Compile Include="Tests3\TestIDGeneratorModule.cs" />
     <Compile Include="Tests3\WpfApplication.cs" />
@@ -126,6 +125,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppSharedTests\Services\" />
+    <Folder Include="Tests3\Attributes\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\NLog\src\NLog\NLog.csproj">

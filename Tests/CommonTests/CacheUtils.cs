@@ -16,7 +16,7 @@ using System.Reactive.Linq ;
 using System.Windows.Threading ;
 using Common.Logging ;
 
-namespace CommonTests
+namespace Tests.CommonTests
 {
     public static class CacheUtils
     { 
@@ -30,6 +30,7 @@ namespace CommonTests
                          .ObserveOnDispatcher ( DispatcherPriority.Background )
                          .Subscribe (
                                      infos => {
+                                         // ReSharper disable once UnusedVariable
                                          foreach ( var logEventInfo in infos )
                                          {
                                                                                       }

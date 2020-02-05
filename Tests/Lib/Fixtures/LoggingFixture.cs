@@ -1,5 +1,4 @@
 ﻿using System.Diagnostics ;
-using Common.Logging ;
 using JetBrains.Annotations ;
 using WpfApp.Core.Logging ;
 using Xunit.Abstractions ;
@@ -20,7 +19,7 @@ namespace TestLib.Fixtures
         public LoggingFixture ( IMessageSink sink )
         {
             Sink = sink ;
-            AppLoggingConfigHelper.EnsureLoggingConfigured ( false , LogMethod ) ;
+            AppLoggingConfigHelper.EnsureLoggingConfigured ( LogMethod ) ;
             // Debug.WriteLine("MY LogFactory is o " + NLog.LogManager.LogFactory.ToString());
         }
 

@@ -362,7 +362,7 @@ namespace WpfControlLibrary1
                                           {
                                               Detailed = targetDetailed , RenderedType = value
                                           } ;
-                    if ( ! navigationService.Navigate ( ( object ) typeControl2 , navigationState ) )
+                    if ( ! navigationService.Navigate ( typeControl2 , navigationState ) )
                     {
                         Logger.Error ( "nav cancelled" ) ;
                     }

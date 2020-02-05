@@ -5,8 +5,8 @@ using AppShared.Services ;
 using AppShared.Utils ;
 using Autofac ;
 using Autofac.Core ;
-using Autofac.Core.Registration ;
 using NLog ;
+using WpfApp.AppShared.Interfaces ;
 
 namespace AppShared.Modules
 {

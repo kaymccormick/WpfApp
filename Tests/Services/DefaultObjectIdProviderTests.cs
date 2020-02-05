@@ -1,19 +1,15 @@
 ﻿using System.Runtime.Serialization ;
 using AppShared.Services ;
 using Autofac.Core ;
+using NLog ;
 using Xunit ;
 
 namespace Tests.Services
 {
     public class DefaultObjectIdProviderTests
     {
-        public DefaultObjectIdProviderTests ()
-        {
-
-        }
-
         [Fact ( )]
-        public void getRootNodesTest ()
+        public void GetRootNodesTest ()
         {
             DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
             var rootNodes = x.GetRootNodes ( ) ;
@@ -27,6 +23,7 @@ namespace Tests.Services
             DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
             var reg = new Moq.Mock < IComponentRegistration > ( ) ;
             var list = x.GetInstanceByComponentRegistration ( reg.Object) ;
+            Assert.NotNull(list);
 
         }
 
@@ -36,6 +33,7 @@ namespace Tests.Services
             DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
             var reg = new Moq.Mock < IComponentRegistration > ( ) ;
             var instanceCount = x.GetInstanceCount ( reg.Object ) ;
+            Assert.Equal(0, instanceCount);
             
             
         }
@@ -44,8 +42,8 @@ namespace Tests.Services
         public void GetObjectInstancesTest ()
         {
             DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
-            var reg = new Moq.Mock < IComponentRegistration > ( ) ;
             var instances = x.GetObjectInstances() ;
+            Assert.NotNull(instances);
 
         }
 
@@ -56,7 +54,8 @@ namespace Tests.Services
             var reg = new Moq.Mock < IComponentRegistration > ( ) ;
             var instance = new object ( ) ;
             var id = x.ProvideObjectInstanceIdentifier ( instance, reg.Object , null ) ;
-            
+            Assert.NotNull ( id ) ;
+
         }
     }
 }

@@ -3,7 +3,7 @@ using NLog ;
 using TestLib.Attributes ;
 using Xunit ;
 
-namespace WpfApp1Tests3.Attributes
+namespace Tests.Lib.Attributes
 {
     [LogTestMethod, BeforeAfterLogger]
 	public class PushContextAttributeTests

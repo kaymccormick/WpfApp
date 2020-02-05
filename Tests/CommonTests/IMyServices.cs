@@ -9,7 +9,6 @@
 // 
 // ---
 #endregion
-using AppShared ;
 using AppShared.Infos ;
 
 namespace TestLib

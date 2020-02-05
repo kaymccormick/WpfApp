@@ -4,6 +4,7 @@ using System.Windows.Data ;
 using AppShared.Interfaces ;
 using Autofac ;
 using Autofac.Core ;
+using WpfApp.AppShared.Interfaces ;
 
 namespace Common.Converters
 {

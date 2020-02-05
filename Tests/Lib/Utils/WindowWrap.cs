@@ -13,19 +13,20 @@ namespace Tests.Lib.Utils
 	public class WindowWrap < T > : Window
 		where T : Visual
 	{
-		private readonly T contentInstance ;
-
-		public WindowWrap ( )
-		{
-			try
-			{
-				contentInstance = Activator.CreateInstance < T > ( ) ;
-				Content         = contentInstance ;
-			}
+        public WindowWrap ( )
+        {
+            try
+            {
+                var contentInstance = Activator.CreateInstance < T > ( ) ;
+                Content         = contentInstance ;
+            }
 			catch ( TargetInvocationException e )
-			{
-				throw e.InnerException ;
-			}
-		}
+            {
+                if ( e.InnerException != null )
+                {
+                    throw e.InnerException ;
+                }
+            }
+        }
 	}
 }

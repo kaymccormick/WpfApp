@@ -1,8 +1,6 @@
 ﻿using System.Windows ;
 using System.Windows.Controls ;
-using AppShared ;
 using Autofac ;
-using Common ;
 using NLog ;
 using WpfApp ;
 

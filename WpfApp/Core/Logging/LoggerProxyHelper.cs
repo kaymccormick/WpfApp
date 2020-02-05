@@ -67,8 +67,7 @@ namespace Logging
             }
 
             // fixme
-            MyLogFactory  myLogFactory = null ;
-                // LogManager.Configuration?.LogFactory as MyLogFactory ;
+            MyLogFactory  myLogFactory = LogManager.Configuration?.LogFactory as MyLogFactory ;
             if ( myLogFactory == null )
 
             {

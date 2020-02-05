@@ -12,7 +12,8 @@ namespace CommonTests.Fixtures
 		/// </summary>
 		public ContainerFixture ( ) { _init ( ) ; }
 
-		public IContainer Container { get ; private set ; }
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
+        public IContainer Container { get ; private set ; }
 
 		private void _init ( )
 		{

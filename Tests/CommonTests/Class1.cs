@@ -5,18 +5,18 @@ using Xunit ;
 namespace CommonTests
 {
 	[BeforeAfterLogger, LogTestMethod]
-	public class Class1 : IClassFixture < testContainerFixture >
+	public class Class1 : IClassFixture < TestContainerFixture >
 	{
 		/// <summary>
 		///     Initializes a new instance of the <see cref="T:System.Object" />
 		///     class.
 		/// </summary>
-		public Class1 ( testContainerFixture testContainerFixture )
+		public Class1 ( TestContainerFixture testContainerFixture )
 		{
 			_testContainerFixture = testContainerFixture ;
 		}
 
-		private readonly testContainerFixture _testContainerFixture ;
+		private readonly TestContainerFixture _testContainerFixture ;
 
 		[ Fact ]
 		public void Test1 ( )

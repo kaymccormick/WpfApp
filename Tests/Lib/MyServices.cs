@@ -1,5 +1,4 @@
-﻿using AppShared ;
-using AppShared.Infos ;
+﻿using AppShared.Infos ;
 
 namespace TestLib
 {

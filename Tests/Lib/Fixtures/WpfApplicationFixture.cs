@@ -1,8 +1,5 @@
 ﻿using System ;
-using System.Linq ;
-using System.Reflection ;
 using System.Threading.Tasks ;
-using System.Windows ;
 using JetBrains.Annotations ;
 using Tests.Lib.Attributes ;
 using Xunit ;
@@ -26,7 +23,6 @@ namespace TestLib.Fixtures
         public Uri BasePackUri
         {
             get => _wpfApplicationHelper.BasePackUri ;
-            set => _wpfApplicationHelper.BasePackUri = value ;
         }
 
         /// <summary>Gets or sets my application.</summary>
@@ -37,12 +33,7 @@ namespace TestLib.Fixtures
         {
             get
             {
-                if ( _wpfApplicationHelper != null )
-                {
-                    return _wpfApplicationHelper.MyApp;
-                }
-
-                return null ;
+                return _wpfApplicationHelper?.MyApp;
             }
             set
             {
@@ -59,14 +50,6 @@ namespace TestLib.Fixtures
         /// </summary>
         public WpfApplicationFixture ( )
         {
-            var qq = AppDomain.CurrentDomain.GetAssemblies ( )
-                              .Where (
-                                      a => Attribute.IsDefined (
-                                                                ( Assembly ) a
-                                                              , typeof ( WpfTestApplicationAttribute
-                                                                )
-                                                               )
-                                     ) ;
             if ( Application.Current != null ) {
                 var assembly = Application.Current.GetType().Assembly ;
                 Assert.True (

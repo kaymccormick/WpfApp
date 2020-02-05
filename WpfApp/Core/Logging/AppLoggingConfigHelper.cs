@@ -32,11 +32,6 @@ namespace WpfApp.Core.Logging
         private static Nullable<int> NumTimesConfigured ;
 
 
-        /// <summary>
-        ///     Gets the collection of file names which should be watched for changes by
-        ///     NLog.
-        /// </summary>gi
-        public override IEnumerable < string > FileNamesToWatch { get ; }
 
         public LogFactory logFactory { get ; set ; }
 
@@ -48,15 +43,6 @@ namespace WpfApp.Core.Logging
 
 
         public static bool ForceCodeConfig { get ; set ; } = false ;
-
-        /// <summary>
-        ///     Called by LogManager when one of the log configuration files changes.
-        /// </summary>
-        /// <returns>
-        ///     A new instance of <see cref="T:NLog.Config.LoggingConfiguration" /> that
-        ///     represents the updated configuration.
-        /// </returns>
-        public override LoggingConfiguration Reload ( ) { return base.Reload ( ) ; }
 
         private static void DoLogMessage (
             string message
@@ -83,7 +69,7 @@ namespace WpfApp.Core.Logging
             logMethod ( "*** Starting logger configuration." ) ;
             InternalLogging ( ) ;
 
-            NLog.LogFactory proxiedFactory = null ;
+            LogFactory proxiedFactory = null ;
             if ( proxyLogging )
             {
                 var proxyGenerator = new ProxyGenerator ( ) ;
@@ -98,15 +84,18 @@ namespace WpfApp.Core.Logging
                                                           , BindingFlags.Static
                                                             | BindingFlags.NonPublic
                                                            ) ;
-            logMethod ( $"field info is {fieldInfo.DeclaringType} . {fieldInfo.Name}" ) ;
-            var cur = fieldInfo.GetValue ( null ) ;
-            logMethod ( $"cur is {cur}" ) ;
-
-            if ( proxyLogging )
+            if ( fieldInfo != null )
             {
-                fieldInfo.SetValue ( null , proxiedFactory ) ;
-                var newVal = fieldInfo.GetValue ( null ) ;
-                logMethod ( $"newval is {newVal}" ) ;
+                logMethod ( $"field info is {fieldInfo.DeclaringType} . {fieldInfo.Name}" ) ;
+                var cur = fieldInfo.GetValue ( null ) ;
+                logMethod ( $"cur is {cur}" ) ;
+
+                if ( proxyLogging )
+                {
+                    fieldInfo.SetValue ( null , proxiedFactory ) ;
+                    var newVal = fieldInfo.GetValue ( null ) ;
+                    logMethod ( $"NewVal = {newVal}" ) ;
+                }
             }
 
             var useFactory = proxyLogging ? proxiedFactory : LogManager.LogFactory ;
@@ -140,13 +129,11 @@ namespace WpfApp.Core.Logging
             var jsonFileTarget = JsonFileTarget ( ) ;
             t.Add ( jsonFileTarget ) ;
             var byType = new Dictionary < Type , int > ( ) ;
-            var byName = new Dictionary < string , Target > ( ) ;
             foreach ( var target in t )
             {
                 // logMethod ( $"target is {target}" ) ;
-                var count = 0 ;
                 var type = target.GetType ( ) ;
-                byType.TryGetValue ( type , out count ) ;
+                byType.TryGetValue ( type , out var count ) ;
                 count          += 1 ;
                 byType[ type ] =  count ;
 
@@ -157,7 +144,7 @@ namespace WpfApp.Core.Logging
                 lconf.AddTarget ( target ) ;
             }
 
-            var loggingRules = t.AsQueryable ( ).Select ( DefaultLoggingRule ) ;
+            var loggingRules = t.AsQueryable ( ).AsEnumerable ( ).Select ( DefaultLoggingRule ) ;
             foreach ( var loggingRule in loggingRules ) { lconf.LoggingRules.Add ( loggingRule ) ; }
             LogManager.Configuration = lconf ;
             return lconf ;
@@ -173,9 +160,9 @@ namespace WpfApp.Core.Logging
             InternalLogger.LogLevel = LogLevel.Debug ;
 
             var id = Process.GetCurrentProcess ( ).Id ;
-            var LogFile = $@"c:\temp\nlog-internal-{id}.txt" ;
-            InternalLogger.LogFile = LogFile ;
-            //"c:\\temp\\nlog-internal-${processid}.txt" ;
+            var logFile = $@"c:\temp\nlog-internal-{id}.txt" ;
+            InternalLogger.LogFile = logFile ;
+            
             //InternalLogger.LogToConsole      = true ;
             //InternalLogger.LogToConsoleError = true ;
             //InternalLogger.LogToTrace        = true ;
@@ -202,9 +189,12 @@ namespace WpfApp.Core.Logging
 
         public static FileTarget JsonFileTarget ( )
         {
-            var f = new FileTarget ( "OUT.JSON" ) ;
-            f.Name     = "json_out" ;
-            f.FileName = Layout.FromString ( @"c:\data\logs\${appdomain}-${processid}-out.json" ) ;
+            var f = new FileTarget ( "OUT.JSON" )
+                    {
+                        Name = "json_out"
+                      , FileName =
+                            Layout.FromString ( @"c:\data\logs\${appdomain}-${processid}-out.json" )
+                    } ;
 
             _fLayout = new JsonLayout { IncludeAllProperties = true } ;
 
@@ -221,22 +211,23 @@ namespace WpfApp.Core.Logging
 
         public static FileTarget MyFileTarget ( )
         {
-            var f = new FileTarget ( ) ;
-            f.Name     = "text_log" ;
-            f.FileName = Layout.FromString ( @"c:\data\logs\log.txt" ) ;
+            var f = new FileTarget
+                    {
+                        Name     = "text_log"
+                      , FileName = Layout.FromString ( @"c:\data\logs\log.txt" )
+                      , Layout   = Layout.FromString ( "${message}" )
+                    } ;
 
-            f.Layout = Layout.FromString ( "${message}" ) ;
             return f ;
         }
 
         public static void EnsureLoggingConfigured ( )
         {
-            EnsureLoggingConfigured ( DumpExistingConfig , null ) ;
+            EnsureLoggingConfigured ( null ) ;
         }
 
         public static void EnsureLoggingConfigured (
-            bool                        b
-          , LogDelegates.LogMethod logMethod
+            LogDelegates.LogMethod logMethod
           , [ CallerFilePath ] string   callerFilePath = null
         )
         {
@@ -263,7 +254,6 @@ namespace WpfApp.Core.Logging
                                                 , BindingFlags.Instance | BindingFlags.NonPublic
                                                  ) ;
 
-            object config ;
             if ( fieldInfo2 == null )
             {
                 System.Diagnostics.Debug.WriteLine (
@@ -273,7 +263,7 @@ namespace WpfApp.Core.Logging
                 throw new Exception ( "no config loaded field found" ) ;
             }
 
-            config = fieldInfo2.GetValue ( LogManager.LogFactory ) ;
+            var config = fieldInfo2.GetValue ( LogManager.LogFactory ) ;
 
             //LogManager.ThrowConfigExceptions = true;
             //LogManager.ThrowExceptions = true;
@@ -283,17 +273,10 @@ namespace WpfApp.Core.Logging
                                                , BindingFlags.Instance | BindingFlags.NonPublic
                                                 ) ;
 
-            bool _configLoaded ;
+            bool configLoaded ;
             if ( fieldInfo == null )
             {
-                if ( config != null )
-                {
-                    _configLoaded = true ;
-                }
-                else
-                {
-                    _configLoaded = false ;
-                }
+                configLoaded = config != null ;
 
                 System.Diagnostics.Debug.WriteLine (
                                                     "no field _configLoaded for "
@@ -303,10 +286,10 @@ namespace WpfApp.Core.Logging
             }
             else
             {
-                _configLoaded = ( bool ) fieldInfo.GetValue ( LogManager.LogFactory ) ;
+                configLoaded = ( bool ) fieldInfo.GetValue ( LogManager.LogFactory ) ;
             }
 
-            var isMyConfig = ! _configLoaded     || LogManager.Configuration is CodeConfiguration ;
+            var isMyConfig = ! configLoaded     || LogManager.Configuration is CodeConfiguration ;
             var doConfig = ! LoggingIsConfigured || ForceCodeConfig && ! isMyConfig ;
             logMethod (
                        $"{nameof ( LoggingIsConfigured )} = {LoggingIsConfigured}; {nameof ( ForceCodeConfig )} = {ForceCodeConfig}; {nameof ( isMyConfig )} = {isMyConfig});"
@@ -341,7 +324,7 @@ namespace WpfApp.Core.Logging
                 return ;
             }
 
-            foreach ( var target in config.AllTargets )
+            foreach ( var unused in config.AllTargets )
             {
                 foreach ( var atarget in config.AllTargets )
                 {
@@ -381,10 +364,6 @@ namespace WpfApp.Core.Logging
 
 
 
-                    // if(json.Target.Layout is JsonLayout l)
-                    // {
-                    // collectaTargeT);
-                    // }
                 }
             }
         }
@@ -408,7 +387,7 @@ namespace WpfApp.Core.Logging
                 if ( fieldInfo.GetValue ( configuration ) != null )
                 {
                     {
-                        Debug ( "Original NLOG configuration filename" ) ;
+                        Debug ( "Original NLog configuration filename" ) ;
                     }
                 }
             }

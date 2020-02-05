@@ -19,16 +19,20 @@ namespace TestLib.Fixtures
 
         public WpfApplicationHelper ( Assembly theAssembly ) { TheAssembly = theAssembly ; }
 
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public Assembly TheAssembly { get ; }
 
         public bool LoadRealApp { get ; set ; } = true ;
 
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public Uri BasePackUri { get ; set ; }
 
+        // ReSharper disable once UnusedMember.Global
         public Assembly CurAssembly { get ; set ; }
 
         public Application MyApp { get ; set ; }
 
+        // ReSharper disable once UnusedMember.Global
         public DispatcherOperation Op { get ; set ; }
 
 
@@ -164,18 +168,7 @@ namespace TestLib.Fixtures
 //         // 	return null ;
 //         // }
 
-        private Application LoadApplication ( )
-        {
-            // if ( LoadRealApp )
-            // {
-            //     Application app = new App ( ) ;
-            //     return app ;
-            // }
-
-            return new Application ( ) ;
-        }
-
-        //[Test(), Apartment(ApartmentState.STA)]
+//[Test(), Apartment(ApartmentState.STA)]
         public void MakeWindowWrap ( [ NotNull ] Type genericType , [ NotNull ] Type wrappedType )
         {
             if ( genericType == null )
@@ -190,7 +183,6 @@ namespace TestLib.Fixtures
 
             try
             {
-                var name = CurAssembly.GetName ( ).Name ;
                 var wrapType = genericType.MakeGenericType ( wrappedType ) ;
                 var wrap = Activator.CreateInstance ( wrapType ) as WindowWrap < Visual > ;
                 MyApp.Run ( wrap ) ;

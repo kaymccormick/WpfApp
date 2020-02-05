@@ -64,7 +64,6 @@
     <Compile Include="WpfApp1\DesignData.cs" />
     <Compile Include="WpfApp1\Events\AttachedEvents.cs" />
     <Compile Include="WpfApp1\Logging\AppLoggerContainer.cs" />
-    <Compile Include="WpfApp1\Logging\LoggerImpl.cs" />
     <Compile Include="WpfApp1\Logging\NLogTargetConverter.cs" />
     <Compile Include="WpfApp1\Logging\TypeBrowserPage.xaml.cs" />
     <Compile Include="WpfApp1\Menus\ILoggingEntity.cs" />

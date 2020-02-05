@@ -11,11 +11,10 @@
 #endregion
 using System.Collections ;
 using System.Collections.Generic ;
-using AppShared.Attributes ;
 using AppShared.Infos ;
 using Autofac.Core ;
 
-namespace AppShared.Interfaces
+namespace WpfApp.AppShared.Interfaces
 {
     // [ InterfaceMetadata ( typeof ( ObjectIdControl ) ) ]
     public interface IObjectIdProvider

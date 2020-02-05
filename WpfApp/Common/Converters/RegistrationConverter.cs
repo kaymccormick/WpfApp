@@ -9,6 +9,7 @@ using Common.Model ;
 using DynamicData.Kernel ;
 using JetBrains.Annotations ;
 using NLog ;
+using WpfApp.AppShared.Interfaces ;
 
 namespace Common.Converters
 {
@@ -40,7 +41,7 @@ namespace Common.Converters
 		/// <param name="culture">The culture to use in the converter.</param>
 		/// <returns>A converted value. If the method returns <see langword="null" />, the valid null value is used.</returns>
 		public object Convert (
-            [ NotNull ] object      value
+             object      value
 		  , Type        targetType
 		  , object      parameter
 		  , CultureInfo culture

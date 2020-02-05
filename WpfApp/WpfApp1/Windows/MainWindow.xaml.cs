@@ -73,7 +73,7 @@ namespace WpfApp1.Windows
 
             var uie = ui as UIElement ;
             var fe = ui as FrameworkElement ;
-            string desc = null ;
+            string desc ;
             var qqq = Attribute.GetCustomAttribute (
                                                     ui.GetType ( )
                                                   , typeof ( RuntimeNamePropertyAttribute )
@@ -81,7 +81,7 @@ namespace WpfApp1.Windows
             if ( qqq != null )
             {
                 desc = ui.GetPropertyValue < string > (
-                                                       ( qqq as RuntimeNamePropertyAttribute ).Name
+                                                       ( qqq as RuntimeNamePropertyAttribute )?.Name
                                                       ) ;
             }
             else
@@ -103,11 +103,11 @@ namespace WpfApp1.Windows
             if ( qq != null )
             {
                 var content =
-                    ui.GetPropertyValue < object > ( ( qq as ContentPropertyAttribute ).Name ) ;
-                if ( content is IEnumerable
-                     && content.GetType ( ) != typeof ( string ) )
+                    ui.GetPropertyValue < object > ( ( qq as ContentPropertyAttribute )?.Name ) ;
+                if ( content is IEnumerable enumerable
+                     && enumerable.GetType ( ) != typeof ( string ) )
                 {
-                    foreach ( var child in content as IEnumerable )
+                    foreach ( var child in enumerable )
                     {
                         RecurseDiscover ( child ) ;
                     }
@@ -120,8 +120,6 @@ namespace WpfApp1.Windows
                 return ;
             }
 
-
-            var c = ui as Control ;
 
             if ( ui is ItemsControl ic )
             {
@@ -191,7 +189,7 @@ namespace WpfApp1.Windows
         private void OnLoaded ( object sender , RoutedEventArgs e )
         {
             DoRestart                                       = false ;
-            System.Windows.Application.Current.ShutdownMode = ShutdownMode.OnLastWindowClose ;
+            Application.Current.ShutdownMode = ShutdownMode.OnLastWindowClose ;
         }
 
         /// <summary>Gets or sets the log events.</summary>
@@ -225,8 +223,6 @@ namespace WpfApp1.Windows
                                                                                               }
                                                                                              ) ;
 
-        public AppLogger AppLogger { get ; set ; }
-
 #pragma warning disable 1591
         public ILogger Logger { get ; set ; } = LogManager.GetCurrentClassLogger ( ) ;
 #pragma warning restore 1591
@@ -248,10 +244,7 @@ namespace WpfApp1.Windows
 
                 foreach ( IMenuItem menuItem in c )
                 {
-                    if ( menu != null )
-                    {
-                        menu.Items.Add ( MenuHelper.MakeMenuItem ( menuItem ) ) ;
-                    }
+                    menu?.Items.Add ( MenuHelper.MakeMenuItem ( menuItem ) ) ;
                 }
 
                 Logger.Trace ( e.RoutedEvent.Name + " changed" ) ;
@@ -289,6 +282,7 @@ namespace WpfApp1.Windows
         public ILifetimeScope LifetimeScope
         {
             get => ( ILifetimeScope ) GetValue ( LifetimeScopeProperty ) ;
+            // ReSharper disable once UnusedMember.Global
             set => SetValue ( LifetimeScopeProperty , value ) ;
         }
 

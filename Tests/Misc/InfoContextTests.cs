@@ -1,10 +1,9 @@
 ﻿using System.Linq ;
-using AppShared ;
 using AppShared.Infos ;
 using TestLib.Attributes ;
 using Xunit ;
 
-namespace WpfApp1Tests3
+namespace Tests.Misc
 {
     [LogTestMethod, BeforeAfterLogger]
 	public class InfoContextTests

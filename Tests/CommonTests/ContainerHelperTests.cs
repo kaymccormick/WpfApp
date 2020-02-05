@@ -98,7 +98,7 @@ namespace CommonTests
 
         private void AddTestLoggingTarget ( string setupContainerTest2Name )
         {
-            AppLoggingConfigHelper.EnsureLoggingConfigured ( true , LogMethod ) ;
+            AppLoggingConfigHelper.EnsureLoggingConfigured ( LogMethod ) ;
             var fileTarget = new FileTarget ( "test target" )
                              {
                                  FileName =

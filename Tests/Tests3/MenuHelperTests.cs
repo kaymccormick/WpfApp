@@ -1,15 +1,15 @@
 ﻿using System ;
 using AppShared.Interfaces ;
-using Autofac ;
 using NLog ;
 using TestLib ;
 using TestLib.Attributes ;
 using TestLib.Fixtures ;
 using WpfApp1.Menus ;
+using WpfApp1Tests3 ;
 using Xunit ;
 using Xunit.Abstractions ;
 
-namespace WpfApp1Tests3
+namespace Tests.Tests3
 {
     /// <summary></summary>
     [Collection ( "WpfApp" ) ]
@@ -19,7 +19,9 @@ namespace WpfApp1Tests3
         // ReSharper disable once UnusedMember.Local
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
+#pragma warning disable 649
         private readonly Func < IMenuItem > _xMenuItemCreator ;
+#pragma warning restore 649
 
 
         protected MenuHelperTests ( WpfApplicationFixture wpfAppFixture , AppContainerFixture containerFixture , UtilsContainerFixture utilsContainerFixture , ITestOutputHelper outputHelper ) : base ( wpfAppFixture , containerFixture , utilsContainerFixture , outputHelper )

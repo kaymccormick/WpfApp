@@ -5,6 +5,7 @@ using AppShared.Interfaces ;
 using Autofac ;
 using JetBrains.Annotations ;
 using NLog ;
+using WpfApp.AppShared.Interfaces ;
 
 namespace AppShared.Xaml
 {
