@@ -11,6 +11,7 @@
         xmlns:wpfControlLibrary1="clr-namespace:WpfControlLibrary1"
         xmlns:common="clr-namespace:Common"
         xmlns:interfaces="clr-namespace:WpfApp.Core.Interfaces"
+        xmlns:controls="clr-namespace:WpfApp.Controls"
         MinWidth="800"
         MinHeight="600"
         mc:Ignorable="d" FontSize="20"
@@ -18,11 +19,11 @@
     <Window.Resources>
         <CollectionViewSource x:Key="ResourcesList" Source="{Binding ElementName=mainWindow,Path=ResourcesCollection}" />
         <DataTemplate DataType="{x:Type system:Type}" x:Key="CellTemplateType">
-            <wpfControlLibrary1:TypeControl MinWidth="200" Target="{Binding ElementName=frame}">
+            <controls:TypeControl MinWidth="200" Target="{Binding ElementName=frame}">
                 <wpfApp:Props.RenderedType>
                     <Binding Path="." />
                 </wpfApp:Props.RenderedType>
-            </wpfControlLibrary1:TypeControl>
+            </controls:TypeControl>
         </DataTemplate>
 
         <types1:ResolveServiceList x:Key="ResolveServices">
@@ -33,11 +34,11 @@
             </appShared1:ResolveService>
         </types1:ResolveServiceList>
         <DataTemplate x:Key="ResourceValueCell">
-            <wpfControlLibrary1:TypeControl Target="{Binding ElementName=frame}" TargetDetailed="true">
+            <controls:TypeControl Target="{Binding ElementName=frame}" TargetDetailed="true">
                 <wpfApp:Props.RenderedType>
                     <Binding Path="Value" Converter="{StaticResource GetTypeConverter}" />
                 </wpfApp:Props.RenderedType>
-            </wpfControlLibrary1:TypeControl>
+            </controls:TypeControl>
         </DataTemplate>
     </Window.Resources>
     <Grid DataContext="{Binding ElementName=mainWindow, Path=(wpfApp:Props.LifetimeScope)}">

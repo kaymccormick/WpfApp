@@ -12,9 +12,10 @@
 
 using System.Threading.Tasks ;
 using Autofac ;
-using Common.Utils ;
+
 using JetBrains.Annotations ;
 using NLog ;
+using WpfApp.Common.Utils ;
 using Xunit ;
 
 namespace TestLib.Fixtures

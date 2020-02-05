@@ -11,6 +11,7 @@ using NLog ;
 using TestLib.Attributes ;
 using TestLib.Fixtures ;
 using WpfApp ;
+using WpfApp.Controls ;
 using WpfControlLibrary1 ;
 using Xunit ;
 using Xunit.Abstractions ;

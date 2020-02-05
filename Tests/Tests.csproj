@@ -30,6 +30,16 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug2|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug2\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
@@ -46,6 +56,7 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AppTests.cs" />
     <Compile Include="CommonTests\CacheUtils.cs" />
     <Compile Include="CommonTests\Class1.cs" />
     <Compile Include="CommonTests\ContainerHelperTests.cs" />
@@ -93,6 +104,51 @@
     <Compile Include="Tests3\WpfTestsBase.cs" />
     <Compile Include="Tests3\XunitTarget.cs" />
     <Compile Include="Lib\Attributes\WpfTestApplicationAttribute.cs" />
+    <Compile Include="WpfApp1\Attributes\LoggingEntityMetadata.cs" />
+    <Compile Include="WpfApp1\Attributes\WindowMetadataAttribute.cs" />
+    <Compile Include="WpfApp1\Controls\Container.xaml.cs">
+      <DependentUpon>Container.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfApp1\Controls\SystemParametersControl.xaml.cs">
+      <DependentUpon>SystemParametersControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfApp1\Controls\TypedService.cs" />
+    <Compile Include="WpfApp1\Controls\UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfApp1\DesignData.cs" />
+    <Compile Include="WpfApp1\Events\AttachedEvents.cs" />
+    <Compile Include="WpfApp1\Logging\AppLoggerContainer.cs" />
+    <Compile Include="WpfApp1\Logging\NLogTargetConverter.cs" />
+    <Compile Include="WpfApp1\Logging\TypeBrowserPage.xaml.cs">
+      <DependentUpon>TypeBrowserPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfApp1\Menus\ILoggingEntity.cs" />
+    <Compile Include="WpfApp1\Menus\MenuHelper.cs" />
+    <Compile Include="WpfApp1\Util\DebugHelper.cs" />
+    <Compile Include="WpfApp1\Util\IObjectId.cs" />
+    <Compile Include="WpfApp1\Util\LoggerInterceptor.cs" />
+    <Compile Include="WpfApp1\Util\LongObjectId.cs" />
+    <Compile Include="WpfApp1\Util\MyActivator.cs" />
+    <Compile Include="WpfApp1\Util\ProxyGenerationHook.cs" />
+    <Compile Include="WpfApp1\Windows\AppSettingsWindow.xaml.cs">
+      <DependentUpon>AppSettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfApp1\Windows\ComponentRegistry.cs" />
+    <Compile Include="WpfApp1\Windows\LifetimeScope.cs" />
+    <Compile Include="WpfApp1\Windows\LogEventInfoCollection.cs" />
+    <Compile Include="WpfApp1\Windows\MainWindow.xaml.cs" />
+    <Compile Include="WpfApp1\Windows\NewWindow.xaml.cs">
+      <DependentUpon>NewWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfApp1\Windows\Page1.xaml.cs">
+      <DependentUpon>Page1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="WpfApp1\Xaml\AppLoggerExtension.cs" />
+    <Compile Include="WpfApp1\Xaml\AssemblyConverter.cs" />
+    <Compile Include="WpfApp1\Xaml\Converter.cs" />
+    <Compile Include="WpfApp1\Xaml\InstanceRegistrationConverter.cs" />
+    <Compile Include="WpfApp1\Xaml\SmartTypeConverter.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac.Mef">
@@ -142,6 +198,40 @@
       <Project>{74792445-f224-4c75-b204-094ff689d950}</Project>
       <Name>WpfApp</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Include="WpfApp1\Controls\Container.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Controls\SystemParametersControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Controls\UserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Logging\TypeBrowserPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Windows\AppSettingsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Windows\NewWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Windows\OldMainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Windows\Page1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

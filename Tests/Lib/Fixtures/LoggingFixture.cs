@@ -26,7 +26,7 @@ namespace TestLib.Fixtures
         private IMessageSink Sink { get ; }
 
         // ReSharper disable once IdentifierTypo
-        private void LogMethod ( string message , string callerfilepath , string callermembername )
+        private void LogMethod ( string message )
         {
             Sink.OnMessage ( new DiagnosticMessage ( message ) ) ;
             Debug.WriteLine ( message ) ;

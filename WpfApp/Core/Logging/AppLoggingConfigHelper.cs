@@ -45,14 +45,10 @@ namespace WpfApp.Core.Logging
 
         private static void DoLogMessage (
             string message
-          , string callerFilePath
-          , string callerMemberName
         )
         {
             System.Diagnostics.Debug.WriteLine (
-                                                callerMemberName
-                                                + ":"
-                                                + nameof ( AppLoggingConfigHelper )
+                                                nameof ( AppLoggingConfigHelper )
                                                 + ":"
                                                 + message
                                                ) ;

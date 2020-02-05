@@ -7,9 +7,9 @@ using System.Windows.Markup ;
 using System.Windows.Navigation ;
 using Microsoft.CSharp ;
 using NLog ;
-using WpfApp ;
+using WpfControlLibrary1 ;
 
-namespace WpfControlLibrary1
+namespace WpfApp.Controls
 {
     /// <summary>
     ///     Interaction logic for TypeControl.xaml

@@ -5,7 +5,7 @@ using System.Linq ;
 using System.Windows ;
 using Autofac ;
 using Autofac.Core ;
-using Common.Utils ;
+
 using JetBrains.Annotations ;
 using NLog ;
 using NLog.Config ;
@@ -15,6 +15,7 @@ using TestLib.Attributes ;
 using TestLib.Fixtures ;
 using Tests.Lib.Attributes ;
 using Tests.Lib.Fixtures ;
+using WpfApp.Common.Utils ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Core.Logging ;
 using Xunit ;
@@ -34,13 +35,14 @@ namespace Tests.CommonTests
         ///     Initializes a new instance of the <see cref="T:System.Object" />
         ///     class.
         /// </summary>
-        public ContainerHelperTests ( LoggingFixture loggingFixture , ITestOutputHelper output )
+        public ContainerHelperTests ( LoggingFixture loggingFixture , ITestOutputHelper output , WpfApplicationFixture wpfApplicationFixture )
         {
             UseLogMethod = LogMethod ;
             UseLogMethod ( $"my logger is type {Logger.GetType ( )}" ) ;
             LoggingFixture = loggingFixture ;
             // WpfApplicationFixture = wpfApplicationFixture ;
             Output = output ;
+            WpfApplicationFixture = wpfApplicationFixture ;
         }
 
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
@@ -101,7 +103,7 @@ namespace Tests.CommonTests
             LogManager.LogFactory.ReconfigExistingLoggers ( ) ;
         }
 
-        private void LogMethod ( string message , string callerFilePath , string callerMemberName )
+        private void LogMethod ( string message  )
         {
             Debug.WriteLine ( message ) ;
             Output?.WriteLine ( message ) ;

@@ -8,6 +8,7 @@
         xmlns:wpfApp="clr-namespace:WpfApp"
         xmlns:wpfControlLibrary11="clr-namespace:WpfControlLibrary1"
         xmlns:common1="clr-namespace:Common"
+        xmlns:controls1="clr-namespace:WpfApp.Controls"
         mc:Ignorable="d"
         DataContext="{Binding ElementName=mainWindow}"
         Title="Main Window" Height="450" Width="1000"
@@ -120,7 +121,7 @@
             </Grid>
         </TabItem>
         <TabItem Header="Assemblies">
-            <wpfControlLibrary11:AssemblyBrowser />
+            <controls1:AssemblyBrowser />
         </TabItem>
     </TabControl>
 

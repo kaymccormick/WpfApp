@@ -3,7 +3,7 @@ using System.Windows.Controls ;
 using System.Windows.Input ;
 using NLog ;
 
-namespace WpfControlLibrary1
+namespace WpfApp.Controls
 {
     /// <summary>
     ///     Interaction logic for AssemblyBrowser.xaml

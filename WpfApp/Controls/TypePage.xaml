@@ -5,16 +5,17 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:wpfApp="clr-namespace:WpfApp"
       xmlns:wpfControlLibrary1="clr-namespace:WpfControlLibrary1"
+      xmlns:controls="clr-namespace:WpfApp.Controls"
       mc:Ignorable="d"
       Background="AliceBlue"
       d:DesignHeight="200" d:DesignWidth="300"
       Title="TypePage">
 
     <DockPanel LastChildFill="True">
-        <wpfControlLibrary1:TypeControl Detailed="true">
+        <controls:TypeControl Detailed="true">
             <wpfApp:Props.RenderedType>
                 <x:Type TypeName="Window" />
             </wpfApp:Props.RenderedType>
-        </wpfControlLibrary1:TypeControl>
+        </controls:TypeControl>
     </DockPanel>
 </Page>
