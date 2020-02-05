@@ -9,7 +9,7 @@ using Common.Converters ;
 using Common.Model ;
 using CommonTests.Fixtures ;
 using TestLib.Attributes ;
-using WpfApp.AppShared.Interfaces ;
+using WpfApp.Core.Interfaces ;
 using Xunit ;
 using Xunit.Abstractions ;
 

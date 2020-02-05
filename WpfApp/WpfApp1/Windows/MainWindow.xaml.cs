@@ -21,7 +21,7 @@ using NLog ;
 using NLog.Config ;
 using Vanara.Extensions.Reflection ;
 using WpfApp ;
-using WpfApp.Core.Interfaces.Interfaces ;
+using WpfApp.Core.Interfaces ;
 using WpfApp1.Attributes ;
 using WpfApp1.Menus ;
 

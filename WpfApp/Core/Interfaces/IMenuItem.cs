@@ -1,7 +1,7 @@
 using System.Collections.Generic ;
 using System.Windows.Input ;
 
-namespace WpfApp.Core.Interfaces.Interfaces
+namespace WpfApp.Core.Interfaces
 {
     /// <summary></summary>
     /// <seealso cref="System.Windows.Input.ICommandSource" />

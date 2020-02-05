@@ -13,6 +13,7 @@ using AppShared.Infos ;
 using Autofac ;
 using TestLib ;
 using TestLib.Fixtures ;
+using Tests.Lib.Fixtures ;
 using Xunit.Abstractions ;
 
 namespace WpfApp1Tests3

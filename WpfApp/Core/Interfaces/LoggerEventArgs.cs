@@ -1,7 +1,7 @@
 using System ;
 using NLog ;
 
-namespace WpfApp.Core.Interfaces.Interfaces
+namespace WpfApp.Core.Interfaces
 {
     /// <summary></summary>
     /// <seealso cref="System.EventArgs" />

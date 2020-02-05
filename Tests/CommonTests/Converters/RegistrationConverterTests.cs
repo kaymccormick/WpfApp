@@ -17,7 +17,7 @@ using Autofac.Core ;
 using Common.Converters ;
 using CommonTests.Fixtures ;
 using TestLib.Attributes ;
-using WpfApp.AppShared.Interfaces ;
+using WpfApp.Core.Interfaces ;
 using Xunit ;
 using Xunit.Abstractions ;
 

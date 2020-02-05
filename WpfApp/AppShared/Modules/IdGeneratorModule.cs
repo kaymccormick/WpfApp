@@ -5,7 +5,7 @@ using AppShared.Utils ;
 using Autofac ;
 using Autofac.Core ;
 using NLog ;
-using WpfApp.Core.Interfaces.Interfaces ;
+using WpfApp.Core.Interfaces ;
 
 namespace AppShared.Modules
 {

@@ -10,7 +10,7 @@
         xmlns:xaml1="clr-namespace:AppShared.Xaml"
         xmlns:wpfControlLibrary1="clr-namespace:WpfControlLibrary1"
         xmlns:common="clr-namespace:Common"
-        xmlns:interfaces="clr-namespace:WpfApp.Core.Interfaces.Interfaces"
+        xmlns:interfaces="clr-namespace:WpfApp.Core.Interfaces"
         MinWidth="800"
         MinHeight="600"
         mc:Ignorable="d" FontSize="20"

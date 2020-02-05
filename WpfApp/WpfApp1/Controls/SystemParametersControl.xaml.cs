@@ -12,7 +12,7 @@ using System.Windows.Controls ;
 using System.Windows.Controls.Primitives ;
 using System.Windows.Media ;
 using NLog ;
-using WpfApp.Core.Interfaces.Interfaces ;
+using WpfApp.Core.Interfaces ;
 using Xceed.Wpf.Toolkit.PropertyGrid ;
 
 namespace WpfApp1.Controls

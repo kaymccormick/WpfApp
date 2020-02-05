@@ -12,7 +12,7 @@
 
 using NLog ;
 
-namespace WpfApp.Core.Interfaces.Interfaces
+namespace WpfApp.Core.Interfaces
 {
     public interface IHaveLogger
 

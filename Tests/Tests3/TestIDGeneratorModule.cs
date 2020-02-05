@@ -1,7 +1,7 @@
 ﻿using AppShared.Modules ;
 using Autofac ;
 using TestLib.Attributes ;
-using WpfApp.AppShared.Interfaces ;
+using WpfApp.Core.Interfaces ;
 using Xunit ;
 using Xunit.Abstractions ;
 

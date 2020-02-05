@@ -13,7 +13,7 @@
 using NLog ;
 using NLog.Fluent ;
 
-namespace WpfApp.Core.Interfaces.Interfaces
+namespace WpfApp.Core.Interfaces
 {
     public class MyLogBuilder : LogBuilder
     {

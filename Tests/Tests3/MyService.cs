@@ -9,7 +9,7 @@
 // 
 // ---
 #endregion
-using AppShared.Interfaces ;
+using WpfApp.Core.Interfaces ;
 
 namespace WpfApp1Tests3
 {

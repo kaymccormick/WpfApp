@@ -3,7 +3,7 @@ using System.Windows ;
 using System.Windows.Markup ;
 using Autofac ;
 using NLog ;
-using WpfApp.Core.Interfaces.Interfaces ;
+using WpfApp.Core.Interfaces ;
 
 namespace AppShared.Xaml
 {

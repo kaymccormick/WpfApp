@@ -1,7 +1,7 @@
 using System.Collections ;
 using System.Collections.Generic ;
 
-namespace WpfApp.Core.Interfaces.Interfaces
+namespace WpfApp.Core.Interfaces
 {
     /// <summary></summary>
     /// <seealso cref="System.Collections.Generic.IList{T}" />

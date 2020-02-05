@@ -2,7 +2,7 @@ using System.Linq ;
 using System.Windows ;
 using System.Windows.Controls ;
 using NLog ;
-using WpfApp.Core.Interfaces.Interfaces ;
+using WpfApp.Core.Interfaces ;
 
 namespace Common.Menus
 {

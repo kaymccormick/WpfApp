@@ -8,7 +8,7 @@ using AppShared.Utils ;
 using Autofac.Core ;
 using JetBrains.Annotations ;
 using NLog ;
-using WpfApp.Core.Interfaces.Interfaces ;
+using WpfApp.Core.Interfaces ;
 
 namespace AppShared.Services
 {

@@ -1,9 +1,10 @@
 ﻿using System ;
-using AppShared.Interfaces ;
 using NLog ;
 using TestLib ;
 using TestLib.Attributes ;
 using TestLib.Fixtures ;
+using Tests.Lib.Fixtures ;
+using WpfApp.Core.Interfaces ;
 using WpfApp1.Menus ;
 using WpfApp1Tests3 ;
 using Xunit ;

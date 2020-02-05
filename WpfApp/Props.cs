@@ -30,7 +30,7 @@ namespace WpfApp
                                             , RoutingStrategy.Direct
                                             , typeof ( RoutedPropertyChangedEventHandler <
                                                   CollectionView > )
-                                            , typeof ( App )
+                                            , typeof ( Props )
                                              ) ;
 
         /// <summary>The menu item list collection view property</summary>
@@ -40,7 +40,7 @@ namespace WpfApp
             DependencyProperty.RegisterAttached (
                                                  "MenuItemListCollectionView"
                                                , typeof ( CollectionView )
-                                               , typeof ( App )
+                                               , typeof ( Props )
                                                , new FrameworkPropertyMetadata (
                                                                                 null
                                                                               , FrameworkPropertyMetadataOptions
@@ -63,7 +63,7 @@ namespace WpfApp
                                               "LoggerRegistered"
                                             , RoutingStrategy.Direct
                                             , typeof ( RoutedEventHandler )
-                                            , typeof ( App )
+                                            , typeof ( Props )
                                              ) ;
 
         // ReSharper disable once MemberCanBePrivate.Global
@@ -76,7 +76,7 @@ namespace WpfApp
                                             , RoutingStrategy.Bubble
                                             , typeof ( RoutedPropertyChangedEventHandler <
                                                   ILifetimeScope > )
-                                            , typeof ( App )
+                                            , typeof ( Props )
                                              ) ;
 
         /// <summary>The lifetime scope property</summary>
@@ -86,7 +86,7 @@ namespace WpfApp
             DependencyProperty.RegisterAttached (
                                                  "LifetimeScope"
                                                , typeof ( ILifetimeScope )
-                                               , typeof ( App )
+                                               , typeof ( Props )
                                                , new FrameworkPropertyMetadata (
                                                                                 null
                                                                               , FrameworkPropertyMetadataOptions
@@ -107,7 +107,7 @@ namespace WpfApp
                                               "RenderedTypeChanged"
                                             , RoutingStrategy.Direct
                                             , typeof ( RoutedPropertyChangedEventHandler < Type > )
-                                            , typeof ( App )
+                                            , typeof ( Props )
                                              ) ;
 
         /// <summary>The rendered type property</summary>
@@ -117,7 +117,7 @@ namespace WpfApp
             DependencyProperty.RegisterAttached (
                                                  "RenderedType"
                                                , typeof ( Type )
-                                               , typeof ( App )
+                                               , typeof ( Props )
                                                , new FrameworkPropertyMetadata (
                                                                                 null
                                                                               , FrameworkPropertyMetadataOptions
@@ -140,7 +140,7 @@ namespace WpfApp
                                             , RoutingStrategy.Direct
                                             , typeof ( RoutedPropertyChangedEventHandler <
                                                   AssemblyList > )
-                                            , typeof ( App )
+                                            , typeof ( Props )
                                              ) ;
 
         /// <summary>The assembly list property</summary>
@@ -150,7 +150,7 @@ namespace WpfApp
             DependencyProperty.RegisterAttached (
                                                  "AssemblyList"
                                                , typeof ( AssemblyList )
-                                               , typeof ( App )
+                                               , typeof ( Props )
                                                , new FrameworkPropertyMetadata (
                                                                                 null
                                                                               , FrameworkPropertyMetadataOptions
@@ -172,7 +172,7 @@ namespace WpfApp
                                             , RoutingStrategy.Bubble
                                             , typeof ( RoutedPropertyChangedEventHandler <
                                                   IContainer > )
-                                            , typeof ( App )
+                                            , typeof ( Props )
                                              ) ;
 
         /// <summary>The container property</summary>
@@ -182,7 +182,7 @@ namespace WpfApp
             DependencyProperty.RegisterAttached (
                                                  "Container"
                                                , typeof ( IContainer )
-                                               , typeof ( App )
+                                               , typeof ( Props )
                                                , new FrameworkPropertyMetadata (
                                                                                 null
                                                                               , FrameworkPropertyMetadataOptions
@@ -205,7 +205,7 @@ namespace WpfApp
                                             , RoutingStrategy.Direct
                                             , typeof ( RoutedPropertyChangedEventHandler <
                                                   ResolveServiceList > )
-                                            , typeof ( App )
+                                            , typeof ( Props )
                                              ) ;
 
         /// <summary>The resolve service list property</summary>
@@ -215,7 +215,7 @@ namespace WpfApp
             DependencyProperty.RegisterAttached (
                                                  "ResolveServiceList"
                                                , typeof ( ResolveServiceList )
-                                               , typeof ( App )
+                                               , typeof ( Props )
                                                , new FrameworkPropertyMetadata (
                                                                                 null
                                                                               , FrameworkPropertyMetadataOptions

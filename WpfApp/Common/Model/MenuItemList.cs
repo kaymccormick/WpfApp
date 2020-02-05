@@ -4,7 +4,7 @@ using System.Collections.ObjectModel ;
 using System.Linq ;
 using Common.Logging ;
 using NLog ;
-using WpfApp.Core.Interfaces.Interfaces ;
+using WpfApp.Core.Interfaces ;
 
 namespace Common.Model
 {

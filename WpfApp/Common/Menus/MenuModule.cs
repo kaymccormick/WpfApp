@@ -18,7 +18,7 @@ using Common.Logging ;
 using Common.Model ;
 using Common.Utils ;
 using NLog ;
-using WpfApp.Core.Interfaces.Interfaces ;
+using WpfApp.Core.Interfaces ;
 using Module = Autofac.Module ;
 
 namespace Common.Menus

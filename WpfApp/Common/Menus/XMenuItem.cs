@@ -4,7 +4,7 @@ using System.Windows ;
 using System.Windows.Input ;
 using Autofac.Features.OwnedInstances ;
 using NLog ;
-using WpfApp.Core.Interfaces.Interfaces ;
+using WpfApp.Core.Interfaces ;
 
 namespace Common.Menus
 {
