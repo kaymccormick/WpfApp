@@ -55,23 +55,13 @@ namespace CommonTests
         // public ContainerHelperTests ( WpfApplicationFixture WpfApplicationFixture ) { WpfApplicationFixture = WpfApplicationFixture ; }
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
-        public LogDelegates.LogMethod UseLogMethod { get ; set ; }
+        public LogDelegates.LogMethod UseLogMethod { get ; }
 
         private void DumpContainer ( IContainer container )
         {
-            var seen = new HashSet < object > ( ) ;
-#if DUMP1
-            foreach ( var componentRegistryRegistration in container.ComponentRegistry.Registrations )
-            {
-                ContainerHelper.Dump ( componentRegistryRegistration , seen, s => Output.WriteLine(s)) ;
-            }
-#endif
 
             foreach ( var comp in container.ComponentRegistry.Registrations )
             {
-                if ( comp.Activator is ReflectionActivator a )
-                {
-                }
 
                 var s = $"{comp.Activator.LimitType}: " ;
                 foreach ( var service in comp.Services )
@@ -88,6 +78,7 @@ namespace CommonTests
             }
         }
 
+        // ReSharper disable once UnusedMember.Local
         private void AddTestLoggingTarget ( string setupContainerTest2Name )
         {
             AppLoggingConfigHelper.EnsureLoggingConfigured ( LogMethod ) ;

@@ -6,7 +6,7 @@ using Autofac ;
 using Autofac.Core ;
 using Common.Model ;
 using DynamicData.Kernel ;
-using WpfApp.AppShared.Interfaces ;
+using WpfApp.Core.Interfaces.Interfaces ;
 
 namespace Common.Converters
 {

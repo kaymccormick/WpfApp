@@ -2,9 +2,9 @@ using System ;
 using System.Collections.Generic ;
 using System.Linq ;
 using System.Windows ;
-using AppShared.Interfaces ;
 using Autofac.Features.Metadata ;
 using NLog ;
+using WpfApp.Core.Interfaces.Interfaces ;
 
 namespace Common.Menus
 {

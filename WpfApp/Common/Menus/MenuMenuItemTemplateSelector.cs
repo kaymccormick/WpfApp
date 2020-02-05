@@ -1,8 +1,8 @@
 using System.Linq ;
 using System.Windows ;
 using System.Windows.Controls ;
-using AppShared.Interfaces ;
 using NLog ;
+using WpfApp.Core.Interfaces.Interfaces ;
 
 namespace Common.Menus
 {

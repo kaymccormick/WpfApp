@@ -1,6 +1,6 @@
 using NLog ;
 
-namespace AppShared.Interfaces
+namespace WpfApp.Core.Interfaces.Interfaces
 {
     public interface ILoggerTracker
     {

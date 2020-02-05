@@ -8,6 +8,7 @@ using WpfApp.Core.Logging ;
 namespace WpfApp1.Xaml
 {
     [ MarkupExtensionReturnType ( typeof ( AppLogger ) ) ]
+    // ReSharper disable once UnusedType.Global
     internal class AppLoggerExtension : MarkupExtension
     {
         /// <summary>
@@ -30,8 +31,12 @@ namespace WpfApp1.Xaml
             LogManager.GetCurrentClassLogger ( ).Info ( $"{arg}" ) ;
         }
 
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
+        // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
         public ILogger Logger { get ; set ; }
 
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
+        // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
         public string Arg { get ; set ; }
 
         /// <summary>
@@ -49,13 +54,16 @@ namespace WpfApp1.Xaml
         public override object ProvideValue ( IServiceProvider serviceProvider )
         {
             var service = serviceProvider.GetService ( typeof ( IProvideValueTarget ) ) ;
-            var provideValueTarget = service as IProvideValueTarget ;
-            Console.WriteLine ( provideValueTarget.TargetObject ) ;
+            if ( service is IProvideValueTarget provideValueTarget )
+            {
+                Console.WriteLine ( provideValueTarget.TargetObject ) ;
+            }
 
-            var service2 = serviceProvider.GetService ( typeof ( IRootObjectProvider ) ) ;
-            var provide = service as IRootObjectProvider ;
+            if ( service is IRootObjectProvider provide )
+            {
+                Console.WriteLine ( provide.RootObject ) ;
+            }
 
-            Console.WriteLine ( provide.RootObject ) ;
             return new AppLogger ( LogManager.GetCurrentClassLogger ( ) ) ;
         }
     }

@@ -14,7 +14,6 @@ using System.Windows.Data ;
 using System.Windows.Input ;
 using System.Windows.Markup ;
 using System.Windows.Threading ;
-using AppShared.Interfaces ;
 using Autofac ;
 using Autofac.Core ;
 using Common.Logging ;
@@ -22,6 +21,7 @@ using NLog ;
 using NLog.Config ;
 using Vanara.Extensions.Reflection ;
 using WpfApp ;
+using WpfApp.Core.Interfaces.Interfaces ;
 using WpfApp1.Attributes ;
 using WpfApp1.Menus ;
 

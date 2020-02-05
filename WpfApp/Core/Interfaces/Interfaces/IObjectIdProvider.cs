@@ -14,7 +14,7 @@ using System.Collections.Generic ;
 using AppShared.Infos ;
 using Autofac.Core ;
 
-namespace WpfApp.AppShared.Interfaces
+namespace WpfApp.Core.Interfaces.Interfaces
 {
     // [ InterfaceMetadata ( typeof ( ObjectIdControl ) ) ]
     public interface IObjectIdProvider

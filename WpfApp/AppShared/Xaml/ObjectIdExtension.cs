@@ -4,7 +4,7 @@ using System.Windows.Markup ;
 using Autofac ;
 using JetBrains.Annotations ;
 using NLog ;
-using WpfApp.AppShared.Interfaces ;
+using WpfApp.Core.Interfaces.Interfaces ;
 
 namespace AppShared.Xaml
 {

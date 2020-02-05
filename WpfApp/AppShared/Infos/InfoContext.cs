@@ -23,7 +23,7 @@ namespace AppShared.Infos
     /// TODO Edit XML Comment Template for InfoContext
     public class InfoContext : Tuple < string , object > , IEnumerable < object >
     {
-        /// <summary>Factory delegate for producing InfoContext obects.</summary>
+        /// <summary>Factory delegate for producing InfoContext objects.</summary>
         /// <param name="name">The name.</param>
         /// <param name="objectContext">The object context.</param>
         /// <returns></returns>

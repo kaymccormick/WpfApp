@@ -24,7 +24,7 @@ namespace Tests.Tests3
 #pragma warning restore 649
 
 
-        protected MenuHelperTests (
+        public MenuHelperTests (
             WpfApplicationFixture wpfAppFixture
           , AppContainerFixture   containerFixture
           , UtilsContainerFixture utilsContainerFixture

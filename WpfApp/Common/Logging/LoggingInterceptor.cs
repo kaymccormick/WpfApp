@@ -1,7 +1,7 @@
 ﻿using System ;
-using AppShared.Interfaces ;
 using Castle.DynamicProxy ;
 using Common.Context ;
+using WpfApp.Core.Interfaces.Interfaces ;
 
 namespace Common.Logging
 {

@@ -1,6 +1,6 @@
 ﻿using System.Linq ;
 using System.Windows.Controls ;
-using AppShared.Interfaces ;
+using WpfApp.Core.Interfaces.Interfaces ;
 
 namespace WpfApp1.Menus
 {

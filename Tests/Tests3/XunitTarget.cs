@@ -14,7 +14,7 @@ using NLog ;
 using NLog.Targets ;
 using Xunit.Abstractions ;
 
-namespace WpfApp1Tests3
+namespace Tests.Tests3
 {
     [ Target ( "Xunit" ) ]
     public class XunitTarget : TargetWithLayout

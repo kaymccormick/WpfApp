@@ -79,7 +79,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\DefaultObjectIdProviderTests.cs" />
     <Compile Include="Lib\Attributes\PushContextAttributeTests.cs" />
-    <Compile Include="Tests3\ContainerHelperTests2.cs" />
     <Compile Include="Lib\Utils\DumpHelper.cs" />
     <Compile Include="Tests3\Fixtures\CombinedFixture.cs" />
     <Compile Include="Misc\InfoContextTests.cs" />
@@ -88,7 +87,8 @@
     <Compile Include="Tests3\ProvideValueTarget.cs" />
     <Compile Include="Tests3\ServiceProviderProxy.cs" />
     <Compile Include="Tests3\TestIDGeneratorModule.cs" />
-    <Compile Include="Tests3\WpfApplication.cs" />
+    <Compile Include="Tests3\TestWindowViews.cs" />
+    <Compile Include="Tests3\WpfCollectionTest.cs" />
     <Compile Include="Tests3\WpfTests.cs" />
     <Compile Include="Tests3\WpfTestsBase.cs" />
     <Compile Include="Tests3\XunitTarget.cs" />

@@ -1,7 +1,7 @@
 using System ;
 using NLog ;
 
-namespace AppShared.Interfaces
+namespace WpfApp.Core.Interfaces.Interfaces
 {
     /// <summary></summary>
     /// <seealso cref="System.EventArgs" />

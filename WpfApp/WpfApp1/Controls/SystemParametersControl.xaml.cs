@@ -11,8 +11,8 @@ using System.Windows ;
 using System.Windows.Controls ;
 using System.Windows.Controls.Primitives ;
 using System.Windows.Media ;
-using AppShared.Interfaces ;
 using NLog ;
+using WpfApp.Core.Interfaces.Interfaces ;
 using Xceed.Wpf.Toolkit.PropertyGrid ;
 
 namespace WpfApp1.Controls

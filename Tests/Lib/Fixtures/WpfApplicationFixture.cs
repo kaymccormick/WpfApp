@@ -2,10 +2,11 @@
 using System.Threading.Tasks ;
 using System.Windows ;
 using JetBrains.Annotations ;
+using TestLib.Fixtures ;
 using Tests.Lib.Attributes ;
 using Xunit ;
 
-namespace TestLib.Fixtures
+namespace Tests.Lib.Fixtures
 {
     /// <summary></summary>
     /// <seealso cref="Xunit.IAsyncLifetime" />
@@ -48,6 +49,7 @@ namespace TestLib.Fixtures
         public Application MyApp
         {
             get => _wpfApplicationHelper?.MyApp ;
+/*
             set
             {
                 if ( _wpfApplicationHelper != null )
@@ -55,6 +57,7 @@ namespace TestLib.Fixtures
                     _wpfApplicationHelper.MyApp = value ;
                 }
             }
+*/
         }
 
         /// <summary>

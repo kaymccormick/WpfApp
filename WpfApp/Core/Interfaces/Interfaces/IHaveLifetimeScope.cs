@@ -1,6 +1,6 @@
 ﻿using Autofac ;
 
-namespace AppShared.Interfaces
+namespace WpfApp.Core.Interfaces.Interfaces
 {
     public interface IHaveLifetimeScope
 

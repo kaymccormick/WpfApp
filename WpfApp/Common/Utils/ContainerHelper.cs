@@ -4,7 +4,6 @@ using System.Linq ;
 using System.Reflection ;
 using System.Windows ;
 using AppShared.Attributes ;
-using AppShared.Interfaces ;
 using AppShared.Modules ;
 using Autofac ;
 using Autofac.Core ;
@@ -14,6 +13,7 @@ using Castle.DynamicProxy ;
 using Common.Logging ;
 using Common.Menus ;
 using NLog ;
+using WpfApp.Core.Interfaces.Interfaces ;
 using WpfApp.Core.Logging ;
 
 namespace Common.Utils

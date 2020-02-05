@@ -1,12 +1,11 @@
 ﻿using System.Linq ;
 using System.Runtime.Serialization ;
-using AppShared.Interfaces ;
 using AppShared.Services ;
 using AppShared.Utils ;
 using Autofac ;
 using Autofac.Core ;
 using NLog ;
-using WpfApp.AppShared.Interfaces ;
+using WpfApp.Core.Interfaces.Interfaces ;
 
 namespace AppShared.Modules
 {

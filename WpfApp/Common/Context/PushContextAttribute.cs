@@ -4,10 +4,10 @@ using System.Diagnostics.CodeAnalysis ;
 using System.Linq ;
 using System.Reflection ;
 using AppShared.Infos ;
-using AppShared.Interfaces ;
 using Common.Exceptions ;
 using JetBrains.Annotations ;
 using NLog ;
+using WpfApp.Core.Interfaces.Interfaces ;
 
 namespace Common.Context
 {

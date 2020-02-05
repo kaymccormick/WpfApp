@@ -165,7 +165,7 @@ namespace TestLib.Fixtures
 //         // 	                 , UriKind.RelativeOrAbsolute
 //         // 	                  ) ;
 //         // 	BasePackUri = uri ;
-//         // 	Debug.WriteLine ( "basepackuri is " + BasePackUri ) ;
+//         // 	Debug.WriteLine ( "URI is " + BasePackUri ) ;
 //         // 	MyApp = theApp ;
 //         // 	return null ;
 //         // }
