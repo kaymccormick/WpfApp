@@ -3,7 +3,7 @@ using System.Reflection ;
 using System.Windows ;
 using System.Windows.Media ;
 
-namespace TestLib
+namespace Tests.Lib.Utils
 {
 	/// <summary></summary>
 	/// <typeparam name="T"></typeparam>

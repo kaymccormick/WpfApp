@@ -46,8 +46,6 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppSharedTests\Services\DefaultObjectIdProviderTests.cs" />
-    <Compile Include="Class1.cs" />
     <Compile Include="CommonTests\CacheUtils.cs" />
     <Compile Include="CommonTests\Class1.cs" />
     <Compile Include="CommonTests\ContainerHelperTests.cs" />
@@ -63,7 +61,7 @@
     <Compile Include="CommonTests\WpfApplication.cs" />
     <Compile Include="Lib\Attributes\BeforeAfterLoggerAttribute.cs" />
     <Compile Include="Lib\Attributes\LogTestMethodAttribute.cs" />
-    <Compile Include="Lib\AutofacContainerDef.cs" />
+    <Compile Include="Lib\Collections\AutofacContainerDef.cs" />
     <Compile Include="Lib\Collections\LoggingCollection.cs" />
     <Compile Include="Lib\Collections\WpfApplication.cs" />
     <Compile Include="Lib\Fixtures\AppContainerFixture.cs" />
@@ -75,30 +73,27 @@
     <Compile Include="Lib\IMyServices.cs" />
     <Compile Include="Lib\MyServices.cs" />
     <Compile Include="Lib\UtilsContainerFixture.cs" />
-    <Compile Include="Lib\WindowWrap.cs" />
+    <Compile Include="Lib\Utils\WindowWrap.cs" />
+    <Compile Include="Misc\Resources.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests3\Attributes\IDGeneratorAttribute.cs" />
+    <Compile Include="Services\DefaultObjectIdProviderTests.cs" />
     <Compile Include="Tests3\Attributes\PushContextAttributeTests.cs" />
     <Compile Include="Tests3\ContainerHelperTests2.cs" />
     <Compile Include="Tests3\DumpHelper.cs" />
     <Compile Include="Tests3\Fixtures\CombinedFixture.cs" />
     <Compile Include="Tests3\InfoContextTests.cs" />
-    <Compile Include="Tests3\LoggerImpl.cs" />
     <Compile Include="Tests3\MenuHelperTests.cs" />
     <Compile Include="Tests3\MyService.cs" />
     <Compile Include="Tests3\ProvideValueTarget.cs" />
     <Compile Include="Tests3\RandomXaml.cs" />
-    <Compile Include="Tests3\Resources.cs" />
     <Compile Include="Tests3\ResourcesPaths.cs" />
     <Compile Include="Tests3\ServiceProviderProxy.cs" />
     <Compile Include="Tests3\TestIDGeneratorModule.cs" />
-    <Compile Include="Tests3\TestResources.Designer.cs" />
-    <Compile Include="Tests3\UnitTest1.cs" />
     <Compile Include="Tests3\WpfApplication.cs" />
     <Compile Include="Tests3\WpfTests.cs" />
     <Compile Include="Tests3\WpfTestsBase.cs" />
     <Compile Include="Tests3\XunitTarget.cs" />
-    <Compile Include="WpfTestApplicationAttribute.cs" />
+    <Compile Include="Lib\Attributes\WpfTestApplicationAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Moq">
@@ -129,7 +124,9 @@
       <Version>1.0.19-beta</Version>
     </PackageReference>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="AppSharedTests\Services\" />
+  </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\..\NLog\src\NLog\NLog.csproj">
       <Project>{a0bff0db-ed9a-4639-ae86-8e709a1efc66}</Project>

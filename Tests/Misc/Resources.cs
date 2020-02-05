@@ -1,4 +1,4 @@
-﻿namespace WpfApp1Tests3
+﻿namespace Tests.Misc
 {
 	public static class Resources
 	{

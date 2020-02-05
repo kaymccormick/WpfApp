@@ -1,9 +1,9 @@
 ﻿using AppShared ;
 using Common.Logging ;
-using KayMcCormick.Dev.Test.Metadata ;
 using Logging ;
 using NLog ;
 using TestLib.Attributes ;
+using Tests.Lib.Attributes ;
 using WpfApp.Core.Logging ;
 using Xunit ;
 

@@ -8,6 +8,7 @@ using System.Windows.Media ;
 using System.Windows.Threading ;
 using JetBrains.Annotations ;
 using NLog ;
+using Tests.Lib.Utils ;
 using Xunit ;
 
 namespace TestLib.Fixtures

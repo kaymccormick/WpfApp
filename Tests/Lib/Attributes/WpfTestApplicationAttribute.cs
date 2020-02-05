@@ -1,6 +1,6 @@
 ﻿using System ;
 
-namespace KayMcCormick.Dev.Test.Metadata
+namespace Tests.Lib.Attributes
 {
 	[ AttributeUsage (
 		                 AttributeTargets.Assembly

@@ -1,7 +1,7 @@
 ﻿using TestLib.Fixtures ;
 using Xunit ;
 
-namespace TestLib
+namespace Tests.Lib.Collections
 {
 	[ CollectionDefinition ( "AutofacContainer" ) ]
 	internal class AutofacContainerDef : ICollectionFixture < AppContainerFixture >

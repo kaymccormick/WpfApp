@@ -1,8 +1,9 @@
-﻿using Xunit;
-using System.Runtime.Serialization ;
+﻿using System.Runtime.Serialization ;
+using AppShared.Services ;
 using Autofac.Core ;
+using Xunit ;
 
-namespace AppShared.Services.ests
+namespace Tests.Services
 {
     public class DefaultObjectIdProviderTests
     {

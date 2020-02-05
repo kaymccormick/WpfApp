@@ -4,7 +4,7 @@ using System.Reflection ;
 using System.Threading.Tasks ;
 using System.Windows ;
 using JetBrains.Annotations ;
-using KayMcCormick.Dev.Test.Metadata ;
+using Tests.Lib.Attributes ;
 using Xunit ;
 using Application = System.Windows.Application ;
 
