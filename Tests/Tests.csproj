@@ -79,13 +79,11 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tests3\Attributes\IDGeneratorAttribute.cs" />
     <Compile Include="Tests3\Attributes\PushContextAttributeTests.cs" />
-    <Compile Include="Tests3\ContainerHelperTests.cs" />
     <Compile Include="Tests3\ContainerHelperTests2.cs" />
     <Compile Include="Tests3\DumpHelper.cs" />
     <Compile Include="Tests3\Fixtures\CombinedFixture.cs" />
     <Compile Include="Tests3\InfoContextTests.cs" />
     <Compile Include="Tests3\LoggerImpl.cs" />
-    <Compile Include="Tests3\MainWindowTests.cs" />
     <Compile Include="Tests3\MenuHelperTests.cs" />
     <Compile Include="Tests3\MyService.cs" />
     <Compile Include="Tests3\ProvideValueTarget.cs" />
@@ -93,16 +91,19 @@
     <Compile Include="Tests3\Resources.cs" />
     <Compile Include="Tests3\ResourcesPaths.cs" />
     <Compile Include="Tests3\ServiceProviderProxy.cs" />
-    <Compile Include="Tests3\TestClass.cs" />
     <Compile Include="Tests3\TestIDGeneratorModule.cs" />
     <Compile Include="Tests3\TestResources.Designer.cs" />
     <Compile Include="Tests3\UnitTest1.cs" />
     <Compile Include="Tests3\WpfApplication.cs" />
     <Compile Include="Tests3\WpfTests.cs" />
+    <Compile Include="Tests3\WpfTestsBase.cs" />
     <Compile Include="Tests3\XunitTarget.cs" />
     <Compile Include="WpfTestApplicationAttribute.cs" />
   </ItemGroup>
   <ItemGroup>
+    <PackageReference Include="Moq">
+      <Version>4.13.1</Version>
+    </PackageReference>
     <PackageReference Include="xunit">
       <Version>2.4.1</Version>
     </PackageReference>
@@ -118,6 +119,11 @@
     </PackageReference>
     <PackageReference Include="xunit.runner.reporters">
       <Version>2.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="xunit.runner.visualstudio">
+      <Version>2.4.1</Version>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Xunit.StaFact">
       <Version>1.0.19-beta</Version>

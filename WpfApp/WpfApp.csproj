@@ -196,7 +196,6 @@
     <Compile Include="AppShared\Utils\SerializableDictionary.cs" />
     <Compile Include="AppShared\Xaml\LifetimeScopeExtension.cs" />
     <Compile Include="AppShared\Xaml\ObjectIdExtension.cs" />
-    <Compile Include="Common\AppContainerFixture.cs" />
     <Compile Include="Common\Context\ContextStackInstanceAttribute.cs" />
     <Compile Include="Common\Context\PushContextAttribute.cs" />
     <Compile Include="Common\Converters\AssemblyConverter.cs" />

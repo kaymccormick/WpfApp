@@ -1,5 +1,4 @@
 ﻿using System ;
-using AppShared.Infos ;
 using AppShared.Interfaces ;
 using Autofac ;
 using NLog ;
@@ -51,28 +50,5 @@ namespace WpfApp1Tests3
             Assert.NotNull ( item ) ;
             Assert.Equal ( header , item.Header ) ;
         }
-    }
-
-    public class WpfTestsBase
-    {
-        protected AppContainerFixture _containerFixture ;
-
-        protected WpfTestsBase (
-            WpfApplicationFixture fixture
-          , AppContainerFixture   containerFixture
-          , UtilsContainerFixture utilsContainerFixture
-          , ITestOutputHelper     outputHelper
-        )
-        {
-
-        }
-
-        public ILifetimeScope containerScope { get => _containerFixture.LifetimeScope ; }
-
-        public IMyServices myServices { get ; set ; }
-
-        public ContextStack < InfoContext > MyStack { get ; set ; }
-
-        public WpfApplicationFixture Fixture { get ; set ; }
     }
 }

@@ -40,14 +40,13 @@ namespace CommonTests
         /// </summary>
         public ContainerHelperTests (
             LoggingFixture        loggingFixture
-          , WpfApplicationFixture wpfApplicationFixture
           , ITestOutputHelper     output
         )
         {
             UseLogMethod = LogMethod ;
             UseLogMethod ( $"my logger is type {Logger.GetType ( )}" ) ;
             LoggingFixture        = loggingFixture ;
-            WpfApplicationFixture = wpfApplicationFixture ;
+            // WpfApplicationFixture = wpfApplicationFixture ;
             Output                = output ;
         }
 
@@ -187,7 +186,9 @@ namespace CommonTests
             var enumerable = c.Resolve < IEnumerable < Lazy < Window > > > ( ) ;
             var l = enumerable.ToList ( ) ;
             Assert.NotEmpty ( l ) ;
-            Assert.Equal ( 3 , l.Count ) ;
+            Assert.All(l, lazy => {
+                Assert.NotNull ( lazy ) ;
+            });
         }
 
         /// <summary>

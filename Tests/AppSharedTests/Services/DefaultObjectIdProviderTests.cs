@@ -1,55 +1,60 @@
 ﻿using Xunit;
-using AppShared.Services;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Runtime.Serialization ;
+using Autofac.Core ;
 
 namespace AppShared.Services.ests
 {
-	public class DefaultObjectIdProviderTests
-	{
-		public DefaultObjectIdProviderTests ()
-		{
+    public class DefaultObjectIdProviderTests
+    {
+        public DefaultObjectIdProviderTests ()
+        {
 
-		}
+        }
 
-		[Fact ( )]
-		public void getRootNodesTest ()
-		{
-			Assert.True ( false , "This test needs an implementation" );
-		}
+        [Fact ( )]
+        public void getRootNodesTest ()
+        {
+            DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
+            var rootNodes = x.GetRootNodes ( ) ;
+            Assert.NotEmpty(rootNodes);
+        }
 
-		[Fact ( )]
-		public void DefaultObjectIdProviderTest ()
-		{
-			Assert.True ( false , "This test needs an implementation" );
-		}
 
-		[Fact ( )]
-		public void GetInstanceByComponentRegistrationTest ()
-		{
-			Assert.True ( false , "This test needs an implementation" );
-		}
+        [Fact ( )]
+        public void GetInstanceByComponentRegistrationTest ()
+        {
+            DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
+            var reg = new Moq.Mock < IComponentRegistration > ( ) ;
+            var list = x.GetInstanceByComponentRegistration ( reg.Object) ;
 
-		[Fact ( )]
-		public void GetInstanceCountTest ()
-		{
+        }
 
-			Assert.True ( false , "This test needs an implementation" );
-		}
+        [Fact ( )]
+        public void GetInstanceCountTest ()
+        {
+            DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
+            var reg = new Moq.Mock < IComponentRegistration > ( ) ;
+            var instanceCount = x.GetInstanceCount ( reg.Object ) ;
+            
+            
+        }
 
-		[Fact ( )]
-		public void GetObjectInstancesTest ()
-		{
-			Assert.True ( false , "This test needs an implementation" );
-		}
+        [Fact ( )]
+        public void GetObjectInstancesTest ()
+        {
+            DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
+            var reg = new Moq.Mock < IComponentRegistration > ( ) ;
+            var instances = x.GetObjectInstances() ;
 
-		[Fact ( )]
-		public void ProvideObjectInstanceIdentifierTest ()
-		{
-			Assert.True ( false , "This test needs an implementation" );
-		}
-	}
+        }
+
+        [Fact ( )]
+        public void ProvideObjectInstanceIdentifierTest ()
+        {
+            DefaultObjectIdProvider x = new DefaultObjectIdProvider(new ObjectIDGenerator());
+            var reg = new Moq.Mock < IComponentRegistration > ( ) ;
+            var id = x.ProvideObjectInstanceIdentifier ( null , reg.Object , null ) ;
+            
+        }
+    }
 }

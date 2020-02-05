@@ -58,7 +58,7 @@ namespace CommonTests.Converters
 
             var instConv =
                 new RegistrationConverter (
-                                           _fixture.Container
+                                               _fixture.Container
                                          , objIdProv
                                           ) ; // TypeDescriptor.GetConverter ( typeof (IComponentRegistration) ) ;
             Assert.NotNull ( instConv ) ;
@@ -82,6 +82,7 @@ namespace CommonTests.Converters
             Assert.NotNull ( myVal ) ;
             Assert.IsAssignableFrom < IList < InstanceRegistration > > ( myVal ) ;
             var list = ( IList < InstanceRegistration > ) myVal ;
+            Assert.Single ( list ) ;
             Assert.Collection (
                                list
                              , info => {
