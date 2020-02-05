@@ -52,7 +52,7 @@
         </Style>
     </UserControl.Resources>
     <Grid
-        DataContext="{Binding Path=(wpfApp:App.RenderedType),ElementName=userControl,FallbackValue={x:Type model:MenuItemList}}"
+        DataContext="{Binding Path=(wpfApp:Props.RenderedType),ElementName=userControl,FallbackValue={x:Type model:MenuItemList}}"
         ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
@@ -64,7 +64,7 @@
         <Canvas Grid.Column="0" Grid.Row="0">
             <Border>
                 <WrapPanel>
-                    <Button Content="{Binding Name}" Command="common:MyAppCommands.VisitType"
+                    <Button Content="{Binding Name}" Command="common:Commands.VisitType"
                             CommandParameter="{Binding}" />
                 </WrapPanel>
             </Border>

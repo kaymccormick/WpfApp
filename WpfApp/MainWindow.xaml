@@ -1,4 +1,4 @@
-﻿<Window Name="mainWindow" x:Class="WpfTestApp.MainWindow"
+﻿<Window Name="mainWindow" x:Class="WpfApp.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -10,6 +10,7 @@
         xmlns:types1="clr-namespace:AppShared.Types"
         xmlns:xaml1="clr-namespace:AppShared.Xaml"
         xmlns:wpfControlLibrary1="clr-namespace:WpfControlLibrary1"
+        xmlns:common="clr-namespace:Common"
         MinWidth="800"
         MinHeight="600"
         mc:Ignorable="d" FontSize="20"
@@ -93,11 +94,11 @@
                 </Grid>
             </TabItem>
             <TabItem Header="Registrations">
-                <Registrations>
+                <wpfControlLibrary1:Registrations>
                     <wpfApp:Props.LifetimeScope>
                         <Binding ElementName="mainWindow" Path="(wpfApp:Props.LifetimeScope)" />
                     </wpfApp:Props.LifetimeScope>
-                </Registrations>
+                </wpfControlLibrary1:Registrations>
             </TabItem>
             <TabItem Header="Y">
                 <StackPanel>
@@ -115,12 +116,12 @@
                         <ListView.View>
                             <GridView>
                                 <GridViewColumn Header="Object ID"
-                                                DisplayMemberBinding="{Binding Source={xaml:ObjectId
-                                LifetimeScope={xaml:LifetimeScope}}}" />
+                                                DisplayMemberBinding="{Binding Source={xaml1:ObjectId
+                                LifetimeScope={xaml1:LifetimeScope}}}" />
                                 <GridViewColumn Header="Service Type" DisplayMemberBinding="{Binding Path=ServiceType}" />
                                 <GridViewColumn Header="Tag" DisplayMemberBinding="{Binding Path=LifetimeScope.Tag}" />
                                 <GridViewColumn Header="Service Instance"
-                                                DisplayMemberBinding="{Binding ConverterParameter={xaml:LifetimeScope}, Converter={StaticResource MyConverter}}" />
+                                                DisplayMemberBinding="{Binding ConverterParameter={xaml1:LifetimeScope}, Converter={StaticResource MyConverter}}" />
                             </GridView>
                         </ListView.View>
                     </ListView>
@@ -144,7 +145,7 @@
                NavigationFailed="Frame_OnNavigationFailed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
                Name="frame" Source="TypePage.xaml">
             <Frame.CommandBindings>
-                <CommandBinding Command="common:MyAppCommands.VisitType" Executed="VisitType" />
+                <CommandBinding Command="common:Commands.VisitType" Executed="VisitType" />
             </Frame.CommandBindings>
             <Frame.RenderTransform>
                 <ScaleTransform ScaleX="2" ScaleY="2" />

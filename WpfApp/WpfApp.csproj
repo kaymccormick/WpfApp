@@ -55,6 +55,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="WpfApp1\Application\IHaveAppLogger.cs" />
+    <Compile Include="WpfApp1\Attributes\LoggingEntityMetadata.cs" />
+    <Compile Include="WpfApp1\Attributes\WindowMetadataAttribute.cs" />
+    <Compile Include="WpfApp1\Controls\Container.xaml.cs" />
+    <Compile Include="WpfApp1\Controls\SystemParametersControl.xaml.cs" />
+    <Compile Include="WpfApp1\Controls\TypedService.cs" />
+    <Compile Include="WpfApp1\Controls\UserControl1.xaml.cs" />
+    <Compile Include="WpfApp1\DesignData.cs" />
+    <Compile Include="WpfApp1\Events\AttachedEvents.cs" />
+    <Compile Include="WpfApp1\Logging\AppLoggerContainer.cs" />
+    <Compile Include="WpfApp1\Logging\LoggerImpl.cs" />
+    <Compile Include="WpfApp1\Logging\NLogTargetConverter.cs" />
+    <Compile Include="WpfApp1\Logging\TypeBrowserPage.xaml.cs" />
+    <Compile Include="WpfApp1\Menus\ILoggingEntity.cs" />
+    <Compile Include="WpfApp1\Menus\MenuHelper.cs" />
+    <Compile Include="WpfApp1\Util\DebugHelper.cs" />
+    <Compile Include="WpfApp1\Util\IObjectId.cs" />
+    <Compile Include="WpfApp1\Util\LoggerInterceptor.cs" />
+    <Compile Include="WpfApp1\Util\LongObjectId.cs" />
+    <Compile Include="WpfApp1\Util\MyActivator.cs" />
+    <Compile Include="WpfApp1\Util\ProxyGenerationHook.cs" />
+    <Compile Include="WpfApp1\Windows\AppSettingsWindow.xaml.cs" />
+    <Compile Include="WpfApp1\Windows\ComponentRegistry.cs" />
+    <Compile Include="WpfApp1\Windows\LifetimeScope.cs" />
+    <Compile Include="WpfApp1\Windows\LogEventInfoCollection.cs" />
+    <Compile Include="WpfApp1\Windows\MainWindow.xaml.cs" />
+    <Compile Include="WpfApp1\Windows\NewWindow.xaml.cs" />
+    <Compile Include="WpfApp1\Windows\Page1.xaml.cs" />
+    <Compile Include="WpfApp1\Xaml\AppLoggerExtension.cs" />
+    <Compile Include="WpfApp1\Xaml\AssemblyConverter.cs" />
+    <Compile Include="WpfApp1\Xaml\Converter.cs" />
+    <Compile Include="WpfApp1\Xaml\InstanceRegistrationConverter.cs" />
+    <Compile Include="WpfApp1\Xaml\SmartTypeConverter.cs" />
     <Page Include="Controls\AssemblyBrowser.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -198,7 +231,7 @@
     <Compile Include="Common\Model\ResourceInfo.cs" />
     <Compile Include="Common\Model\ResourcesModel.cs" />
     <Compile Include="Common\Model\ResourcesUtil.cs" />
-    <Compile Include="Common\MyAppCommands.cs" />
+    <Compile Include="Common\Commands.cs" />
     <Compile Include="Common\NLogTextWriter.cs" />
     <Compile Include="Common\ResourceMetadata.cs" />
     <Compile Include="Common\TestO.cs" />
@@ -220,6 +253,38 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="WpfApp1\Controls\Container.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Controls\SystemParametersControl.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Controls\UserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Logging\TypeBrowserPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Windows\AppSettingsWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Windows\OldMainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Windows\NewWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WpfApp1\Windows\Page1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -274,6 +339,12 @@
     </PackageReference>
     <PackageReference Include="System.Reactive">
       <Version>4.3.2</Version>
+    </PackageReference>
+    <PackageReference Include="Vanara.Core">
+      <Version>3.1.9</Version>
+    </PackageReference>
+    <PackageReference Include="Xceed.Products.Wpf.Toolkit.AvalonDock">
+      <Version>4.0.20076.12200</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>

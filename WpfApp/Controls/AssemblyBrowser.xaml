@@ -4,23 +4,22 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:reflection="clr-namespace:System.Reflection;assembly=mscorlib"
-             xmlns:common="clr-namespace:Common;assembly=Common"
-             xmlns:appShared="clr-namespace:AppShared;assembly=AppShared"
-             xmlns:controls1="clr-namespace:Controls"
              xmlns:wpfControlLibrary1="clr-namespace:WpfControlLibrary1"
+             xmlns:wpfApp="clr-namespace:WpfApp"
+             xmlns:common1="clr-namespace:Common"
              mc:Ignorable="d"
              d:DesignHeight="450" d:DesignWidth="800"
              DataContext="{Binding Mode=OneWay, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}}">
     <UserControl.Resources>
         
-        <CollectionViewSource Source="{Binding Path=(wpfControlLibrary1:App.AssemblyList)}"
+        <CollectionViewSource Source="{Binding Path=(wpfApp:Props.AssemblyList)}"
                               x:Key="AssemblyCollectionView" />
         <DataTemplate x:Key="AssemblyTemplate" DataType="reflection:Assembly">
             <TextBlock Text="{Binding Path=FullName}" />
         </DataTemplate>
     </UserControl.Resources>
     <UserControl.CommandBindings>
-        <CommandBinding Command="common:MyAppCommands.LoadAssemblyList"
+        <CommandBinding Command="common1:Commands.LoadAssemblyList"
                         Executed="LoadAssemblyList" CanExecute="CanLoadAssemblyList" />
     </UserControl.CommandBindings>
     <Grid>
@@ -36,7 +35,7 @@
         </Grid.RowDefinitions>
         <ToolBarTray>
             <ToolBar Band="1" BandIndex="1">
-                <Button Content="Load" Command="common:MyAppCommands.LoadAssemblyList" />
+                <Button Content="Load" Command="common1:Commands.LoadAssemblyList" />
             </ToolBar>
         </ToolBarTray>
         <ListBox Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
@@ -46,9 +45,9 @@
         <ListBox Grid.Row="2" Grid.Column="0" MinHeight="100" Name="TypeBox"
                  ItemsSource="{Binding Source={StaticResource AssemblyCollectionView}, Converter={StaticResource AssemblyConverter}}" />
         <wpfControlLibrary1:TypeControl Grid.Row="3" Grid.Column="1">
-            <wpfControlLibrary1:App.RenderedType>
+            <wpfApp:Props.RenderedType>
                 <Binding ElementName="TypeBox" Path="SelectedItem" />
-            </wpfControlLibrary1:App.RenderedType>
+            </wpfApp:Props.RenderedType>
         </wpfControlLibrary1:TypeControl>
     </Grid>
 </UserControl>

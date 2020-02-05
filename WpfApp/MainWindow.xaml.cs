@@ -8,7 +8,7 @@ using Common ;
 using NLog ;
 using WpfControlLibrary1 ;
 
-namespace WpfTestApp
+namespace WpfApp
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -43,10 +43,9 @@ namespace WpfTestApp
                     {
                         var valueSource = DependencyPropertyHelper.GetValueSource (
                                                                                    resolveService
-                                                                                 , WpfControlLibrary1.App
-                                                                                                     .LifetimeScopeProperty
+                                                                                 , Props.LifetimeScopeProperty
                                                                                   ) ;
-                        var lifetimeScope = WpfControlLibrary1.App.GetLifetimeScope ( resolveService ) ;
+                        var lifetimeScope = Props.GetLifetimeScope ( resolveService ) ;
                         Logger.Warn (
                                      $"{resolveService.ServiceType} {lifetimeScope} {valueSource}"
                                     ) ;
@@ -90,7 +89,7 @@ namespace WpfTestApp
             if ( eParameter != null )
             {
                 var typeControl2 = new TypeControl2() ;
-                typeControl2.SetValue(WpfControlLibrary1.Props.RenderedTypeProperty, eParameter);
+                typeControl2.SetValue(Props.RenderedTypeProperty, eParameter);
                 var findName = FindName ( "frame" ) as Frame ;
                 findName.Navigate(typeControl2) ;
             }

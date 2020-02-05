@@ -3,7 +3,7 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-      xmlns:appShared="clr-namespace:AppShared;assembly=AppShared"
+      xmlns:wpfApp="clr-namespace:WpfApp"
       xmlns:wpfControlLibrary1="clr-namespace:WpfControlLibrary1"
       mc:Ignorable="d"
       Background="AliceBlue"
@@ -12,9 +12,9 @@
 
     <DockPanel LastChildFill="True">
         <wpfControlLibrary1:TypeControl Detailed="true">
-            <wpfControlLibrary1:App.RenderedType>
+            <wpfApp:Props.RenderedType>
                 <x:Type TypeName="Window" />
-            </wpfControlLibrary1:App.RenderedType>
+            </wpfApp:Props.RenderedType>
         </wpfControlLibrary1:TypeControl>
     </DockPanel>
 </Page>

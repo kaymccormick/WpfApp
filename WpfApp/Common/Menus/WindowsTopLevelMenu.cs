@@ -54,7 +54,7 @@ namespace Common.Menus
 				m.Header = ( string ) window.Metadata[ "WindowTitle" ] ;
 			}
 
-			m.Command          = MyAppCommands.OpenWindow ;
+			m.Command          = Commands.OpenWindow ;
 			m.CommandParameter = window ;
 			return m ;
 		}

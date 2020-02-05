@@ -41,7 +41,7 @@ namespace Common.Converters
                        new Button ( )
                        {
                            Content          = "Load"
-                         , Command          = MyAppCommands.Load
+                         , Command          = Commands.Load
                          , CommandParameter = x.Instance
                        }
                       ) ;
@@ -55,7 +55,7 @@ namespace Common.Converters
                        new Button ( )
                        {
                            Content          = "Metadata"
-                         , Command          = MyAppCommands.Metadata
+                         , Command          = Commands.Metadata
                          , CommandParameter = x.Instance
                        }
                       ) ;
