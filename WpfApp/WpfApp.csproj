@@ -54,7 +54,7 @@
     <DebugSymbols>true</DebugSymbols>
     <OutputPath>bin\Debug2\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DocumentationFile>bin\Debug\WpfApp.xml</DocumentationFile>
+    <DocumentationFile>bin\Debug2\WpfApp.xml</DocumentationFile>
     <DebugType>full</DebugType>
     <PlatformTarget>AnyCPU</PlatformTarget>
     <LangVersion>7.3</LangVersion>
@@ -82,6 +82,7 @@
     <Compile Include="Application\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Application\DebugEventArgs.cs" />
     <Compile Include="Config\ContainerHelperSection.cs" />
     <Compile Include="Core\Interfaces\IApplicationContext.cs" />
     <Compile Include="NewMainWindow.xaml.cs">

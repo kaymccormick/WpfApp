@@ -12,7 +12,7 @@ namespace Tests
 {
     public class AppTests
     {
-        private ITestOutputHelper _output ;
+        private readonly ITestOutputHelper _output ;
 
         /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
         public AppTests ( ITestOutputHelper output ) { _output = output ; }
@@ -20,10 +20,15 @@ namespace Tests
         [WpfFact]
         public void TestApplyConfiguration()
         {
-            var app = new App ((message) => _output.WriteLine ( message ) ) ;
+            var app = new App ( DebugEventHandler ) ;
             Assert.NotNull ( app ) ;
             Assert.Collection( app.configSettings , o => Assert.IsType<ContainerHelperSettings>(o));
                 
+        }
+
+        private void DebugEventHandler ( object sender , DebugEventArgs e )
+        {
+            _output.WriteLine ( e.Message ) ;
         }
     }
 }
