@@ -52,7 +52,7 @@ namespace Common.Menus
                                    typeof ( ITopLevelMenu ).IsAssignableFrom ( t ) ;
                                if ( isAssignableFrom )
                                {
-                                   Logger.Debug ( "Scanned and registering " + t ) ;
+                                   Logger.Debug ( "* Scanned and registering " + t ) ;
                                }
 
                                return isAssignableFrom ;

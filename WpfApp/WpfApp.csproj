@@ -74,6 +74,7 @@
     <Compile Include="NewMainWindow.xaml.cs">
       <DependentUpon>NewMainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ProxyUtils.cs" />
     <Compile Include="WpfApp1\Attributes\LoggingEntityMetadata.cs" />
     <Compile Include="WpfApp1\Attributes\WindowMetadataAttribute.cs" />
     <Compile Include="WpfApp1\Controls\Container.xaml.cs" />
@@ -365,6 +366,9 @@
     </PackageReference>
     <PackageReference Include="MvvmLightLibs">
       <Version>5.4.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="NJection.LambdaConverter">
+      <Version>1.0.1</Version>
     </PackageReference>
     <PackageReference Include="System.Reactive">
       <Version>4.3.2</Version>
