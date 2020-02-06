@@ -14,7 +14,7 @@ using System.Linq ;
 using System.Reactive.Concurrency ;
 using System.Reactive.Linq ;
 using System.Windows.Threading ;
-using Common.Logging ;
+using WpfApp.Core.Logging ;
 
 namespace Tests.CommonTests
 {

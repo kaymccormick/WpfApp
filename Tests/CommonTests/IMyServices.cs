@@ -9,9 +9,9 @@
 // 
 // ---
 #endregion
-using AppShared.Infos ;
+using WpfApp.Core.Infos ;
 
-namespace TestLib
+namespace Tests.CommonTests
 {
     public interface IMyServices
 

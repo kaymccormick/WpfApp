@@ -56,25 +56,16 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AppTests.cs" />
     <Compile Include="CommonTests\CacheUtils.cs" />
-    <Compile Include="CommonTests\Class1.cs" />
-    <Compile Include="CommonTests\ContainerHelperTests.cs" />
-    <Compile Include="CommonTests\Converters\InstanceRegistrationConverterTests.cs" />
-    <Compile Include="CommonTests\Converters\RegistrationConverterTests.cs" />
-    <Compile Include="CommonTests\Converters\TestConverterEnumeration.cs" />
-    <Compile Include="CommonTests\Converters\TestResolveServiceConverter.cs" />
     <Compile Include="CommonTests\Fixtures\ContainerFixture.cs" />
     <Compile Include="CommonTests\Fixtures\testContainerFixture.cs" />
     <Compile Include="CommonTests\IMyServices.cs" />
-    <Compile Include="CommonTests\LogConfigTest.cs" />
-    <Compile Include="CommonTests\TypeControlTests.cs" />
     <Compile Include="CommonTests\WpfApplication.cs" />
     <Compile Include="Lib\Attributes\BeforeAfterLoggerAttribute.cs" />
     <Compile Include="Lib\Attributes\LogTestMethodAttribute.cs" />
     <Compile Include="Lib\Collections\AutofacContainerDef.cs" />
-    <Compile Include="Lib\Collections\LoggingCollection.cs" />
     <Compile Include="Lib\Collections\WpfApplication.cs" />
+    <Compile Include="Lib\Exceptions\TestException.cs" />
     <Compile Include="Lib\Fixtures\AppContainerFixture.cs" />
     <Compile Include="Lib\Fixtures\ContainerFixture.cs" />
     <Compile Include="Lib\Fixtures\LoggingFixture.cs" />
@@ -84,23 +75,35 @@
     <Compile Include="Lib\IMyServices.cs" />
     <Compile Include="Lib\MyServices.cs" />
     <Compile Include="Lib\UtilsContainerFixture.cs" />
+    <Compile Include="Lib\Utils\ConverterInfo.cs" />
+    <Compile Include="Lib\Utils\OutputHelperWrapper.cs" />
+    <Compile Include="Lib\Utils\Result.cs" />
     <Compile Include="Lib\Utils\WindowWrap.cs" />
+    <Compile Include="Main\AppTests.cs" />
+    <Compile Include="Main\TestTestContainer.cs" />
+    <Compile Include="Main\ContainerHelperTests.cs" />
+    <Compile Include="Main\Converters\InstanceRegistrationConverterTests.cs" />
+    <Compile Include="Main\Converters\RegistrationConverterTests.cs" />
+    <Compile Include="Main\Converters\TestConverterEnumeration.cs" />
+    <Compile Include="Main\Converters\TestResolveServiceConverter.cs" />
+    <Compile Include="Main\DefaultObjectIdProviderTests.cs" />
+    <Compile Include="Main\LogConfigTest.cs" />
+    <Compile Include="Main\MenuHelperTests.cs" />
+    <Compile Include="Main\TestIdGeneratorModule.cs" />
+    <Compile Include="Main\UI\TypeControlTests.cs" />
+    <Compile Include="Main\Utils\InfoContextTests.cs" />
+    <Compile Include="Main\Utils\PushContextAttributeTests.cs" />
+    <Compile Include="Main\WpfTests.cs" />
     <Compile Include="Misc\Resources.cs" />
     <Compile Include="Misc\ResourcesPaths.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\DefaultObjectIdProviderTests.cs" />
-    <Compile Include="Lib\Attributes\PushContextAttributeTests.cs" />
     <Compile Include="Lib\Utils\DumpHelper.cs" />
     <Compile Include="Tests3\Fixtures\CombinedFixture.cs" />
-    <Compile Include="Misc\InfoContextTests.cs" />
-    <Compile Include="Tests3\MenuHelperTests.cs" />
     <Compile Include="Tests3\MyService.cs" />
     <Compile Include="Tests3\ProvideValueTarget.cs" />
     <Compile Include="Tests3\ServiceProviderProxy.cs" />
-    <Compile Include="Tests3\TestIDGeneratorModule.cs" />
     <Compile Include="Tests3\TestWindowViews.cs" />
     <Compile Include="Tests3\WpfCollectionTest.cs" />
-    <Compile Include="Tests3\WpfTests.cs" />
     <Compile Include="Tests3\WpfTestsBase.cs" />
     <Compile Include="Tests3\XunitTarget.cs" />
     <Compile Include="Lib\Attributes\WpfTestApplicationAttribute.cs" />
@@ -187,6 +190,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppSharedTests\Services\" />
+    <Folder Include="CommonTests\Converters\" />
+    <Folder Include="Lib\EExceptions\" />
+    <Folder Include="Services\" />
     <Folder Include="Tests3\Attributes\" />
   </ItemGroup>
   <ItemGroup>
@@ -235,6 +241,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="xunit.runner.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="test" DependsOnTargets="build">
+    <!-- $(OutputPath)/$(AssemblyName)$(TargetExt)" -->
+    <xunit Assemblies="$(TargetPath)" IgnoreFailures="true" Html="$(OutputPath)\TestResults.html" Xml="$(OutputPath)\TestResults.xml" />
+  </Target>
+  <Target Name="ViewTestResult" AfterTargets="test">
+    <exec command="$(OutputPath)\TestResults.html" />
+  </Target>
 </Project>

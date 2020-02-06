@@ -1,5 +1,4 @@
 ﻿using System ;
-using System.Reflection ;
 using System.Threading ;
 using System.Threading.Tasks ;
 using System.Windows ;
@@ -17,10 +16,6 @@ namespace Tests.Lib.Fixtures
     {
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
-        public WpfApplicationHelper ( Assembly theAssembly ) { TheAssembly = theAssembly ; }
-
-        // ReSharper disable once UnusedAutoPropertyAccessor.Global
-        public Assembly TheAssembly { get ; }
 
         /// <summary>Gets or sets a value indicating whether [load real application].</summary>
         /// <value>
@@ -32,14 +27,11 @@ namespace Tests.Lib.Fixtures
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public Uri BasePackUri { get ; set ; }
 
-        // ReSharper disable once UnusedMember.Global
-        public Assembly CurAssembly { get ; set ; }
 
         public Application MyApp { get ; set ; }
 
         // ReSharper disable once UnusedMember.Global
         public DispatcherOperation Op { get ; set ; }
-
 
         /// <summary>
         ///     Called immediately after the class has been created, before it is used.
@@ -47,11 +39,6 @@ namespace Tests.Lib.Fixtures
         public Task InitializeAsync ( )
         {
             Logger?.Debug ( $"{nameof ( InitializeAsync )}" ) ;
-            // return Task.Run (
-            // ( ) => {
-            // CreateApplication ( TheAssembly ) ;
-            // }
-            // ) ;
             return Task.CompletedTask ;
         }
 
@@ -62,6 +49,7 @@ namespace Tests.Lib.Fixtures
         /// </summary>
         public Task DisposeAsync ( )
         {
+            #if TCS
             var tcs = new TaskCompletionSource < bool > ( ) ;
             var s = new CancellationTokenSource ( ) ;
             var token = s.Token ;
@@ -104,7 +92,7 @@ namespace Tests.Lib.Fixtures
             }
 
             Logger.Error ( "MyApp is null" ) ;
-
+            #endif
             return Task.CompletedTask ;
         }
 //

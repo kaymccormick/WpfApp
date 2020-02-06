@@ -3,9 +3,8 @@ using System.Windows.Controls ;
 using Autofac ;
 using Common ;
 using NLog ;
-using WpfApp ;
 
-namespace WpfControlLibrary1
+namespace WpfApp.Controls
 {
     /// <summary>
     ///     Interaction	logic for Registrations.xaml
@@ -30,7 +29,7 @@ namespace WpfControlLibrary1
         /// TODO Edit XML Comment Template for #ctor
         public Registrations ( )
         {
-            // InitializeComponent ( ) ;
+            InitializeComponent ( ) ;
 //			AddHandler (  )
 
             AddHandler (

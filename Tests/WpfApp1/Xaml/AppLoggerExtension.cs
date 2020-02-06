@@ -1,7 +1,6 @@
 ﻿using System ;
 using System.Windows.Markup ;
 using System.Xaml ;
-using Common.Logging ;
 using NLog ;
 using WpfApp.Core.Logging ;
 

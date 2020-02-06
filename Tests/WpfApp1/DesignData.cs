@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic ;
-using AppShared.Infos ;
 using Autofac ;
-using Common.Menus ;
-using WpfApp.Common.Menus ;
+using WpfApp.Core.Infos ;
+using WpfApp.Core.Menus ;
 
 namespace WpfApp1
 {

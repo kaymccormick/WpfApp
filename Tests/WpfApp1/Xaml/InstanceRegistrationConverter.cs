@@ -5,7 +5,8 @@ using System.Windows.Controls ;
 using System.Windows.Data ;
 using Autofac.Features.Metadata ;
 using Common ;
-using Common.Model ;
+using WpfApp ;
+using WpfApp.Core.Model ;
 
 namespace WpfApp1.Xaml
 {

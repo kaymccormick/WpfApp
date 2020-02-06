@@ -15,12 +15,12 @@
         FontFamily="Deja Vu Sans"
         FontSize="20" MinHeight="800" MinWidth="1202">
     <Window.CommandBindings>
-        <CommandBinding Command="common:Commands.LoadAssemblyList" />
+        <CommandBinding Command="wpfApp1:Commands.LoadAssemblyList" />
         <CommandBinding Command="ApplicationCommands.Open"
                         Executed="CommandBinding_OnExecuted" />
-        <CommandBinding Command="common:Commands.DumpDebug"
+        <CommandBinding Command="wpfApp1:Commands.DumpDebug"
                         Executed="DumpDebug" />
-        <CommandBinding Command="common:Commands.Restart" Executed="Restart" />
+        <CommandBinding Command="wpfApp1:Commands.Restart" Executed="Restart" />
     </Window.CommandBindings>
     <Window.Resources>
         <CollectionViewSource x:Key="LogItems" Source="{Binding LogEvents}" />

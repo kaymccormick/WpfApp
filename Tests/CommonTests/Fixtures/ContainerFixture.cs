@@ -1,6 +1,6 @@
-﻿using AppShared.Modules ;
-using Autofac ;
+﻿using Autofac ;
 using WpfApp.Core.Logging ;
+using WpfApp.Modules ;
 
 namespace CommonTests.Fixtures
 {

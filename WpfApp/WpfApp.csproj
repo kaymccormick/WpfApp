@@ -86,41 +86,42 @@
     <Compile Include="Config\ConfigTargetAttribute.cs" />
     <Compile Include="Config\ContainerHelperSection.cs" />
     <Compile Include="Core\Interfaces\IApplicationContext.cs" />
+    <Compile Include="Core\UnableToRegisterObjectIdException.cs" />
     <Compile Include="NewMainWindow.xaml.cs">
       <DependentUpon>NewMainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="ProxyUtils.cs" />
-    <Compile Include="WpfApp1\Attributes\LoggingEntityMetadata.cs" />
-    <Compile Include="WpfApp1\Attributes\WindowMetadataAttribute.cs" />
-    <Compile Include="WpfApp1\Controls\Container.xaml.cs" />
-    <Compile Include="WpfApp1\Controls\SystemParametersControl.xaml.cs" />
-    <Compile Include="WpfApp1\Controls\TypedService.cs" />
-    <Compile Include="WpfApp1\Controls\UserControl1.xaml.cs" />
-    <Compile Include="WpfApp1\DesignData.cs" />
-    <Compile Include="WpfApp1\Events\AttachedEvents.cs" />
-    <Compile Include="WpfApp1\Logging\AppLoggerContainer.cs" />
-    <Compile Include="WpfApp1\Logging\NLogTargetConverter.cs" />
-    <Compile Include="WpfApp1\Logging\TypeBrowserPage.xaml.cs" />
-    <Compile Include="WpfApp1\Menus\ILoggingEntity.cs" />
-    <Compile Include="WpfApp1\Menus\MenuHelper.cs" />
-    <Compile Include="WpfApp1\Util\DebugHelper.cs" />
-    <Compile Include="WpfApp1\Util\IObjectId.cs" />
-    <Compile Include="WpfApp1\Util\LoggerInterceptor.cs" />
-    <Compile Include="WpfApp1\Util\LongObjectId.cs" />
-    <Compile Include="WpfApp1\Util\MyActivator.cs" />
-    <Compile Include="WpfApp1\Util\ProxyGenerationHook.cs" />
-    <Compile Include="WpfApp1\Windows\AppSettingsWindow.xaml.cs" />
-    <Compile Include="WpfApp1\Windows\ComponentRegistry.cs" />
-    <Compile Include="WpfApp1\Windows\LifetimeScope.cs" />
-    <Compile Include="WpfApp1\Windows\LogEventInfoCollection.cs" />
-    <Compile Include="WpfApp1\Windows\MainWindow.xaml.cs" />
-    <Compile Include="WpfApp1\Windows\NewWindow.xaml.cs" />
-    <Compile Include="WpfApp1\Windows\Page1.xaml.cs" />
-    <Compile Include="WpfApp1\Xaml\AppLoggerExtension.cs" />
-    <Compile Include="WpfApp1\Xaml\AssemblyConverter.cs" />
-    <Compile Include="WpfApp1\Xaml\Converter.cs" />
-    <Compile Include="WpfApp1\Xaml\InstanceRegistrationConverter.cs" />
-    <Compile Include="WpfApp1\Xaml\SmartTypeConverter.cs" />
+    <Compile Include="Core\Attributes\LoggingEntityMetadata.cs" />
+    <Compile Include="Core\Attributes\WindowMetadataAttribute.cs" />
+    <Compile Include="Controls\Container.xaml.cs" />
+    <Compile Include="Controls\SystemParametersControl.xaml.cs" />
+    <Compile Include="Controls\TypedService.cs" />
+    <Compile Include="Controls\UserControl1.xaml.cs" />
+    <Compile Include="DesignData.cs" />
+    <Compile Include="Core\Events\AttachedEvents.cs" />
+    <Compile Include="Core\Logging\AppLoggerContainer.cs" />
+    <Compile Include="Core\Logging\NLogTargetConverter.cs" />
+    <Compile Include="Core\Logging\TypeBrowserPage.xaml.cs" />
+    <Compile Include="Core\Menus\ILoggingEntity.cs" />
+    <Compile Include="Core\Menus\MenuHelper.cs" />
+    <Compile Include="Core\Util\DebugHelper.cs" />
+    <Compile Include="Core\Util\IObjectId.cs" />
+    <Compile Include="Core\Util\LoggerInterceptor.cs" />
+    <Compile Include="Core\Util\LongObjectId.cs" />
+    <Compile Include="Core\Util\MyActivator.cs" />
+    <Compile Include="Core\Util\ProxyGenerationHook.cs" />
+    <Compile Include="Controls\Windows\AppSettingsWindow.xaml.cs" />
+    <Compile Include="Controls\Windows\ComponentRegistry.cs" />
+    <Compile Include="Controls\Windows\LifetimeScope.cs" />
+    <Compile Include="Controls\Windows\LogEventInfoCollection.cs" />
+    <Compile Include="Controls\Windows\MainWindow.xaml.cs" />
+    <Compile Include="Controls\Windows\NewWindow.xaml.cs" />
+    <Compile Include="Controls\Windows\Page1.xaml.cs" />
+    <Compile Include="Core\Xaml\AppLoggerExtension.cs" />
+    <Compile Include="Core\Xaml\AssemblyConverter.cs" />
+    <Compile Include="Core\Xaml\Converter.cs" />
+    <Compile Include="Core\Xaml\InstanceRegistrationConverter.cs" />
+    <Compile Include="Core\Xaml\SmartTypeConverter.cs" />
     <ApplicationDefinition Include="Application\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -186,15 +187,15 @@
       <DependentUpon>TypePage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Props.cs" />
-    <Compile Include="AppShared\AssemblyList.cs" />
-    <Compile Include="AppShared\Attributes\AssemblyContainerScanAttribute.cs" />
-    <Compile Include="AppShared\Attributes\InterfaceMetadataAttribute.cs" />
-    <Compile Include="AppShared\CustomResourceLoader.cs" />
-    <Compile Include="AppShared\DuplicateKeyException.cs" />
-    <Compile Include="AppShared\Infos\ComponentInfo.cs" />
-    <Compile Include="AppShared\Infos\ContextStack.cs" />
-    <Compile Include="AppShared\Infos\InfoContext.cs" />
-    <Compile Include="AppShared\Infos\InstanceInfo.cs" />
+    <Compile Include="Core\AssemblyList.cs" />
+    <Compile Include="Core\Attributes\AssemblyContainerScanAttribute.cs" />
+    <Compile Include="Core\Attributes\InterfaceMetadataAttribute.cs" />
+    <Compile Include="Core\CustomResourceLoader.cs" />
+    <Compile Include="Core\DuplicateKeyException.cs" />
+    <Compile Include="Core\Infos\ComponentInfo.cs" />
+    <Compile Include="Core\Infos\ContextStack.cs" />
+    <Compile Include="Core\Infos\InfoContext.cs" />
+    <Compile Include="Core\Infos\InstanceInfo.cs" />
     <Compile Include="Core\Interfaces\IHasId.cs" />
     <Compile Include="Core\Interfaces\IHaveLifetimeScope.cs" />
     <Compile Include="Core\Interfaces\IHaveLogger.cs" />
@@ -208,60 +209,58 @@
     <Compile Include="Core\Interfaces\LoggerEventArgs.cs" />
     <Compile Include="Core\Interfaces\LoggerRegisteredEventHandler.cs" />
     <Compile Include="Core\Interfaces\MyLogBuilder.cs" />
-    <Compile Include="AppShared\Modules\IdGeneratorModule.cs" />
-    <Compile Include="AppShared\ResolveService.cs" />
-    <Compile Include="AppShared\Services\DefaultObjectIdProvider.cs" />
-    <Compile Include="AppShared\Services\UnableToRegisterObjectIdException.cs" />
-    <Compile Include="AppShared\Types\ResolveServiceList.cs" />
-    <Compile Include="AppShared\Utils\AttachedContext.cs" />
-    <Compile Include="AppShared\Utils\ContextStackException.cs" />
-    <Compile Include="AppShared\Utils\DebugUtils.cs" />
-    <Compile Include="AppShared\Utils\SerializableDictionary.cs" />
-    <Compile Include="AppShared\Xaml\LifetimeScopeExtension.cs" />
-    <Compile Include="AppShared\Xaml\ObjectIdExtension.cs" />
-    <Compile Include="Common\Context\ContextStackInstanceAttribute.cs" />
-    <Compile Include="Common\Context\PushContextAttribute.cs" />
-    <Compile Include="Common\Converters\AssemblyConverter.cs" />
-    <Compile Include="Common\Converters\ComponentLifetimeConverter.cs" />
-    <Compile Include="Common\Converters\GetTypeConverter.cs" />
-    <Compile Include="Common\Converters\InstanceRegistrationConverter.cs" />
-    <Compile Include="Common\Converters\LoggerInstanceConverter.cs" />
-    <Compile Include="Common\Converters\RegistrationConverter.cs" />
-    <Compile Include="Common\Converters\RegistrationConverter2.cs" />
-    <Compile Include="Common\Converters\RegistrationSourceConverter.cs" />
-    <Compile Include="Common\Converters\ResolveServiceConverter.cs" />
-    <Compile Include="Common\Converters\TargetConverter.cs" />
-    <Compile Include="Common\Exceptions\AttributeNotFoundException.cs" />
-    <Compile Include="Common\Exceptions\InfoContextFactoryAttribute.cs" />
-    <Compile Include="Common\Logging\AppLogger.cs" />
-    <Compile Include="Common\Logging\AppLoggingConfigHelper.cs" />
-    <Compile Include="Common\Logging\LoggerTracker.cs" />
-    <Compile Include="Common\Logging\LoggingEntityMetadataAttribute.cs" />
-    <Compile Include="Common\Logging\LoggingInterceptor.cs" />
-    <Compile Include="Common\Logging\MyCacheTarget.cs" />
-    <Compile Include="Common\MainVie.cs" />
-    <Compile Include="Common\Menus\MenuItemContainerStyleSelector.cs" />
-    <Compile Include="Common\Menus\MenuMenuItemTemplateSelector.cs" />
-    <Compile Include="Common\Menus\MenuModule.cs" />
-    <Compile Include="Common\Menus\MenuTemplateSelector.cs" />
-    <Compile Include="Common\Menus\WindowsTopLevelMenu.cs" />
-    <Compile Include="Common\Menus\XMenuItem.cs" />
-    <Compile Include="Common\Model\ComponentRegistration.cs" />
-    <Compile Include="Common\Model\InstanceRegistration.cs" />
-    <Compile Include="Common\Model\MenuItemList.cs" />
-    <Compile Include="Common\Model\MethodInvocation.cs" />
-    <Compile Include="Common\Model\ResourceInfo.cs" />
-    <Compile Include="Common\Model\ResourcesModel.cs" />
-    <Compile Include="Common\Model\ResourcesUtil.cs" />
-    <Compile Include="Common\Commands.cs" />
-    <Compile Include="Common\NLogTextWriter.cs" />
-    <Compile Include="Common\ResourceMetadata.cs" />
-    <Compile Include="Common\TestO.cs" />
-    <Compile Include="Common\Tracing\AppTraceListener.cs" />
-    <Compile Include="Common\Tracing\AppTraceListener2.cs" />
-    <Compile Include="Common\Tracing\Info.cs" />
-    <Compile Include="Common\Utils\BuilderInterceptor.cs" />
-    <Compile Include="Common\Utils\ContainerHelper.cs" />
+    <Compile Include="Modules\IdGeneratorModule.cs" />
+    <Compile Include="Core\ResolveService.cs" />
+    <Compile Include="Services\DefaultObjectIdProvider.cs" />
+    <Compile Include="ResolveServiceList.cs" />
+    <Compile Include="Core\Utils\AttachedContext.cs" />
+    <Compile Include="Core\Utils\ContextStackException.cs" />
+    <Compile Include="Core\Utils\DebugUtils.cs" />
+    <Compile Include="Core\Utils\SerializableDictionary.cs" />
+    <Compile Include="Core\Xaml\LifetimeScopeExtension.cs" />
+    <Compile Include="Core\Xaml\ObjectIdExtension.cs" />
+    <Compile Include="Core\Context\ContextStackInstanceAttribute.cs" />
+    <Compile Include="Core\Context\PushContextAttribute.cs" />
+    <Compile Include="Core\Converters\AssemblyConverter.cs" />
+    <Compile Include="Core\Converters\ComponentLifetimeConverter.cs" />
+    <Compile Include="Core\Converters\GetTypeConverter.cs" />
+    <Compile Include="Core\Converters\InstanceRegistrationConverter.cs" />
+    <Compile Include="Core\Converters\LoggerInstanceConverter.cs" />
+    <Compile Include="Core\Converters\RegistrationConverter.cs" />
+    <Compile Include="Core\Converters\RegistrationConverter2.cs" />
+    <Compile Include="Core\Converters\RegistrationSourceConverter.cs" />
+    <Compile Include="Core\Converters\ResolveServiceConverter.cs" />
+    <Compile Include="Core\Converters\TargetConverter.cs" />
+    <Compile Include="Core\Exceptions\AttributeNotFoundException.cs" />
+    <Compile Include="Core\Exceptions\InfoContextFactoryAttribute.cs" />
+    <Compile Include="Core\Logging\AppLogger.cs" />
+    <Compile Include="Core\Logging\LoggerTracker.cs" />
+    <Compile Include="Core\Logging\LoggingEntityMetadataAttribute.cs" />
+    <Compile Include="Core\Logging\LoggingInterceptor.cs" />
+    <Compile Include="Core\Logging\MyCacheTarget.cs" />
+    <Compile Include="MainVie.cs" />
+    <Compile Include="Core\Menus\MenuItemContainerStyleSelector.cs" />
+    <Compile Include="Core\Menus\MenuMenuItemTemplateSelector.cs" />
+    <Compile Include="Core\Menus\MenuModule.cs" />
+    <Compile Include="Core\Menus\MenuTemplateSelector.cs" />
+    <Compile Include="Core\Menus\WindowsTopLevelMenu.cs" />
+    <Compile Include="Core\Menus\XMenuItem.cs" />
+    <Compile Include="Core\Model\ComponentRegistration.cs" />
+    <Compile Include="Core\Model\InstanceRegistration.cs" />
+    <Compile Include="Core\Model\MenuItemList.cs" />
+    <Compile Include="Core\Model\MethodInvocation.cs" />
+    <Compile Include="Core\Model\ResourceInfo.cs" />
+    <Compile Include="Core\Model\ResourcesModel.cs" />
+    <Compile Include="Core\Model\ResourcesUtil.cs" />
+    <Compile Include="Commands.cs" />
+    <Compile Include="NLogTextWriter.cs" />
+    <Compile Include="ResourceMetadata.cs" />
+    <Compile Include="TestO.cs" />
+    <Compile Include="Core\Tracing\AppTraceListener.cs" />
+    <Compile Include="Core\Tracing\AppTraceListener2.cs" />
+    <Compile Include="Core\Tracing\Info.cs" />
+    <Compile Include="Core\Utils\BuilderInterceptor.cs" />
+    <Compile Include="Core\Utils\ContainerHelper.cs" />
     <Compile Include="Core\Logging\AppLoggingConfigHelper.cs" />
     <Compile Include="Core\Logging\CodeConfiguration.cs" />
     <Compile Include="Core\Logging\LogDelegates.cs" />
@@ -290,35 +289,35 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="WpfApp1\Controls\Container.xaml">
+    <Page Include="Controls\Container.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="WpfApp1\Controls\SystemParametersControl.xaml">
+    <Page Include="Controls\SystemParametersControl.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="WpfApp1\Controls\UserControl1.xaml">
+    <Page Include="Controls\UserControl1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="WpfApp1\Logging\TypeBrowserPage.xaml">
+    <Page Include="Core\Logging\TypeBrowserPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="WpfApp1\Windows\AppSettingsWindow.xaml">
+    <Page Include="Controls\Windows\AppSettingsWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="WpfApp1\Windows\OldMainWindow.xaml">
+    <Page Include="Controls\Windows\OldMainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="WpfApp1\Windows\NewWindow.xaml">
+    <Page Include="Controls\Windows\NewWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="WpfApp1\Windows\Page1.xaml">
+    <Page Include="Controls\Windows\Page1.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -402,7 +401,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Core\Attributes\" />
+    <Folder Include="Logging\" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">

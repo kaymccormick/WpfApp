@@ -1,9 +1,10 @@
 ﻿using System ;
 using System.Diagnostics.CodeAnalysis ;
-using AppShared.Infos ;
 using Autofac ;
 using JetBrains.Annotations ;
 using TestLib.Fixture ;
+using Tests.CommonTests ;
+using WpfApp.Core.Infos ;
 
 namespace TestLib
 {

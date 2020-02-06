@@ -11,8 +11,8 @@
 #endregion
 using System.Collections ;
 using System.Collections.Generic ;
-using AppShared.Infos ;
 using Autofac.Core ;
+using WpfApp.Core.Infos ;
 
 namespace WpfApp.Core.Interfaces
 {

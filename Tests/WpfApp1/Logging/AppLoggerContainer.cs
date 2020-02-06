@@ -1,5 +1,4 @@
 ﻿using System.Linq ;
-using Common.Logging ;
 using NLog ;
 using NLog.Config ;
 using WpfApp.Core.Logging ;

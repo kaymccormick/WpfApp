@@ -5,9 +5,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              MinWidth="300" MinHeight="200"
              xmlns:system="clr-namespace:System;assembly=mscorlib"
-             xmlns:common1="clr-namespace:Common"
-             xmlns:wpfApp="clr-namespace:WpfApp"
-             DataContext="{Binding (wpfApp:Props.LifetimeScope)}"
+             xmlns:wpfApp1="clr-namespace:WpfApp;assembly=WpfApp"
+             xmlns:common="clr-namespace:Common;assembly=WpfApp"
+             DataContext="{Binding (wpfApp1:Props.LifetimeScope)}"
              mc:Ignorable="d">
     <UserControl.Resources>
         <CollectionViewSource
@@ -19,8 +19,8 @@
             LastChildFill="True">
 
             <DockPanel.CommandBindings>
-                <CommandBinding Command="common1:Commands.Load" Executed="LoadInstance" />
-                <CommandBinding Command="common1:Commands.Metadata" Executed="Metadata" />
+                <CommandBinding Command="wpfApp1:Commands.Load" Executed="LoadInstance" />
+                <CommandBinding Command="wpfApp1:Commands.Metadata" Executed="Metadata" />
             </DockPanel.CommandBindings>
 
             <StackPanel>
@@ -84,8 +84,8 @@
                     LastChildFill="True"
                     DataContext="{Binding ComponentRegistry.Registrations}">
                     <DockPanel.CommandBindings>
-                        <CommandBinding Command="common:MyAppCommands.Load" Executed="LoadInstance" />
-                        <CommandBinding Command="common:MyAppCommands.Metadata" Executed="Metadata" />
+                        <CommandBinding Command="wpfApp1:Commands.Load" Executed="LoadInstance" />
+                        <CommandBinding Command="wpfApp1:Commands.Metadata" Executed="Metadata" />
                     </DockPanel.CommandBindings>
                     <DockPanel.Resources>
                         <CollectionViewSource

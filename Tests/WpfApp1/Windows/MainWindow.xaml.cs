@@ -16,12 +16,12 @@ using System.Windows.Markup ;
 using System.Windows.Threading ;
 using Autofac ;
 using Autofac.Core ;
-using Common.Logging ;
 using NLog ;
 using NLog.Config ;
 using Vanara.Extensions.Reflection ;
 using WpfApp ;
 using WpfApp.Core.Interfaces ;
+using WpfApp.Core.Logging ;
 using WpfApp1.Attributes ;
 using WpfApp1.Menus ;
 

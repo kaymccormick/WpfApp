@@ -9,12 +9,11 @@
 // 
 // ---
 #endregion
-using AppShared.Infos ;
 using Autofac ;
 using TestLib ;
-using TestLib.Fixtures ;
+using Tests.CommonTests ;
 using Tests.Lib.Fixtures ;
-using WpfApp.AppShared.Infos ;
+using WpfApp.Core.Infos ;
 using Xunit.Abstractions ;
 
 namespace Tests.Tests3

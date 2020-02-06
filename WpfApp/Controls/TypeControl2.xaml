@@ -3,9 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:model="clr-namespace:Common.Model"
              xmlns:wpfApp="clr-namespace:WpfApp"
              xmlns:common="clr-namespace:Common"
+             xmlns:model="clr-namespace:WpfApp.Core.Model"
              mc:Ignorable="d"
              d:DesignHeight="150" d:DesignWidth="225">
     <UserControl.Resources>
@@ -60,7 +60,7 @@
         <Canvas Grid.Column="0" Grid.Row="0">
             <Border>
                 <WrapPanel>
-                    <Button Content="{Binding Name}" Command="common:Commands.VisitType"
+                    <Button Content="{Binding Name}" Command="wpfApp:Commands.VisitType"
                             CommandParameter="{Binding}" />
                 </WrapPanel>
             </Border>
