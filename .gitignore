@@ -14,3 +14,5 @@ TestResult.xml
 /Backup
 *.sln.bak
 /UpgradeLog.htm
+/AppLoggingConfigHelper.cs
+/Docs/Help/LastBuild.log

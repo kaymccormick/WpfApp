@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NLog", "..\..\NLog\src\NLog
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{963A7522-EE3E-4487-BAF5-8600141A0350}"
 EndProject
+Project("{7CF6DF6D-3B04-46F8-A40B-537D21BCA0B4}") = "Docs", "Docs\Docs.shfbproj", "{FA438012-E41B-4BDD-8391-8616D20FDCF8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -34,6 +36,11 @@ Global
 		{963A7522-EE3E-4487-BAF5-8600141A0350}.Debug2|Any CPU.Build.0 = Debug2|Any CPU
 		{963A7522-EE3E-4487-BAF5-8600141A0350}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{963A7522-EE3E-4487-BAF5-8600141A0350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA438012-E41B-4BDD-8391-8616D20FDCF8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA438012-E41B-4BDD-8391-8616D20FDCF8}.Debug2|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA438012-E41B-4BDD-8391-8616D20FDCF8}.Debug2|Any CPU.Build.0 = Debug|Any CPU
+		{FA438012-E41B-4BDD-8391-8616D20FDCF8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA438012-E41B-4BDD-8391-8616D20FDCF8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
