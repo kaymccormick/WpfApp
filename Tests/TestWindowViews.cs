@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TestLib.Fixtures ;
-using Tests.Lib.Fixtures ;
+﻿using Tests.Lib.Fixtures ;
 using Xunit ;
 
-namespace Tests.Tests3
+namespace Tests
 {
     [Collection("WpfApp")]
     public class TestWindowViews

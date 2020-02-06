@@ -12,7 +12,7 @@
 
 using System.Windows.Markup ;
 
-namespace WpfApp1Tests3
+namespace Tests
 {
     internal class ProvideValueTarget : IProvideValueTarget
     {

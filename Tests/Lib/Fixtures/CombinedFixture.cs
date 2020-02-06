@@ -16,7 +16,7 @@ using JetBrains.Annotations ;
 using NLog ;
 using Xunit ;
 
-namespace WpfApp1Tests3.Fixtures
+namespace Tests.Lib.Fixtures
 {
     [ UsedImplicitly ]
     public class CombinedFixture : IAsyncLifetime

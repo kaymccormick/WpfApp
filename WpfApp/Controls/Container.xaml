@@ -5,7 +5,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              MinWidth="300" MinHeight="200"
              xmlns:system="clr-namespace:System;assembly=mscorlib"
-             xmlns:common1="clr-namespace:Common"
              xmlns:wpfApp="clr-namespace:WpfApp"
              DataContext="{Binding (wpfApp:Props.LifetimeScope)}"
              mc:Ignorable="d">
@@ -145,7 +144,7 @@
                 </StackPanel>
             </TabItem>
             <TabItem Header="Form">
-                <Grid d:DataContext="{Binding Source={StaticResource }}" DataContext="{Binding }">
+                <Grid DataContext="{Binding }">
                     <Grid.Resources>
                         <CollectionViewSource x:Key="LocalCollectionView" Source="{Binding}" />
                     </Grid.Resources>

@@ -2,7 +2,7 @@
 using TestLib.Attributes ;
 using Xunit ;
 
-namespace Tests.Tests3
+namespace Tests
 {
     [ Collection ( "WpfApp" ) ]
     [ LogTestMethod ] [ BeforeAfterLogger ]

@@ -11,7 +11,7 @@
 #endregion
 using WpfApp.Core.Interfaces ;
 
-namespace WpfApp1Tests3
+namespace Tests
 {
     public class MyService : IHaveObjectId
     {

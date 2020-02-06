@@ -16,7 +16,7 @@ using Tests.Lib.Fixtures ;
 using WpfApp.Core.Infos ;
 using Xunit.Abstractions ;
 
-namespace Tests.Tests3
+namespace Tests
 {
     public class WpfTestsBase
     {

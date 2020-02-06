@@ -85,6 +85,7 @@
     <Compile Include="Application\DebugEventArgs.cs" />
     <Compile Include="Config\ConfigTargetAttribute.cs" />
     <Compile Include="Config\ContainerHelperSection.cs" />
+    <Compile Include="Controls\Windows\OldMainWindow.cs" />
     <Compile Include="Core\Interfaces\IApplicationContext.cs" />
     <Compile Include="Core\Interfaces\ITabGuest.cs" />
     <Compile Include="Core\UnableToRegisterObjectIdException.cs" />
@@ -156,6 +157,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\TypePage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Controls\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

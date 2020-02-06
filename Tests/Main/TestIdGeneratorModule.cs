@@ -2,7 +2,6 @@
 using TestLib.Attributes ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Modules ;
-using WpfApp1Tests3 ;
 using Xunit ;
 using Xunit.Abstractions ;
 

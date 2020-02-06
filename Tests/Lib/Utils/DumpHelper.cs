@@ -3,7 +3,6 @@ using System.Reflection ;
 using System.Windows ;
 using NLog ;
 using WpfApp.Core.Infos ;
-using WpfApp1Tests3 ;
 
 namespace Tests.Lib.Utils
 {

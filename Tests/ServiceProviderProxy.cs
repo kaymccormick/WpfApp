@@ -14,7 +14,7 @@ using System ;
 using System.Windows.Markup ;
 using NLog ;
 
-namespace WpfApp1Tests3
+namespace Tests
 {
     internal class ServiceProviderProxy : IServiceProvider
     {

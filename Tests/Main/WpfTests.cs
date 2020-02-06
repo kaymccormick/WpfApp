@@ -10,7 +10,6 @@ using TestLib.Attributes ;
 using Tests.Lib.Fixtures ;
 using Tests.Lib.Utils ;
 using Tests.Misc ;
-using Tests.Tests3 ;
 using WpfApp.Core.Interfaces ;
 using Xunit ;
 using Xunit.Abstractions ;

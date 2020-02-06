@@ -5,8 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:nLog="clr-namespace:NLog;assembly=NLog"
         xmlns:wpfApp="clr-namespace:WpfApp"
-        xmlns:wpfControlLibrary11="clr-namespace:WpfControlLibrary1"
-        xmlns:common1="clr-namespace:Common"
         xmlns:controls1="clr-namespace:WpfApp.Controls"
         mc:Ignorable="d"
         DataContext="{Binding ElementName=mainWindow}"

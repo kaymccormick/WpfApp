@@ -3,7 +3,6 @@ using NLog ;
 using TestLib ;
 using TestLib.Attributes ;
 using Tests.Lib.Fixtures ;
-using Tests.Tests3 ;
 using WpfApp.Core.Interfaces ;
 using WpfApp1.Menus ;
 using Xunit ;

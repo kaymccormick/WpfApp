@@ -1,26 +1,23 @@
-﻿<Window Name="mainWindow" x:Class="WpfApp1.Windows.OldMainWindow"
+﻿<Window Name="mainWindow" x:Class="WpfApp.Controls.Windows.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:nLog="clr-namespace:NLog;assembly=NLog"
-        xmlns:controls="clr-namespace:WpfApp1.Controls"
-        xmlns:wpfApp1="clr-namespace:WpfApp;assembly=WpfApp"
-        xmlns:wpfControlLibrary1="clr-namespace:WpfControlLibrary1;assembly=WpfApp"
-        xmlns:common="clr-namespace:Common;assembly=WpfApp"
-        xmlns:controls1="clr-namespace:WpfApp.Controls;assembly=WpfApp"
+        xmlns:wpfApp="clr-namespace:WpfApp"
+        xmlns:controls1="clr-namespace:WpfApp.Controls"
         mc:Ignorable="d"
         DataContext="{Binding ElementName=mainWindow}"
         Title="Main Window" Height="450" Width="1000"
         FontFamily="Deja Vu Sans"
         FontSize="20" MinHeight="800" MinWidth="1202">
     <Window.CommandBindings>
-        <CommandBinding Command="wpfApp1:Commands.LoadAssemblyList" />
+        <CommandBinding Command="wpfApp:Commands.LoadAssemblyList" />
         <CommandBinding Command="ApplicationCommands.Open"
                         Executed="CommandBinding_OnExecuted" />
-        <CommandBinding Command="wpfApp1:Commands.DumpDebug"
+        <CommandBinding Command="wpfApp:Commands.DumpDebug"
                         Executed="DumpDebug" />
-        <CommandBinding Command="wpfApp1:Commands.Restart" Executed="Restart" />
+        <CommandBinding Command="wpfApp:Commands.Restart" Executed="Restart" />
     </Window.CommandBindings>
     <Window.Resources>
         <CollectionViewSource x:Key="LogItems" Source="{Binding LogEvents}" />
@@ -35,11 +32,11 @@
             </Grid>
         </TabItem>
         <TabItem Header="Autofac" Padding="15" DataContext="{Binding Path=Container}">
-            <controls:Container>
-                <wpfApp1:Props.LifetimeScope>
-                    <Binding ElementName="mainWindow" Path="(wpfApp1:Props.LifetimeScope)" />
-                </wpfApp1:Props.LifetimeScope>
-            </controls:Container>
+            <controls1:Container>
+                <wpfApp:Props.LifetimeScope>
+                    <Binding ElementName="mainWindow" Path="(wpfApp:Props.LifetimeScope)" />
+                </wpfApp:Props.LifetimeScope>
+            </controls1:Container>
         </TabItem>
         <TabItem Header="Home">
             <Grid>
@@ -110,7 +107,7 @@
                     <ColumnDefinition Width="2*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <TreeView ItemsSource="{Binding Path=(wpfApp1:Props.MenuItemListCollectionView)}"
+                <TreeView ItemsSource="{Binding Path=(wpfApp:Props.MenuItemListCollectionView)}"
                           Grid.Row="0" Grid.Column="0" DataContext="{Binding ElementName=mainWindow, Mode=OneWay}">
                     <TreeView.ItemTemplate>
                         <HierarchicalDataTemplate ItemsSource="{Binding Path=Children}">

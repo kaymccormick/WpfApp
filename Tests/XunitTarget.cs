@@ -14,7 +14,7 @@ using NLog ;
 using NLog.Targets ;
 using Xunit.Abstractions ;
 
-namespace Tests.Tests3
+namespace Tests
 {
     [ Target ( "Xunit" ) ]
     public class XunitTarget : TargetWithLayout
