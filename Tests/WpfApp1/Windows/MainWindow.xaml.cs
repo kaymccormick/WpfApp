@@ -15,7 +15,6 @@ using System.Windows.Input ;
 using System.Windows.Markup ;
 using System.Windows.Threading ;
 using Autofac ;
-using Autofac.Core ;
 using NLog ;
 using NLog.Config ;
 using Vanara.Extensions.Reflection ;
@@ -307,6 +306,7 @@ namespace WpfApp1.Windows
                 Logger.Warn ( "Loading assembly {f.FullName}" ) ;
                 var loadFile = Assembly.LoadFile ( f.FullName ) ;
                 // TODO: what are we doing with this?
+                // ReSharper disable once UnusedVariable
                 var childScope = LifetimeScope.BeginLifetimeScope (
                                                                    b => {
                                                                        b.RegisterAssemblyModules (
@@ -335,9 +335,8 @@ namespace WpfApp1.Windows
             }
         }
 
+        // ReSharper disable twice UnusedParameter.Local
         // ReSharper disable once UnusedMember.Local
-        // ReSharper disable once UnusedParameter.Local
-        // ReSharper disable once UnusedParameter.Local
         private void OnRestart ( object sender , ExecutedRoutedEventArgs e )
         {
             DoRestart                        = true ;
@@ -380,8 +379,7 @@ namespace WpfApp1.Windows
         private void InstancesOnly_OnChecked ( object sender , RoutedEventArgs e )
         {
             Logger.Debug ( "checked" ) ;
-            var x = sender as CheckBox ;
-            if ( x != null ) {
+            if ( sender is CheckBox x ) {
                 var collectionViewSource =
                     x.TryFindResource ( "Registrations" ) as CollectionViewSource ;
                 var tryFindResource = TryFindResource ( "RegistrationConverter" ) ;
@@ -412,6 +410,7 @@ namespace WpfApp1.Windows
                     }
                     catch ( Exception )
                     {
+                        // ignored
                     }
                 } ;
                 collectionViewSource.Filter += CheckedHandler ;
@@ -425,7 +424,7 @@ namespace WpfApp1.Windows
         {
             var x = sender as CheckBox ;
             var collectionViewSource =
-                x.TryFindResource ( "Registrations" ) as CollectionViewSource ;
+                ( CollectionViewSource ) x.TryFindResource ( "Registrations" ) ;
             collectionViewSource.Filter -= CheckedHandler ;
             CheckedHandler              =  null ;
         }

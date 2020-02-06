@@ -57,8 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonTests\CacheUtils.cs" />
-    <Compile Include="CommonTests\Fixtures\ContainerFixture.cs" />
-    <Compile Include="CommonTests\Fixtures\testContainerFixture.cs" />
+    <Compile Include="Lib\Fixtures\testContainerFixture.cs" />
     <Compile Include="CommonTests\IMyServices.cs" />
     <Compile Include="CommonTests\WpfApplication.cs" />
     <Compile Include="Lib\Attributes\BeforeAfterLoggerAttribute.cs" />
@@ -190,7 +189,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AppSharedTests\Services\" />
-    <Folder Include="CommonTests\Converters\" />
+    <Folder Include="CommonTests\Fixtures\" />
     <Folder Include="Lib\EExceptions\" />
     <Folder Include="Services\" />
     <Folder Include="Tests3\Attributes\" />

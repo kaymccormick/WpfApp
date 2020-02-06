@@ -1,5 +1,5 @@
 ﻿using TestLib.Attributes ;
-using Tests.CommonTests.Fixtures ;
+using Tests.Lib.Fixtures ;
 using Xunit ;
 
 namespace Tests.Main

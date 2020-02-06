@@ -14,9 +14,9 @@ using System.Globalization ;
 using System.Linq ;
 using Autofac ;
 using Autofac.Core ;
-using CommonTests.Fixtures ;
+
 using TestLib.Attributes ;
-using Tests.CommonTests.Fixtures ;
+using Tests.Lib.Fixtures ;
 using WpfApp.Core.Converters ;
 using WpfApp.Core.Interfaces ;
 using Xunit ;

@@ -12,9 +12,9 @@
 using System ;
 using System.Globalization ;
 using Autofac ;
-using CommonTests.Fixtures ;
+
 using TestLib.Attributes ;
-using Tests.CommonTests.Fixtures ;
+using Tests.Lib.Fixtures ;
 using WpfApp.Core ;
 using WpfApp.Core.Converters ;
 using Xunit ;

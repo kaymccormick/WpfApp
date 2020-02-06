@@ -35,7 +35,7 @@ namespace TestLib.Attributes
         /// <param name="methodUnderTest">The method under test</param>
         public override void Before ( [ NotNull ] MethodInfo methodUnderTest )
         {
-            AppLoggingConfigHelper.EnsureLoggingConfigured ( null ) ;
+            AppLoggingConfigHelper.EnsureLoggingConfigured ( ) ;
             TestFileTarget = new FileTarget ( Name ) ;
             var fileTarget = TestFileTarget ;
             fileTarget.FileName = Layout.FromString (

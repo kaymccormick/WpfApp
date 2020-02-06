@@ -86,6 +86,7 @@
     <Compile Include="Config\ConfigTargetAttribute.cs" />
     <Compile Include="Config\ContainerHelperSection.cs" />
     <Compile Include="Core\Interfaces\IApplicationContext.cs" />
+    <Compile Include="Core\Interfaces\ITabGuest.cs" />
     <Compile Include="Core\UnableToRegisterObjectIdException.cs" />
     <Compile Include="NewMainWindow.xaml.cs">
       <DependentUpon>NewMainWindow.xaml</DependentUpon>

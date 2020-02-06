@@ -33,12 +33,7 @@ namespace WpfApp.Config
         [ConfigurationProperty(doTrace, DefaultValue = false, IsRequired = false, IsKey = false)]
         public bool DoTraceConditionalRegistration
         {
-            get
-            {
-                var o = this[ doTrace ] ;
-                if ( o == null ) Debug.WriteLine ( "o is null" ) ;
-                return o != null && (bool)o;
-            }
+            get => (bool)this[ doTrace ] ;
             set => this[doTrace] = value ;
         }
     }

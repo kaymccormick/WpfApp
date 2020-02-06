@@ -3,6 +3,7 @@ using System.Windows.Controls ;
 using Autofac ;
 using Common ;
 using NLog ;
+using WpfApp.Core.Interfaces ;
 
 namespace WpfApp.Controls
 {
