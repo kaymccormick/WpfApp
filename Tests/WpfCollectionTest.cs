@@ -1,5 +1,5 @@
 ﻿using JetBrains.Annotations ;
-using TestLib.Attributes ;
+using Tests.Lib.Attributes ;
 using Xunit ;
 
 namespace Tests

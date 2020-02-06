@@ -6,7 +6,7 @@ using System.Windows.Markup ;
 using Autofac ;
 using NLog ;
 using TestLib ;
-using TestLib.Attributes ;
+using Tests.Lib.Attributes ;
 using Tests.Lib.Fixtures ;
 using Tests.Lib.Utils ;
 using Tests.Misc ;

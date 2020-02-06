@@ -2,9 +2,11 @@
 using System.Diagnostics ;
 using System.Reflection ;
 using NLog ;
+using NLog.Fluent ;
+using Tests.Lib.Utils ;
 using Xunit.Sdk ;
 
-namespace TestLib.Attributes
+namespace Tests.Lib.Attributes
 {
     /// <summary></summary>
     /// <seealso cref="Xunit.Sdk.BeforeAfterTestAttribute" />
@@ -12,17 +14,25 @@ namespace TestLib.Attributes
     /// TODO Edit XML Comment Template for LogTestMethodAttribute
     public class LogTestMethodAttribute : BeforeAfterTestAttribute
     {
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
         /// <summary>
         ///     This method is called after the test method is executed.
         /// </summary>
         /// <param name="methodUnderTest">The method under test</param>
         public override void After ( MethodInfo methodUnderTest )
         {
-            if ( methodUnderTest.DeclaringType != null )
-            {
-                LogManager.GetLogger ( methodUnderTest.DeclaringType.ToString ( ) )
-                          .Info ( $"{nameof ( After )} test method {methodUnderTest.Name}" ) ;
-            }
+            new LogBuilder ( Logger ).Level ( LogLevel.Info )
+                                     .Message (
+                                               $"{nameof ( After )} test method {methodUnderTest.Name}"
+                                              )
+                                     .Properties (
+                                                  LogHelper.TestMethodProperties (
+                                                                                  methodUnderTest
+                                                                                , TestMethodLifecycle
+                                                                                     .After
+                                                                                 )
+                                                 )
+                                     .Write ( ) ;
         }
 
         /// <summary>
@@ -31,18 +41,18 @@ namespace TestLib.Attributes
         /// <param name="methodUnderTest">The method under test</param>
         public override void Before ( MethodInfo methodUnderTest )
         {
-            if ( methodUnderTest.DeclaringType != null )
-            {
-                try
-                {
-                    LogManager.GetLogger ( methodUnderTest.DeclaringType.ToString ( ) )
-                              .Info ( $"{nameof ( Before )} test method {methodUnderTest.Name}" ) ;
-                }
-                catch ( Exception ex )
-                {
-                    Debug.WriteLine ( ex.ToString ( ) ) ;
-                }
-            }
+            new LogBuilder ( Logger ).Level ( LogLevel.Info )
+                                     .Message (
+                                               $"{nameof ( Before)} test method {methodUnderTest.Name}"
+                                              )
+                                     .Properties (
+                                                  LogHelper.TestMethodProperties (
+                                                                                  methodUnderTest
+                                                                                , TestMethodLifecycle
+                                                                                     .Before
+                                                                                 )
+                                                 )
+                                     .Write ( ) ;
         }
     }
 }

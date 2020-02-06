@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonTests\CacheUtils.cs" />
+    <Compile Include="Lib\Fixtures\GlobalLoggingFixture.cs" />
     <Compile Include="Lib\Fixtures\testContainerFixture.cs" />
     <Compile Include="CommonTests\IMyServices.cs" />
     <Compile Include="CommonTests\WpfApplication.cs" />
@@ -75,6 +76,7 @@
     <Compile Include="Lib\MyServices.cs" />
     <Compile Include="Lib\UtilsContainerFixture.cs" />
     <Compile Include="Lib\Utils\ConverterInfo.cs" />
+    <Compile Include="Lib\Utils\LogHelper.cs" />
     <Compile Include="Lib\Utils\OutputHelperWrapper.cs" />
     <Compile Include="Lib\Utils\Result.cs" />
     <Compile Include="Lib\Utils\WindowWrap.cs" />
@@ -104,6 +106,7 @@
     <Compile Include="TestWindowViews.cs" />
     <Compile Include="WpfCollectionTest.cs" />
     <Compile Include="WpfTestsBase.cs" />
+    <Compile Include="XunitSinkTarget.cs" />
     <Compile Include="XunitTarget.cs" />
     <Compile Include="Lib\Attributes\WpfTestApplicationAttribute.cs" />
     <Compile Include="WpfApp1\Attributes\LoggingEntityMetadata.cs" />

@@ -14,7 +14,7 @@ namespace TestLib.Collections
     [ CollectionDefinition ( "WpfApp" ) ] [ UsedImplicitly ]
     public class WpfApplication : ICollectionFixture < WpfApplicationFixture >
       , ICollectionFixture < UtilsContainerFixture >
-      , ICollectionFixture < AppContainerFixture >
+      , ICollectionFixture < AppContainerFixture >, ICollectionFixture <GlobalLoggingFixture>
     {
     }
 }

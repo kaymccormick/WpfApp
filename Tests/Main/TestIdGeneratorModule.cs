@@ -1,5 +1,5 @@
 ﻿using Autofac ;
-using TestLib.Attributes ;
+using Tests.Lib.Attributes ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Modules ;
 using Xunit ;

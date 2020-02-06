@@ -7,7 +7,7 @@ using NLog.Targets ;
 using WpfApp.Core.Logging ;
 using Xunit.Sdk ;
 
-namespace TestLib.Attributes
+namespace Tests.Lib.Attributes
 {
     public class BeforeAfterLoggerAttribute : BeforeAfterTestAttribute
     {

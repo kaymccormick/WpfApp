@@ -1,5 +1,5 @@
 ﻿using System.Linq ;
-using TestLib.Attributes ;
+using Tests.Lib.Attributes ;
 using WpfApp.Core.Infos ;
 using Xunit ;
 

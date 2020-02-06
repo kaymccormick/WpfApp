@@ -6,6 +6,7 @@ using System.Runtime.Serialization ;
 using Autofac.Core ;
 using JetBrains.Annotations ;
 using NLog ;
+using NLog.Fluent ;
 using WpfApp.Core ;
 using WpfApp.Core.Infos ;
 using WpfApp.Core.Interfaces ;
@@ -136,9 +137,9 @@ namespace WpfApp.Services
             var id = Generator.GetId ( instance , out var newFlag ) ;
             if ( newFlag )
             {
-                Logger.Debug (
+                new LogBuilder(Logger).Level(LogLevel.Debug).Message(
                               $"Provisioned ID {id} for instance of type {instance.GetType ( )}."
-                             ) ;
+                             ).Property("objectId", id).Property("instanceType", instance.GetType().FullName).Write();
                 RegisterObject ( instance , eComponent , eParameters , id ) ;
             }
 

@@ -1,5 +1,5 @@
 ﻿using NLog ;
-using TestLib.Attributes ;
+using Tests.Lib.Attributes ;
 using WpfApp.Core.Context ;
 using Xunit ;
 

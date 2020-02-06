@@ -19,19 +19,31 @@ namespace Tests
     [ Target ( "Xunit" ) ]
     public class XunitTarget : TargetWithLayout
     {
-        private readonly ITestOutputHelper _outputHelper ;
+        public ITestOutputHelper OutputHelper { get ; set ;  }
 
-        public XunitTarget ( ITestOutputHelper outputHelper ) { _outputHelper = outputHelper ; }
-
-        /// <summary>
-        ///     Writes logging event to the log target. Must be overridden in inheriting
-        ///     classes.
-        /// </summary>
-        /// <param name="logEvent">Logging event to be written out.</param>
-        public new void Write ( LogEventInfo logEvent )
+        public XunitTarget ( string name = null ): base()
         {
-            var renderLogEvent = RenderLogEvent ( Layout , logEvent ) ;
-            _outputHelper.WriteLine ( renderLogEvent ) ;
+            if ( name != null )
+            {
+                Name = name ;
+            }
+        }
+
+
+
+
+/// <summary>
+///     Writes logging event to the log target. Must be overridden in inheriting
+///     classes.
+/// </summary>
+/// <param name="logEvent">Logging event to be written out.</param>
+protected override void Write(LogEventInfo logEvent)
+{
+    string logMessage;
+
+    logMessage = RenderLogEvent(Layout, logEvent);
+
+            OutputHelper.WriteLine ( logMessage) ;
         }
     }
 }

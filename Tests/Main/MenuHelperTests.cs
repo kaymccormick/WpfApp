@@ -1,9 +1,10 @@
 ﻿using System ;
 using NLog ;
 using TestLib ;
-using TestLib.Attributes ;
+using Tests.Lib.Attributes ;
 using Tests.Lib.Fixtures ;
 using WpfApp.Core.Interfaces ;
+using WpfApp.Core.Logging ;
 using WpfApp1.Menus ;
 using Xunit ;
 using Xunit.Abstractions ;
@@ -13,13 +14,14 @@ namespace Tests.Main
     /// <summary></summary>
     [ Collection ( "WpfApp" ) ]
     [ LogTestMethod ] [ BeforeAfterLogger ]
-    public class MenuHelperTests : WpfTestsBase
+    public class MenuHelperTests : IClassFixture <LoggingFixture>, IDisposable
     {
         // ReSharper disable once UnusedMember.Local
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
 #pragma warning disable 649
         private readonly Func < IMenuItem > _xMenuItemCreator ;
+        private XunitTarget _xunitTarget ;
 #pragma warning restore 649
 
 
@@ -28,8 +30,11 @@ namespace Tests.Main
           , AppContainerFixture   containerFixture
           , UtilsContainerFixture utilsContainerFixture
           , ITestOutputHelper     outputHelper
-        ) : base ( wpfAppFixture , containerFixture , utilsContainerFixture , outputHelper )
+        )
         {
+            AppLoggingConfigHelper.EnsureLoggingConfigured();
+            _xunitTarget = new XunitTarget("Xunit") { OutputHelper = outputHelper };
+            AppLoggingConfigHelper.AddTarget(_xunitTarget);
         }
 
         /// <summary>Makes the menu item test.</summary>
@@ -45,6 +50,12 @@ namespace Tests.Main
             var item = MenuHelper.MakeMenuItem ( arg ) ;
             Assert.NotNull ( item ) ;
             Assert.Equal ( header , item.Header ) ;
+        }
+
+        /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+        public void Dispose ( )
+        {
+            _xunitTarget?.Dispose ( ) ;
         }
     }
 }

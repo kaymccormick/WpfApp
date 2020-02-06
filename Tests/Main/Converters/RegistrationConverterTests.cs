@@ -14,8 +14,7 @@ using System.Globalization ;
 using System.Linq ;
 using Autofac ;
 using Autofac.Core ;
-
-using TestLib.Attributes ;
+using Tests.Lib.Attributes ;
 using Tests.Lib.Fixtures ;
 using WpfApp.Core.Converters ;
 using WpfApp.Core.Interfaces ;
