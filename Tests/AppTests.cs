@@ -22,7 +22,7 @@ namespace Tests
         {
             var app = new App ( DebugEventHandler ) ;
             Assert.NotNull ( app ) ;
-            Assert.Collection( app.configSettings , o => Assert.IsType<ContainerHelperSettings>(o));
+            Assert.Collection( app.ConfigSettings , o => Assert.IsType<ContainerHelperSettings>(o));
                 
         }
 

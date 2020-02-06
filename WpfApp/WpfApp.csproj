@@ -83,6 +83,7 @@
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="Application\DebugEventArgs.cs" />
+    <Compile Include="Config\ConfigTargetAttribute.cs" />
     <Compile Include="Config\ContainerHelperSection.cs" />
     <Compile Include="Core\Interfaces\IApplicationContext.cs" />
     <Compile Include="NewMainWindow.xaml.cs">

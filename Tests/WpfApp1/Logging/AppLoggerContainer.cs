@@ -20,9 +20,9 @@ namespace WpfApp1.Logging
         {
             get
             {
-                if ( AppLoggingConfigHelper._stringWriter != null )
+                if ( AppLoggingConfigHelper.StringWriter != null )
                 {
-                    return AppLoggingConfigHelper._stringWriter.ToString ( ) ;
+                    return AppLoggingConfigHelper.StringWriter.ToString ( ) ;
                 }
 
                 return "" ;

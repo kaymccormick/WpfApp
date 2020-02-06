@@ -132,6 +132,7 @@ namespace WpfApp.Common.Utils
                 i.OriginalReturnValue = invocation.ReturnValue ;
                 try
                 {
+                    
                     if ( i.OriginalReturnValue is DeferredCallback cb )
                     {
                         object origArg = null ;
@@ -174,7 +175,7 @@ namespace WpfApp.Common.Utils
                         i.ReturnValue = invocation.ReturnValue ;
                         return ;
                     }
-
+                    
                     var classProxyWithTarget =
                         Generator.CreateClassProxyWithTarget (
                                                                     invocation.ReturnValue
