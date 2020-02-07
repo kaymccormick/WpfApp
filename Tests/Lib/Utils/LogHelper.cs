@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections ;
+﻿using System.Collections ;
 using System.Collections.Generic;
-using System.Collections.Specialized ;
-using System.Linq;
 using System.Reflection ;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Tests.Lib.Utils
 {
@@ -24,7 +19,11 @@ namespace Tests.Lib.Utils
         {
             IDictionary r = new Dictionary < string , object > ( ) ;
             r[ "TestMethodName" ]      = method.Name ;
-            r[ "TestClass" ]           = method.DeclaringType.ToString ( ) ;
+            if ( method.DeclaringType != null )
+            {
+                r[ "TestClass" ] = method.DeclaringType.ToString ( ) ;
+            }
+
             r[ "TestMethodLifecycle" ] = stage ;
             return r ;
         }

@@ -85,8 +85,6 @@
     <Compile Include="Application\DebugEventArgs.cs" />
     <Compile Include="Config\ConfigTargetAttribute.cs" />
     <Compile Include="Config\ContainerHelperSection.cs" />
-    <Compile Include="Controls\Windows\OldMainWindow.cs" />
-    <Compile Include="Core\Interfaces\IApplicationContext.cs" />
     <Compile Include="Core\Interfaces\ITabGuest.cs" />
     <Compile Include="Core\UnableToRegisterObjectIdException.cs" />
     <Compile Include="NewMainWindow.xaml.cs">
@@ -104,7 +102,6 @@
     <Compile Include="Core\Logging\AppLoggerContainer.cs" />
     <Compile Include="Core\Logging\NLogTargetConverter.cs" />
     <Compile Include="Core\Logging\TypeBrowserPage.xaml.cs" />
-    <Compile Include="Core\Menus\ILoggingEntity.cs" />
     <Compile Include="Core\Menus\MenuHelper.cs" />
     <Compile Include="Core\Util\DebugHelper.cs" />
     <Compile Include="Core\Util\IObjectId.cs" />
@@ -123,7 +120,6 @@
     <Compile Include="Core\Xaml\AssemblyConverter.cs" />
     <Compile Include="Core\Xaml\Converter.cs" />
     <Compile Include="Core\Xaml\InstanceRegistrationConverter.cs" />
-    <Compile Include="Core\Xaml\SmartTypeConverter.cs" />
     <ApplicationDefinition Include="Application\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -312,10 +308,6 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Controls\Windows\AppSettingsWindow.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Include="Controls\Windows\OldMainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

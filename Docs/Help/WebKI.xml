@@ -18,6 +18,7 @@
   <HelpKINode Title="AddOnResolveServiceListChangedHandler method" Url="html/78f37f13-2896-01c9-abcd-79e91176759c.htm" />
   <HelpKINode Title="AddRegistrationSource method" Url="html/0b89287d-5b2c-02b6-d09a-1ab638ce719a.htm" />
   <HelpKINode Title="AddRenderedTypeChangedEventHandler method" Url="html/6373c99e-fc4b-07fd-37c3-2f3995c6332c.htm" />
+  <HelpKINode Title="AddTarget method" Url="html/598bf26d-584f-e671-4e86-385d6841fd98.htm" />
   <HelpKINode Title="AddText method">
     <HelpKINode Title="ComponentRegistration.AddText Method " Url="html/c5d70865-71ad-b6ff-e0b9-7d70ed390ed7.htm" />
     <HelpKINode Title="ComponentRegistry.AddText Method " Url="html/b385221c-8a4d-c250-78e5-ad2f51779075.htm" />
@@ -82,6 +83,7 @@
     <HelpKINode Title="methods" Url="html/57591939-1b78-e9e9-5d64-a080250f638c.htm" />
     <HelpKINode Title="properties" Url="html/9f0aaf6f-257f-f2ba-447a-61e5d24cd9c7.htm" />
   </HelpKINode>
+  <HelpKINode Title="AppLoggingConfigHelper.AddTarget method" Url="html/598bf26d-584f-e671-4e86-385d6841fd98.htm" />
   <HelpKINode Title="AppLoggingConfigHelper.AppLoggingConfigHelper constructor" Url="html/b4850d5e-b37d-b2d9-34b3-97b54386abda.htm" />
   <HelpKINode Title="AppLoggingConfigHelper.DebuggerTargetEnabled property" Url="html/e7199543-7105-5d92-a1b7-3fbc5df4c73b.htm" />
   <HelpKINode Title="AppLoggingConfigHelper.DumpExistingConfig property" Url="html/b3ec88e3-c9fa-bb66-cb87-c72c7f870062.htm" />
@@ -91,6 +93,8 @@
   <HelpKINode Title="AppLoggingConfigHelper.logFactory property" Url="html/7200bdb8-c8f8-50d2-97d7-ae97fa52ecd5.htm" />
   <HelpKINode Title="AppLoggingConfigHelper.LoggingIsConfigured property" Url="html/87b285db-ba2f-1f41-6dab-b3762dcc7e91.htm" />
   <HelpKINode Title="AppLoggingConfigHelper.MyFileTarget method" Url="html/730da12d-127c-e494-a0e3-9c3caf00a095.htm" />
+  <HelpKINode Title="AppLoggingConfigHelper.RemoveTarget method" Url="html/1429d671-c3fd-b9fa-405c-240ef88d0beb.htm" />
+  <HelpKINode Title="AppLoggingConfigHelper.SetupJsonLayout method" Url="html/204b091d-e4ce-2310-3a4f-dcf1159c89b7.htm" />
   <HelpKINode Title="AppLoggingConfigHelper.StringWriter field" Url="html/96f24cf3-0037-aad4-7e66-d2cb462f471d.htm" />
   <HelpKINode Title="AppSettings field" Url="html/430284ac-6dc3-09fc-5370-b7c18d753237.htm" />
   <HelpKINode Title="AppSettingsWindow class">
@@ -145,20 +149,20 @@
   </HelpKINode>
   <HelpKINode Title="AssemblyContainerScanAttribute.AssemblyContainerScanAttribute constructor" Url="html/24af8be5-d694-3605-3e5a-4fa7ca48dfdd.htm" />
   <HelpKINode Title="AssemblyConverter class">
-    <HelpKINode Title="AssemblyConverter Class" Url="html/471641d9-2c74-2a2e-f23a-55dc3fcf0bf5.htm" />
     <HelpKINode Title="AssemblyConverter Class" Url="html/5c48d434-6e4c-34dc-47c0-0d4a7e90eafc.htm" />
-    <HelpKINode Title="constructor" Url="html/ee50a328-f876-5b7e-11d1-c600cbc64040.htm" />
+    <HelpKINode Title="AssemblyConverter Class" Url="html/471641d9-2c74-2a2e-f23a-55dc3fcf0bf5.htm" />
     <HelpKINode Title="constructor" Url="html/4f9cdd58-bede-d96a-abfc-b49e3a7d9ffc.htm" />
-    <HelpKINode Title="methods" Url="html/1a5fe577-33e7-0398-85a7-f709e052dbed.htm" />
+    <HelpKINode Title="constructor" Url="html/ee50a328-f876-5b7e-11d1-c600cbc64040.htm" />
     <HelpKINode Title="methods" Url="html/2c95a1a4-e799-cab7-10f3-8de2c7b3230e.htm" />
+    <HelpKINode Title="methods" Url="html/1a5fe577-33e7-0398-85a7-f709e052dbed.htm" />
   </HelpKINode>
   <HelpKINode Title="AssemblyConverter.AssemblyConverter constructor">
-    <HelpKINode Title="AssemblyConverter Constructor " Url="html/4f9cdd58-bede-d96a-abfc-b49e3a7d9ffc.htm" />
     <HelpKINode Title="AssemblyConverter Constructor " Url="html/ee50a328-f876-5b7e-11d1-c600cbc64040.htm" />
+    <HelpKINode Title="AssemblyConverter Constructor " Url="html/4f9cdd58-bede-d96a-abfc-b49e3a7d9ffc.htm" />
   </HelpKINode>
   <HelpKINode Title="AssemblyConverter.Convert method">
-    <HelpKINode Title="AssemblyConverter.Convert Method " Url="html/98bd86b9-a4c7-6a0b-28d3-951c6ea51064.htm" />
     <HelpKINode Title="AssemblyConverter.Convert Method " Url="html/60982680-6fce-00c2-ef73-335ac302a781.htm" />
+    <HelpKINode Title="AssemblyConverter.Convert Method " Url="html/98bd86b9-a4c7-6a0b-28d3-951c6ea51064.htm" />
   </HelpKINode>
   <HelpKINode Title="AssemblyConverter.ConvertBack method">
     <HelpKINode Title="AssemblyConverter.ConvertBack Method " Url="html/48552552-e683-f659-1bc2-7818f8b93508.htm" />
@@ -197,19 +201,19 @@
   <HelpKINode Title="AttributeNotFoundException.AttributeName property" Url="html/2292411f-649b-edbd-08b3-ca0f62116c78.htm" />
   <HelpKINode Title="AttributeNotFoundException.AttributeNotFoundException constructor" Url="html/0f80a7ea-07a6-6036-0884-6189192ea0f6.htm" />
   <HelpKINode Title="BaseInterceptor class">
-    <HelpKINode Title="BaseInterceptor Class" Url="html/17530bff-3da6-3201-3e2d-eeb12fec02af.htm" />
     <HelpKINode Title="BaseInterceptor Class" Url="html/27190fdc-42ac-f3b7-8e51-ef82d82c118d.htm" />
+    <HelpKINode Title="BaseInterceptor Class" Url="html/17530bff-3da6-3201-3e2d-eeb12fec02af.htm" />
     <HelpKINode Title="constructor" Url="html/4c43fed3-a7a5-70f3-2ed6-1ca450d4673a.htm" />
     <HelpKINode Title="constructor" Url="html/7bcfa71e-af3b-9436-55d5-c6eecb3aa13a.htm" />
     <HelpKINode Title="fields" Url="html/60e82716-87fd-72e5-550b-26d5bfe9ecb8.htm" />
-    <HelpKINode Title="methods" Url="html/fa53e102-ae9a-45fa-cda7-82ed0fb38bcd.htm" />
     <HelpKINode Title="methods" Url="html/158ee0f0-475a-c8f3-01a4-96cb89a786d2.htm" />
+    <HelpKINode Title="methods" Url="html/fa53e102-ae9a-45fa-cda7-82ed0fb38bcd.htm" />
     <HelpKINode Title="properties" Url="html/6d151405-7abe-46e5-9a6f-5dbfcbefa8a1.htm" />
     <HelpKINode Title="properties" Url="html/b0907b2a-9e1e-2d64-3942-3e412b7ab48e.htm" />
   </HelpKINode>
   <HelpKINode Title="BaseInterceptor.BaseInterceptor constructor">
-    <HelpKINode Title="BaseInterceptor Constructor " Url="html/7bcfa71e-af3b-9436-55d5-c6eecb3aa13a.htm" />
     <HelpKINode Title="BaseInterceptor Constructor " Url="html/4c43fed3-a7a5-70f3-2ed6-1ca450d4673a.htm" />
+    <HelpKINode Title="BaseInterceptor Constructor " Url="html/7bcfa71e-af3b-9436-55d5-c6eecb3aa13a.htm" />
   </HelpKINode>
   <HelpKINode Title="BaseInterceptor.DumpDelegate method" Url="html/421ebdaa-3471-a245-6647-f922fcc91f78.htm" />
   <HelpKINode Title="BaseInterceptor.DumpInvocation method" Url="html/d08b8ad2-db26-b1d9-9791-dff4655488d6.htm" />
@@ -486,8 +490,8 @@
   <HelpKINode Title="Controls namespace" Url="html/13df45dc-1046-ed38-2e0d-bcc8c152d3a1.htm" />
   <HelpKINode Title="Controls.DefaultPage class" Url="html/a8db9d47-8ff2-c57d-45e5-4950521ef58a.htm" />
   <HelpKINode Title="Convert method">
-    <HelpKINode Title="AssemblyConverter.Convert Method " Url="html/98bd86b9-a4c7-6a0b-28d3-951c6ea51064.htm" />
     <HelpKINode Title="AssemblyConverter.Convert Method " Url="html/60982680-6fce-00c2-ef73-335ac302a781.htm" />
+    <HelpKINode Title="AssemblyConverter.Convert Method " Url="html/98bd86b9-a4c7-6a0b-28d3-951c6ea51064.htm" />
     <HelpKINode Title="ComponentLifetimeConverter.Convert Method " Url="html/c6537d62-08f4-f1df-932e-9552db2d539b.htm" />
     <HelpKINode Title="GetTypeConverter.Convert Method " Url="html/b307f0d3-ab86-ab0e-0b3e-6c8f253d269f.htm" />
     <HelpKINode Title="InstanceRegistrationConverter.Convert Method " Url="html/a9bf38cd-a825-4a99-98d7-3d1fea9b5d18.htm" />
@@ -500,12 +504,12 @@
     <HelpKINode Title="TargetConverter.Convert Method " Url="html/3765ea3c-d725-1757-b714-9e44720cc1d5.htm" />
   </HelpKINode>
   <HelpKINode Title="ConvertBack method">
-    <HelpKINode Title="AssemblyConverter.ConvertBack Method " Url="html/6b5f4114-6b2e-2358-1cf4-3dc8e884434a.htm" />
     <HelpKINode Title="AssemblyConverter.ConvertBack Method " Url="html/48552552-e683-f659-1bc2-7818f8b93508.htm" />
+    <HelpKINode Title="AssemblyConverter.ConvertBack Method " Url="html/6b5f4114-6b2e-2358-1cf4-3dc8e884434a.htm" />
     <HelpKINode Title="ComponentLifetimeConverter.ConvertBack Method " Url="html/4c6b3da8-e3d5-6825-0477-32939de6bd3d.htm" />
     <HelpKINode Title="GetTypeConverter.ConvertBack Method " Url="html/c13d47e1-f840-77a9-7b6e-a50e60710042.htm" />
-    <HelpKINode Title="InstanceRegistrationConverter.ConvertBack Method " Url="html/e3512c6c-271a-5471-5bc1-64dc0644c50f.htm" />
     <HelpKINode Title="InstanceRegistrationConverter.ConvertBack Method " Url="html/1bad1321-4792-da74-e551-6a72ca69fda1.htm" />
+    <HelpKINode Title="InstanceRegistrationConverter.ConvertBack Method " Url="html/e3512c6c-271a-5471-5bc1-64dc0644c50f.htm" />
     <HelpKINode Title="NLogTargetConverter.ConvertBack Method " Url="html/84109cd9-9c55-5639-b329-7b9aee0bcbe3.htm" />
     <HelpKINode Title="RegistrationConverter.ConvertBack Method " Url="html/0913e7eb-36c6-92e2-c1e4-a4fe3eb3adcd.htm" />
     <HelpKINode Title="RegistrationConverter2.ConvertBack Method " Url="html/2cc9c430-8d01-9b2c-a47c-2f8969649026.htm" />
@@ -868,8 +872,8 @@
     <HelpKINode Title="AssemblyBrowser.InitializeComponent Method " Url="html/1501420f-6200-4b21-d21b-8cbcfe0cf9cd.htm" />
     <HelpKINode Title="Container.InitializeComponent Method " Url="html/a632eb67-76ae-68d8-fba6-5913025379a7.htm" />
     <HelpKINode Title="DefaultPage.InitializeComponent Method " Url="html/be9e24cb-7212-becf-3287-7a0020179cd1.htm" />
-    <HelpKINode Title="MainWindow.InitializeComponent Method " Url="html/cf592756-7477-1b84-b4d6-d61c6cb97b9a.htm" />
     <HelpKINode Title="MainWindow.InitializeComponent Method " Url="html/6db76519-c115-b042-89af-b4015b04dc49.htm" />
+    <HelpKINode Title="MainWindow.InitializeComponent Method " Url="html/cf592756-7477-1b84-b4d6-d61c6cb97b9a.htm" />
     <HelpKINode Title="NewMainWindow.InitializeComponent Method " Url="html/9cd5ad30-e215-b1f1-cdbb-a2c8a4c26bbc.htm" />
     <HelpKINode Title="NewWindow.InitializeComponent Method " Url="html/9f4b13cb-9bbe-0216-e2c8-2e22ca0ee0d2.htm" />
     <HelpKINode Title="OldMainWindow.InitializeComponent Method " Url="html/9d707c07-89d4-bbe7-1688-3f1311a709a3.htm" />
@@ -932,8 +936,8 @@
     <HelpKINode Title="InstanceRegistrationConverter.Convert Method " Url="html/c627ef61-5071-75bc-2474-57d5ecfe58af.htm" />
   </HelpKINode>
   <HelpKINode Title="InstanceRegistrationConverter.ConvertBack method">
-    <HelpKINode Title="InstanceRegistrationConverter.ConvertBack Method " Url="html/e3512c6c-271a-5471-5bc1-64dc0644c50f.htm" />
     <HelpKINode Title="InstanceRegistrationConverter.ConvertBack Method " Url="html/1bad1321-4792-da74-e551-6a72ca69fda1.htm" />
+    <HelpKINode Title="InstanceRegistrationConverter.ConvertBack Method " Url="html/e3512c6c-271a-5471-5bc1-64dc0644c50f.htm" />
   </HelpKINode>
   <HelpKINode Title="InstanceRegistrationConverter.InstanceRegistrationConverter constructor">
     <HelpKINode Title="InstanceRegistrationConverter Constructor " Url="html/d684968a-88a3-b00d-f1b0-1161343660e7.htm" />
@@ -945,8 +949,8 @@
     <HelpKINode Title="PushContextAttribute.Instances Property " Url="html/1da55124-e99f-895c-8e73-9a00765cfac2.htm" />
   </HelpKINode>
   <HelpKINode Title="Intercept method">
-    <HelpKINode Title="BaseInterceptor.Intercept Method " Url="html/7287147e-3937-626b-ed27-a61e0a751e02.htm" />
     <HelpKINode Title="BaseInterceptor.Intercept Method " Url="html/72010c07-7603-52ca-59c0-e942a884c224.htm" />
+    <HelpKINode Title="BaseInterceptor.Intercept Method " Url="html/7287147e-3937-626b-ed27-a61e0a751e02.htm" />
     <HelpKINode Title="BaseInterceptorImpl.Intercept Method " Url="html/49510c98-182f-6bfe-a0f8-74d32ae646c8.htm" />
     <HelpKINode Title="BuilderInterceptor.Intercept Method " Url="html/7823b551-f620-b40b-5a95-0d05200d2f61.htm" />
     <HelpKINode Title="LogFactoryInterceptor.Intercept Method " Url="html/a98d5dd6-53c7-7f63-4a96-5b8c36e89680.htm" />
@@ -1010,8 +1014,8 @@
   <HelpKINode Title="IsTabletPCKey property" Url="html/dca52e16-0771-b491-e94a-4389c399b9c6.htm" />
   <HelpKINode Title="IsValid method" Url="html/11c876ac-4b2f-eac6-0e74-5bf6caeab7e0.htm" />
   <HelpKINode Title="ITabGuest interface">
-    <HelpKINode Title="ITabGuest Interface" Url="html/9a66aaa9-c13e-b723-d024-3793c2b6167e.htm" />
     <HelpKINode Title="ITabGuest Interface" Url="html/8e0f1a46-b1fa-c10c-e6bf-1268a8a714c9.htm" />
+    <HelpKINode Title="ITabGuest Interface" Url="html/9a66aaa9-c13e-b723-d024-3793c2b6167e.htm" />
   </HelpKINode>
   <HelpKINode Title="ITopLevelMenu interface">
     <HelpKINode Title="ITopLevelMenu Interface" Url="html/d2034f30-7993-9d73-0191-37d7d901f446.htm" />
@@ -1144,19 +1148,19 @@
   <HelpKINode Title="LoggerInterceptor class">
     <HelpKINode Title="LoggerInterceptor Class" Url="html/0d0df32e-a289-d1ad-9ffa-ac81638a923f.htm" />
     <HelpKINode Title="LoggerInterceptor Class" Url="html/ffaceff8-1ab5-c32e-f5b1-7f3489c051fb.htm" />
-    <HelpKINode Title="constructor" Url="html/ca2af6f4-74f2-37a5-8233-b7ddfc7573a0.htm" />
     <HelpKINode Title="constructor" Url="html/f419dddf-abfc-4c27-8f3f-fbca66ba1d48.htm" />
-    <HelpKINode Title="methods" Url="html/5443a504-a497-3890-1d87-7287b7414956.htm" />
+    <HelpKINode Title="constructor" Url="html/ca2af6f4-74f2-37a5-8233-b7ddfc7573a0.htm" />
     <HelpKINode Title="methods" Url="html/5c75e289-07cf-0d32-f887-d354010cf92d.htm" />
+    <HelpKINode Title="methods" Url="html/5443a504-a497-3890-1d87-7287b7414956.htm" />
     <HelpKINode Title="properties" Url="html/41674f02-602d-a7c8-e257-95fd8daa09f2.htm" />
   </HelpKINode>
   <HelpKINode Title="LoggerInterceptor.Intercept method">
-    <HelpKINode Title="LoggerInterceptor.Intercept Method " Url="html/7bcedde6-5021-9729-0ba8-3b3b67f4cdab.htm" />
     <HelpKINode Title="LoggerInterceptor.Intercept Method " Url="html/204da503-755e-624b-6be9-0cffec575743.htm" />
+    <HelpKINode Title="LoggerInterceptor.Intercept Method " Url="html/7bcedde6-5021-9729-0ba8-3b3b67f4cdab.htm" />
   </HelpKINode>
   <HelpKINode Title="LoggerInterceptor.LoggerInterceptor constructor">
-    <HelpKINode Title="LoggerInterceptor Constructor " Url="html/ca2af6f4-74f2-37a5-8233-b7ddfc7573a0.htm" />
     <HelpKINode Title="LoggerInterceptor Constructor " Url="html/f419dddf-abfc-4c27-8f3f-fbca66ba1d48.htm" />
+    <HelpKINode Title="LoggerInterceptor Constructor " Url="html/ca2af6f4-74f2-37a5-8233-b7ddfc7573a0.htm" />
   </HelpKINode>
   <HelpKINode Title="LoggerInterceptor.UseLogMethod property" Url="html/f3578d75-f706-4c85-5531-c1dbcd5e90cf.htm" />
   <HelpKINode Title="LoggerProxyHelper class">
@@ -1239,13 +1243,13 @@
   <HelpKINode Title="MainWindow class">
     <HelpKINode Title="MainWindow Class" Url="html/29fd7b37-eaac-8e45-2398-31e8f67a98f7.htm" />
     <HelpKINode Title="MainWindow Class" Url="html/69c61fc6-f245-8bf0-dd5a-6efac40729fb.htm" />
-    <HelpKINode Title="constructor" Url="html/609922c1-aae5-98b8-ab38-befce3f1c6c0.htm" />
     <HelpKINode Title="constructor" Url="html/4f6b7ff2-3ac1-0a53-6f9d-596f2aa0f4ba.htm" />
-    <HelpKINode Title="events" Url="html/ecd553ea-9dfe-419a-456c-683414fb736f.htm" />
+    <HelpKINode Title="constructor" Url="html/609922c1-aae5-98b8-ab38-befce3f1c6c0.htm" />
     <HelpKINode Title="events" Url="html/0c1d0245-7dd1-c1ec-c644-92b3e13bed8a.htm" />
+    <HelpKINode Title="events" Url="html/ecd553ea-9dfe-419a-456c-683414fb736f.htm" />
     <HelpKINode Title="fields" Url="html/1b5f2c52-8acc-50b3-dd96-a00802ccc9b5.htm" />
-    <HelpKINode Title="methods" Url="html/60414e7f-cd9c-7797-9b6e-c9ec744d7a56.htm" />
     <HelpKINode Title="methods" Url="html/91c0a0f9-6a15-95fa-1f2a-ca57b7615665.htm" />
+    <HelpKINode Title="methods" Url="html/60414e7f-cd9c-7797-9b6e-c9ec744d7a56.htm" />
     <HelpKINode Title="properties" Url="html/a996f438-4150-afcb-24d5-8cc21d70e505.htm" />
     <HelpKINode Title="properties" Url="html/cb9893e6-83c7-ed75-129d-62c905d0277d.htm" />
   </HelpKINode>
@@ -1254,16 +1258,16 @@
   <HelpKINode Title="MainWindow.Configuration property" Url="html/921127f2-c132-6f0a-cf72-d3ad9edac516.htm" />
   <HelpKINode Title="MainWindow.DoRestart property" Url="html/1f8c30c2-4209-4884-82ea-f38d76952656.htm" />
   <HelpKINode Title="MainWindow.InitializeComponent method">
-    <HelpKINode Title="MainWindow.InitializeComponent Method " Url="html/6db76519-c115-b042-89af-b4015b04dc49.htm" />
     <HelpKINode Title="MainWindow.InitializeComponent Method " Url="html/cf592756-7477-1b84-b4d6-d61c6cb97b9a.htm" />
+    <HelpKINode Title="MainWindow.InitializeComponent Method " Url="html/6db76519-c115-b042-89af-b4015b04dc49.htm" />
   </HelpKINode>
   <HelpKINode Title="MainWindow.LifetimeScope property" Url="html/68d70fcd-3040-4510-83e7-09c778a930ca.htm" />
   <HelpKINode Title="MainWindow.LifetimeScopeProperty field" Url="html/82271bc6-ced0-e811-5f80-d1ca0289b5d2.htm" />
   <HelpKINode Title="MainWindow.LogEvents property" Url="html/561a69cd-ad06-5204-78bc-35292b12055e.htm" />
   <HelpKINode Title="MainWindow.Logger property" Url="html/a378c679-1589-7d9d-75de-50de212d129b.htm" />
   <HelpKINode Title="MainWindow.MainWindow constructor">
-    <HelpKINode Title="MainWindow Constructor " Url="html/609922c1-aae5-98b8-ab38-befce3f1c6c0.htm" />
     <HelpKINode Title="MainWindow Constructor " Url="html/4f6b7ff2-3ac1-0a53-6f9d-596f2aa0f4ba.htm" />
+    <HelpKINode Title="MainWindow Constructor " Url="html/609922c1-aae5-98b8-ab38-befce3f1c6c0.htm" />
   </HelpKINode>
   <HelpKINode Title="MainWindow.MenuItemListCollectionViewProperty field" Url="html/e03dbfe5-ddf4-0f0e-1c6e-855b521e33c0.htm" />
   <HelpKINode Title="MainWindow.OnClosed method" Url="html/e60c939c-123e-4a04-b9a1-e3dc0a8526a5.htm" />
@@ -1700,6 +1704,7 @@
   <HelpKINode Title="RemoveOnResolveServiceListChangedHandler method" Url="html/612b7eac-1a4e-1632-c457-ded0215d82bb.htm" />
   <HelpKINode Title="RemoveProperty method" Url="html/ac12f648-1ff9-09f3-90e3-a5333d7b989f.htm" />
   <HelpKINode Title="RemoveRenderedTypeChangedEventHandler method" Url="html/7baac209-8312-5796-40f5-e6f9f97caf35.htm" />
+  <HelpKINode Title="RemoveTarget method" Url="html/1429d671-c3fd-b9fa-405c-240ef88d0beb.htm" />
   <HelpKINode Title="RenderedType attached property" Url="html/8060eae3-8b1c-c202-5c26-c44d4ac04bb0.htm" />
   <HelpKINode Title="RenderedType property" Url="html/5ae28d63-b715-846a-6fa7-c60450f36cc7.htm" />
   <HelpKINode Title="RenderedTypeChanged event" Url="html/d9f66325-bf13-a95a-c7c0-c09256fa9454.htm" />
@@ -1841,6 +1846,7 @@
   <HelpKINode Title="SetRenderedType method" Url="html/baee2e33-46bc-5806-e6b5-770f26e3ab6f.htm" />
   <HelpKINode Title="SetResolveServiceList method" Url="html/8912ed4c-dcbc-8798-92ad-b4d64cafc01f.htm" />
   <HelpKINode Title="SetupContainer method" Url="html/c07a3864-f8ec-a669-d5a1-36ce49f1e568.htm" />
+  <HelpKINode Title="SetupJsonLayout method" Url="html/204b091d-e4ce-2310-3a4f-dcf1159c89b7.htm" />
   <HelpKINode Title="Sharing property" Url="html/49a41e17-597b-e770-8ccd-0bca36214a42.htm" />
   <HelpKINode Title="ShortenGuid method" Url="html/b129ef70-8b21-ae09-7f31-883816e694f6.htm" />
   <HelpKINode Title="ShouldInterceptMethod method">

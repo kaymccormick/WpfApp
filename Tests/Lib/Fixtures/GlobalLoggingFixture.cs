@@ -9,16 +9,12 @@
 // 
 // ---
 #endregion
-using System.Diagnostics ;
 using System.Threading.Tasks ;
-using DynamicData ;
 using JetBrains.Annotations ;
 using NLog ;
-using NLog.Layouts ;
 using WpfApp.Core.Logging ;
 using Xunit ;
 using Xunit.Abstractions ;
-using DiagnosticMessage = Xunit.Sdk.DiagnosticMessage ;
 
 namespace Tests.Lib.Fixtures
 {
@@ -28,7 +24,7 @@ namespace Tests.Lib.Fixtures
     [ UsedImplicitly ]
     public class GlobalLoggingFixture : IAsyncLifetime
     {
-        private                 XunitSinkTarget _xunitSinkTarget ;
+        private readonly XunitSinkTarget _xunitSinkTarget ;
         private static readonly Logger          Logger = LogManager.GetCurrentClassLogger ( ) ;
 
         /// <summary>
@@ -39,18 +35,16 @@ namespace Tests.Lib.Fixtures
         {
             AppLoggingConfigHelper.EnsureLoggingConfigured (
                                                             message => sink.OnMessage (
-                                                                                       new Xunit.
-                                                                                           DiagnosticMessage (
+                                                                                       new DiagnosticMessage (
                                                                                                               message
                                                                                                              )
                                                                                       )
                                                            ) ;
-            Sink = sink ;
 
             var l = AppLoggingConfigHelper.SetupJsonLayout ( ) ;
 
             sink.OnMessage (
-                            new Xunit.DiagnosticMessage ( "Constructing GlobalLoggingFixture." )
+                            new DiagnosticMessage ( "Constructing GlobalLoggingFixture." )
                            ) ;
             _xunitSinkTarget = new XunitSinkTarget ( "Xunitsink" )
                                {
@@ -64,14 +58,7 @@ namespace Tests.Lib.Fixtures
             Logger.Warn ( $"{nameof ( GlobalDiagnosticsContext )} logger added." ) ;
         }
 
-        private IMessageSink Sink { get ; }
-
         // ReSharper disable once IdentifierTypo
-        private void LogMethod ( string message )
-        {
-            Sink.OnMessage ( new DiagnosticMessage ( message ) ) ;
-            Debug.WriteLine ( message ) ;
-        }
 
         /// <summary>
         /// Called immediately after the class has been created, before it is used.

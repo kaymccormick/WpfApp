@@ -10,11 +10,3 @@
 // ---
 #endregion
 
-using System.ComponentModel ;
-
-namespace WpfApp.Core.Converters
-{
-    public class LoggerInstanceConverter : TypeConverter
-    {
-    }
-}

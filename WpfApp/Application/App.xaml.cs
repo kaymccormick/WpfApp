@@ -128,7 +128,6 @@ namespace WpfApp.Application
             try
             {
                 var sections = config.Sections ;
-                string type ;
                 foreach ( ConfigurationSection configSection in sections )
                 {
                     try
@@ -138,7 +137,7 @@ namespace WpfApp.Application
                         // + " : "
                         // + configSection.SectionInformation.Type
                         // ) ;
-                        type = configSection.SectionInformation.Type ;
+                        var type = configSection.SectionInformation.Type ;
                         DoLogMethod ( $"Type is {type}" ) ;
                         var sectionType = Type.GetType ( type ) ;
                         if ( sectionType.Assembly == type1.Assembly )

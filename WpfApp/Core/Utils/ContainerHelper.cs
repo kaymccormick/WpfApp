@@ -9,7 +9,6 @@ using Autofac.Core.Lifetime ;
 using Autofac.Core.Resolving ;
 using Autofac.Extras.AttributeMetadata ;
 using Castle.DynamicProxy ;
-using Common ;
 using NLog ;
 using WpfApp.Core.Attributes ;
 using WpfApp.Core.Interfaces ;

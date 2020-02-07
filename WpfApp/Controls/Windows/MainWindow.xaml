@@ -15,8 +15,6 @@
         <CommandBinding Command="wpfApp:Commands.LoadAssemblyList" />
         <CommandBinding Command="ApplicationCommands.Open"
                         Executed="CommandBinding_OnExecuted" />
-        <CommandBinding Command="wpfApp:Commands.DumpDebug"
-                        Executed="DumpDebug" />
         <CommandBinding Command="wpfApp:Commands.Restart" Executed="Restart" />
     </Window.CommandBindings>
     <Window.Resources>

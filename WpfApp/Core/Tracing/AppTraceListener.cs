@@ -161,7 +161,7 @@ namespace WpfApp.Core.Tracing
                         RoutedEvents[ re.Name ] = info = new Info ( 0 ) ;
                     }
 
-                    info.count += 1 ;
+                    info.Count += 1 ;
                     if ( re.Name == "ScrollChanged" )
                     {
                         doOutput = false ;

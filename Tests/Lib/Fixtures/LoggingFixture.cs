@@ -1,11 +1,7 @@
 ﻿using System ;
-using System.Diagnostics ;
-using System.Threading.Tasks ;
 using JetBrains.Annotations ;
 using WpfApp.Core.Logging ;
-using Xunit ;
 using Xunit.Abstractions ;
-using DiagnosticMessage = Xunit.Sdk.DiagnosticMessage ;
 
 namespace Tests.Lib.Fixtures
 {
@@ -15,9 +11,9 @@ namespace Tests.Lib.Fixtures
     [ UsedImplicitly ]
     public class LoggingFixture : IDisposable
     {
-        private ITestOutputHelper outputHelper;
+        private ITestOutputHelper _outputHelper;
 
-        public ITestOutputHelper GetOutputHelper() => outputHelper;
+        public ITestOutputHelper GetOutputHelper() => _outputHelper;
 
         public void SetOutputHelper ( ITestOutputHelper value )
         {
@@ -25,7 +21,7 @@ namespace Tests.Lib.Fixtures
             {
              AppLoggingConfigHelper.RemoveTarget(_xunitTarget);                   _xunitTarget.Dispose();
             }
-            outputHelper = value ;
+            _outputHelper = value ;
             _xunitTarget = new XunitTarget("Xunit"){ OutputHelper = value};
             AppLoggingConfigHelper.AddTarget(_xunitTarget);
         }
@@ -50,11 +46,6 @@ namespace Tests.Lib.Fixtures
         private IMessageSink Sink { get ; }
 
         // ReSharper disable once IdentifierTypo
-        private void LogMethod ( string message )
-        {
-            Sink.OnMessage ( new DiagnosticMessage ( message ) ) ;
-            Debug.WriteLine ( message ) ;
-        }
 
         /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
         public void Dispose ( )

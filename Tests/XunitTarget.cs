@@ -21,7 +21,7 @@ namespace Tests
     {
         public ITestOutputHelper OutputHelper { get ; set ;  }
 
-        public XunitTarget ( string name = null ): base()
+        public XunitTarget ( string name = null )
         {
             if ( name != null )
             {
@@ -39,11 +39,9 @@ namespace Tests
 /// <param name="logEvent">Logging event to be written out.</param>
 protected override void Write(LogEventInfo logEvent)
 {
-    string logMessage;
+    var logMessage = RenderLogEvent(Layout, logEvent) ;
 
-    logMessage = RenderLogEvent(Layout, logEvent);
-
-            OutputHelper.WriteLine ( logMessage) ;
-        }
+    OutputHelper.WriteLine ( logMessage) ;
+}
     }
 }
