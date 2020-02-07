@@ -1,7 +1,7 @@
 ﻿using System.Windows ;
 using NLog ;
 
-namespace WpfApp1.Events
+namespace Tests.WpfApp1.Events
 {
     public static class AttachedEvents
     {

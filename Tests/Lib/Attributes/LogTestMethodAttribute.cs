@@ -1,6 +1,4 @@
-﻿using System ;
-using System.Diagnostics ;
-using System.Reflection ;
+﻿using System.Reflection ;
 using NLog ;
 using NLog.Fluent ;
 using Tests.Lib.Utils ;

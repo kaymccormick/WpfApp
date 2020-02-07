@@ -16,7 +16,7 @@ using System.Reactive.Linq ;
 using System.Windows.Threading ;
 using WpfApp.Core.Logging ;
 
-namespace Tests.CommonTests
+namespace Tests.Lib.Utils
 {
     public static class CacheUtils
     {

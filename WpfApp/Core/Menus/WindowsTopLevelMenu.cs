@@ -3,7 +3,6 @@ using System.Collections.Generic ;
 using System.Linq ;
 using System.Windows ;
 using Autofac.Features.Metadata ;
-using Common ;
 using NLog ;
 using WpfApp.Core.Interfaces ;
 

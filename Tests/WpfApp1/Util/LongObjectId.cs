@@ -1,6 +1,6 @@
 ﻿namespace WpfApp1.Util
 {
-    internal class LongObjectId : IObjectId
+    internal class LongObjectId
     {
         /// <summary>
         ///     Initializes a new instance of the <see cref="T:System.Object" />

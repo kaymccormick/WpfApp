@@ -4,15 +4,12 @@ using System.Threading ;
 using System.Threading.Tasks ;
 using System.Windows ;
 using System.Windows.Automation ;
-using TestLib.Fixtures ;
-using Tests.CommonTests ;
 using Tests.Lib.Attributes ;
 using Tests.Lib.Exceptions ;
 using Tests.Lib.Fixtures ;
 using Tests.Lib.Utils ;
 using WpfApp ;
 using WpfApp.Controls ;
-using WpfControlLibrary1 ;
 using Xunit ;
 using Xunit.Abstractions ;
 

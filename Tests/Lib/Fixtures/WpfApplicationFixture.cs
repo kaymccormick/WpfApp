@@ -2,8 +2,6 @@
 using System.Threading.Tasks ;
 using System.Windows ;
 using JetBrains.Annotations ;
-using TestLib.Fixtures ;
-using Tests.Lib.Attributes ;
 using Xunit ;
 
 namespace Tests.Lib.Fixtures

@@ -3,7 +3,7 @@ using NLog ;
 using NLog.Config ;
 using WpfApp.Core.Logging ;
 
-namespace WpfApp1.Logging
+namespace Tests.WpfApp1.Logging
 {
     public class AppLoggerContainer
     {

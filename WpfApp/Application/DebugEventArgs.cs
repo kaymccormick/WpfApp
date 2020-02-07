@@ -1,7 +1,7 @@
 ﻿using System ;
 using System.Runtime.CompilerServices ;
 
-namespace WpfApp.Application
+namespace wpfapp.Debug
 {
     /// <summary></summary>
     /// <seealso cref="System.EventArgs" />

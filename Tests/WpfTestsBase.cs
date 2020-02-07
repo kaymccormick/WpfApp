@@ -10,9 +10,9 @@
 // ---
 #endregion
 using Autofac ;
-using TestLib ;
-using Tests.CommonTests ;
+using Tests.Lib ;
 using Tests.Lib.Fixtures ;
+using Tests.Lib.Interfaces ;
 using WpfApp.Core.Infos ;
 using Xunit.Abstractions ;
 

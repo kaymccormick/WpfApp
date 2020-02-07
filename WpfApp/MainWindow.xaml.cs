@@ -3,10 +3,8 @@ using System.Windows ;
 using System.Windows.Controls ;
 using System.Windows.Input ;
 using System.Windows.Navigation ;
-using Common ;
 using NLog ;
 using WpfApp.Controls ;
-using WpfControlLibrary1 ;
 
 namespace WpfApp
 {

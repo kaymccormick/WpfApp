@@ -1,7 +1,7 @@
 ﻿using System ;
 using Autofac.Core ;
 
-namespace WpfApp1.Controls
+namespace Tests.WpfApp1.Controls
 {
     public class TypedService : Service
     {

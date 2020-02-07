@@ -1,6 +1,6 @@
-﻿using Tests.CommonTests ;
+﻿using Tests.Lib.Interfaces ;
 
-namespace TestLib.Fixture
+namespace Tests.Lib.Fixtures
 {
     public class MyServicesFixture
 #pragma warning restore 1591

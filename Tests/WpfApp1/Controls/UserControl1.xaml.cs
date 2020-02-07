@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls ;
 
-namespace WpfApp1.Controls
+namespace Tests.WpfApp1.Controls
 {
     /// <summary>
     ///     Interaction logic for UserControl1.xaml

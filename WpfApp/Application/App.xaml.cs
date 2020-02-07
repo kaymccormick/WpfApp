@@ -26,6 +26,7 @@ using WpfApp.Core ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Core.Logging ;
 using WpfApp.Core.Utils ;
+using wpfapp.Debug ;
 using Exception = System.Exception ;
 using IContainer = Autofac.IContainer ;
 

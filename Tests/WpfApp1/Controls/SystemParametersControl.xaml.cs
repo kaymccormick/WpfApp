@@ -12,7 +12,6 @@ using System.Windows.Controls ;
 using System.Windows.Controls.Primitives ;
 using System.Windows.Media ;
 using NLog ;
-using WpfApp.Core.Interfaces ;
 using Xceed.Wpf.Toolkit.PropertyGrid ;
 
 namespace WpfApp1.Controls
@@ -21,8 +20,7 @@ namespace WpfApp1.Controls
     /// Interaction logic for SystemParametersControl.xaml
     /// </summary>
     public partial class SystemParametersControl
-        : UserControl,
-            ISettingsPanel
+        : UserControl
     {
         private readonly Logger Logger = LogManager.GetCurrentClassLogger();
 

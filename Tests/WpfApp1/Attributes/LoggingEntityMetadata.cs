@@ -1,6 +1,6 @@
 ﻿using System ;
 
-namespace WpfApp1.Attributes
+namespace Tests.WpfApp1.Attributes
 {
     public class LoggingEntityMetadata
     {

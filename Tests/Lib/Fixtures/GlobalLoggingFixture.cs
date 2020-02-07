@@ -49,9 +49,6 @@ namespace Tests.Lib.Fixtures
             _xunitSinkTarget = new XunitSinkTarget ( "Xunitsink" )
                                {
                                    Sink = sink
-                                   // , Layout = Layout.FromString (
-                                   // "${longdate}|${level:uppercase=true}|${logger}|${message}"
-                                   //
                                  , Layout = l
                                } ;
             AppLoggingConfigHelper.AddTarget ( _xunitSinkTarget ) ;

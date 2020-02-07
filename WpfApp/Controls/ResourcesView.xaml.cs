@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls ;
 
-namespace Common.Controls
+namespace WpfApp.Controls
 {
     /// <summary>
     ///     Interaction logic for ResourcesView.xaml

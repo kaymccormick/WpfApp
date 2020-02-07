@@ -15,7 +15,6 @@ using System.Linq ;
 using System.Reflection ;
 using Autofac ;
 using Autofac.Extras.DynamicProxy ;
-using Common ;
 using NLog ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Core.Logging ;

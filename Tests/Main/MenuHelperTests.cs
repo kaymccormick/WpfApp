@@ -1,11 +1,10 @@
 ﻿using System ;
 using NLog ;
-using TestLib ;
+using Tests.Lib ;
 using Tests.Lib.Attributes ;
 using Tests.Lib.Fixtures ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Core.Logging ;
-using WpfApp1.Menus ;
 using Xunit ;
 using Xunit.Abstractions ;
 

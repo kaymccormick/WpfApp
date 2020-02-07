@@ -4,7 +4,6 @@
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
       xmlns:collections="clr-namespace:System.Collections;assembly=mscorlib"
-      xmlns:wpfControlLibrary11="clr-namespace:WpfControlLibrary1"
       xmlns:controls="clr-namespace:WpfApp.Controls"
       mc:Ignorable="d"
       d:DesignHeight="450" d:DesignWidth="800"

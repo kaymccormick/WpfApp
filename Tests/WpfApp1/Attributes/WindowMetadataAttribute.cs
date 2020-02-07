@@ -2,7 +2,7 @@
 using System.ComponentModel.Composition ;
 using JetBrains.Annotations ;
 
-namespace WpfApp1.Attributes
+namespace Tests.WpfApp1.Attributes
 {
     /// <summary></summary>
     /// <seealso cref="System.Attribute" />

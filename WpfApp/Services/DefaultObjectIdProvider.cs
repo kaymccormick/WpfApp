@@ -8,6 +8,7 @@ using JetBrains.Annotations ;
 using NLog ;
 using NLog.Fluent ;
 using WpfApp.Core ;
+using WpfApp.Core.Exceptions ;
 using WpfApp.Core.Infos ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Core.Utils ;

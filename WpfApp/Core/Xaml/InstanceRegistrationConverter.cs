@@ -4,7 +4,6 @@ using System.Globalization ;
 using System.Windows.Controls ;
 using System.Windows.Data ;
 using Autofac.Features.Metadata ;
-using Common ;
 using WpfApp.Core.Model ;
 
 namespace WpfApp.Core.Xaml

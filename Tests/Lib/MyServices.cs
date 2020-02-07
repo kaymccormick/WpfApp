@@ -1,7 +1,7 @@
-﻿using Tests.CommonTests ;
+﻿using Tests.Lib.Interfaces ;
 using WpfApp.Core.Infos ;
 
-namespace TestLib
+namespace Tests.Lib
 {
     /// <summary></summary>
     /// <seealso cref="IMyServices" />

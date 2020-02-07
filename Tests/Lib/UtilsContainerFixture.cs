@@ -2,11 +2,11 @@
 using System.Diagnostics.CodeAnalysis ;
 using Autofac ;
 using JetBrains.Annotations ;
-using TestLib.Fixture ;
-using Tests.CommonTests ;
+using Tests.Lib.Fixtures ;
+using Tests.Lib.Interfaces ;
 using WpfApp.Core.Infos ;
 
-namespace TestLib
+namespace Tests.Lib
 {
     /// <summary></summary>
     /// <seealso cref="System.IDisposable" />

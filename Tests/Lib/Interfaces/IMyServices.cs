@@ -11,7 +11,7 @@
 #endregion
 using WpfApp.Core.Infos ;
 
-namespace Tests.CommonTests
+namespace Tests.Lib.Interfaces
 {
     public interface IMyServices
 

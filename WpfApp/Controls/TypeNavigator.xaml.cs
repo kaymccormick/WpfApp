@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls ;
 
-namespace WpfControlLibrary1
+namespace WpfApp.Controls
 {
     /// <summary>
     ///     Interaction logic for TypeNavigator.xaml

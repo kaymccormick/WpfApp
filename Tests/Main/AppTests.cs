@@ -1,5 +1,6 @@
 ﻿using WpfApp.Application ;
 using WpfApp.Core.Utils ;
+using wpfapp.Debug ;
 using Xunit ;
 using Xunit.Abstractions ;
 

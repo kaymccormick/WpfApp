@@ -7,7 +7,6 @@ using System.Windows.Markup ;
 using System.Windows.Navigation ;
 using Microsoft.CSharp ;
 using NLog ;
-using WpfControlLibrary1 ;
 
 namespace WpfApp.Controls
 {

@@ -5,7 +5,7 @@ using System.Windows.Baml2006 ;
 using System.Windows.Markup ;
 using Autofac ;
 using NLog ;
-using TestLib ;
+using Tests.Lib ;
 using Tests.Lib.Attributes ;
 using Tests.Lib.Fixtures ;
 using Tests.Lib.Utils ;

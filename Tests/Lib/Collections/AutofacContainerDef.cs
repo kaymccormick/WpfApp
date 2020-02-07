@@ -1,5 +1,4 @@
-﻿using TestLib.Fixtures ;
-using Tests.Lib.Fixtures ;
+﻿using Tests.Lib.Fixtures ;
 using Xunit ;
 
 namespace Tests.Lib.Collections

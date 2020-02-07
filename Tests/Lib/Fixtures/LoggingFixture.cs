@@ -11,17 +11,13 @@ namespace Tests.Lib.Fixtures
     [ UsedImplicitly ]
     public class LoggingFixture : IDisposable
     {
-        private ITestOutputHelper _outputHelper;
-
-        public ITestOutputHelper GetOutputHelper() => _outputHelper;
-
         public void SetOutputHelper ( ITestOutputHelper value )
         {
             if(_xunitTarget != null)
             {
              AppLoggingConfigHelper.RemoveTarget(_xunitTarget);                   _xunitTarget.Dispose();
             }
-            _outputHelper = value ;
+
             _xunitTarget = new XunitTarget("Xunit"){ OutputHelper = value};
             AppLoggingConfigHelper.AddTarget(_xunitTarget);
         }
@@ -34,16 +30,12 @@ namespace Tests.Lib.Fixtures
         /// </summary>
         public LoggingFixture ( IMessageSink sink )
         {
-            Sink = sink ;
             sink.OnMessage ( new Xunit.DiagnosticMessage ( "Constructing LoggingFixture." ) ) ;
             // _xunitSinkTarget = new XunitSinkTarget ( "Xunitsink" ) { Sink = sink } ;
             // AppLoggingConfigHelper.AddTarget ( _xunitSinkTarget )
             //
         }
 
-
-
-        private IMessageSink Sink { get ; }
 
         // ReSharper disable once IdentifierTypo
 
