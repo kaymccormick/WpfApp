@@ -1,8 +1,7 @@
-﻿using System.Configuration;
-using WpfApp.Core.Attributes ;
+﻿using System.Configuration ;
 using WpfApp.Core.Utils ;
 
-namespace WpfApp.Core
+namespace WpfApp.Config
 {
     /// <summary></summary>
     /// <seealso cref="System.Configuration.ConfigurationSection" />

@@ -1,4 +1,4 @@
-﻿<Page x:Class="WpfApp.Core.Logging.TypeBrowserPage"
+﻿<Page x:Class="WpfApp.Controls.TypeBrowserPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -21,6 +21,10 @@
         </Grid.ColumnDefinitions>
 
         <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
             <Frame Grid.Column="0" Grid.Row="0" />
             <WrapPanel Grid.Column="0" Grid.Row="1">
                 <controls:TypeControl RenderedType="{x:Type collections:IEnumerable}" />

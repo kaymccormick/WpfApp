@@ -64,6 +64,7 @@
     <Compile Include="CollectionDefinitions\AutofacContainerDef.cs" />
     <Compile Include="CollectionDefinitions\GeneralPuurpose.cs" />
     <Compile Include="CollectionDefinitions\WpfApplication.cs" />
+    <Compile Include="Lib\Fixtures\FixtureLogger.cs" />
     <Compile Include="Lib\Fixtures\GlobalLoggingFixture.cs" />
     <Compile Include="Lib\Fixtures\testContainerFixture.cs" />
     <Compile Include="Lib\Fixtures\AppContainerFixture.cs" />
@@ -71,10 +72,10 @@
     <Compile Include="Lib\Fixtures\LoggingFixture.cs" />
     <Compile Include="Lib\Fixtures\WpfApplicationFixture.cs" />
     <Compile Include="Lib\Fixtures\WpfApplicationHelper.cs" />
-    <Compile Include="Lib\Logging\DebugLogMessage.cs" />
     <Compile Include="Lib\Logging\XunitTarget.cs" />
     <Compile Include="Lib\Misc\IRandom.cs" />
     <Compile Include="Lib\Misc\RandomClass.cs" />
+    <Compile Include="Lib\Utils\CacheUtils.cs" />
     <Compile Include="Lib\Utils\ConverterInfo.cs" />
     <Compile Include="Lib\Utils\LogHelper.cs" />
     <Compile Include="Lib\Utils\Result.cs" />

@@ -24,7 +24,7 @@ namespace Tests.Main.UI
         private readonly LoggingFixture _loggingFixture ;
 
         private static readonly Logger Logger =
-            NLog.LogManager.GetCurrentClassLogger ( ) ;
+            LogManager.GetCurrentClassLogger ( ) ;
 
         /// <summary>Constructor for test class</summary>
         /// <param name="output"></param>

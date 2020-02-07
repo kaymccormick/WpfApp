@@ -4,11 +4,10 @@ using System.ComponentModel ;
 using System.Linq ;
 using System.Reflection ;
 using System.Windows.Data ;
+using NLog ;
 using Tests.Attributes ;
 using Tests.Lib.Fixtures ;
-using Tests.Lib.Logging ;
 using Tests.Lib.Utils ;
-using WpfApp.Core.Logging ;
 using Xunit ;
 using Xunit.Abstractions ;
 
@@ -20,21 +19,17 @@ namespace Tests.Main.Converters
     [ LogTestMethod ] [ BeforeAfterLogger ][Collection("GeneralPurpose")]
     public class TestConverterEnumeration : IClassFixture < LoggingFixture> , IDisposable
     {
+        private readonly LoggingFixture _loggingFixture ;
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
         /// <summary>
         ///     Initializes a new instance of the <see cref="T:System.Object" />
         ///     class.
         /// </summary>
-        public TestConverterEnumeration ( ITestOutputHelper output )
+        public TestConverterEnumeration ( ITestOutputHelper output, LoggingFixture loggingFixture)
         {
-            _output = output ;
-            AppLoggingConfigHelper.EnsureLoggingConfigured();
-            _xunitTarget = new XunitTarget("Xunit") { OutputHelper = output };
-            AppLoggingConfigHelper.AddTarget(_xunitTarget);
-            
+            _loggingFixture = loggingFixture ;
+            loggingFixture.SetOutputHelper ( output ) ;
         }
-
-        private readonly ITestOutputHelper _output ;
-        private XunitTarget _xunitTarget ;
 
         private static string GetCompanyForAssembly ( Assembly refAssembly )
         {
@@ -52,8 +47,8 @@ namespace Tests.Main.Converters
         // ReSharper disable once UnusedMember.Local
         private void DumpEnumerable < T > ( IEnumerable < T > en , string header = null )
         {
-            _output.WriteLine ( $"Enumerable: {header}" ) ;
-            _output.WriteLine ( string.Join ( ", " , en ) ) ;
+            Logger.Debug ( $"Enumerable: {header}" ) ;
+            Logger.Debug ( string.Join ( ", " , en ) ) ;
         }
 
         private static IEnumerable < ConverterInfo > GetConverts ( Type converter )
@@ -79,7 +74,7 @@ namespace Tests.Main.Converters
             var company = GetCompanyForAssembly ( Assembly.GetExecutingAssembly ( ) ) ;
             var refs = LoadReferenced ( ) ;
 
-            //_output.WriteLine ( String.Join ( ", " , refs.Select ( Selector ) ) ) ;
+            //Logger.Debug ( String.Join ( ", " , refs.Select ( Selector ) ) ) ;
             //OutputAssemblyNames ( refs ) ;
             //var assemblies = AppDomain.CurrentDomain.GetAssemblies ( ) ;
             //OutputAssemblies ( assemblies ) ;
@@ -115,7 +110,7 @@ namespace Tests.Main.Converters
         // ReSharper disable once UnusedMember.Local
         private void OutputAssemblyNames ( AssemblyName[] getReferencedAssemblies )
         {
-            _output.WriteLine (
+            Logger.Debug (
                                "Assemblies: "
                                + string.Join (
                                               ", "
@@ -126,13 +121,13 @@ namespace Tests.Main.Converters
                                                                              )
                                              )
                               ) ;
-            _output.WriteLine ( "" ) ;
+            Logger.Debug ( "" ) ;
         }
 
         // ReSharper disable once UnusedMember.Local
         private void OutputAssemblies ( Assembly[] assemblies )
         {
-            _output.WriteLine (
+            Logger.Debug (
                                "Assemblies: "
                                + string.Join (
                                               ", "
@@ -142,7 +137,7 @@ namespace Tests.Main.Converters
                                                                 )
                                              )
                               ) ;
-            _output.WriteLine ( "" ) ;
+            Logger.Debug ( "" ) ;
         }
 
         /// <summary>
@@ -174,13 +169,13 @@ namespace Tests.Main.Converters
             {
                 var type = Type.GetType ( ( ( TypeConverterAttribute ) item2 ).ConverterTypeName ) ;
 
-                _output.WriteLine ( $"{item1}" ) ;
+                Logger.Debug ( $"{item1}" ) ;
                 if ( type != null )
                 {
-                    _output.WriteLine ( "\t" + type.FullName ) ;
+                    Logger.Debug ( "\t" + type.FullName ) ;
                 }
 
-                _output.WriteLine ( "" ) ;
+                Logger.Debug ( "" ) ;
             }
 
             var converters = GetConverterTypes ( out _ ) ;
@@ -188,12 +183,12 @@ namespace Tests.Main.Converters
             foreach ( var converter in converters.SelectMany ( GetConverts ) )
             {
                 var x = converter.Attr ;
-                _output.WriteLine (
+                Logger.Debug (
                                    $"\t{converter.ConverterType} converts {x.SourceType} => {x.TargetType}"
                                   ) ;
             }
 
-            // _output.WriteLine (
+            // Logger.Debug (
             // String.Join (
             // ". "
             // , types.Select ( ( type , i ) => type.FullName )
@@ -202,9 +197,6 @@ namespace Tests.Main.Converters
         }
 
         /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
-        public void Dispose ( )
-        {
-            _xunitTarget?.Dispose ( ) ;
-        }
+        public void Dispose ( ) { _loggingFixture.SetOutputHelper ( null ) ; }
     }
 }

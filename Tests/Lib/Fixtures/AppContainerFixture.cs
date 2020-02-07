@@ -28,7 +28,7 @@ namespace Tests.Lib.Fixtures
     /// <summary>Test fixture configured to suply the primary application container from Autofac.</summary>
     /// <seealso cref="Xunit.IAsyncLifetime" />
     /// <seealso cref="ContainerHelper"/>
-    /// <seealso cref="ContainerHelper.SetupContainer()"/>
+    /// <seealso cref="ContainerHelper.SetupContainer(ContainerHelperSettings)"/>
     [UsedImplicitly ]
     public class AppContainerFixture : IAsyncLifetime, ILifetimeScope
     {
@@ -47,7 +47,12 @@ namespace Tests.Lib.Fixtures
         ///     Initializes a new instance of the <see cref="T:System.Object" />
         ///     class.
         /// </summary>
-        public AppContainerFixture ( IMessageSink sink) { _sink = sink ; }
+        public AppContainerFixture ( IMessageSink sink )
+        {
+            _sink = sink ;
+            FixtureLogger.LogFixtureCreatedLifecycleEvent(GetType());
+
+        }
 
         /// <summary>Gets the lifetime scope.</summary>
         /// <value>The lifetime scope.</value>
@@ -99,7 +104,11 @@ namespace Tests.Lib.Fixtures
         }
 
         /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
-        public void Dispose ( ) { LifetimeScope.Dispose ( ) ; }
+        public void Dispose ( )
+        {
+            FixtureLogger.LogFixtureFinalizedLifecycleEvent(GetType());
+            LifetimeScope.Dispose ( ) ;
+        }
 
         /// <summary>
         /// Begin a new nested scope. Component instances created via the new scope

@@ -1,8 +1,9 @@
 ﻿using System ;
 using System.Reflection ;
 using Castle.DynamicProxy ;
+using WpfApp.Core.Logging ;
 
-namespace WpfApp.Core.Logging
+namespace WpfApp.Proxy
 {
     /// <summary></summary>
     /// <seealso cref="Castle.DynamicProxy.IProxyGenerationHook" />

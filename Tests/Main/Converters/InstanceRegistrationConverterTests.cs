@@ -7,11 +7,9 @@ using Autofac ;
 using Autofac.Core ;
 using Tests.Attributes ;
 using Tests.Lib.Fixtures ;
-using Tests.Lib.Logging ;
 using Tests.Lib.Misc ;
 using WpfApp.Core.Converters ;
 using WpfApp.Core.Interfaces ;
-using WpfApp.Core.Logging ;
 using WpfApp.Core.Model ;
 using Xunit ;
 using Xunit.Abstractions ;
@@ -37,7 +35,7 @@ namespace Tests.Main.Converters
         /// TODO Edit XML Comment Template for _output
         private readonly ITestOutputHelper _output ;
 
-        private XunitTarget _xunitTarget ;
+        private readonly LoggingFixture _loggingFixture ;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="T:System.Object" />
@@ -46,14 +44,14 @@ namespace Tests.Main.Converters
         public InstanceRegistrationConverterTests (
             TestContainerFixture fixture
           , ITestOutputHelper    output
+            , LoggingFixture loggingFixture
         )
         {
             _fixture = fixture ;
-            AppLoggingConfigHelper.EnsureLoggingConfigured();
-            _xunitTarget = new XunitTarget("Xunit") { OutputHelper = output };
-            AppLoggingConfigHelper.AddTarget(_xunitTarget);
+            loggingFixture.SetOutputHelper(output);
 
             _output = output ;
+            _loggingFixture = loggingFixture ;
         }
 
         /// <summary>Tests the conversion1.</summary>
@@ -200,7 +198,8 @@ namespace Tests.Main.Converters
         /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
         public void Dispose ( )
         {
-            _xunitTarget?.Dispose ( ) ;
+            // _xunitTarget?.Dispose ( ) ;
+            _loggingFixture.SetOutputHelper(null);
         }
     }
 }

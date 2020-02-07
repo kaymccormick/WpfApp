@@ -33,8 +33,7 @@ namespace Tests.Main
         /// TODO Edit XML Comment Template for #ctor
         public MenuHelperTests (
             WpfApplicationFixture wpfAppFixture
-          , AppContainerFixture   containerFixture
-          // , UtilsContainerFixture utilsContainerFixture
+          , AppContainerFixture   containerFixture  
           , ITestOutputHelper     outputHelper
             , LoggingFixture loggingFixture
         )

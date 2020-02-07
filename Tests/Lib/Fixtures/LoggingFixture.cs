@@ -22,6 +22,11 @@ namespace Tests.Lib.Fixtures
              AppLoggingConfigHelper.RemoveTarget(_xunitTarget);                   _xunitTarget.Dispose();
             }
 
+            if ( value == null )
+            {
+                _xunitTarget = null ;
+                return ;
+            }
             _xunitTarget = new XunitTarget("Xunit"){ OutputHelper = value};
             AppLoggingConfigHelper.AddTarget(_xunitTarget);
         }
@@ -35,6 +40,7 @@ namespace Tests.Lib.Fixtures
         public LoggingFixture ( IMessageSink sink )
         {
             sink.OnMessage ( new DiagnosticMessage ( "Constructing LoggingFixture." ) ) ;
+            FixtureLogger.LogFixtureCreatedLifecycleEvent ( GetType ( ) ) ;
         }
 
 
@@ -48,6 +54,8 @@ namespace Tests.Lib.Fixtures
                 AppLoggingConfigHelper.RemoveTarget ( _xunitTarget ) ;
                 _xunitTarget.Dispose ( ) ;
             }
+
+            FixtureLogger.LogFixtureFinalizedLifecycleEvent ( GetType ( ) ) ;
         }
     }
 }

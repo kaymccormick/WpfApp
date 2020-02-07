@@ -3,7 +3,7 @@ using Castle.DynamicProxy ;
 using WpfApp.Core.Context ;
 using WpfApp.Core.Interfaces ;
 
-namespace WpfApp.Core.Logging
+namespace WpfApp.Proxy
 {
     /// <summary>DynamicProxy interceptor to inject a logger into classes. TODO refactor.</summary>
     /// <seealso cref="Castle.DynamicProxy.IInterceptor" />

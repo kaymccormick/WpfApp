@@ -19,6 +19,7 @@ using NLog.Fluent ;
 using NLog.Layouts ;
 using NLog.Targets ;
 using NLog.Targets.Wrappers ;
+using WpfApp.Proxy ;
 
 namespace WpfApp.Core.Logging
 {
@@ -257,9 +258,9 @@ namespace WpfApp.Core.Logging
                 throw new ArgumentNullException ( nameof ( target ) ) ;
             }
 
-            Logger.Debug ( "Removing target " + target) ;
             LogManager.Configuration.RemoveTarget ( target.Name ) ;
             LogManager.LogFactory.ReconfigExistingLoggers ( ) ;
+            Logger.Debug("Removing target " + target);
             foreach (var t in LogManager.Configuration.AllTargets)
             {
                 Logger.Debug("Target " + t);

@@ -82,7 +82,6 @@
     <Compile Include="Application\App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Application\DebugEventArgs.cs" />
     <Compile Include="Config\ConfigTargetAttribute.cs" />
     <Compile Include="Config\ContainerHelperSection.cs" />
     <Compile Include="Core\DefaultObjectIdProvider.cs" />
@@ -90,9 +89,13 @@
     <Compile Include="Core\Exceptions\UnableToRegisterObjectIdException.cs" />
     <Compile Include="Core\Interfaces\IObjectId.cs" />
     <Compile Include="Core\Logging\LoggingCategory.cs" />
+    <Compile Include="Debug\DebugEventArgs.cs" />
     <Compile Include="NewMainWindow.xaml.cs">
       <DependentUpon>NewMainWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Proxy\LoggerFactoryHook.cs" />
+    <Compile Include="Proxy\LoggerProxyHelper.cs" />
+    <Compile Include="Proxy\LoggingInterceptor.cs" />
     <Compile Include="Proxy\ProxyUtils.cs" />
     <Compile Include="Core\Attributes\LoggingEntityMetadata.cs" />
     <Compile Include="Core\Attributes\WindowMetadataAttribute.cs" />
@@ -104,7 +107,7 @@
     <Compile Include="Core\Events\AttachedEvents.cs" />
     <Compile Include="Core\Logging\AppLoggerContainer.cs" />
     <Compile Include="Core\Logging\NLogTargetConverter.cs" />
-    <Compile Include="Core\Logging\TypeBrowserPage.xaml.cs" />
+    <Compile Include="Controls\TypeBrowserPage.xaml.cs" />
     <Compile Include="Core\Menus\MenuHelper.cs" />
     <Compile Include="Controls\Windows\AppSettingsWindow.xaml.cs" />
     <Compile Include="Controls\Windows\ComponentRegistry.cs" />
@@ -240,7 +243,6 @@
     <Compile Include="Core\Logging\AppLogger.cs" />
     <Compile Include="Core\Logging\LoggerTracker.cs" />
     <Compile Include="Core\Logging\LoggingEntityMetadataAttribute.cs" />
-    <Compile Include="Core\Logging\LoggingInterceptor.cs" />
     <Compile Include="Core\Logging\MyCacheTarget.cs" />
     <Compile Include="Core\Menus\MenuItemContainerStyleSelector.cs" />
     <Compile Include="Core\Menus\MenuMenuItemTemplateSelector.cs" />
@@ -267,8 +269,6 @@
     <Compile Include="Core\Logging\CodeConfiguration.cs" />
     <Compile Include="Core\Logging\LogDelegates.cs" />
     <Compile Include="Core\Logging\LogFactoryInterceptor.cs" />
-    <Compile Include="Core\Logging\LoggerFactoryHook.cs" />
-    <Compile Include="Core\Logging\LoggerProxyHelper.cs" />
     <Compile Include="Core\Logging\MyLogFactory.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -302,7 +302,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="Core\Logging\TypeBrowserPage.xaml">
+    <Page Include="Controls\TypeBrowserPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

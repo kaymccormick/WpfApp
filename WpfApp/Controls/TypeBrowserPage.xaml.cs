@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls ;
 
-namespace WpfApp.Core.Logging
+namespace WpfApp.Controls
 {
     /// <summary>
     ///     Interaction logic for TypeBrowserPage.xaml

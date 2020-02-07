@@ -89,7 +89,8 @@ namespace Tests.Main
         /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
         public void Dispose ( )
         {
-            _loggingFixture?.Dispose ( ) ;
+            _loggingFixture.SetOutputHelper ( null ) ;
+            // _loggingFixture?.Dispose ( ) ;
         }
     }
 }

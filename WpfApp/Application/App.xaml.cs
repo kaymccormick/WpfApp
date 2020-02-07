@@ -21,6 +21,7 @@ using DynamicData.Annotations ;
 using NLog ;
 using NLog.Fluent ;
 using Vanara.Extensions.Reflection ;
+using WpfApp.Config ;
 using WpfApp.Core ;
 using WpfApp.Core.Attributes ;
 using WpfApp.Core.Exceptions ;
@@ -236,7 +237,8 @@ namespace WpfApp.Application
                                                                           > ( )
                                                                      )
                                                )
-                                       .Where ( tuple => tuple.Item2 != null ) ;
+                                       .Where ( tuple => tuple.Item2 != null )
+                                       .ToArray ( ) ;
                             foreach ( var info in infos )
                             {
                                 if ( info.Item1.MemberType == MemberTypes.Property )

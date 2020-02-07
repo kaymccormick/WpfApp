@@ -46,12 +46,26 @@
       <b>Summary</b>
     </h3>
     <div>
-          Tests run: <a href="#all"><b>21</b></a> —
+          Tests run: <a href="#all"><b>19</b></a> —
           
-            Failures: <a href="#failures"><b>21</b></a>,
+            Errors: <a href="#errors"><b>2</b></a>,
           
-          Run time: <b>28.338s</b>,
-          Finished: <b>02/06/2020 23:29:46</b></div>
+            Failures: <a href="#failures"><b>19</b></a>,
+          
+          Run time: <b>8.243s</b>,
+          Finished: <b>02/07/2020 07:45:35</b></div>
+    <br />
+    <h2>
+      <a id="errors" />Errors
+          </h2>
+    <div class="row&#xA;        ">
+      <span class="failure">✘</span>Test Class Cleanup
+          (Tests.Main.ContainerHelperTests)
+        <br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre></div>
+    <div class="altrow&#xA;        ">
+      <span class="failure">✘</span>Test Class Cleanup
+          (Tests.Main.MenuHelperTests)
+        <br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre></div>
     <br />
     <h2>
       <a id="failures" />Failed tests
@@ -60,7 +74,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.AppTests.TestApplyConfiguration<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.AppTests.TestApplyConfiguration<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -74,20 +88,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.ContainerHelperTests.ContainerTestResolveIMenuItemList<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>
------ Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
------ Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.ContainerHelperTests.ContainerTestResolveIMenuItemList<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -96,39 +97,14 @@
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
    at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
    at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at Tests.Lib.Fixtures.WpfApplicationHelper.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationHelper.cs:line 37
-   at Tests.Lib.Fixtures.WpfApplicationFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationFixture.cs:line 37
------ Inner Stack Trace #3 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at WpfApp.Core.Utils.ContainerHelper.GetAssembliesForScanningViaTypes() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 418
-   at WpfApp.Core.Utils.ContainerHelper.SetupContainer(IContainer&amp; container, ContainerHelperSettings containerHelperSettings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 66
-   at Tests.Lib.Fixtures.AppContainerFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\AppContainerFixture.cs:line 60</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>Working</th><td>false</td></tr></table></div>
+   at WpfApp.Core.Logging.AppLoggingConfigHelper.RemoveTarget(Target target) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Core\Logging\AppLoggingConfigHelper.cs:line 261
+   at Tests.Lib.Fixtures.LoggingFixture.SetOutputHelper(ITestOutputHelper value) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\LoggingFixture.cs:line 22
+   at Tests.Main.ContainerHelperTests..ctor(LoggingFixture loggingFixture, ITestOutputHelper output, WpfApplicationFixture wpfApplicationFixture, AppContainerFixture appContainerFixture) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\ContainerHelperTests.cs:line 43</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>Working</th><td>false</td></tr></table></div>
     <div class="row">
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.ContainerHelperTests.ResolveWindows<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>
------ Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
------ Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.ContainerHelperTests.ResolveWindows<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -137,69 +113,30 @@
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
    at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
    at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at Tests.Lib.Fixtures.WpfApplicationHelper.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationHelper.cs:line 37
-   at Tests.Lib.Fixtures.WpfApplicationFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationFixture.cs:line 37
------ Inner Stack Trace #3 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at WpfApp.Core.Utils.ContainerHelper.GetAssembliesForScanningViaTypes() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 418
-   at WpfApp.Core.Utils.ContainerHelper.SetupContainer(IContainer&amp; container, ContainerHelperSettings containerHelperSettings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 66
-   at Tests.Lib.Fixtures.AppContainerFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\AppContainerFixture.cs:line 60</pre></div>
+   at WpfApp.Core.Logging.AppLoggingConfigHelper.RemoveTarget(Target target) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Core\Logging\AppLoggingConfigHelper.cs:line 261
+   at Tests.Lib.Fixtures.LoggingFixture.SetOutputHelper(ITestOutputHelper value) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\LoggingFixture.cs:line 22
+   at Tests.Main.ContainerHelperTests..ctor(LoggingFixture loggingFixture, ITestOutputHelper output, WpfApplicationFixture wpfApplicationFixture, AppContainerFixture appContainerFixture) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\ContainerHelperTests.cs:line 43</pre></div>
     <div class="altrow">
-      <span class="timing">0s
+      <span class="timing">3.3891292s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.ContainerHelperTests.TestResolveTopLevelMenu<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>
------ Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
------ Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at Tests.Lib.Fixtures.WpfApplicationHelper.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationHelper.cs:line 37
-   at Tests.Lib.Fixtures.WpfApplicationFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationFixture.cs:line 37
------ Inner Stack Trace #3 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at WpfApp.Core.Utils.ContainerHelper.GetAssembliesForScanningViaTypes() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 418
-   at WpfApp.Core.Utils.ContainerHelper.SetupContainer(IContainer&amp; container, ContainerHelperSettings containerHelperSettings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 66
-   at Tests.Lib.Fixtures.AppContainerFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\AppContainerFixture.cs:line 60</pre></div>
+       Tests.Main.ContainerHelperTests.TestResolveTopLevelMenu<br clear="all" /><pre>Assert.NotEmpty() Failure</pre><pre>   at Tests.Main.ContainerHelperTests.TestResolveTopLevelMenu() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\ContainerHelperTests.cs:line 121</pre><h6>Output:</h6><pre>2020-02-07 07:45:30.1247|INFO|Tests.Attributes.LogTestMethodAttribute|Before test method TestResolveTopLevelMenu
+2020-02-07 07:45:30.4132|TRACE|ContainerHelper|Registered WpfApp.Core.Interfaces.ITopLevelMenu[]
+2020-02-07 07:45:30.4541|TRACE|WpfApp.Modules.IdGeneratorModule|RegistrationOnActivating System.Collections.Generic.IEnumerable`1[[WpfApp.Core.Interfaces.ITopLevelMenu, WpfApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2020-02-07 07:45:30.4702|DEBUG|WpfApp.Core.DefaultObjectIdProvider|Provisioned ID 2 for instance of type WpfApp.Core.Interfaces.ITopLevelMenu[].
+2020-02-07 07:45:30.4920|TRACE|WpfApp.Core.DefaultObjectIdProvider|RegisterObject of type WpfApp.Core.Interfaces.ITopLevelMenu[] for System.Collections.Generic.IEnumerable`1[[WpfApp.Core.Interfaces.ITopLevelMenu, WpfApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] id is 2
+2020-02-07 07:45:30.5100|TRACE|WpfApp.Core.DefaultObjectIdProvider|Adding WpfApp.Core.Interfaces.ITopLevelMenu[] to reg for f15c40a7-a528-483a-b468-88bc931109eb
+2020-02-07 07:45:30.5439|TRACE|ContainerHelper|Activated  CompReg w(f15c40a7-a528-483a-b468-88bc931109eb, no description) (sender=Activator = ITopLevelMenu[] (DelegateActivator), Services = [System.Collections.Generic.IEnumerable`1[[WpfApp.Core.Interfaces.ITopLevelMenu, WpfApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = None, Ownership = ExternallyOwned, instance=WpfApp.Core.Interfaces.ITopLevelMenu[])
+2020-02-07 07:45:30.5937|INFO|Tests.Attributes.LogTestMethodAttribute|After test method TestResolveTopLevelMenu
+2020-02-07 07:45:31.4044|DEBUG|WpfApp.Core.Logging.AppLoggingConfigHelper|Removing target Xunit Target[Xunit]
+</pre></div>
     <div class="row">
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
        Tests.Main.Converters.InstanceRegistrationConverterTests.LazyLoadButton<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- The following constructor parameters did not have matching fixture data: TestContainerFixture fixture</pre><pre>
 ----- Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -210,7 +147,7 @@
    at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
    at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
 ----- Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -219,7 +156,7 @@
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
    at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
    at NLog.Logger.Trace(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 172
-   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Modules\IdGeneratorModule.cs:line 43
+   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Modules\IdGeneratorModule.cs:line 43
    at Autofac.Module.Configure(IComponentRegistry componentRegistry) in C:\projects\autofac\src\Autofac\Module.cs:line 82
    at Autofac.ContainerBuilder.Build(IComponentRegistry componentRegistry, Boolean excludeDefaultModules) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 240
    at Autofac.ContainerBuilder.Build(ContainerBuildOptions options) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 148
@@ -233,7 +170,7 @@
       <span class="failure">✘</span>
        Tests.Main.Converters.RegistrationConverterTests.TestConversion1<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- The following constructor parameters did not have matching fixture data: TestContainerFixture fixture</pre><pre>
 ----- Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -244,7 +181,7 @@
    at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
    at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
 ----- Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -253,7 +190,7 @@
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
    at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
    at NLog.Logger.Trace(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 172
-   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Modules\IdGeneratorModule.cs:line 43
+   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Modules\IdGeneratorModule.cs:line 43
    at Autofac.Module.Configure(IComponentRegistry componentRegistry) in C:\projects\autofac\src\Autofac\Module.cs:line 82
    at Autofac.ContainerBuilder.Build(IComponentRegistry componentRegistry, Boolean excludeDefaultModules) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 240
    at Autofac.ContainerBuilder.Build(ContainerBuildOptions options) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 148
@@ -265,7 +202,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.Converters.TestConverterEnumeration.TestConverterEnumeration1<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.Converters.TestConverterEnumeration.TestConverterEnumeration1<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -281,7 +218,7 @@
       <span class="failure">✘</span>
        Tests.Main.Converters.TestResolveServiceConverter.TestConversion1<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- The following constructor parameters did not have matching fixture data: TestContainerFixture fixture</pre><pre>
 ----- Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -292,7 +229,7 @@
    at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
    at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
 ----- Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -301,7 +238,7 @@
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
    at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
    at NLog.Logger.Trace(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 172
-   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Modules\IdGeneratorModule.cs:line 43
+   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Modules\IdGeneratorModule.cs:line 43
    at Autofac.Module.Configure(IComponentRegistry componentRegistry) in C:\projects\autofac\src\Autofac\Module.cs:line 82
    at Autofac.ContainerBuilder.Build(IComponentRegistry componentRegistry, Boolean excludeDefaultModules) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 240
    at Autofac.ContainerBuilder.Build(ContainerBuildOptions options) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 148
@@ -313,7 +250,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.DefaultObjectIdProviderTests.GetInstanceByComponentRegistrationTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.DefaultObjectIdProviderTests.GetInstanceByComponentRegistrationTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -327,7 +264,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.DefaultObjectIdProviderTests.GetInstanceCountTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.DefaultObjectIdProviderTests.GetInstanceCountTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -341,7 +278,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.DefaultObjectIdProviderTests.GetObjectInstancesTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.DefaultObjectIdProviderTests.GetObjectInstancesTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -355,7 +292,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.DefaultObjectIdProviderTests.GetRootNodesTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.DefaultObjectIdProviderTests.GetRootNodesTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -369,7 +306,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.DefaultObjectIdProviderTests.ProvideObjectInstanceIdentifierTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.DefaultObjectIdProviderTests.ProvideObjectInstanceIdentifierTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -383,7 +320,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.LogConfigTest.TestEnsureConfigTwoArgs<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.LogConfigTest.TestEnsureConfigTwoArgs<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -394,23 +331,23 @@
    at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
    at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
     <div class="row">
-      <span class="timing">0s
+      <span class="timing">0.4626187s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.MenuHelperTests.MakeMenuItemTest<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>
+       Tests.Main.MenuHelperTests.MakeMenuItemTest<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>
 ----- Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
    at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
    at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
+   at NLog.Logger.Log(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 171
+   at NLog.Fluent.LogBuilder.Write(String callerMemberName, String callerFilePath, Int32 callerLineNumber) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Fluent\LogBuilder.cs:line 299
+   at Tests.Attributes.LogTestMethodAttribute.Before(MethodInfo methodUnderTest) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Attributes\LogTestMethodAttribute.cs:line 46
 ----- Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -419,46 +356,15 @@
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
    at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
    at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at Tests.Lib.Fixtures.WpfApplicationHelper.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationHelper.cs:line 37
-   at Tests.Lib.Fixtures.WpfApplicationFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationFixture.cs:line 37
------ Inner Stack Trace #3 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at WpfApp.Core.Utils.ContainerHelper.GetAssembliesForScanningViaTypes() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 418
-   at WpfApp.Core.Utils.ContainerHelper.SetupContainer(IContainer&amp; container, ContainerHelperSettings containerHelperSettings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 66
-   at Tests.Lib.Fixtures.AppContainerFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\AppContainerFixture.cs:line 60</pre></div>
-    <div class="altrow">
-      <span class="timing">18.0565006s
-        </span>
-      <span class="failure">✘</span>
-       Tests.Main.UI.TypeControlTests.TestTypeControl<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- Tests.TestException : Exception of type 'Tests.TestException' was thrown.</pre><pre>   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
-   at Tests.Main.UI.TypeControlTests.TestTypeControl() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\UI\TypeControlTests.cs:line 56
------ Inner Stack Trace -----
-   at Tests.Main.UI.TypeControlTests.&lt;&gt;c__DisplayClass9_0.&lt;MakeWindow&gt;b__0(Object sender, RoutedEventArgs args) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\UI\TypeControlTests.cs:line 296</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>UITest</th><td>true</td></tr></table></div>
-    <div class="row">
-      <span class="timing">4.0628046s
-        </span>
-      <span class="failure">✘</span>
-       Tests.Main.UI.TypeControlTests.TestTypeNavigator<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- Tests.TestException : Exception of type 'Tests.TestException' was thrown.</pre><pre>   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
-   at Tests.Main.UI.TypeControlTests.TestTypeNavigator() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\UI\TypeControlTests.cs:line 152
------ Inner Stack Trace -----
-   at Tests.Main.UI.TypeControlTests.&lt;&gt;c__DisplayClass9_0.&lt;MakeWindow&gt;b__0(Object sender, RoutedEventArgs args) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\UI\TypeControlTests.cs:line 296</pre><h6>Output:</h6><pre>2020-02-06 23:29:40.5652|INFO|Tests.Attributes.LogTestMethodAttribute|Before test method TestTypeNavigator
-2020-02-06 23:29:41.5027|DEBUG|Tests.Main.UI.TypeControlTests|Window loaded.
-2020-02-06 23:29:41.6347|DEBUG|Tests.Main.UI.TypeControlTests|Exception: Exception of type 'Tests.TestException' was thrown..
-2020-02-06 23:29:42.6262|INFO|Tests.Attributes.LogTestMethodAttribute|After test method TestTypeNavigator
-</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>UITest</th><td>true</td></tr></table></div>
+   at WpfApp.Core.Logging.AppLoggingConfigHelper.RemoveTarget(Target target) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Core\Logging\AppLoggingConfigHelper.cs:line 261
+   at Tests.Lib.Fixtures.LoggingFixture.Dispose() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\LoggingFixture.cs:line 48
+   at Tests.Main.MenuHelperTests.Dispose() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\MenuHelperTests.cs:line 64
+   at ReflectionAbstractionExtensions.DisposeTestClass(ITest test, Object testClass, IMessageBus messageBus, ExecutionTimer timer, CancellationTokenSource cancellationTokenSource) in C:\Dev\xunit\xunit\src\xunit.execution\Extensions\ReflectionAbstractionExtensions.cs:line 79</pre></div>
     <div class="altrow">
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.Utils.InfoContextTests.EnumeratorTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.Utils.InfoContextTests.EnumeratorTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -472,7 +378,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.Utils.PushContextAttributeTests.AfterTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.Utils.PushContextAttributeTests.AfterTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -486,7 +392,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.Utils.PushContextAttributeTests.BeforeTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.Utils.PushContextAttributeTests.BeforeTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -500,7 +406,7 @@
       <span class="timing">0s
         </span>
       <span class="failure">✘</span>
-       Tests.Main.Utils.PushContextAttributeTests.PushContextAttributeTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.Utils.PushContextAttributeTests.PushContextAttributeTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -518,7 +424,7 @@
     <h3>
       <span class="timing">0.000s
             </span>
-      <span class="clickable" onclick="ToggleClass('classID0E4B')" ondblclick="ToggleClass('classID0E4B')">
+      <span class="clickable" onclick="ToggleClass('classID0E2C')" ondblclick="ToggleClass('classID0E2C')">
         <span class="failure">✘</span>
                Tests.Main.AppTests
                <span class="testcount">
@@ -526,12 +432,12 @@
               </span></span>
       <br clear="all" />
     </h3>
-    <div class="indent" id="classID0E4B">
+    <div class="indent" id="classID0E2C">
       <div class="row">
         <span class="timing">0s
         </span>
         <span class="failure">✘</span>
-       Tests.Main.AppTests.TestApplyConfiguration<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.AppTests.TestApplyConfiguration<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -543,9 +449,9 @@
    at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
     </div>
     <h3>
-      <span class="timing">0.000s
+      <span class="timing">3.389s
             </span>
-      <span class="clickable" onclick="ToggleClass('classID0E1G')" ondblclick="ToggleClass('classID0E1G')">
+      <span class="clickable" onclick="ToggleClass('classID0EHB')" ondblclick="ToggleClass('classID0EHB')">
         <span class="failure">✘</span>
                Tests.Main.ContainerHelperTests
                <span class="testcount">
@@ -553,25 +459,12 @@
               </span></span>
       <br clear="all" />
     </h3>
-    <div class="indent" id="classID0E1G">
+    <div class="indent" id="classID0EHB">
       <div class="row">
         <span class="timing">0s
         </span>
         <span class="failure">✘</span>
-       Tests.Main.ContainerHelperTests.ContainerTestResolveIMenuItemList<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>
------ Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
------ Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.ContainerHelperTests.ContainerTestResolveIMenuItemList<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -580,39 +473,14 @@
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
    at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
    at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at Tests.Lib.Fixtures.WpfApplicationHelper.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationHelper.cs:line 37
-   at Tests.Lib.Fixtures.WpfApplicationFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationFixture.cs:line 37
------ Inner Stack Trace #3 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at WpfApp.Core.Utils.ContainerHelper.GetAssembliesForScanningViaTypes() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 418
-   at WpfApp.Core.Utils.ContainerHelper.SetupContainer(IContainer&amp; container, ContainerHelperSettings containerHelperSettings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 66
-   at Tests.Lib.Fixtures.AppContainerFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\AppContainerFixture.cs:line 60</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>Working</th><td>false</td></tr></table></div>
+   at WpfApp.Core.Logging.AppLoggingConfigHelper.RemoveTarget(Target target) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Core\Logging\AppLoggingConfigHelper.cs:line 261
+   at Tests.Lib.Fixtures.LoggingFixture.SetOutputHelper(ITestOutputHelper value) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\LoggingFixture.cs:line 22
+   at Tests.Main.ContainerHelperTests..ctor(LoggingFixture loggingFixture, ITestOutputHelper output, WpfApplicationFixture wpfApplicationFixture, AppContainerFixture appContainerFixture) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\ContainerHelperTests.cs:line 43</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>Working</th><td>false</td></tr></table></div>
       <div class="altrow">
         <span class="timing">0s
         </span>
         <span class="failure">✘</span>
-       Tests.Main.ContainerHelperTests.ResolveWindows<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>
------ Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
------ Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.ContainerHelperTests.ResolveWindows<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -621,190 +489,30 @@
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
    at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
    at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at Tests.Lib.Fixtures.WpfApplicationHelper.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationHelper.cs:line 37
-   at Tests.Lib.Fixtures.WpfApplicationFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationFixture.cs:line 37
------ Inner Stack Trace #3 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at WpfApp.Core.Utils.ContainerHelper.GetAssembliesForScanningViaTypes() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 418
-   at WpfApp.Core.Utils.ContainerHelper.SetupContainer(IContainer&amp; container, ContainerHelperSettings containerHelperSettings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 66
-   at Tests.Lib.Fixtures.AppContainerFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\AppContainerFixture.cs:line 60</pre></div>
+   at WpfApp.Core.Logging.AppLoggingConfigHelper.RemoveTarget(Target target) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Core\Logging\AppLoggingConfigHelper.cs:line 261
+   at Tests.Lib.Fixtures.LoggingFixture.SetOutputHelper(ITestOutputHelper value) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\LoggingFixture.cs:line 22
+   at Tests.Main.ContainerHelperTests..ctor(LoggingFixture loggingFixture, ITestOutputHelper output, WpfApplicationFixture wpfApplicationFixture, AppContainerFixture appContainerFixture) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\ContainerHelperTests.cs:line 43</pre></div>
       <div class="row">
-        <span class="timing">0s
+        <span class="timing">3.3891292s
         </span>
         <span class="failure">✘</span>
-       Tests.Main.ContainerHelperTests.TestResolveTopLevelMenu<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>
------ Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
------ Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at Tests.Lib.Fixtures.WpfApplicationHelper.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationHelper.cs:line 37
-   at Tests.Lib.Fixtures.WpfApplicationFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationFixture.cs:line 37
------ Inner Stack Trace #3 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at WpfApp.Core.Utils.ContainerHelper.GetAssembliesForScanningViaTypes() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 418
-   at WpfApp.Core.Utils.ContainerHelper.SetupContainer(IContainer&amp; container, ContainerHelperSettings containerHelperSettings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 66
-   at Tests.Lib.Fixtures.AppContainerFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\AppContainerFixture.cs:line 60</pre></div>
-    </div>
-    <h3>
-      <span class="timing">0.000s
-            </span>
-      <span class="clickable" onclick="ToggleClass('classID0ELF')" ondblclick="ToggleClass('classID0ELF')">
-        <span class="failure">✘</span>
-               Tests.Main.Converters.InstanceRegistrationConverterTests
-               <span class="testcount">
-                (1 test)
-              </span></span>
-      <br clear="all" />
-    </h3>
-    <div class="indent" id="classID0ELF">
-      <div class="row">
-        <span class="timing">0s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.Converters.InstanceRegistrationConverterTests.LazyLoadButton<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- The following constructor parameters did not have matching fixture data: TestContainerFixture fixture</pre><pre>
------ Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
------ Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Trace(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 172
-   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Modules\IdGeneratorModule.cs:line 43
-   at Autofac.Module.Configure(IComponentRegistry componentRegistry) in C:\projects\autofac\src\Autofac\Module.cs:line 82
-   at Autofac.ContainerBuilder.Build(IComponentRegistry componentRegistry, Boolean excludeDefaultModules) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 240
-   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 148
-   at Tests.Lib.Fixtures.TestContainerFixture._init() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\testContainerFixture.cs:line 34
-   at Tests.Lib.Fixtures.TestContainerFixture..ctor() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\testContainerFixture.cs:line 19
------ Inner Stack Trace #3 (Xunit.Sdk.TestClassException) -----
+       Tests.Main.ContainerHelperTests.TestResolveTopLevelMenu<br clear="all" /><pre>Assert.NotEmpty() Failure</pre><pre>   at Tests.Main.ContainerHelperTests.TestResolveTopLevelMenu() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\ContainerHelperTests.cs:line 121</pre><h6>Output:</h6><pre>2020-02-07 07:45:30.1247|INFO|Tests.Attributes.LogTestMethodAttribute|Before test method TestResolveTopLevelMenu
+2020-02-07 07:45:30.4132|TRACE|ContainerHelper|Registered WpfApp.Core.Interfaces.ITopLevelMenu[]
+2020-02-07 07:45:30.4541|TRACE|WpfApp.Modules.IdGeneratorModule|RegistrationOnActivating System.Collections.Generic.IEnumerable`1[[WpfApp.Core.Interfaces.ITopLevelMenu, WpfApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]
+2020-02-07 07:45:30.4702|DEBUG|WpfApp.Core.DefaultObjectIdProvider|Provisioned ID 2 for instance of type WpfApp.Core.Interfaces.ITopLevelMenu[].
+2020-02-07 07:45:30.4920|TRACE|WpfApp.Core.DefaultObjectIdProvider|RegisterObject of type WpfApp.Core.Interfaces.ITopLevelMenu[] for System.Collections.Generic.IEnumerable`1[[WpfApp.Core.Interfaces.ITopLevelMenu, WpfApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]] id is 2
+2020-02-07 07:45:30.5100|TRACE|WpfApp.Core.DefaultObjectIdProvider|Adding WpfApp.Core.Interfaces.ITopLevelMenu[] to reg for f15c40a7-a528-483a-b468-88bc931109eb
+2020-02-07 07:45:30.5439|TRACE|ContainerHelper|Activated  CompReg w(f15c40a7-a528-483a-b468-88bc931109eb, no description) (sender=Activator = ITopLevelMenu[] (DelegateActivator), Services = [System.Collections.Generic.IEnumerable`1[[WpfApp.Core.Interfaces.ITopLevelMenu, WpfApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]], Lifetime = Autofac.Core.Lifetime.CurrentScopeLifetime, Sharing = None, Ownership = ExternallyOwned, instance=WpfApp.Core.Interfaces.ITopLevelMenu[])
+2020-02-07 07:45:30.5937|INFO|Tests.Attributes.LogTestMethodAttribute|After test method TestResolveTopLevelMenu
+2020-02-07 07:45:31.4044|DEBUG|WpfApp.Core.Logging.AppLoggingConfigHelper|Removing target Xunit Target[Xunit]
 </pre></div>
-    </div>
-    <h3>
-      <span class="timing">0.000s
-            </span>
-      <span class="clickable" onclick="ToggleClass('classID0EVF')" ondblclick="ToggleClass('classID0EVF')">
-        <span class="failure">✘</span>
-               Tests.Main.Converters.RegistrationConverterTests
-               <span class="testcount">
-                (1 test)
-              </span></span>
-      <br clear="all" />
-    </h3>
-    <div class="indent" id="classID0EVF">
-      <div class="row">
-        <span class="timing">0s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.Converters.RegistrationConverterTests.TestConversion1<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- The following constructor parameters did not have matching fixture data: TestContainerFixture fixture</pre><pre>
------ Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
------ Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Trace(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 172
-   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Modules\IdGeneratorModule.cs:line 43
-   at Autofac.Module.Configure(IComponentRegistry componentRegistry) in C:\projects\autofac\src\Autofac\Module.cs:line 82
-   at Autofac.ContainerBuilder.Build(IComponentRegistry componentRegistry, Boolean excludeDefaultModules) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 240
-   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 148
-   at Tests.Lib.Fixtures.TestContainerFixture._init() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\testContainerFixture.cs:line 34
-   at Tests.Lib.Fixtures.TestContainerFixture..ctor() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\testContainerFixture.cs:line 19
------ Inner Stack Trace #3 (Xunit.Sdk.TestClassException) -----
-</pre></div>
-    </div>
-    <h3>
-      <span class="timing">0.000s
-            </span>
-      <span class="clickable" onclick="ToggleClass('classID0E6F')" ondblclick="ToggleClass('classID0E6F')">
-        <span class="failure">✘</span>
-               Tests.Main.Converters.TestConverterEnumeration
-               <span class="testcount">
-                (1 test)
-              </span></span>
-      <br clear="all" />
-    </h3>
-    <div class="indent" id="classID0E6F">
-      <div class="row">
-        <span class="timing">0s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.Converters.TestConverterEnumeration.TestConverterEnumeration1<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
     </div>
     <h3>
       <span class="timing">0.000s
             </span>
       <span class="clickable" onclick="ToggleClass('classID0EJG')" ondblclick="ToggleClass('classID0EJG')">
         <span class="failure">✘</span>
-               Tests.Main.Converters.TestResolveServiceConverter
+               Tests.Main.Converters.InstanceRegistrationConverterTests
                <span class="testcount">
                 (1 test)
               </span></span>
@@ -815,9 +523,9 @@
         <span class="timing">0s
         </span>
         <span class="failure">✘</span>
-       Tests.Main.Converters.TestResolveServiceConverter.TestConversion1<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- The following constructor parameters did not have matching fixture data: TestContainerFixture fixture</pre><pre>
+       Tests.Main.Converters.InstanceRegistrationConverterTests.LazyLoadButton<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- The following constructor parameters did not have matching fixture data: TestContainerFixture fixture</pre><pre>
 ----- Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -828,7 +536,7 @@
    at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
    at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
 ----- Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -837,7 +545,7 @@
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
    at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
    at NLog.Logger.Trace(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 172
-   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Modules\IdGeneratorModule.cs:line 43
+   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Modules\IdGeneratorModule.cs:line 43
    at Autofac.Module.Configure(IComponentRegistry componentRegistry) in C:\projects\autofac\src\Autofac\Module.cs:line 82
    at Autofac.ContainerBuilder.Build(IComponentRegistry componentRegistry, Boolean excludeDefaultModules) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 240
    at Autofac.ContainerBuilder.Build(ContainerBuildOptions options) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 148
@@ -849,132 +557,22 @@
     <h3>
       <span class="timing">0.000s
             </span>
-      <span class="clickable" onclick="ToggleClass('classID0EHC')" ondblclick="ToggleClass('classID0EHC')">
+      <span class="clickable" onclick="ToggleClass('classID0ETG')" ondblclick="ToggleClass('classID0ETG')">
         <span class="failure">✘</span>
-               Tests.Main.DefaultObjectIdProviderTests
-               <span class="testcount">
-                (5 tests)
-              </span></span>
-      <br clear="all" />
-    </h3>
-    <div class="indent" id="classID0EHC">
-      <div class="row">
-        <span class="timing">0s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.DefaultObjectIdProviderTests.GetInstanceByComponentRegistrationTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
-      <div class="altrow">
-        <span class="timing">0s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.DefaultObjectIdProviderTests.GetInstanceCountTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
-      <div class="row">
-        <span class="timing">0s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.DefaultObjectIdProviderTests.GetObjectInstancesTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
-      <div class="altrow">
-        <span class="timing">0s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.DefaultObjectIdProviderTests.GetRootNodesTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
-      <div class="row">
-        <span class="timing">0s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.DefaultObjectIdProviderTests.ProvideObjectInstanceIdentifierTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
-    </div>
-    <h3>
-      <span class="timing">0.000s
-            </span>
-      <span class="clickable" onclick="ToggleClass('classID0EZD')" ondblclick="ToggleClass('classID0EZD')">
-        <span class="failure">✘</span>
-               Tests.Main.LogConfigTest
+               Tests.Main.Converters.RegistrationConverterTests
                <span class="testcount">
                 (1 test)
               </span></span>
       <br clear="all" />
     </h3>
-    <div class="indent" id="classID0EZD">
+    <div class="indent" id="classID0ETG">
       <div class="row">
         <span class="timing">0s
         </span>
         <span class="failure">✘</span>
-       Tests.Main.LogConfigTest.TestEnsureConfigTwoArgs<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
-   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
-    </div>
-    <h3>
-      <span class="timing">0.000s
-            </span>
-      <span class="clickable" onclick="ToggleClass('classID0E3H')" ondblclick="ToggleClass('classID0E3H')">
-        <span class="failure">✘</span>
-               Tests.Main.MenuHelperTests
-               <span class="testcount">
-                (1 test)
-              </span></span>
-      <br clear="all" />
-    </h3>
-    <div class="indent" id="classID0E3H">
-      <div class="row">
-        <span class="timing">0s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.MenuHelperTests.MakeMenuItemTest<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>
+       Tests.Main.Converters.RegistrationConverterTests.TestConversion1<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- The following constructor parameters did not have matching fixture data: TestContainerFixture fixture</pre><pre>
 ----- Inner Stack Trace #1 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -985,7 +583,7 @@
    at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
    at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
 ----- Inner Stack Trace #2 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -993,60 +591,247 @@
    at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
    at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
    at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at Tests.Lib.Fixtures.WpfApplicationHelper.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationHelper.cs:line 37
-   at Tests.Lib.Fixtures.WpfApplicationFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\WpfApplicationFixture.cs:line 37
------ Inner Stack Trace #3 (System.NullReferenceException) -----
-   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
-   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
-   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
-   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
-   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
-   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
-   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
-   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
-   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
-   at WpfApp.Core.Utils.ContainerHelper.GetAssembliesForScanningViaTypes() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 418
-   at WpfApp.Core.Utils.ContainerHelper.SetupContainer(IContainer&amp; container, ContainerHelperSettings containerHelperSettings) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\wpfapp\WpfApp\Core\Util\ContainerHelper.cs:line 66
-   at Tests.Lib.Fixtures.AppContainerFixture.InitializeAsync() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\AppContainerFixture.cs:line 60</pre></div>
-    </div>
-    <h3>
-      <span class="timing">22.119s
-            </span>
-      <span class="clickable" onclick="ToggleClass('classID0EZ')" ondblclick="ToggleClass('classID0EZ')">
-        <span class="failure">✘</span>
-               Tests.Main.UI.TypeControlTests
-               <span class="testcount">
-                (2 tests)
-              </span></span>
-      <br clear="all" />
-    </h3>
-    <div class="indent" id="classID0EZ">
-      <div class="row">
-        <span class="timing">18.0565006s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.UI.TypeControlTests.TestTypeControl<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- Tests.TestException : Exception of type 'Tests.TestException' was thrown.</pre><pre>   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
-   at Tests.Main.UI.TypeControlTests.TestTypeControl() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\UI\TypeControlTests.cs:line 56
------ Inner Stack Trace -----
-   at Tests.Main.UI.TypeControlTests.&lt;&gt;c__DisplayClass9_0.&lt;MakeWindow&gt;b__0(Object sender, RoutedEventArgs args) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\UI\TypeControlTests.cs:line 296</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>UITest</th><td>true</td></tr></table></div>
-      <div class="altrow">
-        <span class="timing">4.0628046s
-        </span>
-        <span class="failure">✘</span>
-       Tests.Main.UI.TypeControlTests.TestTypeNavigator<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- Tests.TestException : Exception of type 'Tests.TestException' was thrown.</pre><pre>   at System.Threading.Tasks.Task`1.GetResultCore(Boolean waitCompletionNotification)
-   at Tests.Main.UI.TypeControlTests.TestTypeNavigator() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\UI\TypeControlTests.cs:line 152
------ Inner Stack Trace -----
-   at Tests.Main.UI.TypeControlTests.&lt;&gt;c__DisplayClass9_0.&lt;MakeWindow&gt;b__0(Object sender, RoutedEventArgs args) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\UI\TypeControlTests.cs:line 296</pre><h6>Output:</h6><pre>2020-02-06 23:29:40.5652|INFO|Tests.Attributes.LogTestMethodAttribute|Before test method TestTypeNavigator
-2020-02-06 23:29:41.5027|DEBUG|Tests.Main.UI.TypeControlTests|Window loaded.
-2020-02-06 23:29:41.6347|DEBUG|Tests.Main.UI.TypeControlTests|Exception: Exception of type 'Tests.TestException' was thrown..
-2020-02-06 23:29:42.6262|INFO|Tests.Attributes.LogTestMethodAttribute|After test method TestTypeNavigator
-</pre><h6>Traits:</h6><table cellspacing="0" cellpadding="0"><tr><th>UITest</th><td>true</td></tr></table></div>
+   at NLog.Logger.Trace(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 172
+   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Modules\IdGeneratorModule.cs:line 43
+   at Autofac.Module.Configure(IComponentRegistry componentRegistry) in C:\projects\autofac\src\Autofac\Module.cs:line 82
+   at Autofac.ContainerBuilder.Build(IComponentRegistry componentRegistry, Boolean excludeDefaultModules) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 240
+   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 148
+   at Tests.Lib.Fixtures.TestContainerFixture._init() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\testContainerFixture.cs:line 34
+   at Tests.Lib.Fixtures.TestContainerFixture..ctor() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\testContainerFixture.cs:line 19
+----- Inner Stack Trace #3 (Xunit.Sdk.TestClassException) -----
+</pre></div>
     </div>
     <h3>
       <span class="timing">0.000s
             </span>
-      <span class="clickable" onclick="ToggleClass('classID0EDE')" ondblclick="ToggleClass('classID0EDE')">
+      <span class="clickable" onclick="ToggleClass('classID0E4G')" ondblclick="ToggleClass('classID0E4G')">
+        <span class="failure">✘</span>
+               Tests.Main.Converters.TestConverterEnumeration
+               <span class="testcount">
+                (1 test)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" id="classID0E4G">
+      <div class="row">
+        <span class="timing">0s
+        </span>
+        <span class="failure">✘</span>
+       Tests.Main.Converters.TestConverterEnumeration.TestConverterEnumeration1<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
+   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
+   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
+    </div>
+    <h3>
+      <span class="timing">0.000s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EHH')" ondblclick="ToggleClass('classID0EHH')">
+        <span class="failure">✘</span>
+               Tests.Main.Converters.TestResolveServiceConverter
+               <span class="testcount">
+                (1 test)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" id="classID0EHH">
+      <div class="row">
+        <span class="timing">0s
+        </span>
+        <span class="failure">✘</span>
+       Tests.Main.Converters.TestResolveServiceConverter.TestConversion1<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- The following constructor parameters did not have matching fixture data: TestContainerFixture fixture</pre><pre>
+----- Inner Stack Trace #1 (System.NullReferenceException) -----
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
+   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
+   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54
+----- Inner Stack Trace #2 (System.NullReferenceException) -----
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
+   at NLog.Logger.Trace(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 172
+   at WpfApp.Modules.IdGeneratorModule.Load(ContainerBuilder builder) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Modules\IdGeneratorModule.cs:line 43
+   at Autofac.Module.Configure(IComponentRegistry componentRegistry) in C:\projects\autofac\src\Autofac\Module.cs:line 82
+   at Autofac.ContainerBuilder.Build(IComponentRegistry componentRegistry, Boolean excludeDefaultModules) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 240
+   at Autofac.ContainerBuilder.Build(ContainerBuildOptions options) in C:\projects\autofac\src\Autofac\ContainerBuilder.cs:line 148
+   at Tests.Lib.Fixtures.TestContainerFixture._init() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\testContainerFixture.cs:line 34
+   at Tests.Lib.Fixtures.TestContainerFixture..ctor() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\testContainerFixture.cs:line 19
+----- Inner Stack Trace #3 (Xunit.Sdk.TestClassException) -----
+</pre></div>
+    </div>
+    <h3>
+      <span class="timing">0.000s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EFD')" ondblclick="ToggleClass('classID0EFD')">
+        <span class="failure">✘</span>
+               Tests.Main.DefaultObjectIdProviderTests
+               <span class="testcount">
+                (5 tests)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" id="classID0EFD">
+      <div class="row">
+        <span class="timing">0s
+        </span>
+        <span class="failure">✘</span>
+       Tests.Main.DefaultObjectIdProviderTests.GetInstanceByComponentRegistrationTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
+   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
+   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
+      <div class="altrow">
+        <span class="timing">0s
+        </span>
+        <span class="failure">✘</span>
+       Tests.Main.DefaultObjectIdProviderTests.GetInstanceCountTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
+   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
+   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
+      <div class="row">
+        <span class="timing">0s
+        </span>
+        <span class="failure">✘</span>
+       Tests.Main.DefaultObjectIdProviderTests.GetObjectInstancesTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
+   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
+   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
+      <div class="altrow">
+        <span class="timing">0s
+        </span>
+        <span class="failure">✘</span>
+       Tests.Main.DefaultObjectIdProviderTests.GetRootNodesTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
+   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
+   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
+      <div class="row">
+        <span class="timing">0s
+        </span>
+        <span class="failure">✘</span>
+       Tests.Main.DefaultObjectIdProviderTests.ProvideObjectInstanceIdentifierTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
+   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
+   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
+    </div>
+    <h3>
+      <span class="timing">0.000s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EXE')" ondblclick="ToggleClass('classID0EXE')">
+        <span class="failure">✘</span>
+               Tests.Main.LogConfigTest
+               <span class="testcount">
+                (1 test)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" id="classID0EXE">
+      <div class="row">
+        <span class="timing">0s
+        </span>
+        <span class="failure">✘</span>
+       Tests.Main.LogConfigTest.TestEnsureConfigTwoArgs<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
+   at NLog.Logger.Warn(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 895
+   at Tests.Lib.Fixtures.GlobalLoggingFixture..ctor(IMessageSink sink) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\GlobalLoggingFixture.cs:line 54</pre></div>
+    </div>
+    <h3>
+      <span class="timing">0.463s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EKC')" ondblclick="ToggleClass('classID0EKC')">
+        <span class="failure">✘</span>
+               Tests.Main.MenuHelperTests
+               <span class="testcount">
+                (1 test)
+              </span></span>
+      <br clear="all" />
+    </h3>
+    <div class="indent" id="classID0EKC">
+      <div class="row">
+        <span class="timing">0.4626187s
+        </span>
+        <span class="failure">✘</span>
+       Tests.Main.MenuHelperTests.MakeMenuItemTest<br clear="all" /><pre>System.AggregateException : One or more errors occurred.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.\r\n---- System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>
+----- Inner Stack Trace #1 (System.NullReferenceException) -----
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.Log(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 171
+   at NLog.Fluent.LogBuilder.Write(String callerMemberName, String callerFilePath, Int32 callerLineNumber) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Fluent\LogBuilder.cs:line 299
+   at Tests.Attributes.LogTestMethodAttribute.Before(MethodInfo methodUnderTest) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Attributes\LogTestMethodAttribute.cs:line 46
+----- Inner Stack Trace #2 (System.NullReferenceException) -----
+   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
+   at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
+   at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
+   at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
+   at NLog.LoggerImpl.WriteToTargetWithFilterChain(Target target, FilterResult result, LogEventInfo logEvent, AsyncContinuation onException) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 233
+   at NLog.LoggerImpl.Write(Type loggerType, TargetWithFilterChain targetsForLevel, LogEventInfo logEvent, LogFactory factory) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\LoggerImpl.cs:line 115
+   at NLog.Logger.WriteToTargets(LogEventInfo logEvent, TargetWithFilterChain targetsForLevel) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 653
+   at NLog.Logger.WriteToTargets(LogLevel level, IFormatProvider formatProvider, String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger.cs:line 617
+   at NLog.Logger.Debug(String message) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Logger-generated.cs:line 413
+   at WpfApp.Core.Logging.AppLoggingConfigHelper.RemoveTarget(Target target) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\WpfApp\Core\Logging\AppLoggingConfigHelper.cs:line 261
+   at Tests.Lib.Fixtures.LoggingFixture.Dispose() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Fixtures\LoggingFixture.cs:line 48
+   at Tests.Main.MenuHelperTests.Dispose() in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Main\MenuHelperTests.cs:line 64
+   at ReflectionAbstractionExtensions.DisposeTestClass(ITest test, Object testClass, IMessageBus messageBus, ExecutionTimer timer, CancellationTokenSource cancellationTokenSource) in C:\Dev\xunit\xunit\src\xunit.execution\Extensions\ReflectionAbstractionExtensions.cs:line 79</pre></div>
+    </div>
+    <h3>
+      <span class="timing">0.000s
+            </span>
+      <span class="clickable" onclick="ToggleClass('classID0EBF')" ondblclick="ToggleClass('classID0EBF')">
         <span class="failure">✘</span>
                Tests.Main.Utils.InfoContextTests
                <span class="testcount">
@@ -1054,12 +839,12 @@
               </span></span>
       <br clear="all" />
     </h3>
-    <div class="indent" id="classID0EDE">
+    <div class="indent" id="classID0EBF">
       <div class="row">
         <span class="timing">0s
         </span>
         <span class="failure">✘</span>
-       Tests.Main.Utils.InfoContextTests.EnumeratorTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.Utils.InfoContextTests.EnumeratorTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -1073,7 +858,7 @@
     <h3>
       <span class="timing">0.000s
             </span>
-      <span class="clickable" onclick="ToggleClass('classID0ENE')" ondblclick="ToggleClass('classID0ENE')">
+      <span class="clickable" onclick="ToggleClass('classID0ELF')" ondblclick="ToggleClass('classID0ELF')">
         <span class="failure">✘</span>
                Tests.Main.Utils.PushContextAttributeTests
                <span class="testcount">
@@ -1081,12 +866,12 @@
               </span></span>
       <br clear="all" />
     </h3>
-    <div class="indent" id="classID0ENE">
+    <div class="indent" id="classID0ELF">
       <div class="row">
         <span class="timing">0s
         </span>
         <span class="failure">✘</span>
-       Tests.Main.Utils.PushContextAttributeTests.AfterTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.Utils.PushContextAttributeTests.AfterTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -1100,7 +885,7 @@
         <span class="timing">0s
         </span>
         <span class="failure">✘</span>
-       Tests.Main.Utils.PushContextAttributeTests.BeforeTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.Utils.PushContextAttributeTests.BeforeTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
@@ -1114,7 +899,7 @@
         <span class="timing">0s
         </span>
         <span class="failure">✘</span>
-       Tests.Main.Utils.PushContextAttributeTests.PushContextAttributeTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitSinkTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitSinkTarget.cs:line 51
+       Tests.Main.Utils.PushContextAttributeTests.PushContextAttributeTest<br clear="all" /><pre>System.NullReferenceException : Object reference not set to an instance of an object.</pre><pre>   at Tests.Lib.Logging.XunitTarget.Write(LogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\v2\WpfApp\Tests\Lib\Logging\XunitTarget.cs:line 56
    at NLog.Targets.Target.Write(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 580
    at NLog.Targets.Target.WriteAsyncThreadSafe(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 604
    at NLog.Targets.Target.WriteAsyncLogEvent(AsyncLogEventInfo logEvent) in C:\Users\mccor.LAPTOP-T6T0BN1K\source\repos\NLog\src\NLog\Targets\Target.cs:line 317
