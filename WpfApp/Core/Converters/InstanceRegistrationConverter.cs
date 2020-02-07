@@ -11,7 +11,7 @@ namespace WpfApp.Core.Converters
 {
     /// <summary>
     ///     IValueConverter implementation for converting instances of type
-    ///     InstanceRegistration to a list or enumarable of Type.
+    ///     InstanceRegistration to a list or enumerable of Type.
     /// </summary>
     /// <seealso cref="System.Windows.Data.IValueConverter" />
     [ ValueConversion ( typeof ( InstanceRegistration ) , typeof ( IEnumerable < Type > ) ) ]

@@ -12,7 +12,6 @@ using System.Text.RegularExpressions ;
 using Castle.DynamicProxy ;
 using DynamicData ;
 using JetBrains.Annotations ;
-using Logging ;
 using NLog ;
 using NLog.Common ;
 using NLog.Config ;
@@ -258,8 +257,14 @@ namespace WpfApp.Core.Logging
                 throw new ArgumentNullException ( nameof ( target ) ) ;
             }
 
+            Logger.Debug ( "Removing target " + target) ;
             LogManager.Configuration.RemoveTarget ( target.Name ) ;
             LogManager.LogFactory.ReconfigExistingLoggers ( ) ;
+            foreach (var t in LogManager.Configuration.AllTargets)
+            {
+                Logger.Debug("Target " + t);
+            }
+
         }
 
         /// <summary>Ensures the logging configured.</summary>
@@ -459,16 +464,21 @@ namespace WpfApp.Core.Logging
             // $"Adding target {target.Name} {target.GetType ( ).FullName}"
             // )
             // .Write ( ) ;
-            LogManager.Configuration.AddTarget ( target ) ;
-            var rule = DefaultLoggingRule ( target ) ;
-            LogManager.Configuration.AddRule ( LogLevel.Trace , LogLevel.Fatal , target , "*" ) ;
+
+            if ( LogManager.Configuration != null )
+            {
+                LogManager.Configuration.AddTarget ( target ) ;
+                var rule = DefaultLoggingRule ( target ) ;
+                LogManager.Configuration.AddRule (
+                                                  LogLevel.Trace
+                                                , LogLevel.Fatal
+                                                , target
+                                                , "*"
+                                                 ) ;
+            }
+
             LogManager.LogFactory.ReconfigExistingLoggers ( ) ;
 
-            // new LogBuilder ( Logger ).Level ( LogLevel.Debug )
-            // .Message (
-            // $"Added target {target.Name} {target.GetType ( ).FullName}"
-            // )
-            // .Write ( ) ;
         }
 
         /// <summary>Removes the target.</summary>
@@ -493,7 +503,7 @@ namespace WpfApp.Core.Logging
                                                  , Tuple.Create ( "@t" , "${longdate}" )
                                                  , Tuple.Create ( "logger" , (string)null)
                                                  , Tuple.Create ( "@mt" , "${message}")
-                                                 , Tuple.Create ( "exception" , "${onexception}")
+                                                 , Tuple.Create ( "exception" , "${exception}")
                                                } ;
 
             

@@ -22,7 +22,7 @@ namespace WpfApp.Core.Logging
         public AppLogger ( )
         {
             LogManager.GetCurrentClassLogger ( ).Info ( "q??" ) ;
-            Debug.WriteLine ( "debug output for AppLogger here" ) ;
+            System.Diagnostics.Debug.WriteLine ( "debug output for AppLogger here" ) ;
         }
 
         /// <summary>

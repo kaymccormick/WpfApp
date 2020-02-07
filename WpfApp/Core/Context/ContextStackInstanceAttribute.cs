@@ -1,6 +1,6 @@
 ﻿using System ;
 
-namespace WpfApp.Core.Context
+namespace WpfApp.Core
 {
     /// <summary></summary>
     /// <seealso cref="System.Attribute" />

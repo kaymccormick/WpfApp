@@ -1,5 +1,6 @@
 ﻿using Autofac ;
 using JetBrains.Annotations ;
+using Tests.Lib.Misc ;
 using WpfApp.Core.Logging ;
 using WpfApp.Modules ;
 
@@ -32,13 +33,5 @@ namespace Tests.Lib.Fixtures
 
             Container = builder.Build ( ) ;
         }
-    }
-
-    internal interface IRandom
-    {
-    }
-
-    internal class RandomClass : IRandom
-    {
     }
 }

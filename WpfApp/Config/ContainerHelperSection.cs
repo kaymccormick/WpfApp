@@ -1,12 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Configuration;
-using System.Diagnostics ;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Configuration;
+using WpfApp.Core.Attributes ;
 using WpfApp.Core.Utils ;
 
-namespace WpfApp.Config
+namespace WpfApp.Core
 {
     /// <summary></summary>
     /// <seealso cref="System.Configuration.ConfigurationSection" />

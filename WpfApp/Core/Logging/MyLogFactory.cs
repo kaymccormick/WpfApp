@@ -47,7 +47,7 @@ namespace WpfApp.Core.Logging
             }
             else
             {
-                Debug.WriteLine ( "oops" ) ;
+                System.Diagnostics.Debug.WriteLine ( "oops" ) ;
             }
 
             return logger ;

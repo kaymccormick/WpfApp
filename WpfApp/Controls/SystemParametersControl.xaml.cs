@@ -39,7 +39,7 @@ namespace WpfApp.Controls
             foreach ( var resKeyProp in resKeyProps )
             {
                 var propertyInfo = typeof(SysProp).GetProperty( resKeyProp.Name );
-                Debug.Assert( propertyInfo != null );
+                System.Diagnostics.Debug.Assert( propertyInfo != null );
                 propertyInfo.SetValue( sysProp, resKeyProp.GetValue( null ) );
 
 
@@ -54,7 +54,7 @@ namespace WpfApp.Controls
                 else
                 {
                     var propSysProp = typeof(SysProp).GetProperty( barePropName );
-                    Debug.Assert( propSysProp != null );
+                    System.Diagnostics.Debug.Assert( propSysProp != null );
                     propSysProp.SetValue( sysProp, bareProp.GetValue( null ) );
 
                     var p = new PropertyDefinition { TargetProperties = { barePropName } };

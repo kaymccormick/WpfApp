@@ -1,6 +1,6 @@
 ﻿using System.Windows.Controls ;
 
-namespace Controls
+namespace WpfApp.Controls
 {
     /// <summary>
     ///     Interaction logic for DefaultPage.xaml

@@ -10,6 +10,7 @@
 // ---
 #endregion
 using Castle.DynamicProxy ;
+using WpfApp.Proxy ;
 
 namespace WpfApp.Core.Logging
 {

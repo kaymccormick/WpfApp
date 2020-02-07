@@ -110,11 +110,7 @@ namespace WpfApp.Core.Context
                 }
 
                 Logger.Debug ( "instance is {instance}" ) ;
-                if ( instance is IHasId hasId )
-                {
-                    Logger.Debug ( $"id is {hasId.ObjectId}" ) ;
-                }
-
+                
                 var qq =
                     from prop in instance.GetType ( ).GetProperties ( )
                     let atts =

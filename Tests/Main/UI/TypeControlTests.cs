@@ -4,8 +4,8 @@ using System.Threading ;
 using System.Threading.Tasks ;
 using System.Windows ;
 using System.Windows.Automation ;
-using Tests.Lib.Attributes ;
-using Tests.Lib.Exceptions ;
+using NLog ;
+using Tests.Attributes ;
 using Tests.Lib.Fixtures ;
 using Tests.Lib.Utils ;
 using WpfApp ;
@@ -19,21 +19,20 @@ namespace Tests.Main.UI
     ///     Test class for tests of <see cref="TypeControl" />
     /// </summary>
     [ LogTestMethod ] [ BeforeAfterLogger ]
-    public class TypeControlTests : IClassFixture < LoggingFixture >
+    public class TypeControlTests : IClassFixture < LoggingFixture >, IDisposable
     {
-        // ReSharper disable once NotAccessedField.Local
-        private readonly ITestOutputHelper _originalOutput ;
-        private readonly ITestOutputHelper _output ;
+        private readonly LoggingFixture _loggingFixture ;
 
+        private static readonly Logger Logger =
+            NLog.LogManager.GetCurrentClassLogger ( ) ;
 
-        /// <summary>
-        ///     Constructor for test class
-        /// </summary>
+        /// <summary>Constructor for test class</summary>
         /// <param name="output"></param>
-        public TypeControlTests ( ITestOutputHelper output )
+        /// <param name="loggingFixture"></param>
+        public TypeControlTests ( ITestOutputHelper output, LoggingFixture loggingFixture )
         {
-            _originalOutput = output ;
-            _output         = new OutputHelperWrapper ( output ) ;
+            _loggingFixture = loggingFixture ;
+            loggingFixture.SetOutputHelper(output);
         }
 
 
@@ -45,20 +44,20 @@ namespace Tests.Main.UI
         [ Trait ( "UITest" , "true" ) ]
         protected void TestTypeControl ( )
         {
-            CacheUtils.SetupCacheSubscriber ( ) ;
+            
             var controlName = SetupTypeControl ( out var control ) ;
             control.SetValue ( Props.RenderedTypeProperty , typeof ( string ) ) ;
             control.Detailed = true ;
 
             var window = MakeWindow ( control , out var taskCompletionSource ) ;
-            _output.WriteLine ( "showing window" ) ;
+            Logger.Debug( "showing window" ) ;
             window.Show ( ) ;
-            _output.WriteLine ( "Asserting that the task completion source result is not null." ) ;
+            Logger.Debug( "Asserting that the task completion source result is not null." ) ;
             Assert.NotNull ( taskCompletionSource.Task.Result ) ;
-            _output.WriteLine ( "Assertion complete." ) ;
+            Logger.Debug( "Assertion complete." ) ;
             if ( taskCompletionSource.Task.IsFaulted )
             {
-                _output.WriteLine ( "task faulted" ) ;
+                Logger.Debug( "task faulted" ) ;
                 if ( taskCompletionSource.Task.Exception != null )
                 {
                     throw taskCompletionSource.Task.Exception ;
@@ -78,8 +77,7 @@ namespace Tests.Main.UI
                                                                                       .Descendants
                                                                                  , ( sender , args )
                                                                                        => {
-                                                                                       _output
-                                                                                          .WriteLine (
+                                                                                    Logger.Debug(
                                                                                                       $"structure: {args.StructureChangeType}"
                                                                                                      ) ;
                                                                                    }
@@ -113,8 +111,7 @@ namespace Tests.Main.UI
                                                                                                      sender
                                                                                                    , args
                                                                                                  ) => {
-                                                                                                     _output
-                                                                                                        .WriteLine (
+                                                                                                     Logger.Debug ( 
                                                                                                                     "update: "
                                                                                                                     + args
                                                                                                                      .Property
@@ -128,7 +125,7 @@ namespace Tests.Main.UI
                                                                                                     .GetSupportedProperties ( )
                                                                                                 ) ;
 
-                                                   _output.WriteLine ( "yay" ) ;
+                                                   Logger.Debug( "yay" ) ;
                                                    invoke.Invoke ( ) ;
                                                    Thread.Sleep ( 2000 ) ;
                                                }
@@ -148,7 +145,6 @@ namespace Tests.Main.UI
         [ Trait ( "UITest" , "true" ) ]
         private void TestTypeNavigator ( )
         {
-            CacheUtils.SetupCacheSubscriber ( ) ;
 
             var controlName = SetupTypeNavControl ( out var control ) ;
             var window = MakeWindow ( control , out var r ) ;
@@ -205,7 +201,7 @@ namespace Tests.Main.UI
                                                                          hyperlink
                                                                        , TreeScope.Element
                                                                        , ( sender , args ) => {
-                                                                             _output.WriteLine (
+                                                                             Logger.Debug(
                                                                                                 "update: "
                                                                                                 + args
                                                                                                  .Property
@@ -219,7 +215,7 @@ namespace Tests.Main.UI
                                                                             .GetSupportedProperties ( )
                                                                         ) ;
 
-                    _output.WriteLine ( "yay" ) ;
+                    Logger.Debug( "yay" ) ;
                     invoke.Invoke ( ) ;
                     Thread.Sleep ( 2000 ) ;
                     return true ;
@@ -232,14 +228,14 @@ namespace Tests.Main.UI
         // ReSharper disable once InternalOrPrivateMemberNotDocumented
         private void StructureChangedEventHandler ( object sender , StructureChangedEventArgs args )
         {
-            _output.WriteLine ( $"structure: {args.StructureChangeType}" ) ;
+            Logger.Debug( $"structure: {args.StructureChangeType}" ) ;
         }
 
 
         // ReSharper disable once InternalOrPrivateMemberNotDocumented
         private AutomationElementCollection FindHyperlinks ( AutomationElement autoElem )
         {
-            _output.WriteLine ( "About to find hyperlinks" ) ;
+            Logger.Debug( "About to find hyperlinks" ) ;
 
             var hyperlinks = autoElem.FindAll (
                                                TreeScope.Descendants
@@ -249,14 +245,14 @@ namespace Tests.Main.UI
                                                                     , "Hyperlink"
                                                                      )
                                               ) ;
-            _output.WriteLine ( $"Found {hyperlinks.Count} hyperlinks" ) ;
+            Logger.Debug( $"Found {hyperlinks.Count} hyperlinks" ) ;
             return hyperlinks ;
         }
 
         // ReSharper disable once InternalOrPrivateMemberNotDocumented
         private AutomationElement FindControlAutomationElement ( string controlName )
         {
-            _output.WriteLine ( "About to find automation element" ) ;
+            Logger.Debug( "About to find automation element" ) ;
             var first = AutomationElement.RootElement.FindFirst (
                                                                  TreeScope.Children
                                                                , new PropertyCondition (
@@ -265,10 +261,10 @@ namespace Tests.Main.UI
                                                                                       , "MYWin"
                                                                                        )
                                                                 ) ;
-            _output.WriteLine ( "Found automation element " + first ) ;
+            Logger.Debug( "Found automation element " + first ) ;
             Assert.NotNull ( first ) ;
 
-            _output.WriteLine (
+            Logger.Debug(
                                "Trying to find control with Automation ID property " + controlName
                               ) ;
             var autoElem = first.FindFirst (
@@ -279,7 +275,7 @@ namespace Tests.Main.UI
                                                                  , controlName
                                                                   )
                                            ) ;
-            _output.WriteLine ( "Found automation element " + autoElem ) ;
+            Logger.Debug( "Found automation element " + autoElem ) ;
             return autoElem ;
         }
 
@@ -296,12 +292,12 @@ namespace Tests.Main.UI
             window.Loaded += ( sender , args ) => {
                 try
                 {
-                    _output.WriteLine ( "Window loaded." ) ;
+                    Logger.Debug( "Window loaded." ) ;
                     throw new TestException ( ) ;
                 }
                 catch ( Exception ex )
                 {
-                    _output.WriteLine ( $"Exception: {ex.Message}." ) ;
+                    Logger.Debug( $"Exception: {ex.Message}." ) ;
                     source.TrySetException ( ex ) ;
                 }
             } ;
@@ -346,7 +342,7 @@ namespace Tests.Main.UI
                 {
                     foreach ( var automationProperty in elementNode.GetSupportedProperties ( ) )
                     {
-                        _output.WriteLine (
+                        Logger.Debug(
                                            $"{automationProperty.ProgrammaticName}: {elementNode.GetCurrentPropertyValue ( automationProperty )}"
                                           ) ;
                     }
@@ -358,11 +354,11 @@ namespace Tests.Main.UI
                         elementNode.GetCurrentPropertyValue (
                                                              AutomationElement.AutomationIdProperty
                                                             ) ;
-                    _output.WriteLine ( automationId?.ToString ( ) ) ;
+                    Logger.Debug( automationId?.ToString ( ) ) ;
                 }
                 catch ( Exception ex )
                 {
-                    _output.WriteLine ( ex.Message ) ;
+                    Logger.Debug( ex.Message ) ;
                 }
 
                 WalkContentElements ( elementNode , b ) ;
@@ -386,7 +382,7 @@ namespace Tests.Main.UI
                 {
                     foreach ( var automationProperty in elementNode.GetSupportedProperties ( ) )
                     {
-                        _output.WriteLine (
+                        Logger.Debug(
                                            $"{automationProperty.ProgrammaticName}: {elementNode.GetCurrentPropertyValue ( automationProperty )}"
                                           ) ;
                     }
@@ -398,16 +394,22 @@ namespace Tests.Main.UI
                         elementNode.GetCurrentPropertyValue (
                                                              AutomationElement.AutomationIdProperty
                                                             ) ;
-                    _output.WriteLine ( automationId?.ToString ( ) ) ;
+                    Logger.Debug( automationId?.ToString ( ) ) ;
                 }
                 catch ( Exception ex )
                 {
-                    _output.WriteLine ( ex.Message ) ;
+                    Logger.Debug( ex.Message ) ;
                 }
 
                 WalkControlElements ( elementNode , dumpProps ) ;
                 elementNode = TreeWalker.ControlViewWalker.GetNextSibling ( elementNode ) ;
             }
+        }
+
+        /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
+        public void Dispose ( )
+        {
+            _loggingFixture?.Dispose ( ) ;
         }
     }
 }

@@ -13,6 +13,7 @@
 using System.Collections.Generic ;
 using System.Collections.Specialized ;
 using System.Linq ;
+using WpfApp.Core.Exceptions ;
 using static System.String ;
 
 namespace WpfApp.Core.Infos

@@ -3,9 +3,9 @@ using System.Runtime.Serialization ;
 using Autofac ;
 using Autofac.Core ;
 using NLog ;
+using WpfApp.Core ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Core.Utils ;
-using WpfApp.Services ;
 
 namespace WpfApp.Modules
 {

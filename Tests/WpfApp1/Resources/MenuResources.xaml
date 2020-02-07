@@ -1,9 +1,0 @@
-﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-                    xmlns:menus1="clr-namespace:WpfApp.Core.Menus;assembly=WpfApp">
-    <menus1:MenuMenuItemTemplateSelector x:Key="MenuMenuItemTemplateSelector" />
-    <Style TargetType="Menu" x:Key="MenuStyle">
-        <Setter Property="ItemsSource" Value="{DynamicResource MyMenuItemList}" />
-        <Setter Property="ItemTemplateSelector" Value="{StaticResource MenuMenuItemTemplateSelector}" />
-    </Style>
-</ResourceDictionary>

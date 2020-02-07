@@ -85,13 +85,15 @@
     <Compile Include="Application\DebugEventArgs.cs" />
     <Compile Include="Config\ConfigTargetAttribute.cs" />
     <Compile Include="Config\ContainerHelperSection.cs" />
+    <Compile Include="Core\DefaultObjectIdProvider.cs" />
+    <Compile Include="Core\Exceptions\DuplicateKeyException.cs" />
     <Compile Include="Core\Exceptions\UnableToRegisterObjectIdException.cs" />
-    <Compile Include="Core\Interfaces\ITabGuest.cs" />
-    <Compile Include="Core\UnableToRegisterObjectIdException.cs" />
+    <Compile Include="Core\Interfaces\IObjectId.cs" />
+    <Compile Include="Core\Logging\LoggingCategory.cs" />
     <Compile Include="NewMainWindow.xaml.cs">
       <DependentUpon>NewMainWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ProxyUtils.cs" />
+    <Compile Include="Proxy\ProxyUtils.cs" />
     <Compile Include="Core\Attributes\LoggingEntityMetadata.cs" />
     <Compile Include="Core\Attributes\WindowMetadataAttribute.cs" />
     <Compile Include="Controls\Container.xaml.cs" />
@@ -104,12 +106,6 @@
     <Compile Include="Core\Logging\NLogTargetConverter.cs" />
     <Compile Include="Core\Logging\TypeBrowserPage.xaml.cs" />
     <Compile Include="Core\Menus\MenuHelper.cs" />
-    <Compile Include="Core\Util\DebugHelper.cs" />
-    <Compile Include="Core\Util\IObjectId.cs" />
-    <Compile Include="Core\Util\LoggerInterceptor.cs" />
-    <Compile Include="Core\Util\LongObjectId.cs" />
-    <Compile Include="Core\Util\MyActivator.cs" />
-    <Compile Include="Core\Util\ProxyGenerationHook.cs" />
     <Compile Include="Controls\Windows\AppSettingsWindow.xaml.cs" />
     <Compile Include="Controls\Windows\ComponentRegistry.cs" />
     <Compile Include="Controls\Windows\LifetimeScope.cs" />
@@ -120,7 +116,6 @@
     <Compile Include="Core\Xaml\AppLoggerExtension.cs" />
     <Compile Include="Core\Xaml\AssemblyConverter.cs" />
     <Compile Include="Core\Xaml\Converter.cs" />
-    <Compile Include="Core\Xaml\InstanceRegistrationConverter.cs" />
     <ApplicationDefinition Include="Application\App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -194,7 +189,6 @@
     <Compile Include="Core\Attributes\AssemblyContainerScanAttribute.cs" />
     <Compile Include="Core\Attributes\InterfaceMetadataAttribute.cs" />
     <Compile Include="Core\CustomResourceLoader.cs" />
-    <Compile Include="Core\DuplicateKeyException.cs" />
     <Compile Include="Core\Infos\ComponentInfo.cs" />
     <Compile Include="Core\Infos\ContextStack.cs" />
     <Compile Include="Core\Infos\InfoContext.cs" />
@@ -207,19 +201,26 @@
     <Compile Include="Core\Interfaces\IMenuItem.cs" />
     <Compile Include="Core\Interfaces\IMenuItemList.cs" />
     <Compile Include="Core\Interfaces\IObjectIdProvider.cs" />
-    <Compile Include="Core\Interfaces\ISettingsPanel.cs" />
     <Compile Include="Core\Interfaces\ITopLevelMenu.cs" />
     <Compile Include="Core\Interfaces\LoggerEventArgs.cs" />
     <Compile Include="Core\Interfaces\LoggerRegisteredEventHandler.cs" />
     <Compile Include="Core\Interfaces\MyLogBuilder.cs" />
     <Compile Include="Modules\IdGeneratorModule.cs" />
-    <Compile Include="Core\ResolveService.cs" />
-    <Compile Include="Services\DefaultObjectIdProvider.cs" />
+    <Compile Include="Core\Xaml\ResolveService.cs" />
+    <Compile Include="Proxy\BaseInterceptor.cs" />
+    <Compile Include="Proxy\BasicLoggingInterceptor.cs" />
+    <Compile Include="Proxy\BuilderInterceptor.cs" />
+    <Compile Include="Proxy\CallBackHook.cs" />
+    <Compile Include="Proxy\CallbackInterceptor.cs" />
+    <Compile Include="Proxy\ContainerBaseInterceptor.cs" />
+    <Compile Include="Proxy\LoggerInterceptor.cs" />
+    <Compile Include="Proxy\ProxyGenerationHook.cs" />
+    <Compile Include="Proxy\RegistryInterceptor.cs" />
     <Compile Include="ResolveServiceList.cs" />
-    <Compile Include="Core\Utils\AttachedContext.cs" />
-    <Compile Include="Core\Utils\ContextStackException.cs" />
-    <Compile Include="Core\Utils\DebugUtils.cs" />
-    <Compile Include="Core\Utils\SerializableDictionary.cs" />
+    <Compile Include="Core\Util\AttachedContext.cs" />
+    <Compile Include="Core\Util\ContextStackException.cs" />
+    <Compile Include="Core\Util\DebugUtils.cs" />
+    <Compile Include="Core\Util\SerializableDictionary.cs" />
     <Compile Include="Core\Xaml\LifetimeScopeExtension.cs" />
     <Compile Include="Core\Xaml\ObjectIdExtension.cs" />
     <Compile Include="Core\Context\ContextStackInstanceAttribute.cs" />
@@ -241,7 +242,6 @@
     <Compile Include="Core\Logging\LoggingEntityMetadataAttribute.cs" />
     <Compile Include="Core\Logging\LoggingInterceptor.cs" />
     <Compile Include="Core\Logging\MyCacheTarget.cs" />
-    <Compile Include="MainVie.cs" />
     <Compile Include="Core\Menus\MenuItemContainerStyleSelector.cs" />
     <Compile Include="Core\Menus\MenuMenuItemTemplateSelector.cs" />
     <Compile Include="Core\Menus\MenuModule.cs" />
@@ -262,14 +262,12 @@
     <Compile Include="Core\Tracing\AppTraceListener.cs" />
     <Compile Include="Core\Tracing\AppTraceListener2.cs" />
     <Compile Include="Core\Tracing\Info.cs" />
-    <Compile Include="Core\Utils\BuilderInterceptor.cs" />
-    <Compile Include="Core\Utils\ContainerHelper.cs" />
+    <Compile Include="Core\Util\ContainerHelper.cs" />
     <Compile Include="Core\Logging\AppLoggingConfigHelper.cs" />
     <Compile Include="Core\Logging\CodeConfiguration.cs" />
     <Compile Include="Core\Logging\LogDelegates.cs" />
     <Compile Include="Core\Logging\LogFactoryInterceptor.cs" />
     <Compile Include="Core\Logging\LoggerFactoryHook.cs" />
-    <Compile Include="Core\Logging\LoggerInterceptor.cs" />
     <Compile Include="Core\Logging\LoggerProxyHelper.cs" />
     <Compile Include="Core\Logging\MyLogFactory.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -400,9 +398,7 @@
       <Name>NLog</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Logging\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.8">
       <Visible>False</Visible>
