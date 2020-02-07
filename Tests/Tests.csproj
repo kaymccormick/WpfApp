@@ -62,7 +62,7 @@
     <Compile Include="Attributes\BeforeAfterLoggerAttribute.cs" />
     <Compile Include="Attributes\LogTestMethodAttribute.cs" />
     <Compile Include="CollectionDefinitions\AutofacContainerDef.cs" />
-    <Compile Include="CollectionDefinitions\GeneralPuurpose.cs" />
+    <Compile Include="CollectionDefinitions\GeneralPurpose.cs" />
     <Compile Include="CollectionDefinitions\WpfApplication.cs" />
     <Compile Include="Lib\Fixtures\FixtureLogger.cs" />
     <Compile Include="Lib\Fixtures\GlobalLoggingFixture.cs" />
@@ -92,6 +92,7 @@
     <Compile Include="Main\UI\TypeControlTests.cs" />
     <Compile Include="Main\Utils\InfoContextTests.cs" />
     <Compile Include="Main\Utils\PushContextAttributeTests.cs" />
+    <Compile Include="Main\Utils\RunnerReporter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Lib\Fixtures\CombinedFixture.cs" />
     <Compile Include="TestException.cs" />

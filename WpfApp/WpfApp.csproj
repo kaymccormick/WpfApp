@@ -84,6 +84,7 @@
     </Compile>
     <Compile Include="Config\ConfigTargetAttribute.cs" />
     <Compile Include="Config\ContainerHelperSection.cs" />
+    <Compile Include="Config\LoggingSection.cs" />
     <Compile Include="Core\DefaultObjectIdProvider.cs" />
     <Compile Include="Core\Exceptions\DuplicateKeyException.cs" />
     <Compile Include="Core\Exceptions\UnableToRegisterObjectIdException.cs" />

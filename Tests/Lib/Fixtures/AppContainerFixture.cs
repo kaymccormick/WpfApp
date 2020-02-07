@@ -19,6 +19,7 @@ using Autofac.Core.Lifetime ;
 using Autofac.Core.Resolving ;
 using JetBrains.Annotations ;
 using NLog ;
+using WpfApp.Core.Util ;
 using WpfApp.Core.Utils ;
 using Xunit ;
 using Xunit.Abstractions ;
@@ -67,8 +68,7 @@ namespace Tests.Lib.Fixtures
         public Task InitializeAsync ( )
         {
             _sink.OnMessage ( new DiagnosticMessage ( "Initializing container." ) ) ;
-            _container    = ContainerHelper.SetupContainer(out _);
-            LifetimeScope = _container.BeginLifetimeScope();
+            LifetimeScope = ContainerHelper.SetupContainer(out _);
             return Task.CompletedTask ;
         }
 

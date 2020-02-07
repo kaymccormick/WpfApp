@@ -29,17 +29,7 @@ namespace WpfApp.Controls
         public Registrations ( )
         {
             InitializeComponent ( ) ;
-//			AddHandler (  )
-
-            AddHandler (
-                        Props.LifetimeScopeChangedEvent
-                      , new RoutedPropertyChangedEventHandler < ILifetimeScope > ( Target )
-                       ) ;
         }
 
-        private void Target ( object sender , RoutedPropertyChangedEventArgs < ILifetimeScope > e )
-        {
-            // Logger.Debug ( $"LifetimeScopeChanged {sender} {e.NewValue}" ) ;
-        }
     }
 }

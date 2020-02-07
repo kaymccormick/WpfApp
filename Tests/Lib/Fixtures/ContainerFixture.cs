@@ -14,6 +14,7 @@ using System.Threading.Tasks ;
 using Autofac ;
 using JetBrains.Annotations ;
 using NLog ;
+using WpfApp.Core.Util ;
 using WpfApp.Core.Utils ;
 using Xunit ;
 

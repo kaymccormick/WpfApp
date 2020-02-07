@@ -1,6 +1,8 @@
 ﻿using System ;
+using NLog.Layouts ;
 using Tests.Lib.Fixtures ;
 using WpfApp.Application ;
+using WpfApp.Core.Util ;
 using WpfApp.Core.Utils ;
 using WpfApp.Debug ;
 using Xunit ;
@@ -23,7 +25,7 @@ namespace Tests.Main
             _output = output ;
             _loggingFixture = loggingFixture ;
             loggingFixture.SetOutputHelper(output);
-
+            _loggingFixture.Layout = Layout.FromString ( "${message}" ) ;
         }
 
         /// <summary>Tests application of configuration in the app.config file.</summary>

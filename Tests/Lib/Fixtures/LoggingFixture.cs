@@ -1,5 +1,6 @@
 ﻿using System ;
 using JetBrains.Annotations ;
+using NLog.Layouts ;
 using Tests.Lib.Logging ;
 using WpfApp.Core.Logging ;
 using Xunit ;
@@ -7,7 +8,7 @@ using Xunit.Abstractions ;
 
 namespace Tests.Lib.Fixtures
 {
-    /// <summary>Test fixture to provide logging for the individual test case. In order to use, the individual test class must be tagged with the <seealso cref="IClassFixture{TFixture}"/>. Method <seealso cref="SetOutputHelper"/> must be invoked with the <seealso cref="ITestOutputHelper"/> instance supplied by Xunit throught the class constructor.</summary>
+    /// <summary>Test fixture to provide logging for the individual test case. In order to use, the individual test class must be tagged with the <seealso cref="IClassFixture{TFixture}"/>. Method <seealso cref="SetOutputHelper"/> must be invoked with the <seealso cref="ITestOutputHelper"/> instance supplied by Xunit through the class constructor.</summary>
     [ UsedImplicitly ]
     public class LoggingFixture : IDisposable
     {
@@ -32,6 +33,17 @@ namespace Tests.Lib.Fixtures
         }
 
         private XunitTarget _xunitTarget ;
+
+        /// <summary>Gets or sets the layout used to format log messages.</summary>
+        /// <remarks>
+        /// The default value of the layout is: <code>${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}</code>
+        /// </remarks>
+        /// <docgen category="Layout Options" order="1" />
+        public Layout Layout
+        {
+            get => _xunitTarget.Layout ;
+            set => _xunitTarget.Layout = value ;
+        }
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="T:System.Object" />
