@@ -36,7 +36,7 @@
       <DocumentationSource sourceFile="..\Tests\bin\$(Configuration)\Tests.dll" />
       <DocumentationSource sourceFile="..\Tests\bin\$(Configuration)\Tests.xml" />
     </DocumentationSources>
-    <HelpFileFormat>MSHelpViewer</HelpFileFormat>
+    <HelpFileFormat>HtmlHelp1, MSHelpViewer</HelpFileFormat>
     <SyntaxFilters>C#, XAML Usage</SyntaxFilters>
     <PresentationStyle>VS2013</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>

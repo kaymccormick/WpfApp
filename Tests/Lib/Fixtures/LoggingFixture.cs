@@ -18,9 +18,10 @@ namespace Tests.Lib.Fixtures
         /// TODO Edit XML Comment Template for SetOutputHelper
         public void SetOutputHelper ( ITestOutputHelper value )
         {
-            if(_xunitTarget != null)
+            if ( _xunitTarget != null )
             {
-             AppLoggingConfigHelper.RemoveTarget(_xunitTarget);                   _xunitTarget.Dispose();
+                AppLoggingConfigHelper.RemoveTarget ( _xunitTarget ) ;
+                _xunitTarget.Dispose ( ) ;
             }
 
             if ( value == null )
@@ -28,8 +29,9 @@ namespace Tests.Lib.Fixtures
                 _xunitTarget = null ;
                 return ;
             }
-            _xunitTarget = new XunitTarget("Xunit"){ OutputHelper = value};
-            AppLoggingConfigHelper.AddTarget(_xunitTarget);
+
+            _xunitTarget = new XunitTarget ( "Xunit" ) { OutputHelper = value } ;
+            AppLoggingConfigHelper.AddTarget ( _xunitTarget ) ;
         }
 
         private XunitTarget _xunitTarget ;
@@ -39,11 +41,7 @@ namespace Tests.Lib.Fixtures
         /// The default value of the layout is: <code>${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}</code>
         /// </remarks>
         /// <docgen category="Layout Options" order="1" />
-        public Layout Layout
-        {
-            get => _xunitTarget.Layout ;
-            set => _xunitTarget.Layout = value ;
-        }
+        public Layout Layout { get => _xunitTarget.Layout ; set => _xunitTarget.Layout = value ; }
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="T:System.Object" />
