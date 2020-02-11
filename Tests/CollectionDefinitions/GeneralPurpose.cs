@@ -3,7 +3,7 @@
 // 
 // WpfApp
 // Tests
-// GeneralPuurpose.cs
+// GeneralPurpose.cs
 // 
 // 2020-02-06-10:45 PM
 // 

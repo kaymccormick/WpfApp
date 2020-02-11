@@ -25,6 +25,6 @@ namespace WpfApp.Core.Tracing
         ///     Initializes a new instance of the <see cref="T:System.Object" />
         ///     class.
         /// </summary>
-        public Info ( int count ) { this.Count = count ; }
+        public Info ( int count ) { Count = count ; }
     }
 }

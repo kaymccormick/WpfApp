@@ -28,11 +28,7 @@ namespace WpfApp.Core.Converters
         )
         {
             var s = value as ResolveService ;
-            var lifetimeScope = Props.GetLifetimeScope ( s ) ;
-            if ( lifetimeScope == null )
-            {
-                lifetimeScope = parameter as ILifetimeScope ;
-            }
+            var lifetimeScope = Props.GetLifetimeScope ( s ) ?? parameter as ILifetimeScope ;
 
             if ( lifetimeScope == null )
             {

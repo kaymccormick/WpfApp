@@ -51,7 +51,6 @@
                                 CellTemplate="{StaticResource  ServicesCellTemplate}" Header="Services" />
                         </GridView>
                     </ListView.View>
-                    <system:Object />
                 </ListView>
                 <StackPanel Grid.Row="2">
                     <ListView ItemsSource="{Binding Path=CurrentItem,Source={StaticResource Registrations}}">

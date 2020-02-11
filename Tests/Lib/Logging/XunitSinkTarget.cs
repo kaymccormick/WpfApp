@@ -22,7 +22,7 @@ namespace Tests.Lib.Logging
     [Target ( "Xunit" ) ]
     public class XunitSinkTarget : TargetWithLayout
     {
-        private IMessageSink _sink ;
+        private readonly IMessageSink _sink ;
 
         /// <summary>Initializes a new instance of the <see cref="XunitSinkTarget"/> class.</summary>
         /// <param name="name">The name.</param>

@@ -101,7 +101,7 @@ else
             var builder = new ContainerBuilder ( ) ;
 #endif
 
-            // Set the property in order to propogate the settings.
+            // Set the property in order to propagate the settings.
             builder.Properties[ InterceptProperty ] = DoInterception ;
 
             var toScan = assembliesToScan as Assembly[] ?? assembliesToScan.ToArray ( ) ;

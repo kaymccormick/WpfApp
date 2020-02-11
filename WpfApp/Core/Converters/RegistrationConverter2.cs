@@ -77,6 +77,7 @@ namespace WpfApp.Core.Converters
                 return null ;
             }
 
+            // ReSharper disable once SuggestVarOrType_Elsewhere
             IList< InstanceInfo > x = comp?.Instances ?? new List<InstanceInfo>( ) ;
             Logger.Debug ( $"Using list of {string.Join ( ", " , x )}" ) ;
 

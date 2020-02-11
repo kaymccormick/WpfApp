@@ -43,7 +43,7 @@ namespace Tests.Main.Utils
             var xamlSchemaContext = p.CreateXamlSchemaContext();
             Logger.Info("{schemaContext}", xamlSchemaContext);
             var i = 0;
-            bool limitOutput = false ;
+            var limitOutput = false ;
             foreach (var ns in xamlSchemaContext.GetAllXamlNamespaces())
             {
                 var allXamlTypes = xamlSchemaContext.GetAllXamlTypes(ns);
@@ -83,10 +83,10 @@ namespace Tests.Main.Utils
         public void Test2 ( )
         {
             PresentationTraceSources.Refresh();
-            NLogTraceListener x1 = new NLogTraceListener { ForceLogLevel = LogLevel.Debug } ;
+            var x1 = new NLogTraceListener { ForceLogLevel = LogLevel.Debug } ;
             PresentationTraceSources.MarkupSource.Listeners.Add ( x1 ) ;
             PresentationTraceSources.MarkupSource.Switch.Level = SourceLevels.All ;
-            ProxyUtils x = new ProxyUtils(WriteOut, ProxyUtilsBase.CreateInterceptor(WriteOut));
+            var x = new ProxyUtils(WriteOut, ProxyUtilsBase.CreateInterceptor(WriteOut));
             var @out = x.TransformXaml2 ( @"files/test.xaml" ) ;
             Logger.Debug ( "{out}" , @out ) ;
 

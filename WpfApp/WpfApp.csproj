@@ -270,7 +270,7 @@
     <Compile Include="Core\Model\ResourcesModel.cs" />
     <Compile Include="Core\Model\ResourcesUtil.cs" />
     <Compile Include="Commands.cs" />
-    <Compile Include="NLogTextWriter.cs" />
+    <Compile Include="LogTextWriter.cs" />
     <Compile Include="ResourceMetadata.cs" />
     <Compile Include="TestO.cs" />
     <Compile Include="Core\Tracing\AppTraceListener.cs" />

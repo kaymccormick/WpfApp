@@ -31,6 +31,7 @@ namespace WpfApp.Core.Converters
         ///     Initializes a new instance of the <see cref="T:System.Object" />
         ///     class.
         /// </summary>
+        // ReSharper disable once UnusedMember.Global
         public RegistrationConverter ( ) { }
 
         /// <summary>Initializes a new instance of the <see cref="RegistrationConverter"/> class.</summary>

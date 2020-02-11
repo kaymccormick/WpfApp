@@ -14,7 +14,7 @@ using WpfApp.Core.Utils ;
 
 namespace WpfApp.Core
 {
-    /// <summary>Default implementation for objevt ID provider service.</summary>
+    /// <summary>Default implementation for object ID provider service.</summary>
     /// <seealso cref="IObjectIdProvider" />
     public class DefaultObjectIdProvider : IObjectIdProvider
     {
