@@ -15,7 +15,6 @@ using Autofac ;
 using JetBrains.Annotations ;
 using NLog ;
 using WpfApp.Core.Container ;
-using WpfApp.Core.Utils ;
 using Xunit ;
 
 namespace Tests.Lib.Fixtures

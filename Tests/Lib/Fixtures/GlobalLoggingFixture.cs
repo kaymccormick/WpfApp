@@ -50,7 +50,7 @@ namespace Tests.Lib.Fixtures
                                {
                                    Layout = l
                                } ;
-            AppLoggingConfigHelper.AddTarget ( _xunitSinkTarget ) ;
+            AppLoggingConfigHelper.AddTarget ( _xunitSinkTarget, null ) ;
             Logger.Warn ( $"{nameof ( GlobalLoggingFixture)} logger added." ) ;
         }
 

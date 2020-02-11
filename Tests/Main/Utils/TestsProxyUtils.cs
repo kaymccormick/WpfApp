@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics ;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NLog ;
 using NLog.Layouts ;
 using Tests.Lib.Fixtures ;
@@ -29,7 +25,8 @@ namespace Tests.Main.Utils
             _loggingFixture.Layout = Layout.FromString ( "${message}" ) ;
         }
 
-        private static Logger Logger = NLog.LogManager.GetCurrentClassLogger ( ) ;
+        // ReSharper disable once InconsistentNaming
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
         private void WriteOut ( string s )
         {
@@ -49,11 +46,14 @@ namespace Tests.Main.Utils
             bool limitOutput = false ;
             foreach (var ns in xamlSchemaContext.GetAllXamlNamespaces())
             {
-                var j = 0;
                 var allXamlTypes = xamlSchemaContext.GetAllXamlTypes(ns);
                 Logger.Debug("{numtypes} {namespace}", allXamlTypes.Count, ns);
                 i++;
-                if (limitOutput && i >= 5) break;
+                if (limitOutput && i >= 5)
+                {
+                    break;
+                }
+
                 // continue ;
                 foreach (var t in allXamlTypes)
                 {
@@ -64,6 +64,7 @@ namespace Tests.Main.Utils
 
                     continue ;
                     Logger.Debug("{t}", t);
+                    var j = 0;
                     j++;
                     if (limitOutput && j >= 5)
                     {
@@ -82,11 +83,10 @@ namespace Tests.Main.Utils
         public void Test2 ( )
         {
             PresentationTraceSources.Refresh();
-            NLogTraceListener x1 = new NLogTraceListener();
-            x1.ForceLogLevel= LogLevel.Debug;
+            NLogTraceListener x1 = new NLogTraceListener { ForceLogLevel = LogLevel.Debug } ;
             PresentationTraceSources.MarkupSource.Listeners.Add ( x1 ) ;
             PresentationTraceSources.MarkupSource.Switch.Level = SourceLevels.All ;
-            ProxyUtils x = new ProxyUtils(WriteOut, ProxyUtils.CreateInterceptor(WriteOut));
+            ProxyUtils x = new ProxyUtils(WriteOut, ProxyUtilsBase.CreateInterceptor(WriteOut));
             var @out = x.TransformXaml2 ( @"files/test.xaml" ) ;
             Logger.Debug ( "{out}" , @out ) ;
 

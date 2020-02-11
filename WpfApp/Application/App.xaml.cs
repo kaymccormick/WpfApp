@@ -34,10 +34,10 @@ using IContainer = Autofac.IContainer ;
 namespace WpfApp
 {
     /// <summary>Root namespace for the WPF application infrastructure.</summary>
-    [System.Runtime.CompilerServices.CompilerGenerated ]
-class NamespaceDoc
-{
-}
+    [ CompilerGenerated ]
+    internal class NamespaceDoc
+    {
+    }
 }
 
 namespace WpfApp.Application
@@ -64,7 +64,7 @@ namespace WpfApp.Application
     /// <summary>
     ///     Interaction logic for App.xaml
     /// </summary>
-    public partial class App : System.Windows.Application, IDisposable
+    public partial class App : System.Windows.Application , IDisposable
     {
         private IContainer              _container ;
         private ContainerHelperSettings _containerHelperSettings ;
@@ -91,7 +91,14 @@ namespace WpfApp.Application
             }
 
             DebugLog = DoLogMessage ;
-            AppLoggingConfigHelper.EnsureLoggingConfigured ( message => OnDebugMessage(new DebugEventArgs(message))) ;
+            AppLoggingConfigHelper.EnsureLoggingConfigured (
+                                                            message => OnDebugMessage (
+                                                                                       new
+                                                                                           DebugEventArgs (
+                                                                                                           message
+                                                                                                          )
+                                                                                      )
+                                                           ) ;
             Logger = LogManager.GetCurrentClassLogger ( ) ;
 
             ApplyConfiguration ( ) ;
@@ -172,8 +179,8 @@ namespace WpfApp.Application
                                         catch ( Exception ex )
                                         {
                                             DebugLog (
-                                                         $"Unable to set property {attr.Name}: {ex.Message}"
-                                                        ) ;
+                                                      $"Unable to set property {attr.Name}: {ex.Message}"
+                                                     ) ;
                                         }
                                     }
                                 }
@@ -203,6 +210,7 @@ namespace WpfApp.Application
         private ILogger Logger { get ; set ; }
 
         private LogDelegates.LogMethod2 DebugLog { get ; }
+
         private LogDelegates.LogMethod2 InfoLog { get ; }
 
 
@@ -282,12 +290,11 @@ namespace WpfApp.Application
         {
             try
             {
-
                 new LogBuilder ( Logger ).Level ( LogLevel.Debug )
                                          .Message ( message )
-                                         .Property("callerLineNumber", callerFilePath)
-                                         .Property("callerMemberName", callerMemberName)
-                                         .Property ( "callerFilePath" ,  callerFilePath)
+                                         .Property ( "callerLineNumber" , callerFilePath )
+                                         .Property ( "callerMemberName" , callerMemberName )
+                                         .Property ( "callerFilePath" ,   callerFilePath )
                                          .Write (
                                                  callerMemberName
                                                , callerFilePath
@@ -298,16 +305,16 @@ namespace WpfApp.Application
             catch ( Exception ex )
             {
                 System.Diagnostics.Debug.WriteLine (
-                                 $"Received exception trying to log {message}"
-                                 + ( callerMemberName.IsNullOrEmpty ( )
-                                         ? ""
-                                         : $" from {callerMemberName} at {callerFilePath}:{callerLineNumber}: {ex.Message}"
-                                   )
-                                ) ;
+                                                    $"Received exception trying to log {message}"
+                                                    + ( callerMemberName.IsNullOrEmpty ( )
+                                                            ? ""
+                                                            : $" from {callerMemberName} at {callerFilePath}:{callerLineNumber}: {ex.Message}"
+                                                      )
+                                                   ) ;
                 System.Diagnostics.Debug.WriteLine ( ex ) ;
             }
         }
-    
+
         private Assembly CdOnResourceResolve ( object sender , ResolveEventArgs args )
         {
             DebugLog ( $"nameof(CdOnResourceResolve): {args.Name}" ) ;
@@ -439,8 +446,11 @@ namespace WpfApp.Application
 
         private void AppInitialize ( )
         {
-            AppContainer =
-                ContainerHelper.SetupContainer ( out var container ,null, _containerHelperSettings ) ;
+            AppContainer = ContainerHelper.SetupContainer (
+                                                           out var container
+                                                         , null
+                                                         , _containerHelperSettings
+                                                          ) ;
             _container = container ;
 
             SetupTracing ( ) ;
@@ -459,7 +469,9 @@ namespace WpfApp.Application
                 {
                     if ( Logger == null )
                     {
-                        System.Diagnostics.Debug.WriteLine ( "got a logger but i don't have one yet" ) ;
+                        System.Diagnostics.Debug.WriteLine (
+                                                            "got a logger but i don't have one yet"
+                                                           ) ;
                     }
                 }
             } ;
@@ -523,19 +535,12 @@ namespace WpfApp.Application
 
         private void MainWindowLoaded ( object o , RoutedEventArgs args )
         {
-            var w = o as MainWindow ;
-            if ( w == null ) { }
-
-            {
-                Logger.Error ( $"Bad type for event sender {o.GetType ( )}" ) ;
-            }
-
             var fe = o as FrameworkElement ;
             DebugLog ( $"{nameof ( MainWindowLoaded )}" ) ;
             Props.SetMenuItemListCollectionView ( fe , MenuItemListCollectionView ) ;
             DebugLog ( $"Setting LifetimeScope DependencyProperty to {AppContainer}" ) ;
             Props.SetAssemblyList (
-                                   w
+                                   fe
                                  , new AssemblyList ( AppDomain.CurrentDomain.GetAssemblies ( ) )
                                   ) ;
             Props.SetContainer ( fe , _container ) ;
@@ -675,14 +680,14 @@ namespace WpfApp.Application
         /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
         public void Dispose ( )
         {
-            var cd = AppDomain.CurrentDomain;
-            cd.AssemblyLoad -= CurrentDomainOnAssemblyLoad;
+            var cd = AppDomain.CurrentDomain ;
+            cd.AssemblyLoad -= CurrentDomainOnAssemblyLoad ;
             //cd.TypeResolve += CdOnTypeResolve;
-           
-            cd.UnhandledException -= OnAppDomainUnhandledException;
-            cd.ResourceResolve    -= CdOnResourceResolve;
 
-            cd.FirstChanceException -= CurrentDomainOnFirstChanceException;
+            cd.UnhandledException -= OnAppDomainUnhandledException ;
+            cd.ResourceResolve    -= CdOnResourceResolve ;
+
+            cd.FirstChanceException -= CurrentDomainOnFirstChanceException ;
             _container?.Dispose ( ) ;
             AppContainer?.Dispose ( ) ;
         }

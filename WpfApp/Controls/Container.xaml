@@ -116,7 +116,7 @@
                             </ListView.View>
                             <system:Object />
                         </ListView>
-                        <StackPanel Grid.Row="2">
+                        <StackPanel Grid.Row="1">
                             <ListView ItemsSource="{Binding ElementName=userControl, Path=DataContext}">
                                 <ListView.View>
                                     <GridView>

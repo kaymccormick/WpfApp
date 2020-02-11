@@ -15,8 +15,7 @@ using Xunit ;
 
 namespace Tests.CollectionDefinitions
 {
-    /// <summary>Defines the Xunit collection definition for tests that do not fall into other buckets. Provides the <see cref="GlobalLoggingFixture"/.></summary>
-    /// <seealso cref="
+    /// <summary>Defines the Xunit collection definition for tests that do not fall into other buckets. Provides the <see cref="GlobalLoggingFixture"/>.</summary>
     /// GlobalLoggingFixture" />
     [ CollectionDefinition ( "GeneralPurpose" ) ] [ UsedImplicitly ]
     public class GeneralPurpose : ICollectionFixture <GlobalLoggingFixture>

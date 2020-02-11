@@ -41,7 +41,7 @@ namespace WpfApp
                                , typeof ( Commands )
                                 ) ;
 
-        /// <summary<see cref="RoutedUICommand"/> to load the selected object.</summary>
+        /// <summary><see cref="RoutedUICommand"/> to load the selected object.</summary>
         public static readonly RoutedUICommand Load =
             new RoutedUICommand ( "Load" , nameof ( Load ) , typeof ( Commands ) ) ;
 

@@ -262,11 +262,13 @@ namespace WpfApp.Core.Logging
 
             LogManager.Configuration.RemoveTarget ( target.Name ) ;
             LogManager.LogFactory.ReconfigExistingLoggers ( ) ;
+#if LOGREMOVAL
             Logger.Debug ( "Removing target " + target ) ;
             foreach ( var t in LogManager.Configuration.AllTargets )
             {
                 Logger.Debug ( "Target " + t ) ;
             }
+#endif
         }
 
         /// <summary>Ensures the logging configured.</summary>
@@ -451,11 +453,15 @@ namespace WpfApp.Core.Logging
         /// <summary>Adds the supplied target to the current NLog configuration.</summary>
         /// <param name="target">The target.</param>
         // ReSharper disable once RedundantNameQualifier
-        public static void AddTarget ( NLog.Targets.Target target )
+        public static void AddTarget ( NLog.Targets.Target target, NLog.LogLevel minLevel)
         {
+            if(minLevel == null)
+            {
+                minLevel = LogLevel.Trace ;
+            }
             LogManager.Configuration.AddTarget ( target ) ;
             var rule = DefaultLoggingRule ( target ) ;
-            LogManager.Configuration.AddRule ( LogLevel.Trace , LogLevel.Fatal , target , "*" ) ;
+            LogManager.Configuration.AddRule ( minLevel, LogLevel.Fatal , target , "*" ) ;
 
             LogManager.LogFactory.ReconfigExistingLoggers ( ) ;
         }
@@ -488,7 +494,9 @@ namespace WpfApp.Core.Logging
                                                 tuple => new JsonAttribute (
                                                                             tuple.Item1
                                                                           , Layout.FromString (
-                                                                                               tuple.Item2 ?? $"${{{tuple.Item1}}}"
+                                                                                               tuple
+                                                                                                  .Item2
+                                                                                               ?? $"${{{tuple.Item1}}}"
                                                                                               )
                                                                            )
                                                )

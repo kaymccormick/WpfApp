@@ -4,9 +4,7 @@ using NLog.Layouts ;
 using Tests.Lib.Fixtures ;
 using WpfApp.Application ;
 using WpfApp.Core.Container ;
-using WpfApp.Core.Utils ;
 using WpfApp.Debug ;
-using WpfApp.Proxy ;
 using Xunit ;
 using Xunit.Abstractions ;
 
@@ -18,6 +16,8 @@ namespace Tests.Main
     [ Collection ( "GeneralPurpose" ) ]
     public class AppTests : IClassFixture < LoggingFixture > , IDisposable
     {
+        // ReSharper disable once UnusedMember.Local
+        // ReSharper disable once InconsistentNaming
         private static   Logger            Logger = LogManager.GetCurrentClassLogger ( ) ;
         private readonly ITestOutputHelper _output ;
         private readonly LoggingFixture    _loggingFixture ;
