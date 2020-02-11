@@ -1,5 +1,5 @@
 ﻿using System.Configuration ;
-using WpfApp.Core.Util ;
+using WpfApp.Core.Container ;
 
 namespace WpfApp.Config
 {

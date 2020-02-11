@@ -46,9 +46,9 @@ namespace WpfApp.Core.Xaml
                 serviceProvider.GetService (
                                             typeof ( IProvideValueTarget )
                                            ) as IProvideValueTarget ;
-            Logger.Info (
-                         $"{string.Join ( ", " , serviceProvider.GetType ( ).GetInterfaces ( ).Select ( ( type , i ) => type.Name ) )}"
-                        ) ;
+            // Logger.Info (
+                         // $"{string.Join ( ", " , serviceProvider.GetType ( ).GetInterfaces ( ).Select ( ( type , i ) => type.Name ) )}"
+                        // ) ;
             if ( service?.TargetObject != null )
             {
                 Logger.Debug ( "TargetOvject " + service.TargetObject ) ;

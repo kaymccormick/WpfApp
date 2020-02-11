@@ -23,13 +23,6 @@
                 </wpfApp:Props.LifetimeScope>
             </core:ResolveService>
         </wpfApp:ResolveServiceList>
-        <DataTemplate x:Key="ResourceValueCell">
-            <controls:TypeControl Target="{Binding ElementName=frame}" TargetDetailed="true">
-                <wpfApp:Props.RenderedType>
-                    <Binding Path="Value" Converter="{StaticResource GetTypeConverter}" />
-                </wpfApp:Props.RenderedType>
-            </controls:TypeControl>
-        </DataTemplate>
     </Window.Resources>
     <Grid DataContext="{Binding ElementName=mainWindow, Path=(wpfApp:Props.LifetimeScope)}">
         <Grid.ColumnDefinitions>
@@ -42,31 +35,9 @@
             <TextBlock Text="{Binding Path=Tag}" />
             <TextBlock Text="{Binding Source={xaml:LifetimeScope}, Path=Tag}" />
         </StackPanel>
-        <TabControl Name="mainTabControl" Grid.Column="0" Grid.Row="1" />
-        <TabControl Visibility="Hidden" Grid.Column="0" Grid.Row="1" Style="{StaticResource TabControlStyle1}">
-            <TabItem Header="0" />
+        <TabControl Visibility="Visible" Grid.Column="0" Grid.Row="1" Style="{StaticResource TabControlStyle1}">
             <TabItem Header="Tab 1" HorizontalAlignment="Right" Margin="-2.4,-2,-2.2,0.4" Width="63">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition />
-                        <ColumnDefinition Width="15*" />
-                        <ColumnDefinition Width="Auto" />
-                    </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="*" />
-                    </Grid.RowDefinitions>
-                    <ListView ItemsSource="{Binding ElementName=mainWindow,Path=Resources}" Grid.ColumnSpan="2"
-                              Margin="0,0,0,0.2">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn Header="Key" Width="200" DisplayMemberBinding="{Binding Key}" />
-                                <GridViewColumn Width="150" Header="Type"
-                                                CellTemplate="{StaticResource ResourceValueCell}" />
-                                <GridViewColumn Width="300" Header="Value" DisplayMemberBinding="{Binding Value}" />
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-                </Grid>
+                <controls:AllResourcesControl/>
             </TabItem>
             <TabItem Header="ResolveServiceList">
                 <Grid>
@@ -130,7 +101,7 @@
                BorderBrush="Brown" BorderThickness="3"
                Navigating="Frame_OnNavigating"
                NavigationFailed="Frame_OnNavigationFailed" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
-               Name="frame" Source="TypePage.xaml">
+               Name="frame" Source="../Controls/TypePage.xaml">
             <Frame.CommandBindings>
                 <CommandBinding Command="wpfApp:Commands.VisitType" Executed="VisitType" />
             </Frame.CommandBindings>

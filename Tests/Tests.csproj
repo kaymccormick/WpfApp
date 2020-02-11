@@ -76,6 +76,7 @@
     <Compile Include="Lib\Logging\XunitTarget.cs" />
     <Compile Include="Lib\Misc\IRandom.cs" />
     <Compile Include="Lib\Misc\RandomClass.cs" />
+    <Compile Include="Lib\UnexpectedPropertyException.cs" />
     <Compile Include="Lib\Utils\CacheUtils.cs" />
     <Compile Include="Lib\Utils\ConverterInfo.cs" />
     <Compile Include="Lib\Utils\LogHelper.cs" />
@@ -90,6 +91,7 @@
     <Compile Include="Main\DefaultObjectIdProviderTests.cs" />
     <Compile Include="Main\LogConfigTest.cs" />
     <Compile Include="Main\MenuHelperTests.cs" />
+    <Compile Include="Main\TestProps.cs" />
     <Compile Include="Main\UI\TypeControlTests.cs" />
     <Compile Include="Main\Utils\InfoContextTests.cs" />
     <Compile Include="Main\Utils\PushContextAttributeTests.cs" />
@@ -158,6 +160,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="test" DependsOnTargets="build">
     <!-- $(OutputPath)/$(AssemblyName)$(TargetExt)" -->

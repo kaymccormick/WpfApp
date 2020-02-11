@@ -3,7 +3,7 @@ using NLog ;
 using NLog.Layouts ;
 using Tests.Lib.Fixtures ;
 using WpfApp.Application ;
-using WpfApp.Core.Util ;
+using WpfApp.Core.Container ;
 using WpfApp.Core.Utils ;
 using WpfApp.Debug ;
 using WpfApp.Proxy ;

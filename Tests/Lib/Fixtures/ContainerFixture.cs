@@ -14,7 +14,7 @@ using System.Threading.Tasks ;
 using Autofac ;
 using JetBrains.Annotations ;
 using NLog ;
-using WpfApp.Core.Util ;
+using WpfApp.Core.Container ;
 using WpfApp.Core.Utils ;
 using Xunit ;
 
@@ -42,7 +42,7 @@ namespace Tests.Lib.Fixtures
         /// </summary>
         public ContainerFixture ( )
         {
-            _container    = ContainerHelper.SetupContainer ( out _ ) ;
+            _container    = ContainerHelper.SetupContainer ( out _, null, null ) ;
             LifetimeScope = _container.BeginLifetimeScope ( ) ;
         }
 

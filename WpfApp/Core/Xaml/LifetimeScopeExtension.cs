@@ -2,6 +2,7 @@
 using System.Windows.Markup ;
 using Autofac ;
 using NLog ;
+using WpfApp.Core.Container ;
 using WpfApp.Core.Interfaces ;
 
 namespace WpfApp.Core.Xaml
@@ -39,13 +40,9 @@ namespace WpfApp.Core.Xaml
         public override object ProvideValue ( IServiceProvider serviceProvider )
         {
             // todo fixme
-            var haveLifetimeScope = System.Windows.Application.Current as IHaveLifetimeScope ;
-            if ( haveLifetimeScope?.LifetimeScope != null )
-            {
-                return haveLifetimeScope.LifetimeScope ;
-            }
-
-            return "unknown" ;
+             var haveLifetimeScope = ContainerHelper.CurrentLifetimeScope ;
+            Logger.Info ( "lifetime scope is {lifetimescope}" , haveLifetimeScope ) ;
+            return haveLifetimeScope ;
         }
     }
 }

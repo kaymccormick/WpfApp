@@ -236,5 +236,13 @@
             </wpfApp:Props.RenderedType>
         </controls:TypeControl>
     </DataTemplate>
+    <DataTemplate x:Key="ResourceValueCell">
+        <controls:TypeControl Target="{Binding ElementName=frame}" TargetDetailed="true">
+            <wpfApp:Props.RenderedType>
+                <Binding Path="Value" Converter="{StaticResource GetTypeConverter}" />
+            </wpfApp:Props.RenderedType>
+        </controls:TypeControl>
+    </DataTemplate>
+
 
 </ResourceDictionary>
