@@ -1,5 +1,6 @@
 ﻿using System ;
 using System.Reflection ;
+using System.Runtime.Serialization;
 
 namespace Tests.Lib
 {
@@ -32,5 +33,7 @@ namespace Tests.Lib
             Message   = message ;
             MemberInfo = memberInfo ;
         }
+
+        public override void GetObjectData(SerializationInfo info, StreamingContext context) => base.GetObjectData(info, context);
     }
 }

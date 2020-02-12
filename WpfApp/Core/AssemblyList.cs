@@ -12,7 +12,7 @@ namespace WpfApp.Core
     {
         /// <summary>
         ///     Initializes a new instance of the
-        ///     <see cref="System.Collections.ObjectModel.ObservableCollection`1" />
+        ///     System.Collections.ObjectModel.ObservableCollection`1
         ///     class.
         /// </summary>
         // ReSharper disable once UnusedMember.Global
@@ -20,11 +20,11 @@ namespace WpfApp.Core
 
         /// <summary>
         ///     Initializes a new instance of the
-        ///     <see cref="System.Collections.ObjectModel.ObservableCollection`1" />
+        ///     System.Collections.ObjectModel.ObservableCollection`1
         ///     class that contains elements copied from the specified list.
         /// </summary>
         /// <param name="list">The list from which the elements are copied.</param>
-        /// <exception cref="T:System.ArgumentNullException">
+        /// <exception cref="System.ArgumentNullException">
         ///     The <paramref name="list" />
         ///     parameter cannot be <see langword="null" />.
         /// </exception>
@@ -33,11 +33,11 @@ namespace WpfApp.Core
 
         /// <summary>
         ///     Initializes a new instance of the
-        ///     <see cref="System.Collections.ObjectModel.ObservableCollection`1" />
+        ///     System.Collections.ObjectModel.ObservableCollection`1
         ///     class that contains elements copied from the specified collection.
         /// </summary>
         /// <param name="collection">The collection from which the elements are copied.</param>
-        /// <exception cref="T:System.ArgumentNullException">
+        /// <exception cref="System.ArgumentNullException">
         ///     The
         ///     <paramref name="collection" /> parameter cannot be
         ///     <see langword="null" />.

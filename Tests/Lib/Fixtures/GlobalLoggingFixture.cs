@@ -62,7 +62,7 @@ namespace Tests.Lib.Fixtures
         public Task InitializeAsync ( ) { return Task.CompletedTask ; }
 
         /// <summary>
-        /// Called when an object is no longer needed. Called just before <see cref="M:System.IDisposable.Dispose" />
+        /// Called when an object is no longer needed. Called just before <see cref="System.IDisposable.Dispose"/>
         /// if the class also implements that.
         /// </summary>
         public Task DisposeAsync ( )

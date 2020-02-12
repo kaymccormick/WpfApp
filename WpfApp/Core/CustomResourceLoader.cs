@@ -18,11 +18,11 @@ namespace WpfApp.Core
 
         /// <summary>
         ///     Initializes a new instance of the
-        ///     <see cref="System.Xaml.Schema.XamlValueConverter`1" /> class, based on
+        ///     System.Xaml.Schema.XamlValueConverter`1 class, based on
         ///     a
         ///     converter implementing <see cref="System.Type" /> and the
         ///     target/destination type of the
-        ///     <see cref="System.Xaml.Schema.XamlValueConverter`1" />.
+        ///     System.Xaml.Schema.XamlValueConverter`1.
         /// </summary>
         /// <param name="converterType">
         ///     The <see cref="System.Type" /> that implements
@@ -31,7 +31,7 @@ namespace WpfApp.Core
         /// <param name="targetType">
         ///     The target/destination
         ///     <see cref="System.Xaml.XamlType" /> of the
-        ///     <see cref="System.Xaml.Schema.XamlValueConverter`1" />.
+        ///     System.Xaml.Schema.XamlValueConverter`1.
         /// </param>
         public CustomResourceLoader ( Type converterType , XamlType targetType ) :
             base ( converterType , targetType )
@@ -42,11 +42,11 @@ namespace WpfApp.Core
 
         /// <summary>
         ///     Initializes a new instance of the
-        ///     <see cref="System.Xaml.Schema.XamlValueConverter`1" /> class, based on
+        ///     System.Xaml.Schema.XamlValueConverter`1 class, based on
         ///     a
         ///     converter implementing <see cref="System.Type" /> the
         ///     target/destination
-        ///     type of the <see cref="System.Xaml.Schema.XamlValueConverter`1" />,
+        ///     type of the System.Xaml.Schema.XamlValueConverter`1,
         ///     and a
         ///     string name.
         /// </summary>
@@ -57,10 +57,10 @@ namespace WpfApp.Core
         /// <param name="targetType">
         ///     The target/destination
         ///     <see cref="System.Xaml.XamlType" /> of the
-        ///     <see cref="System.Xaml.Schema.XamlValueConverter`1" />.
+        ///     System.Xaml.Schema.XamlValueConverter`1.
         /// </param>
         /// <param name="name">The string name.</param>
-        /// <exception cref="T:System.ArgumentException">
+        /// <exception cref="System.ArgumentException">
         ///     All three parameters are
         ///     <see langword="null" /> (at least one is required to be non-null).
         /// </exception>
@@ -77,7 +77,7 @@ namespace WpfApp.Core
         ///     An instance of the converter implementation, or
         ///     <see langword="null" />.
         /// </returns>
-        /// <exception cref="T:System.Xaml.XamlSchemaException">
+        /// <exception cref="System.Xaml.XamlSchemaException">
         ///     Converter did not implement
         ///     the correct base type.
         /// </exception>

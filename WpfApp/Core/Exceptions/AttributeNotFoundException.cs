@@ -31,9 +31,9 @@ namespace WpfApp.Core.Exceptions
         /// <summary>Initializes a new instance of the <see cref="System.Exception" /> class with serialized data.</summary>
         /// <param name="info">The <see cref="System.Runtime.Serialization.SerializationInfo" /> that holds the serialized object data about the exception being thrown.</param>
         /// <param name="context">The <see cref="System.Runtime.Serialization.StreamingContext" /> that contains contextual information about the source or destination.</param>
-        /// <exception cref="T:System.ArgumentNullException">
+        /// <exception cref="System.ArgumentNullException">
         /// <paramref name="info" /> is <see langword="null" />.</exception>
-        /// <exception cref="T:System.Runtime.Serialization.SerializationException">The class name is <see langword="null" /> or <see cref="P:System.Exception.HResult" /> is zero (0).</exception>
+        /// <exception cref="System.Runtime.Serialization.SerializationException">The class name is <see langword="null" /> or <see cref="System.Exception.HResult"/> is zero (0).</exception>
         protected AttributeNotFoundException (
             [ NotNull ] SerializationInfo info
           , StreamingContext              context
@@ -48,5 +48,7 @@ namespace WpfApp.Core.Exceptions
         // ReSharper disable once UnusedAutoPropertyAccessor.Global
         // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Local
         public string AttributeName { get ; private set ; }
+
+        public override void GetObjectData(SerializationInfo info, StreamingContext context) => base.GetObjectData(info, context);
     }
 }

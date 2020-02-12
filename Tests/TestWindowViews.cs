@@ -13,7 +13,7 @@ namespace Tests
         /// <summary>Initializes a new instance of the <see cref="System.Object" /> class.</summary>
         // ReSharper disable once UnusedParameter.Local
         // ReSharper disable once UnusedParameter.Local
-        public TestWindowViews (WpfApplicationFixture wpfApplicationFixture, AppContainerFixture appContainerFixture)
+        public TestWindowViews (AppContainerFixture appContainerFixture)
         {
         }
 

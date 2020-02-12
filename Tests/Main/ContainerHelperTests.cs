@@ -19,8 +19,6 @@ namespace Tests.Main
     [ Collection ( @"WpfApp" ) ] [ BeforeAfterLogger ] [ LogTestMethod ]
     public class ContainerHelperTests : IClassFixture < LoggingFixture > , IDisposable
     {
-        // ReSharper disable once NotAccessedField.Local
-        private readonly WpfApplicationFixture _wpfApplicationFixture ;
 
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
@@ -33,11 +31,9 @@ namespace Tests.Main
         public ContainerHelperTests (
             LoggingFixture        loggingFixture
           , ITestOutputHelper     output
-          , WpfApplicationFixture wpfApplicationFixture
           , AppContainerFixture   appContainerFixture
         )
         {
-            _wpfApplicationFixture = wpfApplicationFixture ;
             loggingFixture.SetOutputHelper ( output ) ;
 
             LoggingFixture = loggingFixture ;

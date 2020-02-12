@@ -82,7 +82,7 @@ namespace Tests.Lib.Fixtures
 
         /// <summary>
         ///     Called when an object is no longer needed. Called just before
-        ///     <see cref="M:System.IDisposable.Dispose" />
+        ///     <see cref="System.IDisposable.Dispose"/>
         ///     if the class also implements that.
         /// </summary>
         public Task DisposeAsync ( ) { return _wpfApplicationHelper.DisposeAsync ( ) ; }

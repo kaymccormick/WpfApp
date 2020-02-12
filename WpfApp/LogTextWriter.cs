@@ -45,11 +45,11 @@ namespace WpfApp
         ///     The string to write. If <paramref name="value" /> is
         ///     <see langword="null" />, only the line terminator is written.
         /// </param>
-        /// <exception cref="T:System.ObjectDisposedException">
+        /// <exception cref="System.ObjectDisposedException">
         ///     The
         ///     <see cref="System.IO.TextWriter" /> is closed.
         /// </exception>
-        /// <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
+        /// <exception cref="System.IO.IOException">An I/O error occurs.</exception>
         public override void WriteLine ( string value ) { Logger.Warn ( value ) ; }
     }
 }

@@ -63,13 +63,6 @@ namespace Tests.Main.Utils
                     }
 
                     continue ;
-                    Logger.Debug("{t}", t);
-                    var j = 0;
-                    j++;
-                    if (limitOutput && j >= 5)
-                    {
-                        break;
-                    }
                 }
 
 

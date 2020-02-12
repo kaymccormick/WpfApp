@@ -77,13 +77,13 @@ namespace WpfApp.Core.Util
         ///     <see cref="System.Runtime.Serialization.StreamingContext" /> that
         ///     contains contextual information about the source or destination.
         /// </param>
-        /// <exception cref="T:System.ArgumentNullException">
+        /// <exception cref="System.ArgumentNullException">
         ///     <paramref name="info" /> is <see langword="null" />.
         /// </exception>
-        /// <exception cref="T:System.Runtime.Serialization.SerializationException">
+        /// <exception cref="System.Runtime.Serialization.SerializationException">
         ///     The
         ///     class name is <see langword="null" /> or
-        ///     <see cref="P:System.Exception.HResult" /> is zero (0).
+        ///     <see cref="System.Exception.HResult"/> is zero (0).
         /// </exception>
         // ReSharper disable once UnusedMember.Global
         protected ContextStackException (

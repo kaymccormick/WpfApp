@@ -1,5 +1,6 @@
 ﻿using System ;
 using System.Collections.Generic ;
+using System.ComponentModel ;
 using System.Diagnostics.CodeAnalysis ;
 using System.Threading.Tasks ;
 using Autofac ;
@@ -20,6 +21,7 @@ namespace WpfApp.Controls.Windows
                         , "CA1063:Implement IDisposable Correctly"
                         , Justification = "<Pending>"
                       ) ]
+    [EditorBrowsable(EditorBrowsableState.Never)]
     public class LifetimeScope : ILifetimeScope
     {
         /// <summary>
@@ -46,8 +48,8 @@ namespace WpfApp.Controls.Windows
         /// <param name="parameters">Parameters for the instance.</param>
         /// <returns>The component instance.</returns>
         /// <exception
-        ///     cref="T:Autofac.Core.Registration.ComponentNotRegisteredException" />
-        /// <exception cref="T:Autofac.Core.DependencyResolutionException" />
+        ///     cref="Autofac.Core.Registration.ComponentNotRegisteredException" />
+        /// <exception cref="Autofac.Core.DependencyResolutionException" />
         public object ResolveComponent (
             IComponentRegistration    registration
           , IEnumerable < Parameter > parameters
@@ -163,8 +165,7 @@ namespace WpfApp.Controls.Windows
         ///     Tags allow a level in the lifetime hierarchy to be identified.
         ///     In most applications, tags are not necessary.
         /// </remarks>
-        /// <seealso
-        ///     cref="M:Autofac.Builder.IRegistrationBuilder`3.InstancePerMatchingLifetimeScope(System.Object[])" />
+        
         // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Global
         public object Tag { get ; set ; }
 

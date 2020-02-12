@@ -12,7 +12,8 @@ namespace WpfApp.Controls
     {
         // ReSharper disable once UnusedMember.Local
         // ReSharper disable once InternalOrPrivateMemberNotDocumented
-        private static Logger _logger = LogManager.GetCurrentClassLogger ( ) ;
+        // ReSharper disable once InconsistentNaming
+        private static Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
         /// <summary>
         ///     Initializes a new instance of the <see cref="AssemblyBrowser" />

@@ -51,7 +51,7 @@ namespace WpfApp.Core.Logging
         /// TODO Edit XML Comment Template for LoggerRegistered
         public event LoggerRegisteredEventHandler LoggerRegistered ;
 
-        /// <summary>Raises the <see cref="E:LoggerRegistered" /> event.</summary>
+        /// <summary>Raises the <see cref="LoggerRegistered"/> event.</summary>
         /// <param name="args">
         ///     The <see cref="LoggerEventArgs" /> instance containing
         ///     the event data.

@@ -102,12 +102,12 @@ namespace WpfApp.Core.Converters
         ///     An <see cref="System.Object" /> that represents the converted
         ///     value.
         /// </returns>
-        /// <exception cref="T:System.ArgumentNullException">
+        /// <exception cref="System.ArgumentNullException">
         ///     The
         ///     <paramref name="destinationType" /> parameter is <see langword="null" />
         ///     .
         /// </exception>
-        /// <exception cref="T:System.NotSupportedException">
+        /// <exception cref="System.NotSupportedException">
         ///     The conversion cannot be
         ///     performed.
         /// </exception>

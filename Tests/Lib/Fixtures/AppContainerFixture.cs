@@ -12,6 +12,7 @@
 
 using System ;
 using System.Collections.Generic ;
+using System.ComponentModel ;
 using System.Threading.Tasks ;
 using Autofac ;
 using Autofac.Core ;
@@ -29,6 +30,7 @@ namespace Tests.Lib.Fixtures
     /// <seealso cref="Xunit.IAsyncLifetime" />
     /// <seealso cref="ContainerHelper"/>
     [UsedImplicitly ]
+    [Browsable(false)]
     public class AppContainerFixture : IAsyncLifetime, ILifetimeScope
     {
         private readonly IMessageSink _sink ;
@@ -73,7 +75,7 @@ namespace Tests.Lib.Fixtures
 
         /// <summary>
         ///     Called when an object is no longer needed. Called just before
-        ///     <see cref="M:System.IDisposable.Dispose" />
+        ///     <see cref="System.IDisposable.Dispose"/>
         ///     if the class also implements that.
         /// </summary>
         public Task DisposeAsync ( )
@@ -89,8 +91,8 @@ namespace Tests.Lib.Fixtures
         /// <param name="registration">The registration.</param>
         /// <param name="parameters">Parameters for the instance.</param>
         /// <returns>The component instance.</returns>
-        /// <exception cref="T:Autofac.Core.Registration.ComponentNotRegisteredException" />
-        /// <exception cref="T:Autofac.Core.DependencyResolutionException" />
+        /// <exception cref="Autofac.Core.Registration.ComponentNotRegisteredException" />
+        /// <exception cref="Autofac.Core.DependencyResolutionException" />
         public object ResolveComponent ( IComponentRegistration registration , IEnumerable < Parameter > parameters ) { return LifetimeScope.ResolveComponent ( registration , parameters ) ; }
 
         /// <summary>
@@ -120,51 +122,16 @@ namespace Tests.Lib.Fixtures
         /// <returns>A new lifetime scope.</returns>
         public ILifetimeScope BeginLifetimeScope ( object tag ) { return LifetimeScope.BeginLifetimeScope ( tag ) ; }
 
-        /// <summary>
-        /// Begin a new nested scope, with additional components available to it.
-        /// Component instances created via the new scope
-        /// will be disposed along with it.
-        /// </summary>
-        /// <remarks>
-        /// The components registered in the sub-scope will be treated as though they were
-        /// registered in the root scope, i.e., SingleInstance() components will live as long
-        /// as the root scope.
-        /// </remarks>
-        /// <param name="configurationAction">Action on a <see cref="Autofac.ContainerBuilder" />
-        /// that adds component registrations visible only in the new scope.</param>
-        /// <returns>A new lifetime scope.</returns>
+        
         public ILifetimeScope BeginLifetimeScope ( Action < ContainerBuilder > configurationAction ) { return LifetimeScope.BeginLifetimeScope ( configurationAction ) ; }
 
-        /// <summary>
-        /// Begin a new nested scope, with additional components available to it.
-        /// Component instances created via the new scope
-        /// will be disposed along with it.
-        /// </summary>
-        /// <remarks>
-        /// The components registered in the sub-scope will be treated as though they were
-        /// registered in the root scope, i.e., SingleInstance() components will live as long
-        /// as the root scope.
-        /// </remarks>
-        /// <param name="tag">The tag applied to the <see cref="Autofac.ILifetimeScope" />.</param>
-        /// <param name="configurationAction">Action on a <see cref="Autofac.ContainerBuilder" />
-        /// that adds component registrations visible only in the new scope.</param>
-        /// <returns>A new lifetime scope.</returns>
+    
         public ILifetimeScope BeginLifetimeScope ( object tag , Action < ContainerBuilder > configurationAction ) { return LifetimeScope.BeginLifetimeScope ( tag , configurationAction ) ; }
 
-        /// <summary>
-        /// Gets the disposer associated with this <see cref="Autofac.ILifetimeScope" />.
-        /// Component instances can be associated with it manually if required.
-        /// </summary>
-        /// <remarks>Typical usage does not require interaction with this member- it
-        /// is used when extending the container.</remarks>
+       
         public IDisposer Disposer => LifetimeScope.Disposer ;
 
-        /// <summary>
-        /// Gets the tag applied to the <see cref="Autofac.ILifetimeScope" />.
-        /// </summary>
-        /// <remarks>Tags allow a level in the lifetime hierarchy to be identified.
-        /// In most applications, tags are not necessary.</remarks>
-        /// <seealso cref="M:Autofac.Builder.IRegistrationBuilder`3.InstancePerMatchingLifetimeScope(System.Object[])" />
+      
         public object Tag => LifetimeScope.Tag ;
 
         /// <summary>

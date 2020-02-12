@@ -110,9 +110,9 @@ namespace WpfApp.Core.Xaml
 
         /// <summary>
         ///     Raises the
-        ///     <see cref="E:System.Windows.FrameworkElement.Initialized" /> event. This
+        ///     <see cref="System.Windows.FrameworkElement.Initialized"/> event. This
         ///     method is invoked whenever
-        ///     <see cref="P:System.Windows.FrameworkElement.IsInitialized" /> is set to
+        ///     <see cref="System.Windows.FrameworkElement.IsInitialized"/> is set to
         ///     <see langword="true " />internally.
         /// </summary>
         /// <param name="e">

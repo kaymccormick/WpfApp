@@ -37,7 +37,7 @@ namespace Tests.Main.Utils
 
         /// <summary>
         /// Gets a value which indicates a runner switch which can be used
-        /// to explicitly enable the runner. If the return value is <c>null</c>,
+        /// to explicitly enable the runner. If the return value is <see language="null"/>,
         /// then the reported can only be environmentally enabled (implicitly).
         /// This value is used either as a command line switch (with the console or
         /// .NET CLI runner) or as a runner configuration value (with the MSBuild runner).
@@ -53,7 +53,7 @@ namespace Tests.Main.Utils
         /// never throw exceptions.
         /// </summary>
         /// <param name="message">The message from the message bus</param>
-        /// <returns>Return <c>true</c> to continue running tests, or <c>false</c> to stop.</returns>
+        /// <returns>Return <see language="true"/> to continue running tests, or <see language="false"/> to stop.</returns>
         public bool OnMessage ( IMessageSinkMessage message ) { throw new NotImplementedException ( ) ; }
 
         /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
@@ -64,8 +64,8 @@ namespace Tests.Main.Utils
         /// This method should never throw exceptions.
         /// </summary>
         /// <param name="message">The message from the message bus.</param>
-        /// <param name="messageTypes">The list of message types, or <c>null</c>.</param>
-        /// <returns>Return <c>true</c> to continue running tests, or <c>false</c> to stop.</returns>
+        /// <param name="messageTypes">The list of message types, or <see language="null"/>.</param>
+        /// <returns>Return <see language="true"/> to continue running tests, or <see language="false"/> to stop.</returns>
         public bool OnMessageWithTypes (
             IMessageSinkMessage message
           , HashSet < string >  messageTypes
