@@ -63,7 +63,7 @@ namespace WpfApp.Core.Tracing
             var i = 0 ;
             foreach ( var q in eventCache.LogicalOperationStack )
             {
-                Logger.Error ( $"{id}{i}: {source} {q.GetType ( )}: {q}" ) ;
+                Logger.Info( $"{id}{i}: {source} {q.GetType ( )}: {q}" ) ;
                 i ++ ;
             }
         }

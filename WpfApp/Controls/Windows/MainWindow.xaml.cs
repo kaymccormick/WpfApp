@@ -106,7 +106,7 @@ namespace WpfApp.Controls.Windows
                                                    ui.GetType ( )
                                                  , typeof ( ContentPropertyAttribute )
                                                   ) ;
-            Logger.Error ( $"child {desc} ({ui.GetType ( )})" ) ;
+            Logger.Info( $"child {desc} ({ui.GetType ( )})" ) ;
             if ( qq != null )
             {
                 var content =

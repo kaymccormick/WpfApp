@@ -36,7 +36,7 @@ namespace WpfApp.Proxy
         /// </remarks>
         public void NonProxyableMemberNotification ( Type type , MemberInfo memberInfo )
         {
-            Logger.Error ( $"cant proxy {memberInfo.Name}" ) ;
+            Logger.Warn( $"cant proxy {memberInfo.Name}" ) ;
         }
 
         /// <summary>
@@ -47,7 +47,7 @@ namespace WpfApp.Proxy
         /// <returns>True if the given method should be proxied; false otherwise.</returns>
         public bool ShouldInterceptMethod ( Type type , MethodInfo methodInfo )
         {
-            Logger.Error ( $"can proxy {methodInfo.Name}" ) ;
+            Logger.Info( $"can proxy {methodInfo.Name}" ) ;
             return true ;
         }
     }

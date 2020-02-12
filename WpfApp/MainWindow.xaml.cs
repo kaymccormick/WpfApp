@@ -72,7 +72,7 @@ namespace WpfApp
         // ReSharper disable once InternalOrPrivateMemberNotDocumented
         private void Frame_OnNavigating ( object sender , NavigatingCancelEventArgs e )
         {
-            Logger.Error ( e.ContentStateToSave ) ;
+            Logger.Info ( e.ContentStateToSave ) ;
         }
 
         // ReSharper disable once InternalOrPrivateMemberNotDocumented

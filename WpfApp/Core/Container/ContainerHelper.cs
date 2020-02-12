@@ -417,7 +417,7 @@ else
           , LifetimeScopeEndingEventArgs e
         )
         {
-            Logger.Error (
+            Logger.Info(
                           $"{nameof ( SetupContainerOnCurrentScopeEnding )} {e.LifetimeScope.Tag}"
                          ) ;
             CurrentLifetimeScope = null ;
@@ -429,7 +429,7 @@ else
         )
         {
             var n = Random.Next ( 1024 ) ;
-            Logger.Error ( $"Child lifetime scope beginning {n}:  {e.LifetimeScope.Tag}" ) ;
+            Logger.Info( $"Child lifetime scope beginning {n}:  {e.LifetimeScope.Tag}" ) ;
             e.LifetimeScope.ChildLifetimeScopeBeginning +=
                 SetupContainerOnChildLifetimeScopeBeginning ;
             CurrentLifetimeScope = e.LifetimeScope ;

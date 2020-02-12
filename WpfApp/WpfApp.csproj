@@ -272,6 +272,11 @@
     <Compile Include="Core\Model\ResourcesUtil.cs" />
     <Compile Include="Commands.cs" />
     <Compile Include="LogTextWriter.cs" />
+    <Compile Include="Resource1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource1.resx</DependentUpon>
+    </Compile>
     <Compile Include="ResourceMetadata.cs" />
     <Compile Include="TestO.cs" />
     <Compile Include="Core\Tracing\AppTraceListener.cs" />
@@ -349,6 +354,10 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resource1.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource1.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -380,7 +389,7 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="DynamicData">
-      <Version>6.14.3</Version>
+      <Version>6.14.8</Version>
     </PackageReference>
     <PackageReference Include="JetBrains.Annotations">
       <Version>2019.1.3</Version>
