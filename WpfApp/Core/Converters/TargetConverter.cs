@@ -57,12 +57,12 @@ namespace WpfApp.Core.Converters
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
         /// <param name="destinationType">
-        ///     A <see cref="T:System.Type" /> that represents
+        ///     A <see cref="System.Type" /> that represents
         ///     the type you want to convert to.
         /// </param>
         /// <returns>
@@ -85,21 +85,21 @@ namespace WpfApp.Core.Converters
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
         /// <param name="culture">
-        ///     A <see cref="T:System.Globalization.CultureInfo" />. If
+        ///     A <see cref="System.Globalization.CultureInfo" />. If
         ///     <see langword="null" /> is passed, the current culture is assumed.
         /// </param>
-        /// <param name="value">The <see cref="T:System.Object" /> to convert.</param>
+        /// <param name="value">The <see cref="System.Object" /> to convert.</param>
         /// <param name="destinationType">
-        ///     The <see cref="T:System.Type" /> to convert the
+        ///     The <see cref="System.Type" /> to convert the
         ///     <paramref name="value" /> parameter to.
         /// </param>
         /// <returns>
-        ///     An <see cref="T:System.Object" /> that represents the converted
+        ///     An <see cref="System.Object" /> that represents the converted
         ///     value.
         /// </returns>
         /// <exception cref="T:System.ArgumentNullException">

@@ -33,7 +33,7 @@ namespace Tests.Main.Converters
         private readonly ITestOutputHelper    _output ;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public TestResolveServiceConverter (

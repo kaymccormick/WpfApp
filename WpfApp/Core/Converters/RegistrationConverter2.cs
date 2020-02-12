@@ -71,7 +71,7 @@ namespace WpfApp.Core.Converters
 
                 if ( targetType.IsSubclassOf ( typeof ( IEnumerable ) ) )
                 {
-                    return new object[ 0 ] ;
+                    return Array.Empty<object>();
                 }
 
                 return null ;

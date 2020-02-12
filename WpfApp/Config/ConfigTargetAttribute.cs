@@ -21,7 +21,7 @@ namespace WpfApp.Config
     [AttributeUsage(AttributeTargets.Class)]
     public class ConfigTargetAttribute : Attribute
     {
-        /// <summary>Initializes a new instance of the <see cref="T:ConfigTargetAttribute"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="ConfigTargetAttribute"/> class.</summary>
         /// <param name="targetType"></param>
         public ConfigTargetAttribute ( Type targetType ) { TargetType = targetType ; }
 

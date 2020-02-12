@@ -54,23 +54,23 @@ namespace WpfApp.Core.Logging
 
         /// <summary>
         ///     Creates an instance of the type that this
-        ///     <see cref="T:System.ComponentModel.TypeConverter" /> is associated with,
+        ///     <see cref="System.ComponentModel.TypeConverter" /> is associated with,
         ///     using the specified context, given a set of property values for the
         ///     object.
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
         /// <param name="propertyValues">
-        ///     An <see cref="T:System.Collections.IDictionary" />
+        ///     An <see cref="System.Collections.IDictionary" />
         ///     of new property values.
         /// </param>
         /// <returns>
-        ///     An <see cref="T:System.Object" /> representing the given
-        ///     <see cref="T:System.Collections.IDictionary" />, or
+        ///     An <see cref="System.Object" /> representing the given
+        ///     <see cref="System.Collections.IDictionary" />, or
         ///     <see langword="null" />
         ///     if the object cannot be created. This method always returns
         ///     <see langword="null" />.
@@ -91,7 +91,7 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
@@ -113,20 +113,20 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
         /// <param name="value">
-        ///     An <see cref="T:System.Object" /> that specifies the type
+        ///     An <see cref="System.Object" /> that specifies the type
         ///     of array for which to get properties.
         /// </param>
         /// <param name="attributes">
-        ///     An array of type <see cref="T:System.Attribute" />
+        ///     An array of type <see cref="System.Attribute" />
         ///     that is used as a filter.
         /// </param>
         /// <returns>
-        ///     A <see cref="T:System.ComponentModel.PropertyDescriptorCollection" />
+        ///     A <see cref="System.ComponentModel.PropertyDescriptorCollection" />
         ///     with the properties that are exposed for this data type, or
         ///     <see langword="null" /> if there are no properties.
         /// </returns>
@@ -145,7 +145,7 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
@@ -167,7 +167,7 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context that can be used to extract additional information
         ///     about
@@ -196,7 +196,7 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
@@ -221,7 +221,7 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
@@ -242,12 +242,12 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
         /// <param name="sourceType">
-        ///     A <see cref="T:System.Type" /> that represents the
+        ///     A <see cref="System.Type" /> that represents the
         ///     type you want to convert from.
         /// </param>
         /// <returns>
@@ -265,12 +265,12 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
         /// <param name="destinationType">
-        ///     A <see cref="T:System.Type" /> that represents
+        ///     A <see cref="System.Type" /> that represents
         ///     the type you want to convert to.
         /// </param>
         /// <returns>
@@ -293,17 +293,17 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
         /// <param name="culture">
-        ///     The <see cref="T:System.Globalization.CultureInfo" /> to
+        ///     The <see cref="System.Globalization.CultureInfo" /> to
         ///     use as the current culture.
         /// </param>
-        /// <param name="value">The <see cref="T:System.Object" /> to convert.</param>
+        /// <param name="value">The <see cref="System.Object" /> to convert.</param>
         /// <returns>
-        ///     An <see cref="T:System.Object" /> that represents the converted
+        ///     An <see cref="System.Object" /> that represents the converted
         ///     value.
         /// </returns>
         /// <exception cref="T:System.NotSupportedException">
@@ -325,21 +325,21 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
         /// <param name="culture">
-        ///     A <see cref="T:System.Globalization.CultureInfo" />. If
+        ///     A <see cref="System.Globalization.CultureInfo" />. If
         ///     <see langword="null" /> is passed, the current culture is assumed.
         /// </param>
-        /// <param name="value">The <see cref="T:System.Object" /> to convert.</param>
+        /// <param name="value">The <see cref="System.Object" /> to convert.</param>
         /// <param name="destinationType">
-        ///     The <see cref="T:System.Type" /> to convert the
+        ///     The <see cref="System.Type" /> to convert the
         ///     <paramref name="value" /> parameter to.
         /// </param>
         /// <returns>
-        ///     An <see cref="T:System.Object" /> that represents the converted
+        ///     An <see cref="System.Object" /> that represents the converted
         ///     value.
         /// </returns>
         /// <exception cref="T:System.ArgumentNullException">
@@ -379,11 +379,11 @@ namespace WpfApp.Core.Logging
         /// </summary>
         /// <param name="context">
         ///     An
-        ///     <see cref="T:System.ComponentModel.ITypeDescriptorContext" /> that
+        ///     <see cref="System.ComponentModel.ITypeDescriptorContext" /> that
         ///     provides
         ///     a format context.
         /// </param>
-        /// <param name="value">The <see cref="T:System.Object" /> to test for validity.</param>
+        /// <param name="value">The <see cref="System.Object" /> to test for validity.</param>
         /// <returns>
         ///     <see langword="true" /> if the specified value is valid for this object;
         ///     otherwise, <see langword="false" />.

@@ -12,7 +12,6 @@ using Autofac.Extras.AttributeMetadata ;
 using Castle.DynamicProxy ;
 #endif
 using NLog ;
-using WpfApp.Core.Attributes ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Core.Logging ;
 using WpfApp.Modules ;
@@ -360,31 +359,7 @@ else
         /// TODO Edit XML Comment Template for GetAssembliesForScanning
         public static ICollection < Assembly > GetAssembliesForScanningByReferences ( )
         {
-            Logger.Debug (
-                          "Getting assemblies to scan based on AssemblyContainerScan attribute."
-                         ) ;
-
-            var assembliesForScanning = AppDomain.CurrentDomain.GetAssemblies ( )
-                                                 .Where (
-                                                         ( assembly , i1 ) => Attribute.IsDefined (
-                                                                                                   assembly
-                                                                                                 , typeof
-                                                                                                   ( AssemblyContainerScanAttribute
-                                                                                                   )
-                                                                                                  )
-                                                        ) ;
-            var forScanning = assembliesForScanning.ToList ( ) ;
-            Logger.Info (
-                         "Assemblies "
-                         + string.Join (
-                                        ", "
-                                      , forScanning.Select (
-                                                            ( assembly , i1 )
-                                                                => assembly.GetName ( ).Name
-                                                           )
-                                       )
-                        ) ;
-            return forScanning ;
+            throw new NotImplementedException();
         }
 
         /// <summary>Gets the assemblies for scanning via types.</summary>

@@ -23,7 +23,7 @@ namespace Tests.Main
         private static readonly Logger            Logger = LogManager.GetCurrentClassLogger ( ) ;
         private readonly LoggingFixture    _loggingFixture ;
 
-        /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="System.Object" /> class.</summary>
         public TestProps ( ITestOutputHelper output , LoggingFixture loggingFixture )
         {
             _loggingFixture = loggingFixture ;

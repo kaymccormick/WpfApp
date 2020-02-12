@@ -9,7 +9,7 @@ namespace WpfApp.Debug
     /// TODO Edit XML Comment Template for DebugEventArgs
     public class DebugEventArgs : EventArgs
     {
-        /// <summary>Initializes a new instance of the <see cref="T:System.EventArgs"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="System.EventArgs"/> class.</summary>
         /// <param name="message"></param>
         /// <param name="callerMemberName"></param>
         /// <param name="callerFilePath"></param>

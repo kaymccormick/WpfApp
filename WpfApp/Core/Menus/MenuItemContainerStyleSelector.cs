@@ -10,7 +10,7 @@ namespace WpfApp.Core.Menus
     /// TODO Edit XML Comment Template for MenuItemContainerStyleSelector
     public class MenuItemContainerStyleSelector : StyleSelector
     {
-        /// <summary>When overridden in a derived class, returns a <see cref="T:System.Windows.Style"/> based on custom logic.</summary>
+        /// <summary>When overridden in a derived class, returns a <see cref="System.Windows.Style"/> based on custom logic.</summary>
         /// <param name="item">The content.</param>
         /// <param name="container">The element to which the style will be applied.</param>
         /// <returns>

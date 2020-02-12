@@ -28,7 +28,7 @@ namespace WpfApp.Core
         private readonly ConcurrentDictionary < long , object > _registryById ;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public DefaultObjectIdProvider ( ObjectIDGenerator generator )

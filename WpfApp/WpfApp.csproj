@@ -99,6 +99,7 @@
     <Compile Include="Core\Interfaces\IObjectId.cs" />
     <Compile Include="Core\Logging\LoggingCategory.cs" />
     <Compile Include="Debug\DebugEventArgs.cs" />
+    <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="NamespaceDocs.cs" />
     <Compile Include="NewMainWindow.xaml.cs">
       <DependentUpon>NewMainWindow.xaml</DependentUpon>
@@ -127,7 +128,6 @@
     <Compile Include="Controls\Windows\MainWindow.xaml.cs" />
     <Compile Include="Controls\Windows\NewWindow.xaml.cs" />
     <Compile Include="Controls\Windows\Page1.xaml.cs" />
-    <Compile Include="Core\Xaml\AppLoggerExtension.cs" />
     <Compile Include="Core\Xaml\AssemblyConverter.cs" />
     <Compile Include="Core\Xaml\Converter.cs" />
     <ApplicationDefinition Include="Application\App.xaml">
@@ -204,8 +204,6 @@
     </Compile>
     <Compile Include="Props.cs" />
     <Compile Include="Core\AssemblyList.cs" />
-    <Compile Include="Core\Attributes\AssemblyContainerScanAttribute.cs" />
-    <Compile Include="Core\Attributes\InterfaceMetadataAttribute.cs" />
     <Compile Include="Core\CustomResourceLoader.cs" />
     <Compile Include="Core\Infos\ComponentInfo.cs" />
     <Compile Include="Core\Infos\ContextStack.cs" />
@@ -270,7 +268,7 @@
     <Compile Include="Core\Model\ResourceInfo.cs" />
     <Compile Include="Core\Model\ResourcesModel.cs" />
     <Compile Include="Core\Model\ResourcesUtil.cs" />
-    <Compile Include="Commands.cs" />
+    <Compile Include="WpfAppCommands.cs" />
     <Compile Include="LogTextWriter.cs" />
     <Compile Include="Resource1.Designer.cs">
       <AutoGen>True</AutoGen>

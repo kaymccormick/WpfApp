@@ -18,12 +18,12 @@ namespace WpfApp.Core.Menus
 
         /// <summary>
         ///     When overridden in a derived class, returns a
-        ///     <see cref="T:System.Windows.DataTemplate" /> based on custom logic.
+        ///     <see cref="System.Windows.DataTemplate" /> based on custom logic.
         /// </summary>
         /// <param name="item">The data object for which to select the template.</param>
         /// <param name="container">The data-bound object.</param>
         /// <returns>
-        ///     Returns a <see cref="T:System.Windows.DataTemplate" /> or
+        ///     Returns a <see cref="System.Windows.DataTemplate" /> or
         ///     <span class="keyword">
         ///         <span class="languageSpecificText">
         ///             <span class="cs">null</span><span class="vb">Nothing</span>

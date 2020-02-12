@@ -14,7 +14,7 @@ namespace WpfApp.Core.Logging
     public class AppLogger : IAttachedPropertyStore
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public AppLogger ( )
@@ -24,13 +24,13 @@ namespace WpfApp.Core.Logging
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public AppLogger ( ILogger loggerInstance ) { LoggerInstance = loggerInstance ; }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public AppLogger ( string arg ) { Arg = arg ; }
@@ -57,7 +57,7 @@ namespace WpfApp.Core.Logging
         /// <param name="array">
         ///     The destination array. The array is a generic array, should
         ///     be passed undimensioned, and should have components of
-        ///     <see cref="T:System.Xaml.AttachableMemberIdentifier" /> and
+        ///     <see cref="System.Xaml.AttachableMemberIdentifier" /> and
         ///     <see langword="object" />.
         /// </param>
         /// <param name="index">The source index where copying should begin.</param>

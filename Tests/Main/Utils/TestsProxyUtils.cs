@@ -17,7 +17,7 @@ namespace Tests.Main.Utils
     {
         private readonly LoggingFixture _loggingFixture ;
 
-        /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="System.Object" /> class.</summary>
         public TestsProxyUtils (LoggingFixture loggingFixture, ITestOutputHelper helper )
         {
             _loggingFixture = loggingFixture ;

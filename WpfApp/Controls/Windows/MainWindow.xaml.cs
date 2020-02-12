@@ -56,7 +56,7 @@ namespace WpfApp.Controls.Windows
 
         /// <summary>
         ///     Adds a specified object as the child of a
-        ///     <see cref="T:System.Windows.Controls.ContentControl" />.
+        ///     <see cref="System.Windows.Controls.ContentControl" />.
         /// </summary>
         /// <param name="value">The object to add.</param>
         protected override void AddChild ( object value )
@@ -346,7 +346,7 @@ namespace WpfApp.Controls.Windows
 
         /// <summary>Raises the <see cref="E:System.Windows.Window.Closed" /> event.</summary>
         /// <param name="e">
-        ///     An <see cref="T:System.EventArgs" /> that contains the event
+        ///     An <see cref="System.EventArgs" /> that contains the event
         ///     data.
         /// </param>
         protected override void OnClosed ( EventArgs e )

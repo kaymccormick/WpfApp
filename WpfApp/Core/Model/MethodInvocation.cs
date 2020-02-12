@@ -19,7 +19,7 @@ namespace WpfApp.Core.Model
     public class MethodInvocation
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public MethodInvocation (

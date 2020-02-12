@@ -22,7 +22,7 @@ namespace Tests.Main
         private readonly ITestOutputHelper _output ;
         private readonly LoggingFixture    _loggingFixture ;
 
-        /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="System.Object" /> class.</summary>
         public AppTests ( ITestOutputHelper output , LoggingFixture loggingFixture )
         {
             _output         = output ;

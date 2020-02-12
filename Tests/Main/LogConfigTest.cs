@@ -18,7 +18,7 @@ namespace Tests.Main
     public class LogConfigTest : IClassFixture <LoggingFixture>, IDisposable
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         /// <param name="output"></param>

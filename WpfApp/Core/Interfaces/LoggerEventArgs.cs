@@ -10,7 +10,7 @@ namespace WpfApp.Core.Interfaces
     public class LoggerEventArgs : EventArgs
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.EventArgs" />
+        ///     Initializes a new instance of the <see cref="System.EventArgs" />
         ///     class.
         /// </summary>
         public LoggerEventArgs ( ILogger logger ) { Logger = logger ; }

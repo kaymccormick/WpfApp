@@ -51,7 +51,7 @@ namespace WpfApp.Core.Converters
                        new Button
                        {
                            Content          = "Load"
-                         , Command          = Commands.Load
+                         , Command          = WpfAppCommands.Load
                          , CommandParameter = x.Instance
                        }
                       ) ;
@@ -65,7 +65,7 @@ namespace WpfApp.Core.Converters
                        new Button
                        {
                            Content          = "Metadata"
-                         , Command          = Commands.Metadata
+                         , Command          = WpfAppCommands.Metadata
                          , CommandParameter = x.Instance
                        }
                       ) ;

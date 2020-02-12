@@ -11,7 +11,7 @@ namespace WpfApp.Core.Logging
     {
         private readonly LogDelegates.LogMethod _doLogMessage ;
 
-        /// <summary>Initializes a new instance of the <see cref="T:NLog.LogFactory"/>
+        /// <summary>Initializes a new instance of the <see cref="NLog.LogFactory"/>
         ///   class.</summary>
         // ReSharper disable once UnusedMember.Global
         public MyLogFactory ( ) { }

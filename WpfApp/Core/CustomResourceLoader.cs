@@ -18,20 +18,20 @@ namespace WpfApp.Core
 
         /// <summary>
         ///     Initializes a new instance of the
-        ///     <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> class, based on
+        ///     <see cref="System.Xaml.Schema.XamlValueConverter`1" /> class, based on
         ///     a
-        ///     converter implementing <see cref="T:System.Type" /> and the
+        ///     converter implementing <see cref="System.Type" /> and the
         ///     target/destination type of the
-        ///     <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.
+        ///     <see cref="System.Xaml.Schema.XamlValueConverter`1" />.
         /// </summary>
         /// <param name="converterType">
-        ///     The <see cref="T:System.Type" /> that implements
+        ///     The <see cref="System.Type" /> that implements
         ///     the converter behavior.
         /// </param>
         /// <param name="targetType">
         ///     The target/destination
-        ///     <see cref="T:System.Xaml.XamlType" /> of the
-        ///     <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.
+        ///     <see cref="System.Xaml.XamlType" /> of the
+        ///     <see cref="System.Xaml.Schema.XamlValueConverter`1" />.
         /// </param>
         public CustomResourceLoader ( Type converterType , XamlType targetType ) :
             base ( converterType , targetType )
@@ -42,22 +42,22 @@ namespace WpfApp.Core
 
         /// <summary>
         ///     Initializes a new instance of the
-        ///     <see cref="T:System.Xaml.Schema.XamlValueConverter`1" /> class, based on
+        ///     <see cref="System.Xaml.Schema.XamlValueConverter`1" /> class, based on
         ///     a
-        ///     converter implementing <see cref="T:System.Type" /> the
+        ///     converter implementing <see cref="System.Type" /> the
         ///     target/destination
-        ///     type of the <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />,
+        ///     type of the <see cref="System.Xaml.Schema.XamlValueConverter`1" />,
         ///     and a
         ///     string name.
         /// </summary>
         /// <param name="converterType">
-        ///     The <see cref="T:System.Type" /> that implements
+        ///     The <see cref="System.Type" /> that implements
         ///     the converter behavior.
         /// </param>
         /// <param name="targetType">
         ///     The target/destination
-        ///     <see cref="T:System.Xaml.XamlType" /> of the
-        ///     <see cref="T:System.Xaml.Schema.XamlValueConverter`1" />.
+        ///     <see cref="System.Xaml.XamlType" /> of the
+        ///     <see cref="System.Xaml.Schema.XamlValueConverter`1" />.
         /// </param>
         /// <param name="name">The string name.</param>
         /// <exception cref="T:System.ArgumentException">

@@ -28,7 +28,7 @@ namespace WpfApp.Core.Converters
         private readonly IObjectIdProvider _provider ;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         // ReSharper disable once UnusedMember.Global

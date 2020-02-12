@@ -18,7 +18,7 @@
         </DataTemplate>
     </UserControl.Resources>
     <UserControl.CommandBindings>
-        <CommandBinding Command="wpfApp:Commands.LoadAssemblyList"
+        <CommandBinding Command="wpfApp:WpfAppCommands.LoadAssemblyList"
                         Executed="LoadAssemblyList" CanExecute="CanLoadAssemblyList" />
     </UserControl.CommandBindings>
     <Grid>
@@ -34,7 +34,7 @@
         </Grid.RowDefinitions>
         <ToolBarTray>
             <ToolBar Band="1" BandIndex="1">
-                <Button Content="Load" Command="wpfApp:Commands.LoadAssemblyList" />
+                <Button Content="Load" Command="wpfApp:WpfAppCommands.LoadAssemblyList" />
             </ToolBar>
         </ToolBarTray>
         <ListBox Grid.Row="1" Grid.Column="0" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"

@@ -47,7 +47,7 @@ namespace WpfApp
         /// </param>
         /// <exception cref="T:System.ObjectDisposedException">
         ///     The
-        ///     <see cref="T:System.IO.TextWriter" /> is closed.
+        ///     <see cref="System.IO.TextWriter" /> is closed.
         /// </exception>
         /// <exception cref="T:System.IO.IOException">An I/O error occurs.</exception>
         public override void WriteLine ( string value ) { Logger.Warn ( value ) ; }

@@ -68,7 +68,7 @@ namespace WpfApp.Core.Menus
                 m.Header = ( string ) window.Metadata[ "WindowTitle" ] ;
             }
 
-            m.Command          = Commands.OpenWindow ;
+            m.Command          = WpfAppCommands.OpenWindow ;
             m.CommandParameter = window ;
             return m ;
         }

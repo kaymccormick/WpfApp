@@ -23,7 +23,7 @@ namespace WpfApp
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public TestO ( ) { Logger.Debug ( "constructeD" ) ; }

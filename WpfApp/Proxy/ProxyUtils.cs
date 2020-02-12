@@ -264,7 +264,7 @@ namespace WpfApp.Proxy
 
             var m = " " + invocation.Method.Name ;
             if ( invocation.Method.IsSpecialName
-                 && invocation.Method.Name.StartsWith ( "get_" ) )
+                 && invocation.Method.Name.StartsWith ( "get_" , StringComparison.InvariantCulture) )
             {
                 m = $"𝜙 {invocation.Method.Name.Substring ( 4 )}" ;
             }
@@ -503,7 +503,7 @@ namespace WpfApp.Proxy
     /// TODO Edit XML Comment Template for ProxyUtils
     public class ProxyUtils : ProxyUtilsBase
     {
-        /// <summary>Initializes a new instance of the <see cref="T:System.Object"/> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="System.Object"/> class.</summary>
         /// <param name="writeOut">Delegate or lambda to accept raw debug output.</param>
         /// <param name="interceptor">Interceptor to use.</param>
         public ProxyUtils ( Action < string > writeOut , IInterceptor interceptor ) : base (
@@ -588,7 +588,7 @@ namespace WpfApp.Proxy
                                                                      ) ;
             if ( fieldInfo != null ) {
                 var o = fieldInfo.GetValue ( null ) ;
-                Logger.Info ( "{o}" , o ) ;
+                WpfApp.Proxy.ProxyUtilsBase.Logger.Info ( "{o}" , o ) ;
             }
 
             var context = CreateXamlSchemaContext ( ) ;
@@ -756,7 +756,7 @@ namespace WpfApp.Proxy
     {
         public bool Written ;
 
-        /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="System.Object" /> class.</summary>
         public StackInfo ( bool written = false ) { Written = written ; }
     }
 

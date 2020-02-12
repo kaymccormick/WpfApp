@@ -35,7 +35,7 @@ namespace WpfApp.Proxy
 
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
-        /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="System.Object" /> class.</summary>
         protected ContainerBaseInterceptor (ProxyGenerator generator) { Generator = generator ; }
 
         /// <summary>Dumps the delegate.</summary>

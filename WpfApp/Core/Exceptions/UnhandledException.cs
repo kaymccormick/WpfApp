@@ -23,21 +23,21 @@ namespace WpfApp.Core.Exceptions
     public class UnhandledException : Exception
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Exception" />
+        ///     Initializes a new instance of the <see cref="System.Exception" />
         ///     class.
         /// </summary>
         // ReSharper disable once UnusedMember.Global
         public UnhandledException ( ) { }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Exception" />
+        ///     Initializes a new instance of the <see cref="System.Exception" />
         ///     class with a specified error message.
         /// </summary>
         /// <param name="message">The message that describes the error.</param>
         public UnhandledException ( string message ) : base ( message ) { }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Exception" />
+        ///     Initializes a new instance of the <see cref="System.Exception" />
         ///     class with a specified error message and a reference to the inner
         ///     exception
         ///     that is the cause of this exception.
@@ -60,18 +60,18 @@ namespace WpfApp.Core.Exceptions
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Exception" />
+        ///     Initializes a new instance of the <see cref="System.Exception" />
         ///     class with serialized data.
         /// </summary>
         /// <param name="info">
         ///     The
-        ///     <see cref="T:System.Runtime.Serialization.SerializationInfo" /> that
+        ///     <see cref="System.Runtime.Serialization.SerializationInfo" /> that
         ///     holds
         ///     the serialized object data about the exception being thrown.
         /// </param>
         /// <param name="context">
         ///     The
-        ///     <see cref="T:System.Runtime.Serialization.StreamingContext" /> that
+        ///     <see cref="System.Runtime.Serialization.StreamingContext" /> that
         ///     contains contextual information about the source or destination.
         /// </param>
         /// <exception cref="T:System.ArgumentNullException">

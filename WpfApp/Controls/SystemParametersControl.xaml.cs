@@ -100,15 +100,15 @@ namespace WpfApp.Controls
         [Category( "Accessibility" ) ]
         public bool HighContrast { [ SecurityCritical ] get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FocusBorderWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FocusBorderWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey FocusBorderWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FocusBorderHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FocusBorderHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey FocusBorderHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.HighContrast" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.HighContrast" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey HighContrastKey { get; set; }
 
@@ -131,15 +131,15 @@ namespace WpfApp.Controls
         [ Category( "Layout" ) ]
         public Rect WorkArea { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.DropShadow" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.DropShadow" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey DropShadowKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FlatMenu" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FlatMenu" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey FlatMenuKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.WorkArea" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.WorkArea" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey WorkAreaKey { get; set; }
 
@@ -159,15 +159,15 @@ namespace WpfApp.Controls
         [ Category( "Appearance" ) ]
         public bool IconTitleWrap { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconHorizontalSpacing" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconHorizontalSpacing" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IconHorizontalSpacingKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconVerticalSpacing" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconVerticalSpacing" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IconVerticalSpacingKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconTitleWrap" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconTitleWrap" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IconTitleWrapKey { get; set; }
 
@@ -219,39 +219,39 @@ namespace WpfApp.Controls
         [ Category( "Input" ) ]
         public double MouseHoverWidth { [ SecurityCritical ] get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.KeyboardCues" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.KeyboardCues" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey KeyboardCuesKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.KeyboardDelay" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.KeyboardDelay" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey KeyboardDelayKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.KeyboardPreference" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.KeyboardPreference" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey KeyboardPreferenceKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.KeyboardSpeed" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.KeyboardSpeed" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey KeyboardSpeedKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SnapToDefaultButton" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SnapToDefaultButton" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey SnapToDefaultButtonKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.WheelScrollLines" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.WheelScrollLines" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey WheelScrollLinesKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MouseHoverTime" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MouseHoverTime" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MouseHoverTimeKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MouseHoverHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MouseHoverHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MouseHoverHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MouseHoverWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MouseHoverWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MouseHoverWidthKey { get; set; }
 
@@ -273,15 +273,15 @@ namespace WpfApp.Controls
         [ Category( "Input" ) ]
         public int MenuShowDelay { [ SecurityCritical ] get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuDropAlignment" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuDropAlignment" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuDropAlignmentKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuFade" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuFade" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuFadeKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuShowDelay" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuShowDelay" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuShowDelayKey { get; set; }
 
@@ -351,7 +351,7 @@ namespace WpfApp.Controls
         [ Category( "Effects" ) ]
         public PopupAnimation ToolTipPopupAnimation { get; set; }
 
-        /// <summary>Gets a value indicating whether <see cref="T:System.Windows.Controls.ToolTip" /> animation is enabled.  </summary>
+        /// <summary>Gets a value indicating whether <see cref="System.Windows.Controls.ToolTip" /> animation is enabled.  </summary>
         /// <returns>
         /// <see langword="true" /> if ToolTip animation is enabled; otherwise, <see langword="false" />.</returns>
         public bool ToolTipAnimation { [ SecurityCritical ] get; set; }
@@ -368,65 +368,65 @@ namespace WpfApp.Controls
         [ Category( "Effects" ) ]
         public bool UIEffects { [ SecurityCritical ] get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ComboBoxAnimation" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ComboBoxAnimation" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ComboBoxAnimationKey { get; set; }
 
-        /// <summary>Gets a <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ClientAreaAnimation" /> property.</summary>
+        /// <summary>Gets a <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ClientAreaAnimation" /> property.</summary>
         /// <returns>A resource key.</returns>
         [ Category( "Effects" ) ]
         public ResourceKey ClientAreaAnimationKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CursorShadow" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CursorShadow" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey CursorShadowKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.GradientCaptions" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.GradientCaptions" /> property. </summary>
         /// <returns>A resource key.</returns>
         [ Category( "Effects" ) ]
         public ResourceKey GradientCaptionsKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.HotTracking" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.HotTracking" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey HotTrackingKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ListBoxSmoothScrolling" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ListBoxSmoothScrolling" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ListBoxSmoothScrollingKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuAnimation" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuAnimation" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuAnimationKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SelectionFade" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SelectionFade" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey SelectionFadeKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.StylusHotTracking" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.StylusHotTracking" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey StylusHotTrackingKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ToolTipAnimation" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ToolTipAnimation" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ToolTipAnimationKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ToolTipFade" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ToolTipFade" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ToolTipFadeKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.UIEffects" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.UIEffects" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey UIEffectsKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ComboBoxPopupAnimation" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ComboBoxPopupAnimation" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ComboBoxPopupAnimationKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuPopupAnimation" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuPopupAnimation" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuPopupAnimationKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ToolTipPopupAnimation" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ToolTipPopupAnimation" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ToolTipPopupAnimationKey { get; set; }
 
@@ -502,55 +502,55 @@ namespace WpfApp.Controls
         [ Category( "Metrics" ) ]
         public double MenuHeight { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimizeAnimation" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimizeAnimation" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MinimizeAnimationKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.Border" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.Border" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey BorderKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CaretWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CaretWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey CaretWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ForegroundFlashCount" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ForegroundFlashCount" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ForegroundFlashCountKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.DragFullWindows" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.DragFullWindows" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey DragFullWindowsKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.BorderWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.BorderWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey BorderWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ScrollWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ScrollWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ScrollWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ScrollHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ScrollHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ScrollHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CaptionWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CaptionWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey CaptionWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CaptionHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CaptionHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey CaptionHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallCaptionWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallCaptionWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey SmallCaptionWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuHeightKey { get; set; }
 
@@ -624,7 +624,7 @@ namespace WpfApp.Controls
         /// <returns>The height of the scroll bar.</returns>
         public double HorizontalScrollBarHeight { [ SecurityCritical ] get; set; }
 
-        /// <summary>Gets the width, in pixels, of the <see cref="T:System.Windows.Controls.Primitives.Thumb" /> in a horizontal scroll bar. </summary>
+        /// <summary>Gets the width, in pixels, of the <see cref="System.Windows.Controls.Primitives.Thumb" /> in a horizontal scroll bar. </summary>
         /// <returns>The width of the thumb.</returns>
         public double HorizontalScrollBarThumbWidth { [ SecurityCritical ] get; set; }
 
@@ -853,291 +853,291 @@ namespace WpfApp.Controls
         /// <returns>A screen coordinate, in pixels.</returns>
         public double VirtualScreenTop { [ SecurityCritical ] get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ThinHorizontalBorderHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ThinHorizontalBorderHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ThinHorizontalBorderHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ThinVerticalBorderWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ThinVerticalBorderWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ThinVerticalBorderWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CursorWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CursorWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey CursorWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CursorHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.CursorHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey CursorHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ThickHorizontalBorderHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ThickHorizontalBorderHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ThickHorizontalBorderHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ThickVerticalBorderWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ThickVerticalBorderWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ThickVerticalBorderWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FixedFrameHorizontalBorderHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FixedFrameHorizontalBorderHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey FixedFrameHorizontalBorderHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FixedFrameVerticalBorderWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FixedFrameVerticalBorderWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey FixedFrameVerticalBorderWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FocusHorizontalBorderHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FocusHorizontalBorderHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey FocusHorizontalBorderHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FocusVerticalBorderWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FocusVerticalBorderWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey FocusVerticalBorderWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FullPrimaryScreenWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FullPrimaryScreenWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey FullPrimaryScreenWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FullPrimaryScreenHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FullPrimaryScreenHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey FullPrimaryScreenHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.HorizontalScrollBarButtonWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.HorizontalScrollBarButtonWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey HorizontalScrollBarButtonWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.HorizontalScrollBarHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.HorizontalScrollBarHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey HorizontalScrollBarHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.HorizontalScrollBarThumbWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.HorizontalScrollBarThumbWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey HorizontalScrollBarThumbWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IconWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IconHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconGridWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconGridWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IconGridWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconGridHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IconGridHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IconGridHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MaximizedPrimaryScreenWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MaximizedPrimaryScreenWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MaximizedPrimaryScreenWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MaximizedPrimaryScreenHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MaximizedPrimaryScreenHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MaximizedPrimaryScreenHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MaximumWindowTrackWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MaximumWindowTrackWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MaximumWindowTrackWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MaximumWindowTrackHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MaximumWindowTrackHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MaximumWindowTrackHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuCheckmarkWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuCheckmarkWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuCheckmarkWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuCheckmarkHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuCheckmarkHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuCheckmarkHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuButtonWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuButtonWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuButtonWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuButtonHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuButtonHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuButtonHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimumWindowWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimumWindowWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MinimumWindowWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimumWindowHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimumWindowHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MinimumWindowHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimizedWindowWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimizedWindowWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MinimizedWindowWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimizedWindowHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimizedWindowHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MinimizedWindowHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimizedGridWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimizedGridWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MinimizedGridWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimizedGridHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimizedGridHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MinimizedGridHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimumWindowTrackWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimumWindowTrackWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MinimumWindowTrackWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimumWindowTrackHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MinimumWindowTrackHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MinimumWindowTrackHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.PrimaryScreenWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.PrimaryScreenWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey PrimaryScreenWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.PrimaryScreenHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.PrimaryScreenHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey PrimaryScreenHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.WindowCaptionButtonWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.WindowCaptionButtonWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey WindowCaptionButtonWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.WindowCaptionButtonHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.WindowCaptionButtonHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey WindowCaptionButtonHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ResizeFrameHorizontalBorderHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ResizeFrameHorizontalBorderHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ResizeFrameHorizontalBorderHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ResizeFrameVerticalBorderWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ResizeFrameVerticalBorderWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ResizeFrameVerticalBorderWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallIconWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallIconWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey SmallIconWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallIconHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallIconHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey SmallIconHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallWindowCaptionButtonWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallWindowCaptionButtonWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey SmallWindowCaptionButtonWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallWindowCaptionButtonHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallWindowCaptionButtonHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey SmallWindowCaptionButtonHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VirtualScreenWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VirtualScreenWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey VirtualScreenWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VirtualScreenHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VirtualScreenHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey VirtualScreenHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VerticalScrollBarWidth" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VerticalScrollBarWidth" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey VerticalScrollBarWidthKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VerticalScrollBarButtonHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VerticalScrollBarButtonHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey VerticalScrollBarButtonHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.WindowCaptionHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.WindowCaptionHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey WindowCaptionHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.KanjiWindowHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.KanjiWindowHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey KanjiWindowHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuBarHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.MenuBarHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey MenuBarHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallCaptionHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SmallCaptionHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey SmallCaptionHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VerticalScrollBarThumbHeight" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VerticalScrollBarThumbHeight" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey VerticalScrollBarThumbHeightKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsImmEnabled" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsImmEnabled" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsImmEnabledKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsMediaCenter" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsMediaCenter" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsMediaCenterKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsMenuDropRightAligned" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsMenuDropRightAligned" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsMenuDropRightAlignedKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsMiddleEastEnabled" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsMiddleEastEnabled" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsMiddleEastEnabledKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsMousePresent" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsMousePresent" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsMousePresentKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsMouseWheelPresent" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsMouseWheelPresent" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsMouseWheelPresentKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsPenWindows" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsPenWindows" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsPenWindowsKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsRemotelyControlled" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsRemotelyControlled" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsRemotelyControlledKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsRemoteSession" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsRemoteSession" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsRemoteSessionKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ShowSounds" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.ShowSounds" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey ShowSoundsKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsSlowMachine" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsSlowMachine" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsSlowMachineKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SwapButtons" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.SwapButtons" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey SwapButtonsKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsTabletPC" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.IsTabletPC" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey IsTabletPCKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VirtualScreenLeft" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VirtualScreenLeft" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey VirtualScreenLeftKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VirtualScreenTop" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.VirtualScreenTop" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey VirtualScreenTopKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see langword="FocusVisualStyle" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see langword="FocusVisualStyle" /> property. </summary>
         /// <returns>The resource key.</returns>
         public ResourceKey FocusVisualStyleKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.NavigationChromeStyleKey" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.NavigationChromeStyleKey" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey NavigationChromeStyleKey { get; set; }
 
-        /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.NavigationChromeDownLevelStyleKey" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.NavigationChromeDownLevelStyleKey" /> property. </summary>
         /// <returns>A resource key.</returns>
         public ResourceKey NavigationChromeDownLevelStyleKey { get; set; }
 
@@ -1145,7 +1145,7 @@ namespace WpfApp.Controls
         /// <returns>A value in the enumeration.</returns>
         public PowerLineStatus PowerLineStatus { [ SecurityCritical ] get; set; }
 
-        /// <summary>Gets a <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.PowerLineStatus" /> property.</summary>
+        /// <summary>Gets a <see cref="System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.PowerLineStatus" /> property.</summary>
         /// <returns>A resource key.</returns>
         public ResourceKey PowerLineStatusKey { get; set; }
 

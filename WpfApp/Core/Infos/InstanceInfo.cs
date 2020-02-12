@@ -20,13 +20,13 @@ namespace WpfApp.Core.Infos
     public class InstanceInfo
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public InstanceInfo ( ) { }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public InstanceInfo ( object instance , IEnumerable < Parameter > parameters )

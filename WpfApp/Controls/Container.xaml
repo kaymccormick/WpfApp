@@ -18,8 +18,8 @@
             LastChildFill="True">
 
             <DockPanel.CommandBindings>
-                <CommandBinding Command="wpfApp:Commands.Load" Executed="LoadInstance" />
-                <CommandBinding Command="wpfApp:Commands.Metadata" Executed="Metadata" />
+                <CommandBinding Command="wpfApp:WpfAppCommands.Load" Executed="LoadInstance" />
+                <CommandBinding Command="wpfApp:WpfAppCommands.Metadata" Executed="Metadata" />
             </DockPanel.CommandBindings>
 
             <StackPanel>
@@ -82,8 +82,8 @@
                     LastChildFill="True"
                     DataContext="{Binding ComponentRegistry.Registrations}">
                     <DockPanel.CommandBindings>
-                        <CommandBinding Command="wpfApp:Commands.Load" Executed="LoadInstance" />
-                        <CommandBinding Command="wpfApp:Commands.Metadata" Executed="Metadata" />
+                        <CommandBinding Command="wpfApp:WpfAppCommands.Load" Executed="LoadInstance" />
+                        <CommandBinding Command="wpfApp:WpfAppCommands.Metadata" Executed="Metadata" />
                     </DockPanel.CommandBindings>
                     <DockPanel.Resources>
                         <CollectionViewSource

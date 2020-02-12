@@ -22,7 +22,7 @@ namespace Tests.Main.Converters
         private readonly LoggingFixture _loggingFixture ;
         private static readonly Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public TestConverterEnumeration ( ITestOutputHelper output, LoggingFixture loggingFixture)

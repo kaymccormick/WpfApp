@@ -13,7 +13,7 @@ namespace Tests.Lib.Fixtures
     public class TestContainerFixture
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public TestContainerFixture ( ) { _init ( ) ; }

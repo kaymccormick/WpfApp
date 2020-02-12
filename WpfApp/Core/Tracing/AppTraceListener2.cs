@@ -40,7 +40,7 @@ namespace WpfApp.Core.Tracing
         /// <summary>Writes trace and event information to the listener specific output.</summary>
         /// <param name="eventCache">
         ///     A
-        ///     <see cref="T:System.Diagnostics.TraceEventCache" /> object that contains
+        ///     <see cref="System.Diagnostics.TraceEventCache" /> object that contains
         ///     the current process ID, thread ID, and stack trace information.
         /// </param>
         /// <param name="source">
@@ -49,7 +49,7 @@ namespace WpfApp.Core.Tracing
         /// </param>
         /// <param name="eventType">
         ///     One of the
-        ///     <see cref="T:System.Diagnostics.TraceEventType" /> values specifying the
+        ///     <see cref="System.Diagnostics.TraceEventType" /> values specifying the
         ///     type of event that has caused the trace.
         /// </param>
         /// <param name="id">A numeric identifier for the event.</param>
@@ -75,7 +75,7 @@ namespace WpfApp.Core.Tracing
         /// </summary>
         /// <param name="eventCache">
         ///     A
-        ///     <see cref="T:System.Diagnostics.TraceEventCache" /> object that contains
+        ///     <see cref="System.Diagnostics.TraceEventCache" /> object that contains
         ///     the current process ID, thread ID, and stack trace information.
         /// </param>
         /// <param name="source">
@@ -84,7 +84,7 @@ namespace WpfApp.Core.Tracing
         /// </param>
         /// <param name="eventType">
         ///     One of the
-        ///     <see cref="T:System.Diagnostics.TraceEventType" /> values specifying the
+        ///     <see cref="System.Diagnostics.TraceEventType" /> values specifying the
         ///     type of event that has caused the trace.
         /// </param>
         /// <param name="id">A numeric identifier for the event.</param>
@@ -112,7 +112,7 @@ namespace WpfApp.Core.Tracing
         /// </summary>
         /// <param name="eventCache">
         ///     A
-        ///     <see cref="T:System.Diagnostics.TraceEventCache" /> object that contains
+        ///     <see cref="System.Diagnostics.TraceEventCache" /> object that contains
         ///     the current process ID, thread ID, and stack trace information.
         /// </param>
         /// <param name="source">
@@ -121,7 +121,7 @@ namespace WpfApp.Core.Tracing
         /// </param>
         /// <param name="eventType">
         ///     One of the
-        ///     <see cref="T:System.Diagnostics.TraceEventType" /> values specifying the
+        ///     <see cref="System.Diagnostics.TraceEventType" /> values specifying the
         ///     type of event that has caused the trace.
         /// </param>
         /// <param name="id">A numeric identifier for the event.</param>

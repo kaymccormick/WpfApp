@@ -12,7 +12,7 @@ namespace WpfApp.Core
     {
         /// <summary>
         ///     Initializes a new instance of the
-        ///     <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" />
+        ///     <see cref="System.Collections.ObjectModel.ObservableCollection`1" />
         ///     class.
         /// </summary>
         // ReSharper disable once UnusedMember.Global
@@ -20,7 +20,7 @@ namespace WpfApp.Core
 
         /// <summary>
         ///     Initializes a new instance of the
-        ///     <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" />
+        ///     <see cref="System.Collections.ObjectModel.ObservableCollection`1" />
         ///     class that contains elements copied from the specified list.
         /// </summary>
         /// <param name="list">The list from which the elements are copied.</param>
@@ -33,7 +33,7 @@ namespace WpfApp.Core
 
         /// <summary>
         ///     Initializes a new instance of the
-        ///     <see cref="T:System.Collections.ObjectModel.ObservableCollection`1" />
+        ///     <see cref="System.Collections.ObjectModel.ObservableCollection`1" />
         ///     class that contains elements copied from the specified collection.
         /// </summary>
         /// <param name="collection">The collection from which the elements are copied.</param>

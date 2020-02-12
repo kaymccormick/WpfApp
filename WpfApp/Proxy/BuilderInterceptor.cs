@@ -124,7 +124,7 @@ namespace WpfApp.Proxy
             return x ;
         }
 
-        /// <summary>Initializes a new instance of the <see cref="T:System.Object" /> class.</summary>
+        /// <summary>Initializes a new instance of the <see cref="System.Object" /> class.</summary>
         public BuilderInterceptor ( ProxyGenerator generator ) : base ( generator )
         {
         }

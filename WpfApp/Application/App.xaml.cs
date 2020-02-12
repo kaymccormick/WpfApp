@@ -39,6 +39,7 @@ namespace WpfApp
     }
 }
 
+//TODO move namespaces to WpfApp
 namespace WpfApp.Application
 {
     /// <summary>Exit status of application.</summary>
@@ -627,7 +628,7 @@ namespace WpfApp.Application
         ///     event.
         /// </summary>
         /// <param name="e">
-        ///     A <see cref="T:System.Windows.StartupEventArgs" /> that
+        ///     A <see cref="System.Windows.StartupEventArgs" /> that
         ///     contains the event data.
         /// </param>
         protected override void OnStartup ( StartupEventArgs e )

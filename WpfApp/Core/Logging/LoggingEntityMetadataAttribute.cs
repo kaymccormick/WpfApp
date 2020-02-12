@@ -23,7 +23,7 @@ namespace WpfApp.Core.Logging
     public class LoggingEntityMetadataAttribute : Attribute
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Attribute" />
+        ///     Initializes a new instance of the <see cref="System.Attribute" />
         ///     class.
         /// </summary>
         public LoggingEntityMetadataAttribute ( Type loggingType ) { LoggingType = loggingType ; }

@@ -15,13 +15,13 @@ namespace WpfApp.Proxy
         /// <summary>
         ///     Initializes a new instance of the
         ///     <see
-        ///         cref="T:System.Object" />
+        ///         cref="System.Object" />
         ///     class.
         /// </summary>
         public LoggerProxyHelper ( ProxyGenerator generator ) { Generator = generator ; }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public LoggerProxyHelper ( ProxyGenerator generator , LogDelegates.LogMethod logMethod )

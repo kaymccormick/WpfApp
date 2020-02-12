@@ -116,7 +116,7 @@ namespace WpfApp.Core.Xaml
         ///     <see langword="true " />internally.
         /// </summary>
         /// <param name="e">
-        ///     The <see cref="T:System.Windows.RoutedEventArgs" /> that
+        ///     The <see cref="System.Windows.RoutedEventArgs" /> that
         ///     contains the event data.
         /// </param>
         protected override void OnInitialized ( EventArgs e )

@@ -59,7 +59,7 @@
         <Canvas Grid.Column="0" Grid.Row="0">
             <Border>
                 <WrapPanel>
-                    <Button Content="{Binding Name}" Command="wpfApp:Commands.VisitType"
+                    <Button Content="{Binding Name}" Command="wpfApp:WpfAppCommands.VisitType"
                             CommandParameter="{Binding}" />
                 </WrapPanel>
             </Border>

@@ -34,7 +34,7 @@ namespace WpfApp.Core.Model
         private IEnumerable < Service > _services ;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         // ReSharper disable once UnusedMember.Global
@@ -60,7 +60,7 @@ namespace WpfApp.Core.Model
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         // ReSharper disable once UnusedMember.Global
@@ -79,7 +79,7 @@ namespace WpfApp.Core.Model
         }
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         /// [ContentP

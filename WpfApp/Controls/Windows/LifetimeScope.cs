@@ -23,7 +23,7 @@ namespace WpfApp.Controls.Windows
     public class LifetimeScope : ILifetimeScope
     {
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public LifetimeScope (
@@ -81,7 +81,7 @@ namespace WpfApp.Controls.Windows
         /// </summary>
         /// <param name="tag">
         ///     The tag applied to the
-        ///     <see cref="T:Autofac.ILifetimeScope" />.
+        ///     <see cref="Autofac.ILifetimeScope" />.
         /// </param>
         /// <returns>A new lifetime scope.</returns>
         public ILifetimeScope BeginLifetimeScope ( object tag )
@@ -104,7 +104,7 @@ namespace WpfApp.Controls.Windows
         ///     as the root scope.
         /// </remarks>
         /// <param name="configurationAction">
-        ///     Action on a <see cref="T:Autofac.ContainerBuilder" />
+        ///     Action on a <see cref="Autofac.ContainerBuilder" />
         ///     that adds component registrations visible only in the new scope.
         /// </param>
         /// <returns>A new lifetime scope.</returns>
@@ -129,10 +129,10 @@ namespace WpfApp.Controls.Windows
         /// </remarks>
         /// <param name="tag">
         ///     The tag applied to the
-        ///     <see cref="T:Autofac.ILifetimeScope" />.
+        ///     <see cref="Autofac.ILifetimeScope" />.
         /// </param>
         /// <param name="configurationAction">
-        ///     Action on a <see cref="T:Autofac.ContainerBuilder" />
+        ///     Action on a <see cref="Autofac.ContainerBuilder" />
         ///     that adds component registrations visible only in the new scope.
         /// </param>
         /// <returns>A new lifetime scope.</returns>
@@ -146,7 +146,7 @@ namespace WpfApp.Controls.Windows
 
         /// <summary>
         ///     Gets the disposer associated with this
-        ///     <see cref="T:Autofac.ILifetimeScope" />.
+        ///     <see cref="Autofac.ILifetimeScope" />.
         ///     Component instances can be associated with it manually if required.
         /// </summary>
         /// <remarks>
@@ -157,7 +157,7 @@ namespace WpfApp.Controls.Windows
         public IDisposer Disposer { get ; set ; }
 
         /// <summary>
-        ///     Gets the tag applied to the <see cref="T:Autofac.ILifetimeScope" />.
+        ///     Gets the tag applied to the <see cref="Autofac.ILifetimeScope" />.
         /// </summary>
         /// <remarks>
         ///     Tags allow a level in the lifetime hierarchy to be identified.

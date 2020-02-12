@@ -43,7 +43,7 @@ namespace Tests.Lib.Fixtures
         private readonly ILifetimeScope _container = null ;
 
         /// <summary>
-        ///     Initializes a new instance of the <see cref="T:System.Object" />
+        ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
         public AppContainerFixture ( IMessageSink sink )
@@ -116,7 +116,7 @@ namespace Tests.Lib.Fixtures
         /// Begin a new nested scope. Component instances created via the new scope
         /// will be disposed along with it.
         /// </summary>
-        /// <param name="tag">The tag applied to the <see cref="T:Autofac.ILifetimeScope" />.</param>
+        /// <param name="tag">The tag applied to the <see cref="Autofac.ILifetimeScope" />.</param>
         /// <returns>A new lifetime scope.</returns>
         public ILifetimeScope BeginLifetimeScope ( object tag ) { return LifetimeScope.BeginLifetimeScope ( tag ) ; }
 
@@ -130,7 +130,7 @@ namespace Tests.Lib.Fixtures
         /// registered in the root scope, i.e., SingleInstance() components will live as long
         /// as the root scope.
         /// </remarks>
-        /// <param name="configurationAction">Action on a <see cref="T:Autofac.ContainerBuilder" />
+        /// <param name="configurationAction">Action on a <see cref="Autofac.ContainerBuilder" />
         /// that adds component registrations visible only in the new scope.</param>
         /// <returns>A new lifetime scope.</returns>
         public ILifetimeScope BeginLifetimeScope ( Action < ContainerBuilder > configurationAction ) { return LifetimeScope.BeginLifetimeScope ( configurationAction ) ; }
@@ -145,14 +145,14 @@ namespace Tests.Lib.Fixtures
         /// registered in the root scope, i.e., SingleInstance() components will live as long
         /// as the root scope.
         /// </remarks>
-        /// <param name="tag">The tag applied to the <see cref="T:Autofac.ILifetimeScope" />.</param>
-        /// <param name="configurationAction">Action on a <see cref="T:Autofac.ContainerBuilder" />
+        /// <param name="tag">The tag applied to the <see cref="Autofac.ILifetimeScope" />.</param>
+        /// <param name="configurationAction">Action on a <see cref="Autofac.ContainerBuilder" />
         /// that adds component registrations visible only in the new scope.</param>
         /// <returns>A new lifetime scope.</returns>
         public ILifetimeScope BeginLifetimeScope ( object tag , Action < ContainerBuilder > configurationAction ) { return LifetimeScope.BeginLifetimeScope ( tag , configurationAction ) ; }
 
         /// <summary>
-        /// Gets the disposer associated with this <see cref="T:Autofac.ILifetimeScope" />.
+        /// Gets the disposer associated with this <see cref="Autofac.ILifetimeScope" />.
         /// Component instances can be associated with it manually if required.
         /// </summary>
         /// <remarks>Typical usage does not require interaction with this member- it
@@ -160,7 +160,7 @@ namespace Tests.Lib.Fixtures
         public IDisposer Disposer => LifetimeScope.Disposer ;
 
         /// <summary>
-        /// Gets the tag applied to the <see cref="T:Autofac.ILifetimeScope" />.
+        /// Gets the tag applied to the <see cref="Autofac.ILifetimeScope" />.
         /// </summary>
         /// <remarks>Tags allow a level in the lifetime hierarchy to be identified.
         /// In most applications, tags are not necessary.</remarks>
