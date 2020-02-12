@@ -12,7 +12,6 @@
 
 using System ;
 using System.Collections.Generic ;
-using System.ComponentModel ;
 using System.Threading.Tasks ;
 using Autofac ;
 using Autofac.Core ;
@@ -121,16 +120,31 @@ namespace Tests.Lib.Fixtures
         /// <returns>A new lifetime scope.</returns>
         public ILifetimeScope BeginLifetimeScope ( object tag ) { return LifetimeScope.BeginLifetimeScope ( tag ) ; }
 
-        
+
+        /// <summary />
+        /// <param name="configurationAction"></param>
+        /// <returns></returns>
         public ILifetimeScope BeginLifetimeScope ( Action < ContainerBuilder > configurationAction ) { return LifetimeScope.BeginLifetimeScope ( configurationAction ) ; }
 
     
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="tag"></param>
+        /// <param name="configurationAction"></param>
+        /// <returns></returns>
         public ILifetimeScope BeginLifetimeScope ( object tag , Action < ContainerBuilder > configurationAction ) { return LifetimeScope.BeginLifetimeScope ( tag , configurationAction ) ; }
 
        
+        /// <summary>
+        /// 
+        /// </summary>
         public IDisposer Disposer => LifetimeScope.Disposer ;
 
       
+        /// <summary>
+        /// 
+        /// </summary>
         public object Tag => LifetimeScope.Tag ;
 
         /// <summary>

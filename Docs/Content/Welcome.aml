@@ -2,7 +2,8 @@
 <topic id="2a44a300-0b02-4202-972e-febd0e8b2bef" revisionNumber="1">
 	<developerConceptualDocument xmlns="http://ddue.schemas.microsoft.com/authoring/2003/5" xmlns:xlink="http://www.w3.org/1999/xlink">
 		<introduction>
-			<para>The app infrastructure is designed to help bootstrap app development.</para>
+			<para>The app infrastructure is designed to help bootstrap app
+			development.</para>
 		</introduction>
 
 		<section>

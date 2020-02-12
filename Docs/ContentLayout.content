@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Topics>
-  <Topic id="2a44a300-0b02-4202-972e-febd0e8b2bef" visible="True" isDefault="true" isSelected="true" title="Welcome to the WPF App Infrastructure Project">
+  <Topic id="2a44a300-0b02-4202-972e-febd0e8b2bef" visible="False" isMSHVRoot="true" isSelected="true" title="Welcome to the WPF App Infrastructure Project">
     <HelpKeywords>
       <HelpKeyword index="K" term="Welcome" />
     </HelpKeywords>

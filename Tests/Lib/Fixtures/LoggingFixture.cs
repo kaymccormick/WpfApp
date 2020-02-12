@@ -39,7 +39,7 @@ namespace Tests.Lib.Fixtures
 
         /// <summary>Gets or sets the layout used to format log messages.</summary>
         /// <remarks>
-        /// The default value of the layout is: <code>${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}</code>
+        /// The default value of the layout is: <v>${longdate}|${level:uppercase=true}|${logger}|${message:withexception=true}</v>
         /// </remarks>
         /// <docgen category="Layout Options" order="1" />
         // ReSharper disable once UnusedMember.Global
