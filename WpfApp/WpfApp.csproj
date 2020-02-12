@@ -89,6 +89,7 @@
     <Compile Include="Controls\AllResourcesControl.xaml.cs">
       <DependentUpon>AllResourcesControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Core\Attributes\ContextStackInstanceAttribute.cs" />
     <Compile Include="Core\Container\ContainerHelper.cs" />
     <Compile Include="Core\Container\ContainerHelperSettings.cs" />
     <Compile Include="Core\DefaultObjectIdProvider.cs" />
@@ -239,7 +240,6 @@
     <Compile Include="Core\Util\SerializableDictionary.cs" />
     <Compile Include="Core\Xaml\LifetimeScopeExtension.cs" />
     <Compile Include="Core\Xaml\ObjectIdExtension.cs" />
-    <Compile Include="Core\Context\ContextStackInstanceAttribute.cs" />
     <Compile Include="Core\Context\PushContextAttribute.cs" />
     <Compile Include="Core\Converters\AssemblyConverter.cs" />
     <Compile Include="Core\Converters\ComponentLifetimeConverter.cs" />

@@ -48,7 +48,7 @@ namespace Tests.Main
         [ WpfFact ]
         public void MakeMenuItemTest ( )
         {
-            var header = "test" ;
+            const string header = "test" ;
             var arg = _xMenuItemCreator ( ) ;
             arg.Header = header ;
             Assert.NotNull ( arg ) ;

@@ -45,7 +45,7 @@ namespace WpfApp.Proxy
                          ) ;
         }
 
-        /// <summary>Shoulds the intercept method.</summary>
+        /// <summary>Boolean to indicate whether the methods should be intercepted.</summary>
         /// <param name="type">The type.</param>
         /// <param name="memberInfo">The member information.</param>
         /// <returns></returns>

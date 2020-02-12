@@ -78,8 +78,7 @@ namespace Tests.Main
                         throw new UnexpectedPropertyException ( "Field returns null" , fieldInfo ) ;
                     }
 
-                    var prop = value as DependencyProperty ;
-                    if ( prop == null )
+                    if ( ! ( value is DependencyProperty prop ) )
                     {
                         throw new UnexpectedPropertyException (
                                                                "Field does not return value that can cast to DependencyProperty"
@@ -144,7 +143,7 @@ namespace Tests.Main
           , object             value
         )
         {
-            var propInfo = new PropInfo ( ) { DependencyProperty = prop , FieldInfo = fieldInfo } ;
+            var propInfo = new PropInfo { DependencyProperty = prop , FieldInfo = fieldInfo } ;
             props.Add ( propInfo ) ;
             Logger.Debug ( "{fieldName} is DependencyProperty" , fieldInfo.Name ) ;
             Assert.IsAssignableFrom < DependencyProperty > ( value ) ;

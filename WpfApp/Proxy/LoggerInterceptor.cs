@@ -63,7 +63,7 @@ namespace WpfApp.Proxy
                         args[ i ] = "hello " + arg ;
                     }
 
-                    i = i + 1 ;
+                    i += 1 ;
                 }
 
                 @params[ 0 ] = typeof ( LogLevel ) ;

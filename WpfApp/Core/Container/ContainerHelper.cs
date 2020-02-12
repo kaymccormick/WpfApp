@@ -284,7 +284,6 @@ else
 
         private static bool MainScanningPredicate ( Type arg )
         {
-            return false ;
             var r = false ; //typeof ( ITabGuest ).IsAssignableFrom ( arg ) ;
             if ( DoTraceConditionalRegistration )
             {

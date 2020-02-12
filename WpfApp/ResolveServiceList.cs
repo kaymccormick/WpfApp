@@ -11,7 +11,7 @@
 #endregion
 using System.Collections.Generic ;
 using System.Collections.ObjectModel ;
-using WpfApp.Core ;
+using WpfApp.Core.Xaml ;
 
 namespace WpfApp
 {

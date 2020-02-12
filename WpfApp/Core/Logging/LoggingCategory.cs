@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WpfApp.Core.Logging
+﻿namespace WpfApp.Core.Logging
 {
-    class LoggingCategory
+    internal class LoggingCategory
     {
     }
 }

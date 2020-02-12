@@ -485,25 +485,25 @@ namespace WpfApp
                                                                 , ( Type ) e.NewValue
                                                                 , evt
                                                                  ) ;
-            if ( d is UIElement uie )
+            switch ( d )
             {
+                case UIElement uie :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on UIElement {evt.Name}" ) ;
 #endif
-                uie.RaiseEvent ( ev ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
+                    uie.RaiseEvent ( ev ) ;
+                    break ;
+                case ContentElement ce :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on ContentElement {evt.Name}" ) ;
 #endif
-                ce.RaiseEvent ( ev ) ;
-            }
-            else
-            {
+                    ce.RaiseEvent ( ev ) ;
+                    break ;
+                default :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on incompatible type {evt.Name}" ) ;
 #endif
+                    break ;
             }
         }
 
@@ -518,13 +518,12 @@ namespace WpfApp
           , RoutedEventHandler handler
         )
         {
-            if ( d is UIElement uie )
+            switch ( d )
             {
-                uie.AddHandler ( RenderedTypeChangedEvent , handler ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
-                ce.AddHandler ( RenderedTypeChangedEvent , handler ) ;
+                case UIElement uie :     uie.AddHandler ( RenderedTypeChangedEvent , handler ) ;
+                    break ;
+                case ContentElement ce : ce.AddHandler ( RenderedTypeChangedEvent , handler ) ;
+                    break ;
             }
         }
 
@@ -538,13 +537,12 @@ namespace WpfApp
           , RoutedEventHandler handler
         )
         {
-            if ( d is UIElement uie )
+            switch ( d )
             {
-                uie.AddHandler ( RenderedTypeChangedEvent , handler ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
-                ce.AddHandler ( RenderedTypeChangedEvent , handler ) ;
+                case UIElement uie :     uie.AddHandler ( RenderedTypeChangedEvent , handler ) ;
+                    break ;
+                case ContentElement ce : ce.AddHandler ( RenderedTypeChangedEvent , handler ) ;
+                    break ;
             }
         }
 
@@ -592,25 +590,25 @@ namespace WpfApp
                                                                              .NewValue
                                                                         , evt
                                                                          ) ;
-            if ( d is UIElement uie )
+            switch ( d )
             {
+                case UIElement uie :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on UIElement {evt.Name}" ) ;
 #endif
-                uie.RaiseEvent ( ev ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
+                    uie.RaiseEvent ( ev ) ;
+                    break ;
+                case ContentElement ce :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on ContentElement {evt.Name}" ) ;
 #endif
-                ce.RaiseEvent ( ev ) ;
-            }
-            else
-            {
+                    ce.RaiseEvent ( ev ) ;
+                    break ;
+                default :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on incompatible type {evt.Name}" ) ;
 #endif
+                    break ;
             }
         }
 
@@ -624,13 +622,12 @@ namespace WpfApp
           , RoutedEventHandler handler
         )
         {
-            if ( d is UIElement uie )
+            switch ( d )
             {
-                uie.AddHandler ( AssemblyListChangedEvent , handler ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
-                ce.AddHandler ( AssemblyListChangedEvent , handler ) ;
+                case UIElement uie :     uie.AddHandler ( AssemblyListChangedEvent , handler ) ;
+                    break ;
+                case ContentElement ce : ce.AddHandler ( AssemblyListChangedEvent , handler ) ;
+                    break ;
             }
         }
 
@@ -644,13 +641,12 @@ namespace WpfApp
           , RoutedEventHandler handler
         )
         {
-            if ( d is UIElement uie )
+            switch ( d )
             {
-                uie.AddHandler ( AssemblyListChangedEvent , handler ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
-                ce.AddHandler ( AssemblyListChangedEvent , handler ) ;
+                case UIElement uie :     uie.AddHandler ( AssemblyListChangedEvent , handler ) ;
+                    break ;
+                case ContentElement ce : ce.AddHandler ( AssemblyListChangedEvent , handler ) ;
+                    break ;
             }
         }
 
@@ -704,25 +700,25 @@ namespace WpfApp
                                                                       , ( IContainer ) e.NewValue
                                                                       , evt
                                                                        ) ;
-            if ( d is UIElement uie )
+            switch ( d )
             {
+                case UIElement uie :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on UIElement {d.GetType ()}  {evt.Name}" ) ;
 #endif
-                uie.RaiseEvent ( ev ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
+                    uie.RaiseEvent ( ev ) ;
+                    break ;
+                case ContentElement ce :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on ContentElement {evt.Name}" ) ;
 #endif
-                ce.RaiseEvent ( ev ) ;
-            }
-            else
-            {
+                    ce.RaiseEvent ( ev ) ;
+                    break ;
+                default :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on incompatible type {evt.Name}" ) ;
 #endif
+                    break ;
             }
         }
 
@@ -736,13 +732,12 @@ namespace WpfApp
           , RoutedEventHandler handler
         )
         {
-            if ( d is UIElement uie )
+            switch ( d )
             {
-                uie.AddHandler ( ContainerChangedEvent , handler ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
-                ce.AddHandler ( ContainerChangedEvent , handler ) ;
+                case UIElement uie :     uie.AddHandler ( ContainerChangedEvent , handler ) ;
+                    break ;
+                case ContentElement ce : ce.AddHandler ( ContainerChangedEvent , handler ) ;
+                    break ;
             }
         }
 
@@ -756,13 +751,12 @@ namespace WpfApp
           , RoutedEventHandler handler
         )
         {
-            if ( d is UIElement uie )
+            switch ( d )
             {
-                uie.AddHandler ( ContainerChangedEvent , handler ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
-                ce.AddHandler ( ContainerChangedEvent , handler ) ;
+                case UIElement uie :     uie.AddHandler ( ContainerChangedEvent , handler ) ;
+                    break ;
+                case ContentElement ce : ce.AddHandler ( ContainerChangedEvent , handler ) ;
+                    break ;
             }
         }
 
@@ -842,25 +836,25 @@ namespace WpfApp
                                                                                 ) e.NewValue
                                                                               , evt
                                                                                ) ;
-            if ( d is UIElement uie )
+            switch ( d )
             {
+                case UIElement uie :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on UIElement {evt.Name}" ) ;
 #endif
-                uie.RaiseEvent ( ev ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
+                    uie.RaiseEvent ( ev ) ;
+                    break ;
+                case ContentElement ce :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on ContentElement {evt.Name}" ) ;
 #endif
-                ce.RaiseEvent ( ev ) ;
-            }
-            else
-            {
+                    ce.RaiseEvent ( ev ) ;
+                    break ;
+                default :
 #if TRACE_EVENTS
                 Logger.Trace ( $"Raising event on incompatible type {evt.Name}" ) ;
 #endif
+                    break ;
             }
         }
 
@@ -874,13 +868,12 @@ namespace WpfApp
           , RoutedEventHandler handler
         )
         {
-            if ( d is UIElement uie )
+            switch ( d )
             {
-                uie.AddHandler ( ResolveServiceListChangedEvent , handler ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
-                ce.AddHandler ( ResolveServiceListChangedEvent , handler ) ;
+                case UIElement uie :     uie.AddHandler ( ResolveServiceListChangedEvent , handler ) ;
+                    break ;
+                case ContentElement ce : ce.AddHandler ( ResolveServiceListChangedEvent , handler ) ;
+                    break ;
             }
         }
 
@@ -894,13 +887,12 @@ namespace WpfApp
           , RoutedEventHandler handler
         )
         {
-            if ( d is UIElement uie )
+            switch ( d )
             {
-                uie.AddHandler ( ResolveServiceListChangedEvent , handler ) ;
-            }
-            else if ( d is ContentElement ce )
-            {
-                ce.AddHandler ( ResolveServiceListChangedEvent , handler ) ;
+                case UIElement uie :     uie.AddHandler ( ResolveServiceListChangedEvent , handler ) ;
+                    break ;
+                case ContentElement ce : ce.AddHandler ( ResolveServiceListChangedEvent , handler ) ;
+                    break ;
             }
         }
 

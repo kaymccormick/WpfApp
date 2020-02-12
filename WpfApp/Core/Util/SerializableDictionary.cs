@@ -3,7 +3,7 @@ using System.Xml ;
 using System.Xml.Schema ;
 using System.Xml.Serialization ;
 
-namespace WpfApp.Core.Utils
+namespace WpfApp.Core.Util
 {
     /// <summary></summary>
     /// <typeparam name="TKey">The type of the key.</typeparam>

@@ -20,7 +20,6 @@ using WpfApp.Core.Container ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Core.Logging ;
 using WpfApp.Core.Model ;
-using WpfApp.Core.Utils ;
 using WpfApp.Proxy ;
 using Module = Autofac.Module ;
 

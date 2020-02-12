@@ -15,8 +15,8 @@ using Autofac ;
 using Tests.Attributes ;
 using Tests.Lib.Fixtures ;
 using Tests.Lib.Misc ;
-using WpfApp.Core ;
 using WpfApp.Core.Converters ;
+using WpfApp.Core.Xaml ;
 using Xunit ;
 using Xunit.Abstractions ;
 

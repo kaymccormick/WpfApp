@@ -154,32 +154,30 @@ namespace WpfApp.Core.Tracing
                 var key = args[ i ] as string ;
                 var o = args[ i + 1 ] ;
                 string desc = null ;
-                if ( o is RoutedEvent re )
+                switch ( o )
                 {
-                    if ( ! RoutedEvents.TryGetValue ( re.Name , out var info ) )
+                    case RoutedEvent re :
                     {
-                        RoutedEvents[ re.Name ] = info = new Info ( 0 ) ;
-                    }
+                        if ( ! RoutedEvents.TryGetValue ( re.Name , out var info ) )
+                        {
+                            RoutedEvents[ re.Name ] = info = new Info ( 0 ) ;
+                        }
 
-                    info.Count += 1 ;
-                    if ( re.Name == "ScrollChanged" )
-                    {
-                        doOutput = false ;
-                    }
+                        info.Count += 1 ;
+                        if ( re.Name == "ScrollChanged" )
+                        {
+                            doOutput = false ;
+                        }
 
-                    desc = re.Name ;
-                }
-                else if ( o is FrameworkElement fe )
-                {
-                    desc = $"{o.GetType ( ).Name}[{fe.Name}]" ;
-                }
-                else if ( o is bool )
-                {
-                    desc = o.GetType ( ) + "[" + o + "]" ;
-                }
-                else if ( o is RoutedEventArgs )
-                {
-                    desc = o.GetType ( ).ToString ( ) ;
+                        desc = re.Name ;
+                        break ;
+                    }
+                    case FrameworkElement fe : desc = $"{o.GetType ( ).Name}[{fe.Name}]" ;
+                        break ;
+                    case bool _ :              desc = o.GetType ( ) + "[" + o + "]" ;
+                        break ;
+                    case RoutedEventArgs _ :   desc = o.GetType ( ).ToString ( ) ;
+                        break ;
                 }
 
                 //d[ args[ i ].ToString ( ) ] = args[ i + 1 ] ;

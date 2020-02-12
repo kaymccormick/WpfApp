@@ -16,11 +16,11 @@
         <CollectionViewSource x:Key="ResourcesList" Source="{Binding ElementName=mainWindow,Path=ResourcesCollection}" />
 
         <wpfApp:ResolveServiceList x:Key="ResolveServices">
-            <core:ResolveService ServiceType="{x:Type interfaces:IObjectIdProvider}">
+            <xaml:ResolveService ServiceType="{x:Type interfaces:IObjectIdProvider}">
                 <wpfApp:Props.LifetimeScope>
                     <Binding ElementName="mainWindow" Path="(wpfApp:Props.LifetimeScope)" />
                 </wpfApp:Props.LifetimeScope>
-            </core:ResolveService>
+            </xaml:ResolveService>
         </wpfApp:ResolveServiceList>
     </Window.Resources>
     <Grid DataContext="{Binding ElementName=mainWindow, Path=(wpfApp:Props.LifetimeScope)}">

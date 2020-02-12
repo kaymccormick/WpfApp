@@ -17,8 +17,8 @@ namespace Tests.Main.Utils
         [Fact ]
         public void EnumeratorTest ( )
         {
-            var name = "test" ;
-            var objectContext = "hello" ;
+            const string name = "test" ;
+            const string objectContext = "hello" ;
             var x = new InfoContext ( name , objectContext ) ;
             var objects = x.ToList ( ) ;
             Assert.Equal ( 2 ,             objects.Count ) ;

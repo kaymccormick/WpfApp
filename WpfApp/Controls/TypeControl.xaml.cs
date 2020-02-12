@@ -260,7 +260,7 @@ namespace WpfApp.Controls
             if ( myType.IsGenericType )
             {
                 addChild.AddText ( "<" ) ;
-                var i = 0 ;
+                const int i = 0 ;
                 foreach ( var arg in myType.GenericTypeArguments )
                 {
                     GenerateControlsForType ( arg , addChild , true ) ;

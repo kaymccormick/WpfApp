@@ -261,13 +261,13 @@ namespace WpfApp.Application
                                                )
                                        .Where ( tuple => tuple.Item2 != null )
                                        .ToArray ( ) ;
-                            foreach ( var info in infos )
+                            foreach ( var (item1 , _) in infos )
                             {
-                                if ( info.Item1.MemberType == MemberTypes.Property )
+                                if ( item1.MemberType == MemberTypes.Property )
                                 {
                                     foreach ( var memberInfo in infos )
                                     {
-                                        var attr = at.TargetType.GetProperty ( info.Item1.Name ) ;
+                                        var attr = at.TargetType.GetProperty ( item1.Name ) ;
                                         try
                                         {
                                             var configVal =

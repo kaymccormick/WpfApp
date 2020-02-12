@@ -14,7 +14,7 @@ using System.Windows ;
 using Autofac.Core ;
 using NLog ;
 
-namespace WpfApp.Core
+namespace WpfApp.Core.Xaml
 {
     /// <summary></summary>
     /// <seealso cref="System.Windows.FrameworkElement" />

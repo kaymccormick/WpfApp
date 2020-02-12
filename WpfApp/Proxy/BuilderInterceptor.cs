@@ -5,7 +5,6 @@ using Autofac.Core ;
 using Castle.DynamicProxy ;
 using NLog ;
 using WpfApp.Core.Model ;
-using WpfApp.Core.Utils ;
 
 namespace WpfApp.Proxy
 {
@@ -52,7 +51,8 @@ namespace WpfApp.Proxy
 
                         Logger.Info ( $"{invocation.Method.Name} returning deferred callback" ) ;
                         var cbAction = cb.Callback ;
-                        Action < IComponentRegistry > newCbAction = ( IComponentRegistry reg ) => {
+                        // ReSharper disable once ConvertToLocalFunction
+                        Action < IComponentRegistry > newCbAction = reg => {
                             var p2 = Generator
                                .CreateInterfaceProxyWithTarget < IComponentRegistry > (
                                                                                        reg

@@ -3,7 +3,7 @@ using System.Linq ;
 using JetBrains.Annotations ;
 using WpfApp.Core.Infos ;
 
-namespace WpfApp.Core.Utils
+namespace WpfApp.Core.Util
 {
     /// <summary></summary>
     /// <seealso cref="System.IDisposable" />

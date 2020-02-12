@@ -15,7 +15,7 @@ using System ;
 using System.Runtime.Serialization ;
 using JetBrains.Annotations ;
 
-namespace WpfApp.Core.Utils
+namespace WpfApp.Core.Util
 {
     /// <summary></summary>
     /// <seealso cref="System.Exception" />

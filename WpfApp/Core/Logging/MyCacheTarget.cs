@@ -30,9 +30,9 @@ namespace WpfApp.Core.Logging
         #endregion
 
         /// <summary>
-        ///     If there is no target in nlog.config definedm a new one is registered
+        ///     If there is no target in NLog.config defined a new one is registered
         ///     with
-        ///     the default maxcount
+        ///     the default maxCount
         /// </summary>
         /// <param name="defaultMaxCount"></param>
         /// <returns></returns>

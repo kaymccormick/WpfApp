@@ -4,8 +4,8 @@ using Autofac ;
 using Autofac.Core ;
 using NLog ;
 using WpfApp.Core ;
+using WpfApp.Core.Debug ;
 using WpfApp.Core.Interfaces ;
-using WpfApp.Core.Utils ;
 
 namespace WpfApp.Modules
 {

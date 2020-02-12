@@ -53,14 +53,12 @@ namespace WpfApp.Core.Xaml
         public override object ProvideValue ( IServiceProvider serviceProvider )
         {
             var service = serviceProvider.GetService ( typeof ( IProvideValueTarget ) ) ;
-            if ( service is IProvideValueTarget provideValueTarget )
+            switch ( service )
             {
-                Console.WriteLine ( provideValueTarget.TargetObject ) ;
-            }
-
-            if ( service is IRootObjectProvider provide )
-            {
-                Console.WriteLine ( provide.RootObject ) ;
+                case IProvideValueTarget provideValueTarget : Console.WriteLine ( provideValueTarget.TargetObject ) ;
+                    break ;
+                case IRootObjectProvider provide :            Console.WriteLine ( provide.RootObject ) ;
+                    break ;
             }
 
             return new AppLogger ( LogManager.GetCurrentClassLogger ( ) ) ;

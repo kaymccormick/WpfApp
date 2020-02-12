@@ -43,7 +43,7 @@ namespace Tests.Main.Utils
             var xamlSchemaContext = p.CreateXamlSchemaContext();
             Logger.Info("{schemaContext}", xamlSchemaContext);
             var i = 0;
-            var limitOutput = false ;
+            const bool limitOutput = false ;
             foreach (var ns in xamlSchemaContext.GetAllXamlNamespaces())
             {
                 var allXamlTypes = xamlSchemaContext.GetAllXamlTypes(ns);

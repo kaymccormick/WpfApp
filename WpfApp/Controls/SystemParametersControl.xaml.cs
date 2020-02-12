@@ -1,7 +1,6 @@
 ﻿using System ;
 using System.Collections.Generic ;
 using System.ComponentModel ;
-using System.Diagnostics ;
 using System.Dynamic ;
 using System.Linq ;
 using System.Reflection ;
@@ -97,8 +96,8 @@ namespace WpfApp.Controls
 
         /// <summary>Gets information about the High Contrast accessibility feature. </summary>
         /// <returns>
-        /// <see langword="true" /> if the HIGHCONTRASTON option is selected; otherwise,<see langword=" false" />.</returns>
-        [ Category( "Accessibility" ) ]
+        /// <see langword="true" /> if the <value>HIGHCONTRASTON</value> option is selected; otherwise,<see langword=" false" />.</returns>
+        [Category( "Accessibility" ) ]
         public bool HighContrast { [ SecurityCritical ] get; set; }
 
         /// <summary>Gets the <see cref="T:System.Windows.ResourceKey" /> for the <see cref="P:System.Windows.SystemParameters.FocusBorderWidth" /> property. </summary>

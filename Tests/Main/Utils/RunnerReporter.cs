@@ -5,7 +5,7 @@ using Xunit.Abstractions ;
 
 namespace Tests.Main.Utils
 {
-    class RunnerReporter : IRunnerReporter
+    internal class RunnerReporter : IRunnerReporter
     {
         /// <summary>
         /// Creates a message handler that will report messages for the given
@@ -25,12 +25,14 @@ namespace Tests.Main.Utils
         /// Gets the description of the reporter. This is typically used when showing
         /// the user the invocation option for the reporter.
         /// </summary>
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public string Description { get ; set ; }
 
         /// <summary>
         /// Gets a value which indicates whether the reporter should be
         /// environmentally enabled.
         /// </summary>
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public bool IsEnvironmentallyEnabled { get ; set ; }
 
         /// <summary>
@@ -40,6 +42,7 @@ namespace Tests.Main.Utils
         /// This value is used either as a command line switch (with the console or
         /// .NET CLI runner) or as a runner configuration value (with the MSBuild runner).
         /// </summary>
+        // ReSharper disable once UnusedAutoPropertyAccessor.Global
         public string RunnerSwitch { get ; set ; }
     }
 

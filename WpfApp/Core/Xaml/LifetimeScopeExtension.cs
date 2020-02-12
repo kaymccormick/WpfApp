@@ -3,7 +3,6 @@ using System.Windows.Markup ;
 using Autofac ;
 using NLog ;
 using WpfApp.Core.Container ;
-using WpfApp.Core.Interfaces ;
 
 namespace WpfApp.Core.Xaml
 {

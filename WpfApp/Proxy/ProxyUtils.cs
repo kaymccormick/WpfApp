@@ -145,7 +145,7 @@ namespace WpfApp.Proxy
 
         private static string Depth ( int callDepth )
         {
-            var c = '⟳' ;
+            const char c = '⟳' ;
             return $"{new string ( c , callDepth ),- 8}" ;
             //return char.ConvertFromUtf32 ( 0x2460 + callDepth - 1 ) ;
         }
@@ -193,22 +193,17 @@ namespace WpfApp.Proxy
                 var val = b ? "⊨" : "⊭" ;
                 return val ;
             }
-            else if ( r is Type t )
+
+            switch ( r )
             {
-                var rr = t.UnderlyingSystemType == t ? "" : "𝓡" ;
-                return $"{rr}𝒯 {FormatTyp ( t.UnderlyingSystemType )}" ;
-            }
-            else if ( r is XamlType xt )
-            {
-                return "𝓧" + FormatValue ( xt.UnderlyingType , out b1 ) ;
-            }
-            else if ( r is string ss )
-            {
-                return ss ;
-            }
-            else
-            {
-                if ( r is ICollection < object > col )
+                case Type t :
+                {
+                    var rr = t.UnderlyingSystemType == t ? "" : "𝓡" ;
+                    return $"{rr}𝒯 {FormatTyp ( t.UnderlyingSystemType )}" ;
+                }
+                case XamlType xt : return "𝓧" + FormatValue ( xt.UnderlyingType , out b1 ) ;
+                case string ss :   return ss ;
+                case ICollection < object > col :
                 {
                     var q = from o in col select FormatValue ( o , out b ) ;
                     b1 = true ;
@@ -322,7 +317,7 @@ namespace WpfApp.Proxy
 
 
             var formatted = FormatInvocation ( invocation , "" ) ;
-            var a = new InvocationEventArgs ( ) { formatted = formatted } ;
+            var a = new InvocationEventArgs { formatted = formatted } ;
             
             DumpInvocation ( invocation , _callDepth ) ;
             invocation.Proceed ( ) ;
@@ -367,13 +362,12 @@ namespace WpfApp.Proxy
                                  .GetGenericTypeDefinition ( ) )
                     {
                         object[] args = null ;
-                        if ( r is XamlValueConverter < ValueSerializer > q )
+                        switch ( r )
                         {
-                            args = new object[] { q.ConverterType , q.TargetType , q.Name } ;
-                        }
-                        else if ( r is XamlValueConverter < TypeConverter > z )
-                        {
-                            args = new object[] { z.ConverterType , z.TargetType , z.Name } ;
+                            case XamlValueConverter < ValueSerializer > q : args = new object[] { q.ConverterType , q.TargetType , q.Name } ;
+                                break ;
+                            case XamlValueConverter < TypeConverter > z :   args = new object[] { z.ConverterType , z.TargetType , z.Name } ;
+                                break ;
                         }
 
                         if ( args != null )
@@ -409,76 +403,81 @@ namespace WpfApp.Proxy
                                                                           ) ;
                         }
                     }
-                    else if ( r is XamlDirective d )
-                    {
-                        object[] args =
-                        {
-                            d.GetXamlNamespaces ( ) , d.Name , d.Type , d.TypeConverter
-                          , d.AllowedLocation
-                        } ;
-
-                        invocation.ReturnValue =
-                            ProxyGenerator.CreateClassProxyWithTarget (
-                                                                       r.GetType ( )
-                                                                     , r
-                                                                     , args
-                                                                     , this
-                                                                      ) ;
-                    }
-                    else if ( r is NamespaceDeclaration ns )
-                    {
-                        invocation.ReturnValue =
-                            ProxyGenerator.CreateClassProxyWithTarget (
-                                                                       r.GetType ( )
-                                                                     , r
-                                                                     , new object[]
-                                                                       {
-                                                                           ns.Namespace , ns.Prefix
-                                                                       }
-                                                                     , this
-                                                                      ) ;
-                    }
                     else
-
                     {
-                        try
+                        switch ( r )
                         {
-                            invocation.ReturnValue =
-                                ProxyGenerator.CreateClassProxyWithTarget (
-                                                                           r.GetType ( )
-                                                                         , r
-                                                                         , this
-                                                                          ) ;
-                        }
-                        catch ( InvalidProxyConstructorArgumentsException )
-                        {
-                            writeLine ( "Constructors for ⮜" + FormatTyp ( r.GetType ( ) ) + "⮞" ) ;
-                            foreach ( var constructorInfo in r.GetType ( ).GetConstructors ( ) )
+                            case XamlDirective d :
                             {
-                                writeLine (
-                                           FormatTyp ( constructorInfo.DeclaringType )
-                                           + " ( "
-                                           + string.Join (
-                                                          " , "
-                                                        , constructorInfo
-                                                         .GetParameters ( )
-                                                         .Select (
-                                                                  ( info , i )
-                                                                      => FormatTyp (
-                                                                                    info
-                                                                                       .ParameterType
-                                                                                   )
-                                                                         + " "
-                                                                         + info.Name
-                                                                         + ( info.HasDefaultValue
-                                                                                 ? " = "
-                                                                                   + info
-                                                                                      .DefaultValue
-                                                                                 : "" )
-                                                                 )
-                                                         )
-                                          ) ;
+                                object[] args =
+                                {
+                                    d.GetXamlNamespaces ( ) , d.Name , d.Type , d.TypeConverter
+                                  , d.AllowedLocation
+                                } ;
+
+                                invocation.ReturnValue =
+                                    ProxyGenerator.CreateClassProxyWithTarget (
+                                                                               r.GetType ( )
+                                                                             , r
+                                                                             , args
+                                                                             , this
+                                                                              ) ;
+                                break ;
                             }
+                            case NamespaceDeclaration ns :
+                                invocation.ReturnValue =
+                                    ProxyGenerator.CreateClassProxyWithTarget (
+                                                                               r.GetType ( )
+                                                                             , r
+                                                                             , new object[]
+                                                                               {
+                                                                                   ns.Namespace , ns.Prefix
+                                                                               }
+                                                                             , this
+                                                                              ) ;
+                                break ;
+                            default :
+                                try
+                                {
+                                    invocation.ReturnValue =
+                                        ProxyGenerator.CreateClassProxyWithTarget (
+                                                                                   r.GetType ( )
+                                                                                 , r
+                                                                                 , this
+                                                                                  ) ;
+                                }
+                                catch ( InvalidProxyConstructorArgumentsException )
+                                {
+                                    writeLine ( "Constructors for ⮜" + FormatTyp ( r.GetType ( ) ) + "⮞" ) ;
+                                    foreach ( var constructorInfo in r.GetType ( ).GetConstructors ( ) )
+                                    {
+                                        writeLine (
+                                                   FormatTyp ( constructorInfo.DeclaringType )
+                                                   + " ( "
+                                                   + string.Join (
+                                                                  " , "
+                                                                , constructorInfo
+                                                                 .GetParameters ( )
+                                                                 .Select (
+                                                                          ( info , i )
+                                                                              => FormatTyp (
+                                                                                            info
+                                                                                               .ParameterType
+                                                                                           )
+                                                                                 + " "
+                                                                                 + info.Name
+                                                                                 + ( info.HasDefaultValue
+                                                                                         ? " = "
+                                                                                           + info
+                                                                                              .DefaultValue
+                                                                                         : "" )
+                                                                         )
+                                                                 )
+                                                  ) ;
+                                    }
+                                }
+
+                                break ;
                         }
                     }
                 }
@@ -587,12 +586,15 @@ namespace WpfApp.Proxy
                                                                     , BindingFlags.NonPublic
                                                                       | BindingFlags.Static
                                                                      ) ;
-            var o = fieldInfo.GetValue ( null ) ;
-            Logger.Info ( "{o}" , o ) ;
+            if ( fieldInfo != null ) {
+                var o = fieldInfo.GetValue ( null ) ;
+                Logger.Info ( "{o}" , o ) ;
+            }
+
             var context = CreateXamlSchemaContext ( ) ;
             var settings = CreateXamlObjectReaderSettings ( ) ;
             var xmlReader = CreateXmlReader ( inputUri ) ;
-            object instance = null ;
+            object instance ;
 
             instance = System.Windows.Markup.XamlReader.Load ( xmlReader ) ;
 
@@ -674,7 +676,7 @@ namespace WpfApp.Proxy
         // ReSharper disable once VirtualMemberNeverOverridden.Global
         protected virtual XamlObjectReaderSettings CreateXamlObjectReaderSettings ( )
         {
-            return new XamlObjectReaderSettings ( )
+            return new XamlObjectReaderSettings
                    {
                        AllowProtectedMembersOnRoot      = true
                      , RequireExplicitContentVisibility = false

@@ -5,7 +5,7 @@ using NLog ;
 namespace WpfApp.Core.Logging
 {
     /// <summary>
-    ///     Experimetal class used as an attempt to initialize loggers
+    ///     Experimental class used as an attempt to initialize loggers
     ///     through XAML.
     /// </summary>
     /// <seealso cref="System.Xaml.IAttachedPropertyStore" />

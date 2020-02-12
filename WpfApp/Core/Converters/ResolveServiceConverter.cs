@@ -2,6 +2,7 @@ using System ;
 using System.Globalization ;
 using System.Windows.Data ;
 using Autofac ;
+using WpfApp.Core.Xaml ;
 
 namespace WpfApp.Core.Converters
 {

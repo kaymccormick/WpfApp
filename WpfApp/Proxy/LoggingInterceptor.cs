@@ -25,10 +25,7 @@ namespace WpfApp.Proxy
             if ( invocation.InvocationTarget is IHaveLogger haveLogger )
             {
                 var logger = haveLogger.Logger ;
-                if ( logger != null )
-                {
-                    logger.Trace ( $"invocation of {invocation.Method.Name}" ) ;
-                }
+                logger?.Trace ( $"invocation of {invocation.Method.Name}" ) ;
             }
 
             invocation.Proceed ( ) ;
