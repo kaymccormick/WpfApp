@@ -14,7 +14,6 @@
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <CollectionViewSource x:Key="ResourcesList" Source="{Binding ElementName=mainWindow,Path=ResourcesCollection}" />
-        
 
         <wpfApp:ResolveServiceList x:Key="ResolveServices">
             <core:ResolveService ServiceType="{x:Type interfaces:IObjectIdProvider}">
@@ -36,7 +35,7 @@
             <TextBlock Text="{Binding Source={xaml:LifetimeScope}, Path=Tag}" />
         </StackPanel>
         <TabControl Visibility="Visible" Grid.Column="0" Grid.Row="1" Style="{StaticResource TabControlStyle1}">
-            <TabItem Header="Tab 1" HorizontalAlignment="Right" Margin="-2.4,-2,-2.2,0.4" Width="63">
+            <TabItem Header="Tab 1" HorizontalAlignment="Right">
                 <controls:AllResourcesControl/>
             </TabItem>
             <TabItem Header="ResolveServiceList">

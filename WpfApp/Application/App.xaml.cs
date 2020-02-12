@@ -483,7 +483,7 @@ namespace WpfApp.Application
                 if ( args.Logger.Name == myLoggerName )
                 {
                     args.Logger.Trace (
-                                       "Received logger for application in LoggerREegistered handler."
+                                       "Received logger for application in LoggerRegistered handler."
                                       ) ;
                 }
                 else

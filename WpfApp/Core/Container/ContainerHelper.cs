@@ -284,6 +284,7 @@ else
 
         private static bool MainScanningPredicate ( Type arg )
         {
+            return false ;
             var r = false ; //typeof ( ITabGuest ).IsAssignableFrom ( arg ) ;
             if ( DoTraceConditionalRegistration )
             {
@@ -438,7 +439,7 @@ else
         private static string DescribeComponent ( IComponentRegistration eventArgsComponent )
         {
             var debugDesc = "no description" ;
-            var key = "DebugDescription" ;
+            const string key = "DebugDescription" ;
             if ( eventArgsComponent.Metadata.ContainsKey ( key ) )
             {
                 debugDesc = eventArgsComponent.Metadata[ key ].ToString ( ) ;

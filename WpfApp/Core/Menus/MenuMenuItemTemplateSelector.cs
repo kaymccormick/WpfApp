@@ -13,6 +13,7 @@ namespace WpfApp.Core.Menus
     public class MenuMenuItemTemplateSelector : DataTemplateSelector
 
     {
+        private const string MenuItemTemplateNoChildrenTemplateName = "Menu_ItemTemplateNoChildren";
         private static readonly ILogger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
         /// <summary>
@@ -62,8 +63,7 @@ namespace WpfApp.Core.Menus
             //     return base.SelectTemplate( item, container );
             // }
 
-            var source = item as IMenuItem ;
-            if ( source == null )
+            if ( ! ( item is IMenuItem ) )
             {
                 Logger.Warn ( "item is not a IMenuItem" ) ;
                 return base.SelectTemplate ( item , container ) ;
@@ -80,7 +80,7 @@ namespace WpfApp.Core.Menus
                     Logger.Debug ( "item is IMenuItem" ) ;
                     if ( x.Children.Any ( ) )
                     {
-                        var key = "Menu_ItemTemplateChildren" ;
+                        const string key = "Menu_ItemTemplateChildren" ;
                         Logger.Info ( $"Selecting template {key} for {container}" ) ;
                         if ( r != null )
                         {
@@ -99,7 +99,7 @@ namespace WpfApp.Core.Menus
 
                     else
                     {
-                        var key = "Menu_ItemTemplateNoChildren" ;
+                        const string key = MenuItemTemplateNoChildrenTemplateName;
 
                         Logger.Info ( $"Selecting template {key} for {container}" ) ;
 

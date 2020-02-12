@@ -16,3 +16,6 @@ TestResult.xml
 /UpgradeLog.htm
 /AppLoggingConfigHelper.cs
 /Docs/Help/LastBuild.log
+*.chm
+*.msha
+*.mshc

@@ -21,6 +21,7 @@ namespace Tests.Main.UI
     [ LogTestMethod ] [ BeforeAfterLogger ]
     public class TypeControlTests : IClassFixture < LoggingFixture >, IDisposable
     {
+        private const string typeControlName = "typeControl";
         private readonly LoggingFixture _loggingFixture ;
 
         private static readonly Logger Logger =
@@ -307,7 +308,7 @@ namespace Tests.Main.UI
         // ReSharper disable once InternalOrPrivateMemberNotDocumented
         private string SetupTypeNavControl ( out TypeNavigator control )
         {
-            var controlName = "typeNav" ;
+            const string controlName = "typeNav" ;
             control = new TypeNavigator { Name = controlName } ;
             control.SetValue (
                               Props.RenderedTypeProperty
@@ -319,7 +320,7 @@ namespace Tests.Main.UI
         // ReSharper disable once InternalOrPrivateMemberNotDocumented
         private string SetupTypeControl ( out TypeControl control )
         {
-            var controlName = "typeControl" ;
+            const string controlName = typeControlName;
             control = new TypeControl { Name = controlName } ;
             control.SetValue (
                               Props.RenderedTypeProperty
