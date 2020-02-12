@@ -141,21 +141,21 @@ namespace WpfApp.Core.Infos
             return r ;
         }
 
-        /// <summary>Adds an item to the <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
-        /// <param name="item">The object to add to the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
-        /// <exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only.</exception>
+        /// <summary>Adds an item to the System.Collections.Generic.ICollection`1.</summary>
+        /// <param name="item">The object to add to the System.Collections.Generic.ICollection`1.</param>
+        /// <exception cref="System.NotSupportedException">The System.Collections.Generic.ICollection`1 is read-only.</exception>
         public void Add ( T item ) { Push ( item ) ; }
 
-        /// <summary>Removes the first occurrence of a specific object from the <see cref="T:System.Collections.Generic.ICollection`1" />.</summary>
-        /// <param name="item">The object to remove from the <see cref="T:System.Collections.Generic.ICollection`1" />.</param>
+        /// <summary>Removes the first occurrence of a specific object from the System.Collections.Generic.ICollection`1.</summary>
+        /// <param name="item">The object to remove from the System.Collections.Generic.ICollection`1.</param>
         /// <returns>
-        /// <see langword="true" /> if <paramref name="item" /> was successfully removed from the <see cref="T:System.Collections.Generic.ICollection`1" />; otherwise, <see langword="false" />. This method also returns <see langword="false" /> if <paramref name="item" /> is not found in the original <see cref="T:System.Collections.Generic.ICollection`1" />.</returns>
-        /// <exception cref="T:System.NotSupportedException">The <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only.</exception>
+        /// <see langword="true" /> if <paramref name="item" /> was successfully removed from the System.Collections.Generic.ICollection`1; otherwise, <see langword="false" />. This method also returns <see langword="false" /> if <paramref name="item" /> is not found in the original System.Collections.Generic.ICollection`1.</returns>
+        /// <exception cref="System.NotSupportedException">The System.Collections.Generic.ICollection`1 is read-only.</exception>
         public bool Remove ( T item ) { throw new System.NotImplementedException ( ) ; }
 
-        /// <summary>Gets a value indicating whether the <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only.</summary>
+        /// <summary>Gets a value indicating whether the System.Collections.Generic.ICollection`1 is read-only.</summary>
         /// <returns>
-        /// <see langword="true" /> if the <see cref="T:System.Collections.Generic.ICollection`1" /> is read-only; otherwise, <see langword="false" />.</returns>
+        /// <see langword="true" /> if the System.Collections.Generic.ICollection`1 is read-only; otherwise, <see langword="false" />.</returns>
         public bool IsReadOnly { get ; set ; } = false ;
     }
 }

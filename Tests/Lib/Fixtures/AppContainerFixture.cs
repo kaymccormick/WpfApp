@@ -29,8 +29,7 @@ namespace Tests.Lib.Fixtures
     /// <summary>Test fixture configured to supply the primary application container from Autofac.</summary>
     /// <seealso cref="Xunit.IAsyncLifetime" />
     /// <seealso cref="ContainerHelper"/>
-    [UsedImplicitly ]
-    [Browsable(false)]
+    [UsedImplicitly]
     public class AppContainerFixture : IAsyncLifetime, ILifetimeScope
     {
         private readonly IMessageSink _sink ;

@@ -66,7 +66,7 @@ namespace WpfApp.Core.Menus
 
             #region Menu Item Lists
             Logger.Debug ( "Registering MenuItemList" ) ;
-            var q = builder.RegisterType < MenuItemList > ( )
+            var q = builder.RegisterType < MenuItemCollection > ( )
                             //.AsImplementedInterfaces ( )
                            .WithMetadata < ResourceMetadata > (
                                                                m => m.For (
@@ -75,7 +75,7 @@ namespace WpfApp.Core.Menus
                                                                           )
                                                               )
                            .PreserveExistingDefaults ( )
-                           .As < IMenuItemList > ( ) ;
+                           .As < IMenuItemCollection > ( ) ;
             if ( intercept )
             {
                 Logger.Debug ( "enabling interception" ) ;

@@ -24,7 +24,7 @@ namespace Tests.Lib.Utils
     /// TODO Edit XML Comment Template for LogHelper
     public static class LogHelper
     {
-        /// <summary>Supplied structured logging properties for a particular test method indicated by <seealso cref="method"/>.. Supplied properties "TestMethodName", "TestClass",</summary>
+        /// <summary>Supplied structured logging properties for a particular test method indicated by method.. Supplied properties "TestMethodName", "TestClass",</summary>
         /// <param name="method">The method.</param>
         /// <param name="stage">The stage.</param>
         /// <returns></returns>

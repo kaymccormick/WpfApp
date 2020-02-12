@@ -178,7 +178,6 @@ namespace Tests.Main
             Assert.NotNull ( setMethodInfo ) ;
             CheckedMembers[ setterName ] = true ;
 
-            var eventName = "" ;
         }
 
         private static void CheckRoutedEvent ( FieldInfo fieldInfo , object value )

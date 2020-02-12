@@ -47,7 +47,7 @@
         </Style>
     </UserControl.Resources>
     <Grid
-        DataContext="{Binding Path=(wpfApp:Props.RenderedType),ElementName=userControl,FallbackValue={x:Type model:MenuItemList}}"
+        DataContext="{Binding Path=(wpfApp:Props.RenderedType),ElementName=userControl,FallbackValue={x:Type model:MenuItemCollection}}"
         ShowGridLines="True">
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />

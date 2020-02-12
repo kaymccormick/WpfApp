@@ -114,4 +114,10 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="AppLoggingConfigHelper_ConfigureLogging_____Starting_logger_configuration_" xml:space="preserve">
+    <value>*** Starting logger configuration.</value>
+  </data>
+  <data name="AppLoggingConfigHelper_EnsureLoggingConfigured_no_config_loaded_field_found" xml:space="preserve">
+    <value>no config loaded field found</value>
+  </data>
 </root>

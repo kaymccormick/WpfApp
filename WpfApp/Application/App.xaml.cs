@@ -34,6 +34,7 @@ namespace WpfApp
     /// <summary>Root namespace for the WPF application infrastructure.</summary>
     [ CompilerGenerated ]
     [ UsedImplicitly ]
+    [SuppressMessage("Performance", "CA1812:Avoid uninstantiated internal classes", Justification = "<Pending>")]
     internal class NamespaceDoc
     {
     }
@@ -78,7 +79,7 @@ namespace WpfApp.Application
         public delegate void OnDebugMessageRaised ( object sender , DebugEventArgs args ) ;
 
         private IContainer              _container ;
-        private ContainerHelperSettings _containerHelperSettings ;
+        private ContainerHelperSettings _containerHelperSettings = null ;
 
         /// <summary>Initializes a new instance of the <see cref="App"/> class.</summary>
         /// <param name="debugEventHandler">The debug event handler.</param>
@@ -425,7 +426,7 @@ namespace WpfApp.Application
                           ) ]
         private object DispatcherOperationCallback ( object arg )
         {
-            DebugLog ( $"{nameof ( DispatcherOperationCallback )}" ) ;
+            DebugLog ( nameof ( DispatcherOperationCallback ) ) ;
 
             AppInitialize ( ) ;
 
@@ -506,9 +507,9 @@ namespace WpfApp.Application
                                                       ) ;
 
 
-            if ( AppContainer.IsRegistered < IMenuItemList > ( ) )
+            if ( AppContainer.IsRegistered < IMenuItemCollection > ( ) )
             {
-                var menuItemList = AppContainer.Resolve < IMenuItemList > ( ) ;
+                var menuItemList = AppContainer.Resolve < IMenuItemCollection > ( ) ;
                 MenuItemListCollectionView    = new ListCollectionView ( menuItemList ) ;
                 Resources[ "MyMenuItemList" ] = menuItemList ;
             }
@@ -558,7 +559,7 @@ namespace WpfApp.Application
         private void MainWindowLoaded ( object o , RoutedEventArgs args )
         {
             var fe = o as FrameworkElement ;
-            DebugLog ( $"{nameof ( MainWindowLoaded )}" ) ;
+            DebugLog (nameof ( MainWindowLoaded ) ) ;
             Props.SetMenuItemListCollectionView ( fe , MenuItemListCollectionView ) ;
             DebugLog ( $"Setting LifetimeScope DependencyProperty to {AppContainer}" ) ;
             Props.SetAssemblyList (

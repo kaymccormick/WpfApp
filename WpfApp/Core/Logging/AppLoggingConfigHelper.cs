@@ -15,6 +15,7 @@ using NLog.Common ;
 using NLog.Config ;
 using NLog.Layouts ;
 using NLog.Targets ;
+using WpfApp.Properties ;
 using WpfApp.Proxy ;
 
 namespace WpfApp.Core.Logging
@@ -88,7 +89,7 @@ namespace WpfApp.Core.Logging
           , bool                   proxyLogging = false
         )
         {
-            logMethod ( "*** Starting logger configuration." ) ;
+            logMethod ( Resources.AppLoggingConfigHelper_ConfigureLogging_____Starting_logger_configuration_ ) ;
             InternalLogging ( ) ;
 
             LogFactory proxiedFactory = null ;
@@ -309,7 +310,7 @@ namespace WpfApp.Core.Logging
                                                     "no field _configLoaded for "
                                                     + LogManager.LogFactory
                                                    ) ;
-                throw new Exception ( "no config loaded field found" ) ;
+                throw new Exception ( Resources.AppLoggingConfigHelper_EnsureLoggingConfigured_no_config_loaded_field_found ) ;
             }
 
             var config = fieldInfo2.GetValue ( LogManager.LogFactory ) ;
@@ -443,7 +444,9 @@ namespace WpfApp.Core.Logging
 
 
         // ReSharper disable once UnusedParameter.Local
+#pragma warning disable IDE0060 // Remove unused parameter
         private static void Debug ( string s ) { }
+#pragma warning restore IDE0060 // Remove unused parameter
 
         /// <summary>Adds the supplied target to the current NLog configuration.</summary>
         /// <param name="target">The target.</param>

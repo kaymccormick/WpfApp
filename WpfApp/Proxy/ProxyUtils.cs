@@ -179,7 +179,9 @@ namespace WpfApp.Proxy
             }
         }
 
+
         // ReSharper disable once UnusedParameter.Local
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Style", "IDE0060:Remove unused parameter", Justification = "<Pending>")]
         private string FormatReturnValue ( IInvocation invocation , object r )
         {
             return FormatValue ( r , out _ ) ;
@@ -215,7 +217,9 @@ namespace WpfApp.Proxy
             return r.ToString ( ) ;
         }
 
+
         // ReSharper disable once UnusedMember.Local
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Code Quality", "IDE0051:Remove unused private members", Justification = "<Pending>")]
         private static string FormatValue < T > ( ICollection < T > r , out bool b1 )
         {
             b1 = true ;
@@ -552,7 +556,7 @@ namespace WpfApp.Proxy
         {
             var stringWriter = CreateStringWriter ( ) ;
 
-            var xmlWriterProxy = CreateXmlWriter ( stringWriter ) ;
+            using var xmlWriterProxy = CreateXmlWriter ( stringWriter ) ;
             var context = CreateXamlSchemaContext ( ) ;
             var settings = CreateXamlObjectReaderSettings ( ) ;
             var reader = CreateXamlObjectReader ( instance , context , settings ) ;

@@ -99,7 +99,6 @@
     <Compile Include="Core\Exceptions\UnableToRegisterObjectIdException.cs" />
     <Compile Include="Core\Exceptions\UnhandledException.cs" />
     <Compile Include="Core\Interfaces\IObjectId.cs" />
-    <Compile Include="Core\Logging\LoggingCategory.cs" />
     <Compile Include="Debug\DebugEventArgs.cs" />
     <Compile Include="GlobalSuppressions.cs" />
     <Compile Include="NamespaceDocs.cs" />
@@ -216,7 +215,7 @@
     <Compile Include="Core\Interfaces\IHaveObjectId.cs" />
     <Compile Include="Core\Interfaces\ILoggerTracker.cs" />
     <Compile Include="Core\Interfaces\IMenuItem.cs" />
-    <Compile Include="Core\Interfaces\IMenuItemList.cs" />
+    <Compile Include="Core\Interfaces\IMenuItemCollection.cs" />
     <Compile Include="Core\Interfaces\IObjectIdProvider.cs" />
     <Compile Include="Core\Interfaces\ITopLevelMenu.cs" />
     <Compile Include="Core\Interfaces\LoggerEventArgs.cs" />
@@ -264,7 +263,7 @@
     <Compile Include="Core\Menus\XMenuItem.cs" />
     <Compile Include="Core\Model\ComponentRegistration.cs" />
     <Compile Include="Core\Model\InstanceRegistration.cs" />
-    <Compile Include="Core\Model\MenuItemList.cs" />
+    <Compile Include="Core\Model\MenuItemCollection.cs" />
     <Compile Include="Core\Model\MethodInvocation.cs" />
     <Compile Include="Core\Model\ResourceInfo.cs" />
     <Compile Include="Core\Model\ResourcesModel.cs" />

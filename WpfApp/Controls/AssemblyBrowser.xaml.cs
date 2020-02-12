@@ -13,6 +13,7 @@ namespace WpfApp.Controls
         // ReSharper disable once UnusedMember.Local
         // ReSharper disable once InternalOrPrivateMemberNotDocumented
         // ReSharper disable once InconsistentNaming
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Code Quality", "IDE0052:Remove unread private members", Justification = "<Pending>")]
         private static Logger Logger = LogManager.GetCurrentClassLogger ( ) ;
 
         /// <summary>

@@ -61,7 +61,7 @@ namespace Tests.Main
         [ Fact ] [ UsedImplicitly ] [ Trait ( "Working" , "false" ) ]
         public void ContainerTestResolveIMenuItemList ( )
         {
-            var menuItemList = Scope.Resolve < IMenuItemList > ( ) ;
+            var menuItemList = Scope.Resolve < IMenuItemCollection > ( ) ;
             Assert.NotNull ( menuItemList ) ;
             Assert.NotEmpty ( menuItemList ) ;
             Assert.NotEmpty ( menuItemList.First ( ).Children ) ;
