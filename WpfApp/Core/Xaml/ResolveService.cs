@@ -113,7 +113,7 @@ namespace WpfApp.Core.Xaml
         ///     <see cref="System.Windows.FrameworkElement.Initialized"/> event. This
         ///     method is invoked whenever
         ///     <see cref="System.Windows.FrameworkElement.IsInitialized"/> is set to
-        ///     <see langword="true " />internally.
+        ///     <see langword="true"/> internally.
         /// </summary>
         /// <param name="e">
         ///     The <see cref="System.Windows.RoutedEventArgs" /> that

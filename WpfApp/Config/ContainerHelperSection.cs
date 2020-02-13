@@ -17,7 +17,7 @@ namespace WpfApp.Config
         /// TODO Edit XML Comment Template for DoInterception
         [ConfigurationProperty("DoInterception", DefaultValue = false, IsRequired = false, IsKey = false)]
         // ReSharper disable once UnusedMember.Global
-        public bool DoInterception { get => ( bool ) this[ nameof(DoInterception)] ; set => this["DoInterception"] = value; }
+        public bool DoInterception { get => ( bool ) this[ nameof(DoInterception)] ; set => this[nameof(DoInterception)] = value; }
 
         /// <summary>Gets or sets a value indicating whether [do trace conditional registration].</summary>
         /// <value>

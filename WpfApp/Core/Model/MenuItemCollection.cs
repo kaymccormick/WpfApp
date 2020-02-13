@@ -2,6 +2,7 @@ using System ;
 using System.Collections.Generic ;
 using System.Collections.ObjectModel ;
 using System.Linq ;
+using JetBrains.Annotations ;
 using NLog ;
 using WpfApp.Core.Interfaces ;
 using WpfApp.Core.Logging ;
@@ -25,9 +26,14 @@ namespace WpfApp.Core.Model
         /// <param name="loggerFunc">The logger function.</param>
         public MenuItemCollection (
             IEnumerable < ITopLevelMenu > topLevelMenus
-          , Func < Type , ILogger >       loggerFunc
+          , [ NotNull ] Func < Type , ILogger >       loggerFunc
         ) : base ( topLevelMenus.Select ( menu => menu.GetXMenuItem ( ) ) )
         {
+            if ( loggerFunc == null )
+            {
+                throw new ArgumentNullException ( nameof ( loggerFunc ) ) ;
+            }
+
             Logger = loggerFunc ( typeof ( MenuItemCollection ) ) ;
             Logger.Info ( $"Creating {nameof ( MenuItemCollection )} [ Count = {Count} ] " ) ;
         }

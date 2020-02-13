@@ -12,7 +12,7 @@ namespace WpfApp
     {
         /// <summary>
         ///     Parameterless constructor.
-        /// </summarypp>
+        /// </summary>
         public DesignData ( )
         {
             var containerBuilder = new ContainerBuilder ( ) ;

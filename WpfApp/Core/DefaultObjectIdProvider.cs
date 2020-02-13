@@ -31,9 +31,9 @@ namespace WpfApp.Core
         ///     Initializes a new instance of the <see cref="System.Object" />
         ///     class.
         /// </summary>
-        public DefaultObjectIdProvider ( ObjectIDGenerator generator )
+        public DefaultObjectIdProvider ( [ NotNull ] ObjectIDGenerator generator )
         {
-            Generator     = generator ;
+            Generator     = generator ?? throw new ArgumentNullException ( nameof ( generator ) ) ;
             _registryById = new ConcurrentDictionary < long , object > ( ) ;
             _registry     = new ConcurrentDictionary < object , long > ( ) ;
             _id           = generator.GetId ( this , out _ ) ;
@@ -123,13 +123,23 @@ namespace WpfApp.Core
         /// TODO Edit XML Comment Template for ProvideObjectInstanceIdentifier
         public object ProvideObjectInstanceIdentifier (
             [ NotNull ] object        instance
-          , IComponentRegistration    eComponent
-          , IEnumerable < Parameter > eParameters
+          , [ NotNull ] IComponentRegistration    eComponent
+          , [ NotNull ] IEnumerable < Parameter > eParameters
         )
         {
             if ( instance == null )
             {
                 throw new ArgumentNullException ( nameof ( instance ) ) ;
+            }
+
+            if ( eComponent == null )
+            {
+                throw new ArgumentNullException ( nameof ( eComponent ) ) ;
+            }
+
+            if ( eParameters == null )
+            {
+                throw new ArgumentNullException ( nameof ( eParameters ) ) ;
             }
 
             var id = Generator.GetId ( instance , out var newFlag ) ;

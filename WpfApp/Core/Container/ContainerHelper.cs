@@ -21,7 +21,7 @@ using WpfApp.Proxy ;
 namespace WpfApp.Core.Container
 {
     /// <summary>
-    ///     static helper class for autofac container. Contains static methods to help bootstrap the container. <see cref="ContainerHelper.SetupContainer(container, assembliesToScan, containerHelperSettings)"/>.
+    ///     static helper class for autofac container. Contains static methods to help bootstrap the container. <see cref="ContainerHelper.SetupContainer(IContainer,IEnumerable{Assembly},ContainerHelperSettings)"/>.
     /// </summary>
     public static class ContainerHelper
     {

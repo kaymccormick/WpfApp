@@ -120,4 +120,7 @@
   <data name="AppLoggingConfigHelper_EnsureLoggingConfigured_no_config_loaded_field_found" xml:space="preserve">
     <value>no config loaded field found</value>
   </data>
+  <data name="App_ErrorExit_No_application_reference" xml:space="preserve">
+    <value>No application reference</value>
+  </data>
 </root>

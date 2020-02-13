@@ -39,8 +39,13 @@ namespace WpfApp.Core.Xaml
         ///     The object value to set on the property where the extension is
         ///     applied.
         /// </returns>
-        public override object ProvideValue ( IServiceProvider serviceProvider )
+        public override object ProvideValue ( [ NotNull ] IServiceProvider serviceProvider )
         {
+            if ( serviceProvider == null )
+            {
+                throw new ArgumentNullException ( nameof ( serviceProvider ) ) ;
+            }
+
             var service =
                 serviceProvider.GetService (
                                             typeof ( IProvideValueTarget )

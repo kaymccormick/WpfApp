@@ -92,7 +92,7 @@ namespace WpfApp.Controls
 
         /// <summary>Gets information about the High Contrast accessibility feature. </summary>
         /// <returns>
-        /// <see langword="true" /> if the <value>HIGHCONTRASTON</value> option is selected; otherwise,<see langword=" false" />.</returns>
+        /// <see langword="true" /> if the <value>HIGHCONTRASTON</value> option is selected; otherwise,<see langword="false" />.</returns>
         [Category( "Accessibility" ) ]
         public bool HighContrast { [ SecurityCritical ] get; set; }
 
@@ -123,7 +123,7 @@ namespace WpfApp.Controls
         public bool FlatMenu { [ SecurityCritical ] get; set; }
 
         /// <summary>Gets the size of the work area on the primary display monitor. </summary>
-        /// <returns>A <see langword="RECT" /> structure that receives the work area coordinates, expressed as virtual screen coordinates.</returns>
+        /// <returns>A <see cref="RECT" /> structure that receives the work area coordinates, expressed as virtual screen coordinates.</returns>
         [ Category( "Layout" ) ]
         public Rect WorkArea { get; set; }
 
@@ -180,7 +180,7 @@ namespace WpfApp.Controls
 
         /// <summary>Gets a value indicating whether the user relies on the keyboard instead of the mouse, and whether the user wants applications to display keyboard interfaces that are typically hidden. </summary>
         /// <returns>
-        /// <see langword="true" /> if the user relies on the keyboard; otherwise,<see langword=" false" />.</returns>
+        /// <see langword="true" /> if the user relies on the keyboard; otherwise,<see langword="false" />.</returns>
         [ Category( "Input" ) ]
         public bool KeyboardPreference { [ SecurityCritical ] get; set; }
 
@@ -428,7 +428,7 @@ namespace WpfApp.Controls
 
         /// <summary>Gets the animation effects associated with user actions. </summary>
         /// <returns>
-        /// <see langword="true" /> if the minimize window animations feature is enabled; otherwise,<see langword=" false" />.</returns>
+        /// <see langword="true" /> if the minimize window animations feature is enabled; otherwise,<see langword="false" />.</returns>
         [ Category( "Effects" ) ]
         public bool MinimizeAnimation { [ SecurityCritical ] get; set; }
 
@@ -778,7 +778,7 @@ namespace WpfApp.Controls
 
         /// <summary>Gets a value that indicates whether the system is ready to use a Unicode-based Input Method Editor (IME) on a Unicode application.  </summary>
         /// <returns>
-        /// <see langword="true" /> if the Input Method Manager/Input Method Editor features are enabled; otherwise, <see langword="false" />.<see langword="" /></returns>
+        /// <see langword="true" /> if the Input Method Manager/Input Method Editor features are enabled; otherwise, <see langword="false" />.</returns>
         public bool IsImmEnabled { [ SecurityCritical ] get; set; }
 
         /// <summary>Gets a value that indicates whether the current operating system is the Microsoft Windows XP Media Center Edition. </summary>
@@ -1125,7 +1125,7 @@ namespace WpfApp.Controls
         /// <returns>A resource key.</returns>
         public ResourceKey VirtualScreenTopKey { get; set; }
 
-        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see langword="FocusVisualStyle" /> property. </summary>
+        /// <summary>Gets the <see cref="System.Windows.ResourceKey" /> for the <see cref="FocusVisualStyle" /> property. </summary>
         /// <returns>The resource key.</returns>
         public ResourceKey FocusVisualStyleKey { get; set; }
 

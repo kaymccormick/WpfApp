@@ -1,8 +1,10 @@
 ﻿using System ;
 using System.Collections.Generic ;
+using System.Runtime.Serialization ;
 using System.Xml ;
 using System.Xml.Schema ;
 using System.Xml.Serialization ;
+using JetBrains.Annotations ;
 
 namespace WpfApp.Core.Util
 {
@@ -75,6 +77,17 @@ namespace WpfApp.Core.Util
         }
 
         #region IXmlSerializable Members
+
+      
+
+
+        /// <summary>Initializes a new instance of the <see cref="System.Collections.Generic.Dictionary" /> class with serialized data.</summary>
+        /// <param name="info">A <see cref="System.Runtime.Serialization.SerializationInfo" /> object containing the information required to serialize the <see cref="System.Collections.Generic.Dictionary`2" />.</param>
+        /// <param name="context">A <see cref="System.Runtime.Serialization.StreamingContext" /> structure containing the source and destination of the serialized stream associated with the <see cref="System.Collections.Generic.Dictionary`2" />.</param>
+        protected SerializableDictionary ( SerializationInfo info , StreamingContext context ) : base ( info , context )
+        {
+        }
+
         /// <summary>
         /// This method is reserved and should not be used. When implementing the <span class="keyword">IXmlSerializable</span> interface, you should return <span class="keyword"><span class="languageSpecificText"><span class="cs">null</span><span class="vb">Nothing</span><span class="cpp">nullptr</span></span></span><span class="nu">a null reference (<span class="keyword">Nothing</span> in Visual Basic)</span> (<span class="keyword"><span class="languageSpecificText"><span class="cs">null</span><span class="vb">Nothing</span><span class="cpp">nullptr</span></span></span><span class="nu">a null reference (<span class="keyword">Nothing</span> in Visual Basic)</span> in Visual Basic) from this method, and instead, if specifying a custom schema is required, apply the <see cref="System.Xml.Serialization.XmlSchemaProviderAttribute"/> to the class.
         /// </summary>

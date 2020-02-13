@@ -48,8 +48,7 @@ namespace WpfApp.Core.Exceptions
         /// </param>
         /// <param name="innerException">
         ///     The exception that is the cause of the current
-        ///     exception, or a null reference (<see langword="Nothing" /> in Visual
-        ///     Basic)
+        ///     exception, or a null reference 
         ///     if no inner exception is specified.
         /// </param>
         public UnhandledException ( string message , Exception innerException ) : base (

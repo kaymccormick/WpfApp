@@ -56,7 +56,7 @@ namespace WpfApp.Proxy
             Logger.Debug (
                           $"{nameof ( ShouldInterceptMethod )}: type={type}, memberInfo={memberInfo}"
                          ) ;
-            return memberInfo.Name.StartsWith ( "get_" , StringComparison.Ordinal ) ;
+            return memberInfo != null && memberInfo.Name.StartsWith ( "get_" , StringComparison.Ordinal ) ;
         }
 
         /// <summary>Invoked by the generation process to notify that the whole process has completed.</summary>

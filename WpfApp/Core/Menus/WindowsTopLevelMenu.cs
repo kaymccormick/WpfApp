@@ -3,6 +3,7 @@ using System.Collections.Generic ;
 using System.Linq ;
 using System.Windows ;
 using Autofac.Features.Metadata ;
+using JetBrains.Annotations ;
 using NLog ;
 using WpfApp.Core.Interfaces ;
 
@@ -27,9 +28,14 @@ namespace WpfApp.Core.Menus
         public WindowsTopLevelMenu (
             IEnumerable < Meta < Lazy < Window > > > windows
           , Func < IMenuItem >                       xMenuItemCreator
-          , Func < Type , ILogger >                  func
+          , [ NotNull ] Func < Type , ILogger >                  func
         )
         {
+            if ( func == null )
+            {
+                throw new ArgumentNullException ( nameof ( func ) ) ;
+            }
+
             Logger = func ( typeof ( WindowsTopLevelMenu ) ) ;
 
             _xMenuItemCreator = xMenuItemCreator ;

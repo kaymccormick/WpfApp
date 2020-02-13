@@ -186,6 +186,7 @@ namespace WpfApp.Controls
             // Container.Children.Add ( ) ;
         }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Globalization", "CA1303:Do not pass literals as localized parameters", Justification = "<Pending>")]
         private void GenerateControlsForType ( Type myType , IAddChild addChild , bool toolTip )
         {
             // TextBlock tb = new TextBlock();

@@ -61,6 +61,15 @@ namespace WpfApp.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to No application reference.
+        /// </summary>
+        internal static string App_ErrorExit_No_application_reference {
+            get {
+                return ResourceManager.GetString("App_ErrorExit_No_application_reference", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to *** Starting logger configuration..
         /// </summary>
         internal static string AppLoggingConfigHelper_ConfigureLogging_____Starting_logger_configuration_ {

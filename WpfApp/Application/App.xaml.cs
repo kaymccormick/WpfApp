@@ -635,9 +635,12 @@ namespace WpfApp.Application
         /// </param>
         protected override void OnStartup ( StartupEventArgs e )
         {
-            DoOnStartup ( e.Args ) ;
+            if ( e != null )
+            {
+                DoOnStartup ( e.Args ) ;
 
-            base.OnStartup ( e ) ;
+                base.OnStartup ( e ) ;
+            }
         }
 
         /// <summary>Does the on startup.</summary>
@@ -647,7 +650,7 @@ namespace WpfApp.Application
         public void DoOnStartup ( string[] args )
         {
             AddEventListeners ( ) ;
-            if ( ProcessArgs && args.Any ( ) )
+            if ( args != null && (ProcessArgs && args.Any ( )) )
             {
                 var windowName = args[ 0 ] ;
                 var xaml = "../Windows/" + windowName + ".xaml" ;
@@ -681,7 +684,7 @@ namespace WpfApp.Application
                 DebugLog ( $"Exiting with code {intCode}, {exitCode}" ) ;
                 if ( Current == null )
                 {
-                    DebugLog ( "No application reference" ) ;
+                    DebugLog ( WpfApp.Properties.Resources.App_ErrorExit_No_application_reference ) ;
                     Process.GetCurrentProcess ( ).Kill ( ) ;
                 }
                 else
