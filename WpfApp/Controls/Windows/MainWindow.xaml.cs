@@ -54,7 +54,7 @@ namespace WpfApp.Controls.Windows
         public static DependencyProperty MenuItemListCollectionViewProperty =
             Props.MenuItemListCollectionViewProperty ;
 
-        private MyCacheTarget _target ;
+        private readonly MyCacheTarget _target ;
 
         /// <summary>
         ///     Adds a specified object as the child of a

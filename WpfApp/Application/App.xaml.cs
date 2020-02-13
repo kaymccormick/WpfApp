@@ -80,7 +80,7 @@ namespace WpfApp.Application
         public delegate void OnDebugMessageRaised ( object sender , DebugEventArgs args ) ;
 
         private IContainer              _container ;
-        private ContainerHelperSettings _containerHelperSettings = null ;
+        private readonly ContainerHelperSettings _containerHelperSettings = null ;
 
         /// <summary>Initializes a new instance of the <see cref="App"/> class.</summary>
         /// <param name="debugEventHandler">The debug event handler.</param>
@@ -246,7 +246,7 @@ namespace WpfApp.Application
                         var type = configSection.SectionInformation.Type ;
                         // DoLogMethod ( $"Type is {type}" ) ;
                         var sectionType = Type.GetType ( type ) ;
-                        if ( sectionType.Assembly == type1.Assembly )
+                        if ( sectionType != null && sectionType.Assembly == type1.Assembly )
                         {
                             DebugLog ( "Found section " + sectionType.Name ) ;
                             var at = sectionType.GetCustomAttribute < ConfigTargetAttribute > ( ) ;
@@ -277,13 +277,16 @@ namespace WpfApp.Application
                                                 ( ( PropertyInfo ) memberInfo.Item1 ).GetValue (
                                                                                                 configSection
                                                                                                ) ;
-                                            attr.SetValue ( configTarget , configVal ) ;
+                                            if ( attr != null )
+                                            {
+                                                attr.SetValue ( configTarget , configVal ) ;
+                                            }
                                         }
                                         catch ( Exception ex )
                                         {
-                                            DebugLog (
-                                                      $"Unable to set property {attr.Name}: {ex.Message}"
-                                                     ) ;
+                                            DebugLog?.Invoke (
+                                                              $"Unable to set property {attr.Name}: {ex.Message}"
+                                                             ) ;
                                         }
                                     }
                                 }

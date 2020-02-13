@@ -602,7 +602,7 @@ namespace WpfApp.Proxy
                                                                      ) ;
             if ( fieldInfo != null ) {
                 var o = fieldInfo.GetValue ( null ) ;
-                WpfApp.Proxy.ProxyUtilsBase.Logger.Info ( "{o}" , o ) ;
+                Logger.Info ( "{o}" , o ) ;
             }
 
             var context = CreateXamlSchemaContext ( ) ;
