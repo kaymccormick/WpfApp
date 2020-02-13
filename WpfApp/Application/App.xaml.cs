@@ -17,6 +17,7 @@ using Autofac ;
 using Autofac.Core ;
 using Castle.Core.Internal ;
 using JetBrains.Annotations ;
+using KayMcCormick.Logging.Common ;
 using NLog ;
 using NLog.Fluent ;
 using Vanara.Extensions.Reflection ;

@@ -8,6 +8,7 @@ using Autofac.Core ;
 using Autofac.Core.Lifetime ;
 using Autofac.Core.Resolving ;
 using Autofac.Extras.AttributeMetadata ;
+using KayMcCormick.Logging.Common ;
 #if ENABLE_BUILDERPROXY
 using Castle.DynamicProxy ;
 #endif

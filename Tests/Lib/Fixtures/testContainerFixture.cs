@@ -1,5 +1,6 @@
 ﻿using Autofac ;
 using JetBrains.Annotations ;
+using KayMcCormick.Logging.Common ;
 using Tests.Lib.Misc ;
 using WpfApp.Core.Logging ;
 using WpfApp.Modules ;

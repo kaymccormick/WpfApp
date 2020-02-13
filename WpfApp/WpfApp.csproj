@@ -106,8 +106,6 @@
       <DependentUpon>NewMainWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Proxy\InterceptEvents.cs" />
-    <Compile Include="Proxy\LoggerFactoryHook.cs" />
-    <Compile Include="Proxy\LoggerProxyHelper.cs" />
     <Compile Include="Proxy\LoggingInterceptor.cs" />
     <Compile Include="Proxy\ProxyUtils.cs" />
     <Compile Include="Core\Attributes\LoggingEntityMetadata.cs" />
@@ -228,7 +226,6 @@
     <Compile Include="Proxy\CallBackHook.cs" />
     <Compile Include="Proxy\CallbackInterceptor.cs" />
     <Compile Include="Proxy\ContainerBaseInterceptor.cs" />
-    <Compile Include="Proxy\LoggerInterceptor.cs" />
     <Compile Include="Proxy\ProxyGenerationHook.cs" />
     <Compile Include="Proxy\RegistryInterceptor.cs" />
     <Compile Include="ResolveServiceList.cs" />
@@ -280,11 +277,6 @@
     <Compile Include="Core\Tracing\AppTraceListener.cs" />
     <Compile Include="Core\Tracing\AppTraceListener2.cs" />
     <Compile Include="Core\Tracing\Info.cs" />
-    <Compile Include="Core\Logging\AppLoggingConfigHelper.cs" />
-    <Compile Include="Core\Logging\CodeConfiguration.cs" />
-    <Compile Include="Core\Logging\LogDelegates.cs" />
-    <Compile Include="Core\Logging\LogFactoryInterceptor.cs" />
-    <Compile Include="Core\Logging\MyLogFactory.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -423,6 +415,10 @@
     <ProjectReference Include="..\..\..\NLog\src\NLog\NLog.csproj">
       <Project>{a0bff0db-ed9a-4639-ae86-8e709a1efc66}</Project>
       <Name>NLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common.csproj">
+      <Project>{122608B7-60D4-4182-A670-E8BE067C4F88}</Project>
+      <Name>KayMcCormick.Logging.Common</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup />

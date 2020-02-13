@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Diagnostics ;
+using KayMcCormick.Test.Common.Fixtures ;
 using NLog ;
 using NLog.Layouts ;
-using Tests.Lib.Fixtures ;
 using WpfApp.Proxy ;
 using Xunit ;
 using Xunit.Abstractions ;

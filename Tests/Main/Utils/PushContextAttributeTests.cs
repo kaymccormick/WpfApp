@@ -1,5 +1,5 @@
-﻿using NLog ;
-using Tests.Attributes ;
+﻿using KayMcCormick.Test.Common ;
+using NLog ;
 using WpfApp.Core.Context ;
 using Xunit ;
 

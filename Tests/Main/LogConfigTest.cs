@@ -1,10 +1,11 @@
 ﻿using System ;
 using System.Linq ;
+using KayMcCormick.Logging.Common ;
+using KayMcCormick.Test.Common ;
+using KayMcCormick.Test.Common.Fixtures ;
 using NLog ;
 using NLog.Config ;
 using NLog.Targets ;
-using Tests.Attributes ;
-using Tests.Lib.Fixtures ;
 using WpfApp.Core.Logging ;
 using Xunit ;
 using Xunit.Abstractions ;

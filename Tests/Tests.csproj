@@ -60,26 +60,19 @@
     <Reference Include="UIAutomationTypes" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Attributes\BeforeAfterLoggerAttribute.cs" />
-    <Compile Include="Attributes\LogTestMethodAttribute.cs" />
     <Compile Include="CollectionDefinitions\AutofacContainerDef.cs" />
     <Compile Include="CollectionDefinitions\GeneralPurpose.cs" />
     <Compile Include="CollectionDefinitions\WpfApplication.cs" />
-    <Compile Include="Lib\Fixtures\FixtureLogger.cs" />
-    <Compile Include="Lib\Fixtures\GlobalLoggingFixture.cs" />
     <Compile Include="Lib\Fixtures\testContainerFixture.cs" />
     <Compile Include="Lib\Fixtures\AppContainerFixture.cs" />
     <Compile Include="Lib\Fixtures\ContainerFixture.cs" />
-    <Compile Include="Lib\Fixtures\LoggingFixture.cs" />
     <Compile Include="Lib\Fixtures\WpfApplicationFixture.cs" />
     <Compile Include="Lib\Fixtures\WpfApplicationHelper.cs" />
-    <Compile Include="Lib\Logging\XunitTarget.cs" />
     <Compile Include="Lib\Misc\IRandom.cs" />
     <Compile Include="Lib\Misc\RandomClass.cs" />
     <Compile Include="Lib\UnexpectedPropertyException.cs" />
     <Compile Include="Lib\Utils\CacheUtils.cs" />
     <Compile Include="Lib\Utils\ConverterInfo.cs" />
-    <Compile Include="Lib\Utils\LogHelper.cs" />
     <Compile Include="Lib\Utils\Result.cs" />
     <Compile Include="Lib\Utils\WindowWrap.cs" />
     <Compile Include="Main\AppTests.cs" />
@@ -102,7 +95,6 @@
     <Compile Include="Lib\Fixtures\CombinedFixture.cs" />
     <Compile Include="TestException.cs" />
     <Compile Include="TestWindowViews.cs" />
-    <Compile Include="Lib\Logging\XunitSinkTarget.cs" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac.Mef">
@@ -148,6 +140,14 @@
     <ProjectReference Include="..\..\..\NLog\src\NLog\NLog.csproj">
       <Project>{a0bff0db-ed9a-4639-ae86-8e709a1efc66}</Project>
       <Name>NLog</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common.csproj">
+      <Project>{122608B7-60D4-4182-A670-E8BE067C4F88}</Project>
+      <Name>KayMcCormick.Logging.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\KayMcCormick.Test.Common\KayMcCormick.Test.Common\KayMcCormick.Test.Common.csproj">
+      <Project>{FA345B13-66B5-4378-B88C-E4737AF69894}</Project>
+      <Name>KayMcCormick.Test.Common</Name>
     </ProjectReference>
     <ProjectReference Include="..\WpfApp\WpfApp.csproj">
       <Project>{74792445-f224-4c75-b204-094ff689d950}</Project>

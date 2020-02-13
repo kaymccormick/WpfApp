@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Reflection;
 using System.Windows;
+using KayMcCormick.Test.Common.Fixtures ;
 using NLog;
 using NLog.Layouts;
 using Tests.Lib;
-using Tests.Lib.Fixtures;
 using WpfApp;
 using WpfApp.Application;
 using Xunit;

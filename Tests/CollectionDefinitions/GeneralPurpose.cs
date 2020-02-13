@@ -9,13 +9,14 @@
 // 
 // ---
 #endregion
+
 using JetBrains.Annotations ;
-using Tests.Lib.Fixtures ;
+using KayMcCormick.Test.Common.Fixtures ;
 using Xunit ;
 
 namespace Tests.CollectionDefinitions
 {
-    /// <summary>Defines the Xunit collection definition for tests that do not fall into other buckets. Provides the <see cref="GlobalLoggingFixture"/>.</summary>
+    /// <summary>Defines the Xunit collection definition for tests that do not fall into other buckets. Provides the <see cref="KayMcCormick.Test.Common.Fixtures.GlobalLoggingFixture"/>.</summary>
     /// GlobalLoggingFixture" />
     [ CollectionDefinition ( "GeneralPurpose" ) ] [ UsedImplicitly ]
     public class GeneralPurpose : ICollectionFixture <GlobalLoggingFixture>

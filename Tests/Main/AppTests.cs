@@ -1,7 +1,7 @@
 ﻿using System ;
+using KayMcCormick.Test.Common.Fixtures ;
 using NLog ;
 using NLog.Layouts ;
-using Tests.Lib.Fixtures ;
 using WpfApp.Application ;
 using WpfApp.Core.Container ;
 using WpfApp.Debug ;

@@ -20,3 +20,4 @@ TestResult.xml
 *.msha
 *.mshc
 /Output-Build.txt
+/Docs/Help

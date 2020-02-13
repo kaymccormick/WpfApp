@@ -1,4 +1,5 @@
 ﻿using System.Linq ;
+using KayMcCormick.Logging.Common ;
 using NLog ;
 using NLog.Config ;
 

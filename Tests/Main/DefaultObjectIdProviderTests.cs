@@ -2,9 +2,9 @@
 using System.Runtime.Serialization ;
 using Autofac.Core ;
 using JetBrains.Annotations ;
+using KayMcCormick.Test.Common ;
+using KayMcCormick.Test.Common.Fixtures ;
 using Moq ;
-using Tests.Attributes ;
-using Tests.Lib.Fixtures ;
 using WpfApp.Core ;
 using WpfApp.Core.Interfaces ;
 using Xunit ;

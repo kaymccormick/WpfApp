@@ -2,6 +2,7 @@
 using System.Linq ;
 using System.Reactive.Linq ;
 using System.Reactive.Subjects ;
+using KayMcCormick.Logging.Common ;
 using NLog ;
 using NLog.Config ;
 using NLog.Targets ;
