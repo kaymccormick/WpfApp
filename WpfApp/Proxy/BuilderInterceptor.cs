@@ -54,11 +54,11 @@ namespace WpfApp.Proxy
                         // ReSharper disable once ConvertToLocalFunction
                         Action < IComponentRegistry > newCbAction = reg => {
                             var p2 = Generator
-                               .CreateInterfaceProxyWithTarget < IComponentRegistry > (
-                                                                                       reg
-                                                                                     , new
-                                                                                           RegistryInterceptor (Generator )
-                                                                                      ) ;
+                               .CreateInterfaceProxyWithTarget (
+                                                                reg
+                                                              , new
+                                                                    RegistryInterceptor (Generator )
+                                                               ) ;
                             Logger.Info ( "in callback" ) ;
                             if ( origArg != null )
                             {

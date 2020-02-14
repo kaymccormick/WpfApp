@@ -28,7 +28,12 @@ namespace WpfApp.Core.Converters
           , CultureInfo culture
         )
         {
-            var s = value as ResolveService ;
+            if ( value == null )
+            {
+                throw new ArgumentNullException ( nameof ( value ) ) ;
+            }
+
+            var s = ( ResolveService ) value ;
             var lifetimeScope = Props.GetLifetimeScope ( s ) ?? parameter as ILifetimeScope ;
 
             if ( lifetimeScope == null )

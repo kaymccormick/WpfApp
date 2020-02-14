@@ -122,7 +122,6 @@
     <Compile Include="Core\Menus\MenuHelper.cs" />
     <Compile Include="Controls\Windows\AppSettingsWindow.xaml.cs" />
     <Compile Include="Controls\Windows\ComponentRegistry.cs" />
-    <Compile Include="Controls\Windows\LifetimeScope.cs" />
     <Compile Include="Controls\Windows\LogEventInfoCollection.cs" />
     <Compile Include="Controls\Windows\MainWindow.xaml.cs" />
     <Compile Include="Controls\Windows\NewWindow.xaml.cs" />

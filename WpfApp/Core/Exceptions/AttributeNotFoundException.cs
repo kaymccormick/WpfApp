@@ -49,6 +49,12 @@ namespace WpfApp.Core.Exceptions
         // ReSharper disable once AutoPropertyCanBeMadeGetOnly.Local
         public string AttributeName { get ; private set ; }
 
+       
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="info"></param>
+        /// <param name="context"></param>
         public override void GetObjectData(SerializationInfo info, StreamingContext context) => base.GetObjectData(info, context);
     }
 }

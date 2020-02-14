@@ -3,7 +3,7 @@ using System.Linq ;
 using Autofac.Core ;
 using JetBrains.Annotations ;
 
-namespace WpfApp.Core.Debug
+namespace WpfApp.Core.Util
 {
     /// <summary>Extension methods for debug output.</summary>
     public static class DebugUtils

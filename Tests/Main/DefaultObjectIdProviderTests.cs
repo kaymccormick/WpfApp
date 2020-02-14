@@ -82,7 +82,7 @@ namespace Tests.Main
             var x = new DefaultObjectIdProvider ( new ObjectIDGenerator ( ) ) ;
             var reg = new Mock < IComponentRegistration > ( ) ;
             var instance = new object ( ) ;
-            var id = x.ProvideObjectInstanceIdentifier ( instance , reg.Object , null ) ;
+            var id = x.ProvideObjectInstanceIdentifier ( instance , reg.Object , Array.Empty<Parameter>() ) ;
             Assert.NotNull ( id ) ;
         }
 

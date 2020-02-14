@@ -255,6 +255,7 @@ namespace WpfApp.Controls
             return pp ;
         }
 
+        // ReSharper disable once UnusedMember.Local
         private string NameForType ( Type myType )
         {
             // todo move to a better place

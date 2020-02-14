@@ -19,7 +19,7 @@ namespace WpfApp.Controls
     public partial class SystemParametersControl
         : UserControl
     {
-        private readonly Logger Logger = LogManager.GetCurrentClassLogger();
+        private static readonly Logger Logger = LogManager.GetCurrentClassLogger();
 
         /// <summary>Parameterless constructor.</summary>
         public SystemParametersControl()

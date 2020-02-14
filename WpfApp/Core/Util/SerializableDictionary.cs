@@ -4,7 +4,6 @@ using System.Runtime.Serialization ;
 using System.Xml ;
 using System.Xml.Schema ;
 using System.Xml.Serialization ;
-using JetBrains.Annotations ;
 
 namespace WpfApp.Core.Util
 {
@@ -80,10 +79,11 @@ namespace WpfApp.Core.Util
 
       
 
-
-        /// <summary>Initializes a new instance of the <see cref="System.Collections.Generic.Dictionary" /> class with serialized data.</summary>
-        /// <param name="info">A <see cref="System.Runtime.Serialization.SerializationInfo" /> object containing the information required to serialize the <see cref="System.Collections.Generic.Dictionary`2" />.</param>
-        /// <param name="context">A <see cref="System.Runtime.Serialization.StreamingContext" /> structure containing the source and destination of the serialized stream associated with the <see cref="System.Collections.Generic.Dictionary`2" />.</param>
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="info"></param>
+        /// <param name="context"></param>
         protected SerializableDictionary ( SerializationInfo info , StreamingContext context ) : base ( info , context )
         {
         }

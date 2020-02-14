@@ -42,17 +42,10 @@ namespace Tests.Main.Utils
             var p = new ProxyUtils(WriteOut, ProxyUtilsBase.CreateInterceptor(WriteOut));
             var xamlSchemaContext = p.CreateXamlSchemaContext();
             Logger.Info("{schemaContext}", xamlSchemaContext);
-            var i = 0;
-            const bool limitOutput = false ;
             foreach (var ns in xamlSchemaContext.GetAllXamlNamespaces())
             {
                 var allXamlTypes = xamlSchemaContext.GetAllXamlTypes(ns);
                 Logger.Debug("{numtypes} {namespace}", allXamlTypes.Count, ns);
-                i++;
-                if (limitOutput && i >= 5)
-                {
-                    break;
-                }
 
                 // continue ;
                 foreach (var t in allXamlTypes)
@@ -61,8 +54,6 @@ namespace Tests.Main.Utils
                     {
                         Logger.Debug ( "{t}" , t ) ;
                     }
-
-                    continue ;
                 }
 
 

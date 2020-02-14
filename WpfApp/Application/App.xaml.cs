@@ -26,7 +26,6 @@ using WpfApp.Core ;
 using WpfApp.Core.Container ;
 using WpfApp.Core.Exceptions ;
 using WpfApp.Core.Interfaces ;
-using WpfApp.Core.Logging ;
 using WpfApp.Debug ;
 using IContainer = Autofac.IContainer ;
 
@@ -135,8 +134,6 @@ namespace WpfApp.Application
         private ILogger Logger { get ; set ; }
 
         private LogDelegates.LogMethod2 DebugLog { get ; }
-
-        private LogDelegates.LogMethod2 InfoLog { get ; }
 
 
         /// <summary>Gets the task completion source.</summary>

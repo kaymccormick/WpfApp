@@ -1,14 +1,13 @@
-﻿using System ;
-using System.Collections.Generic ;
-using System.Diagnostics.CodeAnalysis ;
-using System.Linq ;
-using System.Reflection ;
-using JetBrains.Annotations ;
-using NLog ;
-using WpfApp.Core.Attributes ;
-using WpfApp.Core.Exceptions ;
-using WpfApp.Core.Infos ;
-using WpfApp.Core.Interfaces ;
+﻿using System;
+using System.Collections.Generic;
+using System.Diagnostics.CodeAnalysis;
+using System.Linq;
+using System.Reflection;
+using JetBrains.Annotations;
+using NLog;
+using WpfApp.Core.Attributes;
+using WpfApp.Core.Exceptions;
+using WpfApp.Core.Infos;
 
 namespace WpfApp.Core.Context
 {

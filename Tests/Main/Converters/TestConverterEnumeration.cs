@@ -175,7 +175,7 @@ namespace Tests.Main.Converters
                     Logger.Debug ( "\t" + type.FullName ) ;
                 }
 
-                Logger.Debug ( "" ) ;
+                Logger.Debug ( "{0}", "hello" ) ;
             }
 
             var converters = GetConverterTypes ( out _ ) ;

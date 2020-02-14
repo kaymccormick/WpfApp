@@ -30,9 +30,9 @@ namespace WpfApp.Core.Logging
         {
             get
             {
-                if ( AppLoggingConfigHelper.StringWriter != null )
+                if ( AppLoggingConfigHelper.Writer != null )
                 {
-                    return AppLoggingConfigHelper.StringWriter.ToString ( ) ;
+                    return AppLoggingConfigHelper.Writer.ToString ( ) ;
                 }
 
                 return "" ;

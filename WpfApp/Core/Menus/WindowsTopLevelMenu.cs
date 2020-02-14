@@ -17,6 +17,7 @@ namespace WpfApp.Core.Menus
         private readonly IMenuItem          _xMenuItem ;
         private readonly Func < IMenuItem > _xMenuItemCreator ;
 
+        // ReSharper disable once InconsistentNaming
         private readonly ILogger Logger ;
 
         /// <summary>Initializes a new instance of the <see cref="WindowsTopLevelMenu"/> class.</summary>

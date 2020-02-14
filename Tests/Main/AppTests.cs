@@ -4,7 +4,6 @@ using NLog ;
 using NLog.Layouts ;
 using WpfApp.Application ;
 using WpfApp.Core.Container ;
-using WpfApp.Debug ;
 using Xunit ;
 using Xunit.Abstractions ;
 
@@ -19,13 +18,11 @@ namespace Tests.Main
         // ReSharper disable once UnusedMember.Local
         // ReSharper disable once InconsistentNaming
         private static   Logger            Logger = LogManager.GetCurrentClassLogger ( ) ;
-        private readonly ITestOutputHelper _output ;
         private readonly LoggingFixture    _loggingFixture ;
 
         /// <summary>Initializes a new instance of the <see cref="System.Object" /> class.</summary>
         public AppTests ( ITestOutputHelper output , LoggingFixture loggingFixture )
         {
-            _output         = output ;
             _loggingFixture = loggingFixture ;
             loggingFixture.SetOutputHelper ( output ) ;
             _loggingFixture.Layout = Layout.FromString ( "${message}" ) ;
@@ -37,7 +34,7 @@ namespace Tests.Main
         [ WpfFact ]
         public void TestApplyConfiguration ( )
         {
-            using var app = new App ( DebugEventHandler ) ;
+            using var app = new App ( ) ;
             Assert.NotNull ( app ) ;
             Assert.Collection (
                                app.ConfigSettings
@@ -45,12 +42,6 @@ namespace Tests.Main
                               ) ;
         }
 
-       
-
-        private void DebugEventHandler ( object sender , DebugEventArgs e )
-        {
-            _output.WriteLine ( e.Message ) ;
-        }
 
         /// <summary>Performs application-defined tasks associated with freeing, releasing, or resetting unmanaged resources.</summary>
         public void Dispose ( )

@@ -7,10 +7,10 @@ using Autofac.Core ;
 using JetBrains.Annotations ;
 using NLog ;
 using NLog.Fluent ;
-using WpfApp.Core.Debug ;
 using WpfApp.Core.Exceptions ;
 using WpfApp.Core.Infos ;
 using WpfApp.Core.Interfaces ;
+using WpfApp.Core.Util ;
 
 namespace WpfApp.Core
 {

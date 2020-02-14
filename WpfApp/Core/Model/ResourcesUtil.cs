@@ -13,30 +13,30 @@ namespace WpfApp.Core.Model
         // ReSharper disable once UnusedMember.Local
         private static void CollectResources (
             FrameworkElement                      haveResources
-          , ObservableCollection < ResourceInfo > ResourcesCollection
+          , ObservableCollection < ResourceInfo > resourcesCollection
         )
         {
             var res = haveResources.Resources ;
-            AddResourceInfos ( res , ResourcesCollection ) ;
+            AddResourceInfos ( res , resourcesCollection ) ;
 
             foreach ( var child in LogicalTreeHelper.GetChildren ( haveResources ) )
             {
                 if ( child is FrameworkElement e )
                 {
-                    CollectResources ( e , ResourcesCollection ) ;
+                    CollectResources ( e , resourcesCollection ) ;
                 }
             }
         }
 
         private static void AddResourceInfos (
             ResourceDictionary                    res
-          , ObservableCollection < ResourceInfo > ResourcesCollection
+          , ObservableCollection < ResourceInfo > resourcesCollection
         )
         {
             var resourcesSource = res.Source ;
             foreach ( DictionaryEntry haveResourcesResource in res )
             {
-                ResourcesCollection.Add (
+                resourcesCollection.Add (
                                          new ResourceInfo (
                                                            resourcesSource
                                                          , haveResourcesResource.Key
@@ -47,7 +47,7 @@ namespace WpfApp.Core.Model
 
             foreach ( var r in res.MergedDictionaries )
             {
-                AddResourceInfos ( r , ResourcesCollection ) ;
+                AddResourceInfos ( r , resourcesCollection ) ;
             }
         }
     }
