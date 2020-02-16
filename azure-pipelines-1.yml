@@ -10,9 +10,24 @@ pool:
   vmImage: 'windows-latest'
 
 steps:
+- task: MsBuildHelperTask@0
+  inputs:
+    variableName: 'MsBuildAdditionalArguments'
+    MsBuildTargetBuild: true
+    MsBuildBaseOutputPath: 'StagingDirectory'
+    MsBuildOutputPath: 'StagingDirectory'
+    SkipInvalidConfigurations: 'true'
+    TreatWarningsAsError: 'false'
+    GerenateDocumentation: 'true'
+    RunCodeAnalysis: 'false'
+    ValidateArchitecture: 'false'
+    MvcBuildViews: 'false'
+    Precompile: 'false'
+    EnableUpdateable: 'false'
 - task: MSBuild@1
   inputs:
     solution: '**/*.csproj'
     platform: 'x86'
     configuration: 'Release'
     restoreNugetPackages: true
+    msbuildArguments: $(MsBuildAdditionalArguments)
