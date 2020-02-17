@@ -26,14 +26,8 @@ steps:
     MsBuildTargetCustom: 'restore;build'
     MsBuildBaseOutputPath: 'StagingDirectory'
     MsBuildOutputPath: 'StagingDirectory'
-    SkipInvalidConfigurations: 'true'
     TreatWarningsAsError: 'false'
     GerenateDocumentation: 'true'
-    RunCodeAnalysis: 'false'
-    ValidateArchitecture: 'false'
-    MvcBuildViews: 'false'
-    Precompile: 'false'
-    EnableUpdateable: 'false'
 - task: MSBuild@1
   inputs:
     solution: '**/*.csproj'
