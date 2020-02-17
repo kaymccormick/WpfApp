@@ -15,10 +15,12 @@ steps:
   submodules: recursive
 
 - task: NuGetToolInstaller@1
-
 - task: NuGetCommand@2
-  inputs: 
-    restoreSolution: '$(solution)'
+  inputs:
+    command: 'restore'
+    restoreSolution: '**/*.csproj'
+    feedsToUse: 'select'
+    noCache: true    
 
 - task: MsBuildHelperTask@0
   inputs:
