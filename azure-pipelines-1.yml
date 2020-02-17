@@ -12,6 +12,10 @@ pool:
   workspace:
     clean: outputs | resources | all 
     
+variables:
+  buildPlatform: 'x86'
+  buildConfiguration: 'Release'
+
 steps:
 - checkout: self
   submodules: recursive
@@ -58,7 +62,15 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    Contents: '**/*.xml'
+    Contents: 'WpfApp/bin/$(BuildPlatform)/$(BuildConfiguration)/*.xml'
+    TargetFolder: '$(Build.StagingDirectory)/XmlDocs'
+    CleanTargetFolder: true
+    flattenFolders: true
+    preserveTimestamp: true
+
+- task: CopyFiles@2
+  inputs:
+    Contents: 'KayMcCormick*/*/bin/$(BuildPlatform)/$(BuildConfiguration)/*.xml'
     TargetFolder: '$(Build.StagingDirectory)/XmlDocs'
     CleanTargetFolder: true
     flattenFolders: true
