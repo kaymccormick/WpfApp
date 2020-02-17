@@ -100,18 +100,6 @@ steps:
     artifact: 'XmlDocs'
     publishLocation: 'pipeline'
 
-- task: PublishGitHubRelease@0
-  inputs:
-    applicationName: 'Azure1'
-    gitSourceOption: 'github'
-    token: 'e3wuyitcvypnjwcu2yxxeewe7rxfqdxzuegx3thtpuf2t47chgba'
-    repo: 'WpfApp'
-    owner: 'kaymccormick'
-    tagName: 'v$(build.buildNumber)'
-    releaseName: 'XmlDocs-v$(build.buildNumber)'
-    assetsPattern: '''$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'''
-
-
 - task: UploadFilesToSPDocLib@1
   inputs:
     spUrl: 'https://satoridev.sharepoint.com/Builds/Forms/AllItems.aspx'
