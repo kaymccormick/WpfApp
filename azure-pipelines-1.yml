@@ -9,10 +9,9 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
-
 steps:
 - checkout: self
-    submodules: recursive
+  submodules: recursive
 
 - task: NuGetToolInstaller@1
 
