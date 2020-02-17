@@ -27,6 +27,7 @@ steps:
     MsBuildBaseOutputPath: 'StagingDirectory'
     MsBuildOutputPath: 'StagingDirectory'
     TreatWarningsAsError: 'false'
+    SkipInvalidConfigurations: 'true'
     GerenateDocumentation: 'true'
 - task: MSBuild@1
   inputs:
