@@ -203,11 +203,11 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common.csproj">
+    <ProjectReference Include="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common.csproj">
       <Project>{122608B7-60D4-4182-A670-E8BE067C4F88}</Project>
       <Name>KayMcCormick.Logging.Common</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\KayMcCormick.Test.Common\KayMcCormick.Test.Common\KayMcCormick.Test.Common.csproj">
+    <ProjectReference Include="..\KayMcCormick.Test.Common\KayMcCormick.Test.Common\KayMcCormick.Test.Common.csproj">
       <Project>{FA345B13-66B5-4378-B88C-E4737AF69894}</Project>
       <Name>KayMcCormick.Test.Common</Name>
     </ProjectReference>

@@ -477,7 +477,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common.csproj">
+    <ProjectReference Include="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common.csproj">
       <Project>{122608B7-60D4-4182-A670-E8BE067C4F88}</Project>
       <Name>KayMcCormick.Logging.Common</Name>
     </ProjectReference>
