@@ -8,6 +8,8 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
+  workspace:
+    clean: outputs | resources | all 
 
 variables:
   solution: '**/WpfApp.sln'
