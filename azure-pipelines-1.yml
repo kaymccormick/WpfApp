@@ -1,12 +1,5 @@
 # Starter pipeline
-- task: ArchiveFiles@2
-  inputs:
-    rootFolderOrFile: '$(Build.StagingDirectory)'
-    includeRootFolder: false
-    archiveType: 'zip'
-    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
-    replaceExistingArchive: true
-    verbose: true
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -48,3 +41,24 @@ steps:
     configuration: 'Release'
     restoreNugetPackages: false
     msbuildArguments: $(MsBuildAdditionalArguments)
+
+- task: CopyFiles@2
+  inputs:
+    Contents: '**/*.xml'
+    TargetFolder: '$(Build.StagingDirectory)/XmlDocs'
+    CleanTargetFolder: true
+    flattenFolders: true
+    preserveTimestamp: true
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(Build.StagingDirectory)/XmlDocs'
+    includeRootFolder: true
+    archiveType: 'zip'
+    archiveFile: - task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '''$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'''
+    artifact: 'XmlDocs'
+    publishLocation: 'pipeline'
+    replaceExistingArchive: true
+    verbose: true
