@@ -110,11 +110,6 @@
     <Compile Include="Lib\Fixtures\CombinedFixture.cs" />
     <Compile Include="TestException.cs" />
     <Compile Include="TestWindowViews.cs" />
-    <Compile Include="VSTest.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <DependentUpon>VSTest.runsettings</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Autofac.Mef">
@@ -176,10 +171,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="VSTest.runsettings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>VSTest.Designer.cs</LastGenOutput>
-    </None>
     <None Include="xunit.runner.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
