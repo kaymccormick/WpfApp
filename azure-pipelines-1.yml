@@ -9,16 +9,27 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-
+  workspace:
+    clean: outputs | resources | all 
+    
 steps:
 - checkout: self
   submodules: recursive
 
 - task: NuGetToolInstaller@1
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: '*/*.csproj'
+    feedsToUse: 'select'
+    noCache: true    
 
 - task: NuGetCommand@2
-  inputs: 
-    restoreSolution: '$(solution)'
+  inputs:
+    command: 'restore'
+    restoreSolution: 'KayMcCormick*/*/*.csproj'
+    feedsToUse: 'select'
+    noCache: true    
 
 - task: MsBuildHelperTask@0
   inputs:
