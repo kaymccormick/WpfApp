@@ -9,7 +9,13 @@ trigger:
 pool:
   vmImage: 'windows-latest'
 
+
 steps:
+- task: NuGetToolInstaller@1
+
+- task: NuGetCommand@2
+  inputs: 
+    restoreSolution: '$(solution)'
 
 - task: MsBuildHelperTask@0
   inputs:
