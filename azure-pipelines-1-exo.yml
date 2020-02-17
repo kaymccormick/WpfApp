@@ -99,11 +99,3 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     artifact: 'XmlDocs'
     publishLocation: 'pipeline'
-
-- task: UploadFilesToSPDocLib@1
-  inputs:
-    spUrl: 'https://satoridev.sharepoint.com/Builds/Forms/AllItems.aspx'
-    targetFolder: 'XmlDocs'
-    login: '$(sharepoint.userid)'
-    password: '$(sharepoint.password)'
-    filesToUpload: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
