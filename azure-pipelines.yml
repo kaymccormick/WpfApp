@@ -10,8 +10,8 @@ pool:
   vmImage: 'windows-latest'
 
 variables:
-  solution: '**/*.sln'
-  buildPlatform: 'Any CPU'
+  solution: '**/WpfApp.sln'
+  buildPlatform: 'x86'
   buildConfiguration: 'Release'
 
 steps:
