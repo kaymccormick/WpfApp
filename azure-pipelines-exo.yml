@@ -4,10 +4,19 @@
 # https://docs.microsoft.com/azure/devops/pipelines/apps/windows/dot-net
 
 trigger:
-- master
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - '*'
+    exclude:
+    - azure-pipelines-1.yml
+    - azure-pipelines-1.yml
+    - azure-pipelines-1-exo.yml
 
 pool:
-  vmImage: 'windows-latest'
+  name: exo
   workspace:
     clean: outputs | resources | all 
 
