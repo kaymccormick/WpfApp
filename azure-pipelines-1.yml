@@ -9,7 +9,9 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-
+  workspace:
+    clean: outputs | resources | all 
+    
 steps:
 - checkout: self
   submodules: recursive
