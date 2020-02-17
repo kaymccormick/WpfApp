@@ -5,7 +5,16 @@
 # https://aka.ms/yaml
 
 trigger:
-- master
+  branches:
+    include:
+    - master
+  paths:
+    include:
+    - '*'
+    exclude:
+    - azure-pipelines-1.yml
+    - azure-pipelines-exo.yml
+    - azure-pipelines.yml
 
 pool:
   name: exo
