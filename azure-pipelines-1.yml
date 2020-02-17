@@ -20,7 +20,14 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
-    restoreSolution: '**/*.csproj'
+    restoreSolution: '*/*.csproj'
+    feedsToUse: 'select'
+    noCache: true    
+
+- task: NuGetCommand@2
+  inputs:
+    command: 'restore'
+    restoreSolution: 'KayMcCormick*/*/*.csproj'
     feedsToUse: 'select'
     noCache: true    
 
