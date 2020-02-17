@@ -1,11 +1,11 @@
 [submodule "KayMcCormick.Test.Common"]
 	path = KayMcCormick.Test.Common
 	url = https://github.com/kaymccormick/KayMcCormick.Test.Common.git
-	branch = net472
+	branch = master
 [submodule "KayMcCormick.Logging.Common"]
 	path = KayMcCormick.Logging.Common
 	url = https://github.com/kaymccormick/KayMcCormick.Logging.Common
-	branch = net472
+	branch = master
 [submodule "NLog"]
 	path = NLog
 	url = https://github.com/kaymccormick/NLog
