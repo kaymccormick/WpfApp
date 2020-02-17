@@ -42,7 +42,15 @@ steps:
     GerenateDocumentation: 'true'
 - task: MSBuild@1
   inputs:
-    solution: '**/*.csproj;!NLog/**'
+    solution: '*/*.csproj'
+    platform: 'x86'
+    configuration: 'Release'
+    restoreNugetPackages: false
+    msbuildArguments: $(MsBuildAdditionalArguments)
+
+- task: MSBuild@1
+  inputs:
+    solution: 'KayMcCormick*/*/*.csproj'
     platform: 'x86'
     configuration: 'Release'
     restoreNugetPackages: false
