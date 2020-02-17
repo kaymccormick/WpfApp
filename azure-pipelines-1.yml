@@ -61,6 +61,14 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '''$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'''
+    targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     artifact: 'XmlDocs'
     publishLocation: 'pipeline'
+
+- task: UploadFilesToSPDocLib@1
+  inputs:
+    spUrl: 'https://satoridev.sharepoint.com/sites/Dev/Shared%20Documents/Forms/AllItems.aspx?viewpath=%2Fsites%2FDev%2FShared%20Documents%2FForms%2FAllItems.aspx'
+    targetFolder: 'XmlDocs'
+    login: 'kay@satoridev.onmicrosoft.com'
+    password: 'So8XuY#WCu6@b#Y@'
+    filesToUpload: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
