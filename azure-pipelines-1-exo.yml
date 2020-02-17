@@ -28,7 +28,7 @@ variables:
 steps:
 - checkout: self
   submodules: recursive
-  `persistCredentials: true
+  persistCredentials: true
 
 - task: NuGetToolInstaller@1
 - task: NuGetCommand@2
