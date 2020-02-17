@@ -42,9 +42,7 @@ steps:
     GerenateDocumentation: 'true'
 - task: MSBuild@1
   inputs:
-    solution: >
-      **/*.csproj
-      !NLog/**
+    solution: '**/*.csproj;!NLog/**'
     platform: 'x86'
     configuration: 'Release'
     restoreNugetPackages: false
