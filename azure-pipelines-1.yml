@@ -55,10 +55,12 @@ steps:
     rootFolderOrFile: '$(Build.StagingDirectory)/XmlDocs'
     includeRootFolder: true
     archiveType: 'zip'
-    archiveFile: - task: PublishPipelineArtifact@1
+    archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    replaceExistingArchive: true
+    verbose: true
+
+- task: PublishPipelineArtifact@1
   inputs:
     targetPath: '''$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'''
     artifact: 'XmlDocs'
     publishLocation: 'pipeline'
-    replaceExistingArchive: true
-    verbose: true
