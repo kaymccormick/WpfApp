@@ -45,10 +45,12 @@ steps:
     clean: true
     createLogFile: true
     logFileVerbosity: 'diagnostic'
+
 - task: VSTest@2
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
+
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Pipeline.Workspace)\SetupProject1\bin\Release\*.msi'

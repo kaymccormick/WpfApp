@@ -1,30 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Include>
-  <DirectoryRef Id="TARGETDIR">
-    <Component Id="cmp2F8F6FA14F9DA5014B170499CD549FC6" Guid="{80952614-08A7-4E64-98CE-0C8B0A0C87F6}" KeyPath="yes">
-      <RegistryKey Key="SOFTWARE\Kay McCormick" Root="HKLM">
-        <RegistryValue Name="LogRoot" Value="c:\data\logs" Type="string" />
-      </RegistryKey>
-    </Component>
-  </DirectoryRef>
-  <DirectoryRef Id="TARGETDIR">
-    <Component Id="cmp5040885620B05B84EAA120FA2F5D93C4" Guid="9f4e3a1d-dc10-4fc6-88c7-e10cda333fd0" KeyPath="yes">
-      <RegistryKey ForceCreateOnInstall="yes" Key="SOFTWARE\Kay McCormick\Logs" Root="HKLM" />
-    </Component>
-  </DirectoryRef>
-  <DirectoryRef Id="TARGETDIR">
-    <Component Id="cmp9BF3988ADB3F43702EB482BAAFDF3125" Guid="bb089cc6-b655-4055-aaf2-f6a7322d39f3" KeyPath="yes">
-      <RegistryKey ForceCreateOnInstall="yes" Key="SOFTWARE\Kay McCormick\Applications" Root="HKLM" />
-    </Component>
-  </DirectoryRef>
-  <DirectoryRef Id="TARGETDIR">
-    <Component Id="cmpB91E6F3D8D300BC8F84FB64027C4F3AC" Guid="4aa39716-7455-4666-b323-745dbb5ba0cc" KeyPath="yes">
-      <RegistryKey ForceCreateOnInstall="yes" Key="SOFTWARE\Kay McCormick\Applications\WpfApp2" Root="HKLM" />
-    </Component>
-  </DirectoryRef>
-  <DirectoryRef Id="TARGETDIR">
-    <Component Id="cmpF03EEBDC728B29CD92B26BBE55ACF9DC" Guid="c039df12-bf65-4ed6-9927-fd2c5ff5c08f" KeyPath="yes">
-      <RegistryKey ForceCreateOnInstall="yes" Key="SOFTWARE\Kay McCormick\Applications\WpfApp1" Root="HKLM" />
-    </Component>
-  </DirectoryRef>
 </Include>

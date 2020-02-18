@@ -26,16 +26,16 @@
   <Fragment>
     <ComponentGroup Id="ProductComponents" Directory="INSTALLFOLDER">
       <!-- TODO: Remove the comments around this Component element and the ComponentRef below in order to add resources to this installer. -->
-      <Component Id="ProductComponent">
-        <?include include1.wxi ?>
-        <!-- <RegistryKey Root="HKCU" -->
-        <!--              Key="Software\Kay McCormick\Logging" -->
-        <!--              Action="createAndRemoveOnUninstall"> -->
-        <!--   <RegistryValue Type="integer" Name="SomeIntegerValue" Value="1" KeyPath="yes"/> -->
-        <!--   <RegistryValue Type="string" Value="Default Value"/> -->
-        <!-- </RegistryKey> -->
-        <!-- TODO: Insert files, registry keys, and other resources here. -->
-      </Component>
+      <!-- <Component Id="ProductComponent"> -->
+      <!-- <?include include1.wxi ?> -->
+      <!-- <RegistryKey Root="HKCU" -->
+      <!--              Key="Software\Kay McCormick\Logging" -->
+      <!--              Action="createAndRemoveOnUninstall"> -->
+      <!--   <RegistryValue Type="integer" Name="SomeIntegerValue" Value="1" KeyPath="yes"/> -->
+      <!--   <RegistryValue Type="string" Value="Default Value"/> -->
+      <!-- </RegistryKey> -->
+      <!-- TODO: Insert files, registry keys, and other resources here. -->
+      <!-- </Component> -->
     </ComponentGroup>
   </Fragment>
   <Fragment>
