@@ -94,7 +94,7 @@ steps:
     replaceExistingArchive: true
     verbose: true
 
-- task: MSBuild@1
+- task: VSBuild@1
   inputs:
     solution: '**/*.shfbproj'
     platform: 'x86'
