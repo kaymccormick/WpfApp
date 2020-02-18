@@ -110,12 +110,12 @@
     <Content Include="icons\Help.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common.csproj">
+    <ProjectReference Include="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common.csproj">
       <Name>KayMcCormick.Logging.Common</Name>
       <Project>{122608b7-60d4-4182-a670-e8be067c4f88}</Project>
       <Private>True</Private>
     </ProjectReference>
-    <ProjectReference Include="..\..\KayMcCormick.Test.Common\KayMcCormick.Test.Common\KayMcCormick.Test.Common.csproj">
+    <ProjectReference Include="..\KayMcCormick.Test.Common\KayMcCormick.Test.Common\KayMcCormick.Test.Common.csproj">
       <Name>KayMcCormick.Test.Common</Name>
       <Project>{fa345b13-66b5-4378-b88c-e4737af69894}</Project>
       <Private>True</Private>
