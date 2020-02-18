@@ -3,8 +3,8 @@
   <PropertyGroup>
     <!-- The configuration and platform will be used to determine which assemblies to include from solution and
 				 project documentation sources -->
-    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
-    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Configuration Condition=" '$(Configuration)' == '' ">Release</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>fa438012-e41b-4bdd-8391-8616d20fdcf8</ProjectGuid>
     <SHFBSchemaVersion>2017.9.26.0</SHFBSchemaVersion>
