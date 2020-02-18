@@ -31,12 +31,10 @@
       <Argument Key="requestExampleUrl" Value="" />
     </TransformComponentArguments>
     <DocumentationSources>
-      <DocumentationSource sourceFile="..\WpfApp\bin\$(Configuration)\WpfApp.exe" />
-      <DocumentationSource sourceFile="..\WpfApp\bin\$(Configuration)\WpfApp.xml" />
-      <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\Debug\KayMcCormick.Logging.Common.xml" />
-      <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\Debug\KayMcCormick.Logging.Common.dll" />
-      <DocumentationSource sourceFile="..\KayMcCormick.Test.Common\KayMcCormick.Test.Common\bin\Debug\KayMcCormick.Test.Common.xml" />
-      <DocumentationSource sourceFile="..\KayMcCormick.Test.Common\KayMcCormick.Test.Common\bin\Debug\KayMcCormick.Test.Common.dll" />
+      <DocumentationSource sourceFile="..\WpfApp\bin\$(Platform)\$(Configuration)\WpfApp.exe" />
+      <DocumentationSource sourceFile="..\WpfApp\bin\$(Platform)\$(Configuration)\WpfApp.xml" />
+      <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\$(Platform)\$(Configuration)\McCormick.Logging.Common.xml" />
+      <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\$(Platform)\$(Configuration)\KayMcCormick.Logging.Common.dll" />
     </DocumentationSources>
     <HelpFileFormat>MSHelpViewer, Website</HelpFileFormat>
     <SyntaxFilters>C#, Visual Basic, Visual Basic Usage, Managed C++, F#, XAML Usage, X#</SyntaxFilters>
