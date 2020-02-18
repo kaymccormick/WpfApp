@@ -100,7 +100,6 @@ steps:
     solution: '**/*.shfbproj'
     platform: 'x86'
     configuration: 'Release'
-    clean: true
     createLogFile: true
     logFileVerbosity: 'diagnostic'
 
