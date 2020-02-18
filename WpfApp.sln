@@ -8,9 +8,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{963A7522-EE3E-4487-BAF5-8600141A0350}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Misc", "Misc", "{83F1343D-2083-4DE4-B8A9-E4D1A4ED5B69}"
-	ProjectSection(SolutionItems) = preProject
-		Output-Build.txt = Output-Build.txt
-	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KayMcCormick.Test.Common", "KayMcCormick.Test.Common\KayMcCormick.Test.Common\KayMcCormick.Test.Common.csproj", "{FA345B13-66B5-4378-B88C-E4737AF69894}"
 EndProject

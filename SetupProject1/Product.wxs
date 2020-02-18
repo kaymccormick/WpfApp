@@ -7,9 +7,9 @@
     <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" />
 
     <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
-    <MediaTemplate />
+    <MediaTemplate EmbedCab="yes" />
 
-    <Feature Id="ProductFeature" Title="SetupProject1" Level="1">
+    <Feature Id="ProductFeature" Title="Kay McCormick Mega App" Level="1">
       <ComponentGroupRef Id="ProductComponents" />
       <ComponentGroupRef Id="ProgramFilesFolder_files" />
     </Feature>
