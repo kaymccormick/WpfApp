@@ -94,6 +94,15 @@ steps:
     replaceExistingArchive: true
     verbose: true
 
+- task: MSBuild@1
+  inputs:
+    solution: '**/*.shfbproj'
+    platform: 'x86'
+    configuration: 'Release'
+    clean: true
+    createLogFile: true
+    logFileVerbosity: 'diagnostic'
+
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
