@@ -17,6 +17,7 @@ trigger:
 
 pool:
   name: exo
+  demands: ServiceAccount
   workspace:
     clean: outputs | resources | all 
 
