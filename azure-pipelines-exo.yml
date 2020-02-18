@@ -51,6 +51,6 @@ steps:
     configuration: '$(buildConfiguration)'
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Pipeline.Workspace)\bin\Release\*.msi'
+    targetPath: '$(Pipeline.Workspace)\SetupProject1\bin\Release\*.msi'
     artifact: 'MsiInstaller'
     publishLocation: 'pipeline'
