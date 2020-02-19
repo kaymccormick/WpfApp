@@ -18,10 +18,9 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-  workspace:
-    clean: outputs | resources | all 
     
 variables:
+  solution: '**/WpfApp.sln'
   buildPlatform: 'x86'
   buildConfiguration: 'Release'
 
@@ -34,41 +33,16 @@ steps:
 - task: NuGetCommand@2
   inputs:
     command: 'restore'
-    restoreSolution: '*/*.csproj'
-    feedsToUse: 'select'
-    noCache: true    
+    restoreSolution: '$(solution)'
 
-- task: NuGetCommand@2
+- task: VSBuild@1
   inputs:
-    command: 'restore'
-    restoreSolution: 'KayMcCormick*/*/*.csproj'
-    feedsToUse: 'select'
-    noCache: true    
-
-- task: MsBuildHelperTask@0
-  inputs:
-    variableName: 'MsBuildAdditionalArguments'
-    MsBuildTargetCustom: 'restore;build'
-    MsBuildBaseOutputPath: 'StagingDirectory'
-    MsBuildOutputPath: 'StagingDirectory'
-    TreatWarningsAsError: 'false'
-    SkipInvalidConfigurations: 'true'
-    GerenateDocumentation: 'true'
-- task: MSBuild@1
-  inputs:
-    solution: '*/*.csproj'
-    platform: 'x86'
-    configuration: 'Release'
-    restoreNugetPackages: false
-    msbuildArguments: $(MsBuildAdditionalArguments)
-
-- task: MSBuild@1
-  inputs:
-    solution: 'KayMcCormick*/*/*.csproj'
-    platform: 'x86'
-    configuration: 'Release'
-    restoreNugetPackages: false
-    msbuildArguments: $(MsBuildAdditionalArguments)
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    clean: false
+    createLogFile: true
+    logFileVerbosity: 'detailed'
 
 - task: CopyFiles@2
   inputs:
@@ -94,27 +68,27 @@ steps:
     replaceExistingArchive: true
     verbose: true
 
+- task: VSBuild@1
+  inputs:
+    solution: '*/*.shfbproj'
+    platform: 'x86'
+    configuration: 'Release'
+    createLogFile: true
+    logFileVerbosity: 'detailed'
+
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     artifact: 'XmlDocs'
     publishLocation: 'pipeline'
-
-- task: PublishGitHubRelease@0
+- task: CopyFiles@2
   inputs:
-    applicationName: 'Azure1'
-    gitSourceOption: 'github'
-    token: 'e3wuyitcvypnjwcu2yxxeewe7rxfqdxzuegx3thtpuf2t47chgba'
-    repo: 'WpfApp'
-    owner: 'kaymccormick'
-    tagName: 'v$(build.buildNumber)'
-    releaseName: 'XmlDocs-v$(build.buildNumber)'
-    assetsPattern: '''$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'''
-
-- task: UploadFilesToSPDocLib@1
+    SourceFolder: '$(Build.SourcesDirectory)/Docs/Help'
+    Contents: 'WpfApp.chm'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    preserveTimestamp: true
+- task: PublishPipelineArtifact@1
   inputs:
-    spUrl: 'https://satoridev.sharepoint.com/Builds/Forms/AllItems.aspx'
-    targetFolder: 'XmlDocs'
-    login: '$(sharepoint.userid)'
-    password: '$(sharepoint.password)'
-    filesToUpload: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+    targetPath: '$(Build.SourcesDirectory)/Docs/Help/WpfApp.chm'
+    artifact: 'HTML Help file'
+    publishLocation: 'pipeline'
