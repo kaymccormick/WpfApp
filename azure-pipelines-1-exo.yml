@@ -86,7 +86,7 @@ steps:
     
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Build.SourceDirectory)/Docs/Help/WpfApp.chm'
+    targetPath: '$(Build.SourcesDirectory)/Docs/Help/WpfApp.chm'
     artifact: 'HTML Help file'
     publishLocation: 'pipeline'
 
