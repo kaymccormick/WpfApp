@@ -13,7 +13,7 @@
     <RootNamespace>Docs</RootNamespace>
     <Name>Docs</Name>
     <!-- SHFB properties -->
-    <FrameworkVersion>.NET Framework 4.8</FrameworkVersion>
+    <FrameworkVersion>.NET Framework 4.7.2</FrameworkVersion>
     <OutputPath>Help\</OutputPath>
     <HtmlHelpName>WpfApp</HtmlHelpName>
     <Language>en-US</Language>
@@ -36,7 +36,7 @@
       <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\$(Platform)\$(Configuration)\KayMcCormick.Logging.Common.xml" />
       <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\$(Platform)\$(Configuration)\KayMcCormick.Logging.Common.dll" />
     </DocumentationSources>
-    <HelpFileFormat>MSHelpViewer, Website</HelpFileFormat>
+    <HelpFileFormat>HtmlHelp1, MSHelpViewer, Website</HelpFileFormat>
     <SyntaxFilters>C#, Visual Basic, Visual Basic Usage, Managed C++, F#, XAML Usage, X#</SyntaxFilters>
     <PresentationStyle>VS2013</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
@@ -71,6 +71,7 @@
     <IncludeFavorites>False</IncludeFavorites>
     <WebsiteSdkLinkType>Msdn</WebsiteSdkLinkType>
     <AppendMarkdownFileExtensionsToUrls>False</AppendMarkdownFileExtensionsToUrls>
+    <CopyrightText>Copyright 2020 Kay McCormick</CopyrightText>
   </PropertyGroup>
   <!-- There are no properties for these groups.  AnyCPU needs to appear in order for Visual Studio to perform
 			 the build.  The others are optional common platform types that may appear. -->
