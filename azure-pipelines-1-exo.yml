@@ -35,17 +35,7 @@ steps:
 - task: NuGetToolInstaller@1
 - task: NuGetCommand@2
   inputs:
-    command: 'restore'
-    restoreSolution: '*/*.csproj'
-    feedsToUse: 'select'
-    noCache: true    
-
-- task: NuGetCommand@2
-  inputs:
-    command: 'restore'
-    restoreSolution: 'KayMcCormick*/*/*.csproj'
-    feedsToUse: 'select'
-    noCache: true    
+    restoreSolution: '$(solution)'
 
 - task: VSBuild@1
   inputs:
@@ -82,7 +72,7 @@ steps:
 
 - task: VSBuild@1
   inputs:
-    solution: '**/*.shfbproj'
+    solution: '*/*.shfbproj'
     platform: 'x86'
     configuration: 'Release'
     createLogFile: true
