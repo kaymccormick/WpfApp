@@ -21,3 +21,4 @@ TestResult.xml
 *.mshc
 /Output-Build.txt
 /Docs/Help
+/msbuild.log.old

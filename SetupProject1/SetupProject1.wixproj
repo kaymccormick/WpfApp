@@ -20,7 +20,6 @@
     <SuppressValidation>True</SuppressValidation>
     <LinkerAdditionalOptions>
     </LinkerAdditionalOptions>
-    <CompilerAdditionalOptions>--vv</CompilerAdditionalOptions>
     <VerboseOutput>True</VerboseOutput>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x64' ">
