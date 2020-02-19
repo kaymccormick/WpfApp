@@ -83,3 +83,10 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     artifact: 'XmlDocs'
     publishLocation: 'pipeline'
+    
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.SourceDirectory)/Docs/Help/WpfApp.chm'
+    artifact: 'HTML Help file'
+    publishLocation: 'pipeline'
+
