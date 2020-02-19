@@ -17,8 +17,6 @@ trigger:
 
 pool:
   vmImage: 'windows-latest'
-  workspace:
-    clean: outputs | resources | all 
 
 variables:
   solution: '**/WpfApp.sln'
@@ -41,7 +39,6 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    clean: true
     createLogFile: true
     logFileVerbosity: 'diagnostic'
 - task: VSTest@2
