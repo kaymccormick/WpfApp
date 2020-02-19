@@ -103,18 +103,6 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     artifact: 'XmlDocs'
     publishLocation: 'pipeline'
-- task: CopyFiles@2
-  inputs:
-    SourceFolder: '$(Build.SourcesDirectory)/Docs/Help'
-    Contents: 'WpfApp.chm'
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
-    preserveTimestamp: true
-
-- task: PublishPipelineArtifact@1
-  inputs:
-    targetPath: '$(Build.SourcesDirectory)/Docs/Help/WpfApp.chm'
-    artifact: 'HTML Help file'
-    publishLocation: 'pipeline'
 
 - task: ArchiveFiles@2
   inputs:
