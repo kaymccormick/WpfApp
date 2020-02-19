@@ -24,6 +24,9 @@ variables:
   solution: '**/WpfApp.sln'
   buildPlatform: 'x86'
   buildConfiguration: 'Release'
+  HtmlHelpOutputPath: $(Build.BinariesDirectory)/Docs/HtmlHelp
+  MSHelpOutputPath: $(Build.BinariesDirectory)/Docs/MSHelp
+  SiteOutputPath: $(Build.BinariesDirectory)/Docs/Site
 
 steps:
 - checkout: self
@@ -75,6 +78,25 @@ steps:
     configuration: 'Release'
     createLogFile: true
     logFileVerbosity: 'detailed'
+    msbuildArgs: -POutputPath=$(HtmlHelpOutputPath) -PHelpFileFormat=HtmlHelp1
+
+- task: VSBuild@1
+  inputs:
+    solution: '*/*.shfbproj'
+    platform: 'x86'
+    configuration: 'Release'
+    createLogFile: true
+    logFileVerbosity: 'detailed'
+    msbuildArgs: -POutputPath=$(SiteOutputPath) -PHelpFileFormat=Website
+
+- task: VSBuild@1
+  inputs:
+    solution: '*/*.shfbproj'
+    platform: 'x86'
+    configuration: 'Release'
+    createLogFile: true
+    logFileVerbosity: 'detailed'
+    msbuildArgs: -POutputPath=$(MSHelpOutputPath) -PHelpFileFormat=MSHelpViewer
 
 - task: PublishPipelineArtifact@1
   inputs:
@@ -87,9 +109,49 @@ steps:
     Contents: 'WpfApp.chm'
     TargetFolder: '$(Build.ArtifactStagingDirectory)'
     preserveTimestamp: true
+
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.SourcesDirectory)/Docs/Help/WpfApp.chm'
     artifact: 'HTML Help file'
     publishLocation: 'pipeline'
 
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(HtmlHelpOutputPath)' 
+    includeRootFolder: true 
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Docs-HtmlHelp-$(Build.BuildId).zip' 
+    verbose: true
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(MSHelpOutputPath)' 
+    includeRootFolder: true 
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Docs-MSHelp-$(Build.BuildId).zip' 
+    verbose: true
+
+- task: ArchiveFiles@2
+  inputs:
+    rootFolderOrFile: '$(SiteOutputPath)' 
+    includeRootFolder: true 
+    archiveType: 'zip'
+    archiveFile: '$(Build.ArtifactStagingDirectory)/Docs-Site-$(Build.BuildId).zip' 
+    verbose: true
+
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)/Docs-Site-$(Build.BuildId).zip'
+    artifact: 'HTML Help Dist'
+    publishLocation: 'pipeline'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)/Docs-MSHelp-$(Build.BuildId).zip'
+    artifact: 'MSHelp Dist'
+    publishLocation: 'pipeline'
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)/Docs-Site-$(Build.BuildId).zip'
+    artifact: 'Site Dist'
+    publishLocation: 'pipeline'
