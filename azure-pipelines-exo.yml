@@ -53,6 +53,6 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    targetPath: '$(Build.SourcesDirectory)\SetupProject1\bin\Release\*.msi'
+    targetPath: '$(Build.SourcesDirectory)\SetupProject1\bin\Release\\Kay McCormick Mega App.msi'
     artifact: 'MsiInstaller'
     publishLocation: 'pipeline'
