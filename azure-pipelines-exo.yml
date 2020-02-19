@@ -18,8 +18,6 @@ trigger:
 pool:
   name: exo
   demands: ServiceAccount
-  workspace:
-    clean: outputs | resources | all 
 
 variables:
   solution: '**/WpfApp.sln'
@@ -42,7 +40,6 @@ steps:
     solution: '$(solution)'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-    clean: true
     createLogFile: true
     logFileVerbosity: 'diagnostic'
 
