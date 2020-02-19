@@ -1,4 +1,5 @@
-﻿using System ;
+﻿#if false
+using System ;
 using System.Collections.Generic ;
 using System.ComponentModel ;
 using System.Linq ;
@@ -200,3 +201,4 @@ namespace Tests.Main.Converters
         public void Dispose ( ) { _loggingFixture.SetOutputHelper ( null ) ; }
     }
 }
+#endif
