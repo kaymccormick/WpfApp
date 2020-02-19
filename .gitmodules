@@ -4,7 +4,7 @@
 	branch = master
 [submodule "KayMcCormick.Logging.Common"]
 	path = KayMcCormick.Logging.Common
-	url = https://github.com/kaymccormick/KayMcCormick.Logging.Common
+	url = https://kaymccormick@dev.azure.com/kaymccormick/KayMcCormick.Logging.Common/_git/KayMcCormick.Logging.Common
 	branch = master
 [submodule "NLog"]
 	path = NLog
