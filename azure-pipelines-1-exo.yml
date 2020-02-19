@@ -42,7 +42,7 @@ steps:
     configuration: '$(buildConfiguration)'
     clean: false
     createLogFile: true
-    logFileVerbosity: 'diagnostic'
+    logFileVerbosity: 'detailed'
 
 - task: CopyFiles@2
   inputs:
@@ -74,14 +74,19 @@ steps:
     platform: 'x86'
     configuration: 'Release'
     createLogFile: true
-    logFileVerbosity: 'diagnostic'
+    logFileVerbosity: 'detailed'
 
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     artifact: 'XmlDocs'
     publishLocation: 'pipeline'
-    
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)/Docs/Help'
+    Contents: 'WpfApp.chm'
+    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+    preserveTimestamp: true
 - task: PublishPipelineArtifact@1
   inputs:
     targetPath: '$(Build.SourcesDirectory)/Docs/Help/WpfApp.chm'
