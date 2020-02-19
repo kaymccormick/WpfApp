@@ -31,8 +31,8 @@
       <Argument Key="requestExampleUrl" Value="" />
     </TransformComponentArguments>
     <DocumentationSources>
+      <DocumentationSource sourceFile="..\WpfApp\bin\$(Platform)\$(Configuration)\WpfApp.exe" />
       <DocumentationSource sourceFile="..\WpfApp\bin\$(Platform)\$(Configuration)\WpfApp.xml" />
-      <DocumentationSource sourceFile="..\WpfApp\bin\$(Platform)\$(Configuration)\WpfApp.dll" />
       <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\$(Platform)\$(Configuration)\KayMcCormick.Logging.Common.xml" />
       <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\$(Platform)\$(Configuration)\KayMcCormick.Logging.Common.dll" />
     </DocumentationSources>
