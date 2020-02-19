@@ -83,12 +83,3 @@ steps:
     targetPath: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
     artifact: 'XmlDocs'
     publishLocation: 'pipeline'
-
-- task: O365PostMessageRelease@0
-  inputs:
-    addressType: 'url'
-    url: 'https://outlook.office.com/webhook/d3e8f9d8-c43c-4a0b-a2ca-2f7c73a422ea@3956be4f-5b3e-40ee-a904-74d46f3f1b7f/IncomingWebhook/557c0c0963ff495d8930e2d8f5bd650f/07763d67-a182-473a-be2b-2fa3762eea30'
-    messageType: 'message'
-    title: 'build'
-    includeLink: true
-    linkText: 'View Release Detail'
