@@ -32,9 +32,9 @@
     </TransformComponentArguments>
     <DocumentationSources>
       <DocumentationSource sourceFile="..\WpfApp\bin\$(Platform)\$(Configuration)\WpfApp.xml" />
-      <DocumentationSource sourceFile="(StagingDirectory\WpfApp.dll" />
+      <DocumentationSource sourceFile="..\WpfApp\bin\$(Platform)\$(Configuration)\WpfApp.dll" />
       <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\$(Platform)\$(Configuration)\KayMcCormick.Logging.Common.xml" />
-      <DocumentationSource sourceFile="$(StagingDirectory)\KayMcCormick.Logging.Common.dll" />
+      <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\$(Platform)\$(Configuration)\KayMcCormick.Logging.Common.dll" />
     </DocumentationSources>
     <HelpFileFormat>MSHelpViewer, Website</HelpFileFormat>
     <SyntaxFilters>C#, Visual Basic, Visual Basic Usage, Managed C++, F#, XAML Usage, X#</SyntaxFilters>
