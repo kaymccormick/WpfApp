@@ -23,6 +23,7 @@ pool:
     clean: outputs | resources | all 
     
 variables:
+  solution: '**/WpfApp.sln'
   buildPlatform: 'x86'
   buildConfiguration: 'Release'
 
@@ -46,30 +47,14 @@ steps:
     feedsToUse: 'select'
     noCache: true    
 
-- task: MsBuildHelperTask@0
+- task: VSBuild@1
   inputs:
-    variableName: 'MsBuildAdditionalArguments'
-    MsBuildTargetCustom: 'restore;build'
-    MsBuildBaseOutputPath: 'StagingDirectory'
-    MsBuildOutputPath: 'StagingDirectory'
-    TreatWarningsAsError: 'false'
-    SkipInvalidConfigurations: 'true'
-    GerenateDocumentation: 'true'
-- task: MSBuild@1
-  inputs:
-    solution: '*/*.csproj'
-    platform: 'x86'
-    configuration: 'Release'
-    restoreNugetPackages: false
-    msbuildArguments: $(MsBuildAdditionalArguments)
-
-- task: MSBuild@1
-  inputs:
-    solution: 'KayMcCormick*/*/*.csproj'
-    platform: 'x86'
-    configuration: 'Release'
-    restoreNugetPackages: false
-    msbuildArguments: $(MsBuildAdditionalArguments)
+    solution: '$(solution)'
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
+    clean: true
+    createLogFile: true
+    logFileVerbosity: 'diagnostic'
 
 - task: CopyFiles@2
   inputs:
