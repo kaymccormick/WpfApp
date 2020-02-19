@@ -78,7 +78,7 @@ steps:
     configuration: 'Release'
     createLogFile: true
     logFileVerbosity: 'detailed'
-    msbuildArgs: -POutputPath=$(HtmlHelpOutputPath) -PHelpFileFormat=HtmlHelp1
+    msbuildArgs: -P:OutputPath=$(HtmlHelpOutputPath) -P:HelpFileFormat=HtmlHelp1
 
 - task: VSBuild@1
   inputs:
@@ -87,7 +87,7 @@ steps:
     configuration: 'Release'
     createLogFile: true
     logFileVerbosity: 'detailed'
-    msbuildArgs: -POutputPath=$(SiteOutputPath) -PHelpFileFormat=Website
+    msbuildArgs: -P:OutputPath=$(SiteOutputPath) -P:HelpFileFormat=Website
 
 - task: VSBuild@1
   inputs:
@@ -96,7 +96,7 @@ steps:
     configuration: 'Release'
     createLogFile: true
     logFileVerbosity: 'detailed'
-    msbuildArgs: -POutputPath=$(MSHelpOutputPath) -PHelpFileFormat=MSHelpViewer
+    msbuildArgs: -P:OutputPath=$(MSHelpOutputPath) -P:HelpFileFormat=MSHelpViewer
 
 - task: PublishPipelineArtifact@1
   inputs:
