@@ -14,7 +14,7 @@
     <Name>Docs</Name>
     <!-- SHFB properties -->
     <FrameworkVersion>.NET Framework 4.7.2</FrameworkVersion>
-    <OutputPath>Help\</OutputPath>
+    <OutputPath Condition=" '$(OutputPath)' == '' ">Help\</OutputPath>
     <HtmlHelpName>WpfApp</HtmlHelpName>
     <Language>en-US</Language>
     <TransformComponentArguments>
@@ -36,7 +36,7 @@
       <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\$(Platform)\$(Configuration)\KayMcCormick.Logging.Common.xml" />
       <DocumentationSource sourceFile="..\KayMcCormick.Logging.Common\KayMcCormick.Logging.Common\bin\$(Platform)\$(Configuration)\KayMcCormick.Logging.Common.dll" />
     </DocumentationSources>
-    <HelpFileFormat>HtmlHelp1, MSHelpViewer, Website</HelpFileFormat>
+    <HelpFileFormat>Website</HelpFileFormat>
     <SyntaxFilters>C#, Visual Basic, Visual Basic Usage, Managed C++, F#, XAML Usage, X#</SyntaxFilters>
     <PresentationStyle>VS2013</PresentationStyle>
     <CleanIntermediates>True</CleanIntermediates>
